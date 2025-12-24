@@ -85,11 +85,203 @@
   },
   {
     "data": {
-      "id": "kei56",
+      "id": "kei56_tomehoppe_mother",
       "label": "系56",
       "year": "",
       "institute": "",
       "notes": "1990年に海外優良遺伝資源導入調査事業（県単独）で導入した育種素材に由来する",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nyoho",
+      "label": "女峰",
+      "year": 1985,
+      "institute": "栃木県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=716&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kei210_nyoho_mother",
+      "label": "系210",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kei2_kei210_mother",
+      "label": "系2",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "harunoka",
+      "label": "はるのか",
+      "year": 1967,
+      "institute": "農林省園芸試験場",
+      "notes": "別称に農林11号",
+      "sources": "https://agriknowledge.affrc.go.jp/RN/4010001316",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sokusei2go",
+      "label": "促成2号",
+      "year": "",
+      "institute": "",
+      "notes": "別称に久留米103号",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miyazaki",
+      "label": "宮崎",
+      "year": "",
+      "institute": "",
+      "notes": "情報提供を募集しています",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "the_sun",
+      "label": "The sun",
+      "year": "",
+      "institute": "",
+      "notes": "情報提供を募集しています。ザサンという表記も見られます。",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "KA16_99_26_7_mother",
+      "label": "KA16",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "A65_KA16_mother",
+      "label": "A65",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "97_9_1",
+      "label": "97_9_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "95_6_14",
+      "label": "95_6_14",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "15_95_6_14_mother",
+      "label": "15",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "X_2_15_mother",
+      "label": "X_2",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sakei8go",
+      "label": "佐系8号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "5_2_sakei8go_mother",
+      "label": "5_2",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "X_1_5_2_mother",
+      "label": "X_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
       "sources": "",
       "db_registration_date": "2025/12/24",
       "placeholder": false
@@ -109,8 +301,8 @@
   },
   {
     "data": {
-      "id": "97_9_1",
-      "label": "97_9_1",
+      "id": "D8_4_A65_mother",
+      "label": "D8_4_A65_mother",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -121,8 +313,8 @@
   },
   {
     "data": {
-      "id": "KA-16",
-      "label": "KA-16",
+      "id": "aiberry",
+      "label": "aiberry",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -133,8 +325,56 @@
   },
   {
     "data": {
-      "id": "nyoho",
-      "label": "nyoho",
+      "id": "danner",
+      "label": "danner",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "kuru47go",
+      "label": "kuru47go",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "niyoho",
+      "label": "niyoho",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "reiko",
+      "label": "reiko",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "sachinoka",
+      "label": "sachinoka",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -169,7 +409,19 @@
   },
   {
     "data": {
-      "id": "unknown_father__kei56",
+      "id": "toyonoka",
+      "label": "toyonoka",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__kei56_tomehoppe_mother",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -181,7 +433,55 @@
   },
   {
     "data": {
-      "id": "unknown_mother__kei56",
+      "id": "unknown_father__miyazaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__the_sun",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__kei56_tomehoppe_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__miyazaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__the_sun",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -233,7 +533,7 @@
   },
   {
     "data": {
-      "source": "KA-16",
+      "source": "KA16_99_26_7_mother",
       "target": "99_26_7",
       "role": "father",
       "source_id": "岡_2018"
@@ -289,7 +589,7 @@
   },
   {
     "data": {
-      "source": "kei56",
+      "source": "kei56_tomehoppe_mother",
       "target": "tonehoppe",
       "role": "mother",
       "source_id": "武井_2001"
@@ -305,18 +605,274 @@
   },
   {
     "data": {
-      "source": "unknown_mother__kei56",
-      "target": "kei56",
+      "source": "unknown_mother__kei56_tomehoppe_mother",
+      "target": "kei56_tomehoppe_mother",
       "role": "mother",
       "source_id": "武井_2001"
     }
   },
   {
     "data": {
-      "source": "unknown_father__kei56",
-      "target": "kei56",
+      "source": "unknown_father__kei56_tomehoppe_mother",
+      "target": "kei56_tomehoppe_mother",
       "role": "father",
       "source_id": "武井_2001"
+    }
+  },
+  {
+    "data": {
+      "source": "kei210_nyoho_mother",
+      "target": "nyoho",
+      "role": "mother",
+      "source_id": "安川_1985"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "nyoho",
+      "role": "father",
+      "source_id": "安川_1985"
+    }
+  },
+  {
+    "data": {
+      "source": "danner",
+      "target": "kei210_nyoho_mother",
+      "role": "mother",
+      "source_id": "安川_1985"
+    }
+  },
+  {
+    "data": {
+      "source": "kei2_kei210_mother",
+      "target": "kei210_nyoho_mother",
+      "role": "father",
+      "source_id": "安川_1985"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "kei2_kei210_mother",
+      "role": "mother",
+      "source_id": "安川_1985"
+    }
+  },
+  {
+    "data": {
+      "source": "danner",
+      "target": "kei2_kei210_mother",
+      "role": "father",
+      "source_id": "安川_1985"
+    }
+  },
+  {
+    "data": {
+      "source": "sokusei2go",
+      "target": "harunoka",
+      "role": "mother",
+      "source_id": "農林認定品種データベース_はるのか"
+    }
+  },
+  {
+    "data": {
+      "source": "danner",
+      "target": "harunoka",
+      "role": "father",
+      "source_id": "農林認定品種データベース_はるのか"
+    }
+  },
+  {
+    "data": {
+      "source": "miyazaki",
+      "target": "sokusei2go",
+      "role": "mother",
+      "source_id": "農林認定品種データベース_はるのか"
+    }
+  },
+  {
+    "data": {
+      "source": "the_sun",
+      "target": "sokusei2go",
+      "role": "father",
+      "source_id": "農林認定品種データベース_はるのか"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__miyazaki",
+      "target": "miyazaki",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__miyazaki",
+      "target": "miyazaki",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__the_sun",
+      "target": "the_sun",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__the_sun",
+      "target": "the_sun",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "KA16_99_26_7_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "A65_KA16_mother",
+      "target": "KA16_99_26_7_mother",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "A65_KA16_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "D8_4_A65_mother",
+      "target": "A65_KA16_mother",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "95_6_14",
+      "target": "97_9_1",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "sakei8go",
+      "target": "97_9_1",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "15_95_6_14_mother",
+      "target": "95_6_14",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "95_6_14",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "X_2_15_mother",
+      "target": "15_95_6_14_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "15_95_6_14_mother",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "X_2_15_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "kuru47go",
+      "target": "X_2_15_mother",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "sakei8go",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "5_2_sakei8go_mother",
+      "target": "sakei8go",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "X_1_5_2_mother",
+      "target": "5_2_sakei8go_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "5_2_sakei8go_mother",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "X_1_5_2_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "niyoho",
+      "target": "X_1_5_2_mother",
+      "role": "father",
+      "source_id": "岡_2018"
     }
   }
 ]

@@ -1,0 +1,295 @@
+[
+  {
+    "data": {
+      "id": "sagai9go",
+      "label": "佐賀i9号",
+      "year": 2018,
+      "institute": "佐賀県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=26987&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "sakei14go",
+      "label": "佐系14号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "99_26_7",
+      "label": "99_26_7",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "99_5_3",
+      "label": "99_5_3",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "yayoihime",
+      "label": "やよいひめ",
+      "year": 2005,
+      "institute": "群馬県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12576&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "96_01_001",
+      "label": "96_01_001",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "tonehoppe",
+      "label": "とねほっぺ",
+      "year": 1999,
+      "institute": "群馬県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7502&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "kei56",
+      "label": "系56",
+      "year": "",
+      "institute": "",
+      "notes": "1990年に海外優良遺伝資源導入調査事業（県単独）で導入した育種素材に由来する",
+      "sources": "",
+      "db_registration_date": "2025/12/24"
+    }
+  },
+  {
+    "data": {
+      "id": "97_5_8",
+      "label": "97_5_8",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "id": "97_9_1",
+      "label": "97_9_1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "id": "KA-16",
+      "label": "KA-16",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "id": "nyoho",
+      "label": "nyoho",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "id": "sagahonoka",
+      "label": "sagahonoka",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "id": "tochiotome",
+      "label": "tochiotome",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "id": "unknown",
+      "label": "unknown",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": ""
+    }
+  },
+  {
+    "data": {
+      "source": "sakei14go",
+      "target": "sagai9go",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "yayoihime",
+      "target": "sagai9go",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "99_26_7",
+      "target": "sakei14go",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "99_5_3",
+      "target": "sakei14go",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "99_26_7",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "KA-16",
+      "target": "99_26_7",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "97_9_1",
+      "target": "99_5_3",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "97_5_8",
+      "target": "99_5_3",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "96_01_001",
+      "target": "yayoihime",
+      "role": "mother",
+      "source_id": "武井_2007"
+    }
+  },
+  {
+    "data": {
+      "source": "tonehoppe",
+      "target": "yayoihime",
+      "role": "father",
+      "source_id": "武井_2007"
+    }
+  },
+  {
+    "data": {
+      "source": "tonehoppe",
+      "target": "96_01_001",
+      "role": "mother",
+      "source_id": "武井_2007"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "96_01_001",
+      "role": "father",
+      "source_id": "武井_2007"
+    }
+  },
+  {
+    "data": {
+      "source": "kei56",
+      "target": "tonehoppe",
+      "role": "mother",
+      "source_id": "武井_2001"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "tonehoppe",
+      "role": "father",
+      "source_id": "武井_2001"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown",
+      "target": "kei56",
+      "role": "mother",
+      "source_id": "武井_2001"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown",
+      "target": "kei56",
+      "role": "father",
+      "source_id": "武井_2001"
+    }
+  }
+]

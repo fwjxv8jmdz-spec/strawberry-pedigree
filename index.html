@@ -39,7 +39,7 @@
 <div id="app">
   <div id="left">
     <div class="h">検索</div>
-    <input id="q" type="text" placeholder="品種名で検索（例：とねほっぺ）" />
+    <input id="q" type="text" placeholder="品種名で検索（例：とちおとめ）" />
 
     <div class="row" style="margin-top:10px;">
       <button id="fit">全体表示</button>
@@ -49,20 +49,19 @@
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
       <div class="row">
-        <button id="layout_dagre" class="active">階層（親→子）</button>
+        <button id="layout_dagre" class="active">配置リセット</button>
         
       </div>
       <div class="muted small" style="margin-top:6px;">
-        階層：家系図らしく整理／自由：絡みが多いところをほどきやすい
+        ノードの配置を階層スタイル（親→子）にリセットします。
       </div>
     </div>
 
     <div class="box">
       <div class="h" style="margin:0 0 6px;">凡例</div>
-      <div><span class="tag">母 → 子</span> 実線（上カーブ）</div>
-      <div><span class="tag">父 → 子</span> 破線（下カーブ）</div>
-      <div><span class="tag">不明 → 子</span> 点線</div>
-      <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更できます。ホイールで拡大縮小。</div>
+      <div><span class="tag">母 → 子</span> 実線</div>
+      <div><span class="tag">父 → 子</span> 破線</div>
+      <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更・ホイールで拡大縮小できます。</div>
     </div>
 
     <div class="box">
@@ -103,8 +102,8 @@ function setDetail(n){
     return;
   }
   const d = n.data();
-  const year = d.year ? `<div><b>育成年</b>：${esc(d.year)}</div>` : '';
-  const inst = d.institute ? `<div><b>育成機関</b>：${esc(d.institute)}</div>` : '';
+  const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
+  const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
 
   // sources: allow ; or newline separated
@@ -130,9 +129,9 @@ function setDetail(n){
   const motherHtml = mothers.length ? `<div><b>母</b>：${mothers.map(esc).join(', ')}</div>` : '';
   const fatherHtml = fathers.length ? `<div><b>父</b>：${fathers.map(esc).join(', ')}</div>` : '';
   const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${unknowns.map(esc).join(', ')}</div>` : '';
-  const childHtml = children.length ? `<div style="margin-top:8px;"><b>子（この品種を親に持つ）</b><div>${children.map(esc).join(', ')}</div></div>` : '';
+  const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${children.map(esc).join(', ')}</div></div>` : '';
 
-  const ph = d.placeholder ? `<div class="muted" style="margin-top:6px;">※このノードは「親として登場したが、品種情報が未入力」です。</div>` : '';
+  const ph = d.placeholder ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
 
   document.getElementById('detail').innerHTML = `
     <div class="box">

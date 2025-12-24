@@ -289,20 +289,164 @@
   },
   {
     "data": {
-      "id": "97_5_8",
-      "label": "97_5_8",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
+      "id": "sagai5go",
+      "label": "佐賀i5号",
+      "year": 2018,
+      "institute": "佐賀県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=26986&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
     }
   },
   {
     "data": {
       "id": "D8_4_A65_mother",
-      "label": "D8_4_A65_mother",
+      "label": "D8_5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "97_5_8",
+      "label": "97_5_8",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kurume47go",
+      "label": "久留米47号",
+      "year": "",
+      "institute": "",
+      "notes": "情報提供を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "reiko",
+      "label": "麗紅",
+      "year": "1978(?)",
+      "institute": "千葉県（?）",
+      "notes": "農産種苗法による名称登録342号",
+      "sources": "",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "HS_1_reiko_mother",
+      "label": "HS_1",
+      "year": "",
+      "institute": "",
+      "notes": "自殖系統",
+      "sources": "",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FS_3_reiko_father",
+      "label": "FS_3",
+      "year": "",
+      "institute": "",
+      "notes": "自殖系統",
+      "sources": "",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukuba",
+      "label": "fukuba",
+      "year": 1899,
+      "institute": "福羽逸人",
+      "notes": "自殖系統。日本で開発された最初のイチゴ品種。",
+      "sources": "",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "benihoppe",
+      "label": "紅ほっぺ",
+      "year": 2002,
+      "institute": "静岡県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10371&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "akihime",
+      "label": "章姫",
+      "year": 1992,
+      "institute": "萩原和弘",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2991&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kunowase",
+      "label": "久能早生",
+      "year": 1983,
+      "institute": "萩原章弘",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=457&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sachinoka",
+      "label": "さちのか",
+      "year": 2000,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7650&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "toyonoka",
+      "label": "とよのか",
+      "year": 1999,
+      "institute": "野菜・茶業試験場",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=615&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/25",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "General_Chanzy",
+      "label": "General_Chanzy",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -325,6 +469,18 @@
   },
   {
     "data": {
+      "id": "amaotome",
+      "label": "amaotome",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "danner",
       "label": "danner",
       "year": "",
@@ -337,8 +493,8 @@
   },
   {
     "data": {
-      "id": "kuru47go",
-      "label": "kuru47go",
+      "id": "himiko",
+      "label": "himiko",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -349,32 +505,8 @@
   },
   {
     "data": {
-      "id": "niyoho",
-      "label": "niyoho",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "reiko",
-      "label": "reiko",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "sachinoka",
-      "label": "sachinoka",
+      "id": "kyokuho",
+      "label": "kyokuho",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -409,11 +541,11 @@
   },
   {
     "data": {
-      "id": "toyonoka",
-      "label": "toyonoka",
+      "id": "unknown_father__D8_4_A65_mother",
+      "label": "不明",
       "year": "",
       "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
+      "notes": "placeholder (unknown parent)",
       "sources": "",
       "db_registration_date": "",
       "placeholder": true
@@ -422,6 +554,18 @@
   {
     "data": {
       "id": "unknown_father__kei56_tomehoppe_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__kurume47go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -457,7 +601,31 @@
   },
   {
     "data": {
+      "id": "unknown_mother__D8_4_A65_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__kei56_tomehoppe_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__kurume47go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -821,7 +989,7 @@
   },
   {
     "data": {
-      "source": "kuru47go",
+      "source": "kurume47go",
       "target": "X_2_15_mother",
       "role": "father",
       "source_id": "岡_2018"
@@ -869,10 +1037,218 @@
   },
   {
     "data": {
-      "source": "niyoho",
+      "source": "nyoho",
       "target": "X_1_5_2_mother",
       "role": "father",
       "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "amaotome",
+      "target": "sagai5go",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "sagai5go",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__D8_4_A65_mother",
+      "target": "D8_4_A65_mother",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__D8_4_A65_mother",
+      "target": "D8_4_A65_mother",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "95_6_14",
+      "target": "97_5_8",
+      "role": "mother",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "97_5_8",
+      "role": "father",
+      "source_id": "岡_2018"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__kurume47go",
+      "target": "kurume47go",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__kurume47go",
+      "target": "kurume47go",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "HS_1_reiko_mother",
+      "target": "reiko",
+      "role": "mother",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "FS_3_reiko_father",
+      "target": "reiko",
+      "role": "father",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "HS_1_reiko_mother",
+      "role": "mother",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "HS_1_reiko_mother",
+      "role": "father",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "fukuba",
+      "target": "FS_3_reiko_father",
+      "role": "mother",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "fukuba",
+      "target": "FS_3_reiko_father",
+      "role": "father",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "General_Chanzy",
+      "target": "fukuba",
+      "role": "mother",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "General_Chanzy",
+      "target": "fukuba",
+      "role": "father",
+      "source_id": "成川_1981"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "benihoppe",
+      "role": "mother",
+      "source_id": "竹内_1999"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "benihoppe",
+      "role": "father",
+      "source_id": "竹内_1999"
+    }
+  },
+  {
+    "data": {
+      "source": "kunowase",
+      "target": "akihime",
+      "role": "mother",
+      "source_id": "登録品種データベース_章姫"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "akihime",
+      "role": "father",
+      "source_id": "登録品種データベース_章姫"
+    }
+  },
+  {
+    "data": {
+      "source": "kyokuho",
+      "target": "kunowase",
+      "role": "mother",
+      "source_id": "登録品種データベース_久能早生"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "kunowase",
+      "role": "father",
+      "source_id": "登録品種データベース_久能早生"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "sachinoka",
+      "role": "mother",
+      "source_id": "森下_1997"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "sachinoka",
+      "role": "father",
+      "source_id": "森下_1997"
+    }
+  },
+  {
+    "data": {
+      "source": "himiko",
+      "target": "toyonoka",
+      "role": "mother",
+      "source_id": "登録品種データベース_toyonoka"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "toyonoka",
+      "role": "father",
+      "source_id": "登録品種データベース_toyonoka"
     }
   }
 ]

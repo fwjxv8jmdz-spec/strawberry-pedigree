@@ -50,6 +50,14 @@
         <li>検索：一致ノードをハイライト</li>
       </ul>
     </div>
+
+    <div class="box">
+      <div class="h" style="margin:0 0 6px;">読み込み</div>
+      <div id="status" class="muted">elements.json を読み込み中…</div>
+      <div class="muted" style="margin-top:6px;">
+        ※更新が反映されない時は Ctrl+F5（強制再読み込み）も試してください。
+      </div>
+    </div>
   </div>
 
   <div id="cy"></div>
@@ -61,76 +69,7 @@
 </div>
 
 <script>
-const elements = [{"data": {"id": "佐賀i9号", "label": "佐賀i9号", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "左系14号", "label": "左系14号", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "やよいひめ", "label": "やよいひめ", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "佐系14号", "label": "佐系14号", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "99-26-7", "label": "99-26-7", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "99-5-3", "label": "99-5-3", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "さがほのか", "label": "さがほのか", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "KA-16", "label": "KA-16", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "97-9-1", "label": "97-9-1", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "97-5-8", "label": "97-5-8", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "96-01-001", "label": "96-01-001", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "とねほっぺ", "label": "とねほっぺ", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": false}}, {"data": {"id": "とちおとめ", "label": "とちおとめ", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "系56", "label": "系56", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "女峰", "label": "女峰", "year": null, "institute": null, "notes": null, "sources": null, "placeholder": true}}, {"data": {"id": "e1", "source": "左系14号", "target": "佐賀i9号", "role": "mother"}}, {"data": {"id": "e2", "source": "やよいひめ", "target": "佐賀i9号", "role": "father"}}, {"data": {"id": "e3", "source": "99-26-7", "target": "佐系14号", "role": "mother"}}, {"data": {"id": "e4", "source": "99-5-3", "target": "佐系14号", "role": "father"}}, {"data": {"id": "e5", "source": "さがほのか", "target": "99-26-7", "role": "mother"}}, {"data": {"id": "e6", "source": "KA-16", "target": "99-26-7", "role": "father"}}, {"data": {"id": "e7", "source": "97-9-1", "target": "99-5-3", "role": "mother"}}, {"data": {"id": "e8", "source": "97-5-8", "target": "99-5-3", "role": "father"}}, {"data": {"id": "e9", "source": "96-01-001", "target": "やよいひめ", "role": "mother"}}, {"data": {"id": "e10", "source": "とねほっぺ", "target": "やよいひめ", "role": "father"}}, {"data": {"id": "e11", "source": "とねほっぺ", "target": "96-01-001", "role": "mother"}}, {"data": {"id": "e12", "source": "とちおとめ", "target": "96-01-001", "role": "father"}}, {"data": {"id": "e13", "source": "系56", "target": "とねほっぺ", "role": "mother"}}, {"data": {"id": "e14", "source": "女峰", "target": "とねほっぺ", "role": "father"}}];
-
-const cy = cytoscape({
-  container: document.getElementById('cy'),
-  elements,
-  style: [
-    {
-      selector: 'node',
-      style: {
-        'label': 'data(label)',
-        'font-size': 12,
-        'text-wrap': 'wrap',
-        'text-max-width': 120,
-        'text-valign': 'center',
-        'text-halign': 'center',
-        'background-color': '#111827',
-        'color': '#ffffff',
-        'width': 'label',
-        'height': 'label',
-        'padding': '10px',
-        'shape': 'round-rectangle'
-      }
-    },
-    {
-      selector: 'node[placeholder]',
-      style: {
-        'background-color': '#6b7280'
-      }
-    },
-    {
-      selector: 'edge',
-      style: {
-        'curve-style': 'bezier',
-        'target-arrow-shape': 'triangle',
-        'arrow-scale': 1,
-        'width': 2,
-        'line-color': '#111827',
-        'target-arrow-color': '#111827'
-      }
-    },
-    {
-      selector: 'edge[role="father"]',
-      style: {
-        'line-style': 'dashed'
-      }
-    },
-    {
-      selector: 'edge[role="unknown"]',
-      style: {
-        'line-style': 'dotted',
-        'line-color': '#9ca3af',
-        'target-arrow-color': '#9ca3af'
-      }
-    },
-    {
-      selector: '.faded',
-      style: {
-        'opacity': 0.15
-      }
-    },
-    {
-      selector: '.highlight',
-      style: {
-        'border-width': 3,
-        'border-color': '#f59e0b'
-      }
-    }
-  ],
-  layout: { name: 'breadthfirst', directed: true, padding: 20, spacingFactor: 1.2 }
-});
+let cy = null;
 
 function esc(s){
   return (s ?? '').toString()
@@ -138,7 +77,7 @@ function esc(s){
 }
 
 function setDetail(n){
-  if(!n){ 
+  if(!n){
     document.getElementById('detail').innerHTML = '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
     return;
   }
@@ -148,7 +87,6 @@ function setDetail(n){
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
   const sources = d.sources ? `<div style="margin-top:8px;"><b>出典</b><div>${esc(d.sources)}</div></div>` : '';
 
-  // parents/children
   const incomers = n.incomers('edge');
   const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
   const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
@@ -177,48 +115,128 @@ function setDetail(n){
   `;
 }
 
-// click handlers
-cy.on('tap', 'node', (evt) => {
-  const n = evt.target;
-  setDetail(n);
+function initCy(elements){
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements,
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'label': 'data(label)',
+          'font-size': 12,
+          'text-wrap': 'wrap',
+          'text-max-width': 120,
+          'text-valign': 'center',
+          'text-halign': 'center',
+          'background-color': '#111827',
+          'color': '#ffffff',
+          'width': 'label',
+          'height': 'label',
+          'padding': '10px',
+          'shape': 'round-rectangle'
+        }
+      },
+      {
+        selector: 'node[placeholder]',
+        style: { 'background-color': '#6b7280' }
+      },
+      {
+        selector: 'edge',
+        style: {
+          'curve-style': 'bezier',
+          'target-arrow-shape': 'triangle',
+          'arrow-scale': 1,
+          'width': 2,
+          'line-color': '#111827',
+          'target-arrow-color': '#111827'
+        }
+      },
+      {
+        selector: 'edge[role="father"]',
+        style: { 'line-style': 'dashed' }
+      },
+      {
+        selector: 'edge[role="unknown"]',
+        style: {
+          'line-style': 'dotted',
+          'line-color': '#9ca3af',
+          'target-arrow-color': '#9ca3af'
+        }
+      },
+      {
+        selector: '.faded',
+        style: { 'opacity': 0.15 }
+      },
+      {
+        selector: '.highlight',
+        style: { 'border-width': 3, 'border-color': '#f59e0b' }
+      }
+    ],
+    layout: { name: 'breadthfirst', directed: true, padding: 20, spacingFactor: 1.2 }
+  });
 
-  cy.elements().removeClass('faded');
-  cy.elements().removeClass('highlight');
+  // click handlers
+  cy.on('tap', 'node', (evt) => {
+    const n = evt.target;
+    setDetail(n);
 
-  const neighborhood = n.closedNeighborhood();
-  cy.elements().not(neighborhood).addClass('faded');
-  n.addClass('highlight');
-});
+    cy.elements().removeClass('faded');
+    cy.elements().removeClass('highlight');
 
-cy.on('tap', (evt) => {
-  if(evt.target === cy){
+    const neighborhood = n.closedNeighborhood();
+    cy.elements().not(neighborhood).addClass('faded');
+    n.addClass('highlight');
+  });
+
+  cy.on('tap', (evt) => {
+    if(evt.target === cy){
+      cy.elements().removeClass('faded');
+      cy.elements().removeClass('highlight');
+      setDetail(null);
+    }
+  });
+
+  // search
+  const q = document.getElementById('q');
+  q.addEventListener('input', () => {
+    const term = q.value.trim();
+    cy.nodes().removeClass('highlight');
+    if(!term) return;
+
+    const matched = cy.nodes().filter(n => (n.data('label') || '').includes(term));
+    matched.addClass('highlight');
+    if(matched.length){
+      cy.animate({ fit: { eles: matched, padding: 80 } }, { duration: 200 });
+    }
+  });
+
+  document.getElementById('fit').addEventListener('click', () => cy.fit(undefined, 30));
+  document.getElementById('clear').addEventListener('click', () => {
+    document.getElementById('q').value = '';
     cy.elements().removeClass('faded');
     cy.elements().removeClass('highlight');
     setDetail(null);
+  });
+}
+
+async function loadElements(){
+  const status = document.getElementById('status');
+  try{
+    // ★キャッシュ回避：更新しても反映されない問題を潰す
+    const url = "elements.json?ts=" + Date.now();
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const elements = await res.json();
+
+    status.textContent = `読み込み完了：nodes+edges=${elements.length}`;
+    initCy(elements);
+  }catch(err){
+    status.innerHTML = `読み込み失敗：${esc(err.message)}<br>（elements.json がリポジトリの root にあるか確認してください）`;
   }
-});
+}
 
-// search
-const q = document.getElementById('q');
-q.addEventListener('input', () => {
-  const term = q.value.trim();
-  cy.nodes().removeClass('highlight');
-  if(!term) return;
-
-  const matched = cy.nodes().filter(n => (n.data('label') || '').includes(term));
-  matched.addClass('highlight');
-  if(matched.length){
-    cy.animate({ fit: { eles: matched, padding: 80 } }, { duration: 200 });
-  }
-});
-
-document.getElementById('fit').addEventListener('click', () => cy.fit(undefined, 30));
-document.getElementById('clear').addEventListener('click', () => {
-  q.value = '';
-  cy.elements().removeClass('faded');
-  cy.elements().removeClass('highlight');
-  setDetail(null);
-});
+loadElements();
 </script>
 </body>
 </html>

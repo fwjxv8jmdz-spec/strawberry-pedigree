@@ -14,7 +14,7 @@
 
   <style>
     body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; }
-    #app { display: grid; grid-template-columns: 320px 1fr 340px; height: 100vh; }
+    #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
     #left, #right { padding: 12px; border-right: 1px solid #e5e7eb; overflow: auto; }
     #right { border-right: none; border-left: 1px solid #e5e7eb; }
     #cy { width: 100%; height: 100%; }
@@ -50,6 +50,7 @@
       border: 1px solid #e5e7eb;
       font-size: 12px;
       margin-right: 6px;
+      background: #fff;
     }
 
     a { color: #2563eb; text-decoration: none; }
@@ -61,8 +62,7 @@
 <div id="app">
   <div id="left">
     <div class="h">検索</div>
-    <input id="q" type="text"
-      placeholder="品種名 / 品種登録者で検索（例：とちおとめ、栃木県）" />
+    <input id="q" type="text" placeholder="品種名 / 品種登録者で検索（例：とちおとめ、栃木県）" />
 
     <div class="row" style="margin-top:10px;">
       <button id="fit">全体表示</button>
@@ -72,17 +72,21 @@
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
       <button id="layout_dagre">配置リセット（親→子）</button>
+      <div class="muted" style="margin-top:6px;">ノード配置を階層（親→子）にリセットします。</div>
     </div>
 
     <div class="box">
       <div class="h" style="margin:0 0 6px;">凡例</div>
-      <div><span class="tag">母 → 子</span> 実線</div>
-      <div><span class="tag">父 → 子</span> 破線</div>
+      <div><span class="tag">母 → 子</span> 実線（時計回りカーブ）</div>
+      <div><span class="tag">父 → 子</span> 破線（反時計回りカーブ）</div>
+      <div><span class="tag">不明 → 子</span> 点線</div>
+      <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更・ホイールで拡大縮小できます。</div>
     </div>
 
     <div class="box">
       <div class="h" style="margin:0 0 6px;">読み込み</div>
       <div id="status" class="muted">elements.json を読み込み中…</div>
+      <div class="muted" style="margin-top:6px;">更新が反映されない時は Ctrl+F5（強制再読み込み）も試してください。</div>
     </div>
   </div>
 
@@ -105,7 +109,16 @@ function esc(s){
 }
 
 function uniq(arr){
-  return [...new Set(arr.filter(x => x))];
+  const seen = new Set();
+  const out = [];
+  for(const v of arr){
+    const s = (v ?? '').toString().trim();
+    if(!s) continue;
+    if(seen.has(s)) continue;
+    seen.add(s);
+    out.push(s);
+  }
+  return out;
 }
 
 function setDetail(n){
@@ -116,27 +129,66 @@ function setDetail(n){
   }
 
   const d = n.data();
-  const incomers = n.incomers('edge');
-  const outgoers = n.outgoers('edge');
 
-  const mothers = uniq(incomers.filter(e => e.data('role') === 'mother')
-    .sources().map(x => x.data('label')));
-  const fathers = uniq(incomers.filter(e => e.data('role') === 'father')
-    .sources().map(x => x.data('label')));
-  const children = uniq(outgoers.targets().map(x => x.data('label')));
+  const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
+  const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
+  const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
+
+  // 品種登録情報（品種そのものの出典）
+  let sourcesHtml = '';
+  if(d.sources){
+    const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
+    const links = parts.map(p => {
+      const isUrl = /^https?:\/\//i.test(p);
+      return isUrl
+        ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">${esc(p)}</a></div>`
+        : `<div>${esc(p)}</div>`;
+    }).join('');
+    sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
+  }
+
+  // parents / children
+  const incomers = n.incomers('edge');
+  const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
+  const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
+  const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
+
+  const outgoers = n.outgoers('edge');
+  const children = outgoers.targets().map(x => x.data('label'));
+
+  const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
+  const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
+  const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
+  const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
+
+  // 交配出典（この品種が「子」である交配エッジの source_id）
   const crossSources = uniq(incomers.map(e => e.data('source_id')));
+  const crossSourcesHtml = crossSources.length
+    ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
+    : '';
+
+  const ph = d.placeholder ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
 
   document.getElementById('detail').innerHTML = `
     <div class="box">
-      <div class="h">${esc(d.label)}</div>
-      ${d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : ''}
-      ${d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : ''}
-      ${mothers.length ? `<div><b>母</b>：${mothers.map(esc).join(', ')}</div>` : ''}
-      ${fathers.length ? `<div><b>父</b>：${fathers.map(esc).join(', ')}</div>` : ''}
-      ${children.length ? `<div><b>子</b>：${children.map(esc).join(', ')}</div>` : ''}
-      ${crossSources.length ? `<div><b>交配出典</b><br>${crossSources.map(esc).join('<br>')}</div>` : ''}
+      <div class="h" style="margin:0 0 6px;">${esc(d.label)}</div>
+      ${year}
+      ${inst}
+      ${motherHtml}
+      ${fatherHtml}
+      ${unknownHtml}
+      ${childHtml}
+      ${notes}
+      ${crossSourcesHtml}
+      ${sourcesHtml}
+      ${ph}
     </div>
   `;
+}
+
+function runLayout(){
+  if(!cy) return;
+  cy.layout({ name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }).run();
 }
 
 function initCy(elements){
@@ -144,44 +196,117 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
+      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
       {
         selector: 'node',
         style: {
           'label': 'data(label)',
-          'background-color': '#F472B6',
-          'color': '#7C2D12',
+          'font-size': 12,
+          'text-wrap': 'wrap',
+          'text-max-width': 150,
           'text-valign': 'center',
           'text-halign': 'center',
-          'shape': 'round-rectangle',
-          'padding': '10px'
+
+          'background-color': '#FCE7F3',
+          'border-width': 1.5,
+          'border-color': '#F9A8D4',
+          'color': '#831843',
+
+          /* make it rectangle that fits label */
+          'width': 'label',
+          'padding': '12px',
+          'shape': 'round-rectangle'
+          /* no height -> not square */
         }
       },
+      {
+        selector: 'node[placeholder]',
+        style: {
+          'background-color': '#FFF1F2',
+          'border-color': '#FBCFE8',
+          'color': '#9F1239'
+        }
+      },
+
+      /* ===== edges ===== */
       {
         selector: 'edge',
         style: {
           'curve-style': 'unbundled-bezier',
+          'edge-distances': 'node-position',
           'target-arrow-shape': 'triangle',
+          'arrow-scale': 0.9,
           'width': 2,
-          'line-color': '#EC4899',
-          'target-arrow-color': '#EC4899'
+          'line-color': '#F472B6',
+          'target-arrow-color': '#F472B6'
         }
       },
+
+      /* mother: solid + CLOCKWISE curve (positive distance) */
+      {
+        selector: 'edge[role="mother"]',
+        style: {
+          'line-style': 'solid',
+          'line-color': '#F472B6',
+          'target-arrow-color': '#F472B6',
+          'control-point-distance': 30,   /* + = clockwise */
+          'control-point-weight': 0.5
+        }
+      },
+
+      /* father: dashed + COUNTERCLOCKWISE curve (negative distance) */
       {
         selector: 'edge[role="father"]',
-        style: { 'line-style': 'dashed', 'line-color': '#F9A8D4' }
+        style: {
+          'line-style': 'dashed',
+          'line-color': '#FBCFE8',
+          'target-arrow-color': '#FBCFE8',
+          'control-point-distance': -30,  /* - = counterclockwise */
+          'control-point-weight': 0.5
+        }
       },
+
+      /* unknown */
       {
-        selector: '.highlight',
-        style: { 'border-width': 3, 'border-color': '#FB7185' }
-      }
+        selector: 'edge[role="unknown"]',
+        style: {
+          'line-style': 'dotted',
+          'line-color': '#E5E7EB',
+          'target-arrow-color': '#E5E7EB',
+          'control-point-distance': 18,
+          'control-point-weight': 0.5
+        }
+      },
+
+      /* ===== interaction ===== */
+      { selector: '.faded', style: { 'opacity': 0.2 } },
+      { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
-    layout: { name: 'dagre', rankDir: 'TB', padding: 30 }
+    layout: { name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }
   });
 
-  cy.on('tap', 'node', e => setDetail(e.target));
-  cy.on('tap', e => { if(e.target === cy) setDetail(null); });
+  // click handlers
+  cy.on('tap', 'node', (evt) => {
+    const n = evt.target;
+    setDetail(n);
 
-  // ★ 検索（品種名 OR 品種登録者）
+    cy.elements().removeClass('faded');
+    cy.elements().removeClass('highlight');
+
+    const neighborhood = n.closedNeighborhood();
+    cy.elements().not(neighborhood).addClass('faded');
+    n.addClass('highlight');
+  });
+
+  cy.on('tap', (evt) => {
+    if(evt.target === cy){
+      cy.elements().removeClass('faded');
+      cy.elements().removeClass('highlight');
+      setDetail(null);
+    }
+  });
+
+  // search (cultivar name OR institute)
   const q = document.getElementById('q');
   q.addEventListener('input', () => {
     const term = q.value.trim().toLowerCase();
@@ -189,33 +314,44 @@ function initCy(elements){
     if(!term) return;
 
     const matched = cy.nodes().filter(n => {
-      const label = (n.data('label') || '').toLowerCase();
-      const inst  = (n.data('institute') || '').toLowerCase();
+      const label = ((n.data('label') || '') + '').toLowerCase();
+      const inst  = ((n.data('institute') || '') + '').toLowerCase();
       return label.includes(term) || inst.includes(term);
     });
 
     matched.addClass('highlight');
     if(matched.length){
-      cy.fit(matched, 80);
+      cy.animate({ fit: { eles: matched, padding: 80 } }, { duration: 200 });
     }
   });
 
-  document.getElementById('fit').onclick = () => cy.fit(undefined, 30);
-  document.getElementById('clear').onclick = () => {
+  // buttons
+  document.getElementById('fit').addEventListener('click', () => cy.fit(undefined, 30));
+  document.getElementById('clear').addEventListener('click', () => {
     q.value = '';
-    cy.nodes().removeClass('highlight');
+    cy.elements().removeClass('faded');
+    cy.elements().removeClass('highlight');
     setDetail(null);
-  };
-  document.getElementById('layout_dagre').onclick =
-    () => cy.layout({ name: 'dagre', rankDir: 'TB', padding: 30 }).run();
+  });
+  document.getElementById('layout_dagre').addEventListener('click', () => runLayout());
+
+  // initial fit
+  cy.fit(undefined, 30);
 }
 
 async function loadElements(){
   const status = document.getElementById('status');
-  const res = await fetch('elements.json?ts=' + Date.now());
-  const elements = await res.json();
-  status.textContent = `読み込み完了：${elements.length} 要素`;
-  initCy(elements);
+  try{
+    const url = "elements.json?ts=" + Date.now(); // cache-bust
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const elements = await res.json();
+
+    status.textContent = `読み込み完了：nodes+edges=${elements.length}`;
+    initCy(elements);
+  }catch(err){
+    status.innerHTML = `読み込み失敗：${esc(err.message)}<br>（elements.json がリポジトリの root にあるか確認してください）`;
+  }
 }
 
 loadElements();

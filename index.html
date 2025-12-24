@@ -126,7 +126,7 @@ function setDetail(n){
       const isUrl = /^https?:\/\//i.test(p);
       return isUrl ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">${esc(p)}</a></div>` : `<div>${esc(p)}</div>`;
     }).join('');
-    sourcesHtml = `<div style="margin-top:8px;"><b>出典（品種情報）</b>${links}</div>`;
+    sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
   }
 
   // parents/children
@@ -179,73 +179,100 @@ function initCy(elements){
   cy = cytoscape({
     container: document.getElementById('cy'),
     elements,
-    style: [
-      {
-        selector: 'node',
-        style: {
-          'label': 'data(label)',
-          'font-size': 12,
-          'text-wrap': 'wrap',
-          'text-max-width': 120,
-          'text-valign': 'center',
-          'text-halign': 'center',
-          'background-color': '#111827',
-          'color': '#ffffff',
-          'width': 'label',
-          'height': 'label',
-          'padding': '10px',
-          'shape': 'round-rectangle'
-        }
-      },
-      {
-        selector: 'node[placeholder]',
-        style: { 'background-color': '#6b7280' }
-      },
+style: [
+  /* ===== nodes ===== */
+  {
+    selector: 'node',
+    style: {
+      'label': 'data(label)',
+      'font-size': 12,
+      'text-wrap': 'wrap',
+      'text-max-width': 120,
+      'text-valign': 'center',
+      'text-halign': 'center',
 
-      /* edges: use unbundled-bezier to reduce overlaps */
-      {
-        selector: 'edge',
-        style: {
-          'curve-style': 'unbundled-bezier',
-          'edge-distances': 'node-position',
-          'target-arrow-shape': 'triangle',
-          'arrow-scale': 1,
-          'width': 2,
-          'line-color': '#111827',
-          'target-arrow-color': '#111827'
-        }
-      },
+      /* strawberry pink */
+      'background-color': '#F472B6',
+      'color': '#7C2D12',
 
-      /* mother/father: separate curves (up/down) to avoid overlap */
-      {
-        selector: 'edge[role="mother"]',
-        style: {
-          'control-point-distance': 30,
-          'control-point-weight': 0.5
-        }
-      },
-      {
-        selector: 'edge[role="father"]',
-        style: {
-          'line-style': 'dashed',
-          'control-point-distance': -30,
-          'control-point-weight': 0.5
-        }
-      },
-      {
-        selector: 'edge[role="unknown"]',
-        style: {
-          'line-style': 'dotted',
-          'line-color': '#9ca3af',
-          'target-arrow-color': '#9ca3af',
-          'control-point-distance': 20,
-          'control-point-weight': 0.5
-        }
-      },
+      'width': 'label',
+      'height': 'label',
+      'padding': '10px',
+      'shape': 'round-rectangle'
+    }
+  },
+  {
+    selector: 'node[placeholder]',
+    style: {
+      'background-color': '#FBCFE8',
+      'color': '#7C2D12'
+    }
+  },
 
-      { selector: '.faded', style: { 'opacity': 0.15 } },
-      { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#f59e0b' } }
-    ],
+  /* ===== edges ===== */
+  {
+    selector: 'edge',
+    style: {
+      'curve-style': 'unbundled-bezier',
+      'edge-distances': 'node-position',
+      'target-arrow-shape': 'triangle',
+      'arrow-scale': 1,
+      'width': 2,
+      'line-color': '#EC4899',
+      'target-arrow-color': '#EC4899'
+    }
+  },
+
+  /* mother */
+  {
+    selector: 'edge[role="mother"]',
+    style: {
+      'line-style': 'solid',
+      'line-color': '#EC4899',
+      'target-arrow-color': '#EC4899',
+      'control-point-distance': 30,
+      'control-point-weight': 0.5
+    }
+  },
+
+  /* father */
+  {
+    selector: 'edge[role="father"]',
+    style: {
+      'line-style': 'dashed',
+      'line-color': '#F9A8D4',
+      'target-arrow-color': '#F9A8D4',
+      'control-point-distance': -30,
+      'control-point-weight': 0.5
+    }
+  },
+
+  /* unknown */
+  {
+    selector: 'edge[role="unknown"]',
+    style: {
+      'line-style': 'dotted',
+      'line-color': '#FBCFE8',
+      'target-arrow-color': '#FBCFE8',
+      'control-point-distance': 20,
+      'control-point-weight': 0.5
+    }
+  },
+
+  /* ===== interaction ===== */
+  {
+    selector: '.faded',
+    style: { 'opacity': 0.18 }
+  },
+  {
+    selector: '.highlight',
+    style: {
+      'border-width': 3,
+      'border-color': '#FB7185'
+    }
+  }
+]
+,
     layout: { name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }
   });
 

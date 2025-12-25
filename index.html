@@ -216,50 +216,34 @@ function initCy(elements){
           'width': 'label',
           'padding': '12px',
           'shape': 'round-rectangle'
-          /* no height -> not square */
         }
       },
 
       /* =======================================================
-         ①＋③：登録品種（year がある & placeholder ではない）
-         - 枠/影/文字の強調（①）
-         - 右上ドット（③）
-         ※ placeholder=true を未登録扱いにしたいので "not([placeholder])" を付ける
+         ①：登録品種（year がある & placeholder=true ではない）
+         - 枠/影/文字の強調（①のみ）
          ======================================================= */
       {
-        selector: 'node[year][!placeholder]',
+        selector: 'node[year][placeholder != true]',
         style: {
-          /* ① */
           'border-width': 2.6,
           'border-color': '#ff5fa2',
           'background-color': '#ffd9eb',
           'font-weight': '600',
           'shadow-blur': 10,
           'shadow-color': '#ff9ac6',
-          'shadow-opacity': 0.35,
-
-          /* ③ */
-          'background-image': 'url("data:image/svg+xml;utf8,\
-<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\'>\
-<circle cx=\'12\' cy=\'12\' r=\'10\' fill=\'%23ff5fa2\'/>\
-</svg>")',
-          'background-fit': 'none',
-          'background-position-x': '96%',
-          'background-position-y': '10%',
-          'background-width': 10,
-          'background-height': 10
+          'shadow-opacity': 0.35
         }
       },
 
-      /* 未登録（placeholder=true） */
+      /* 未登録（placeholder=true のみ） */
       {
-    selector: 'node[placeholder = true]',
-  style: {
-    'background-color': '#FFF1F2',
-    'border-color': '#FBCFE8',
-    'color': '#9F1239',
-    'background-image': 'none',
-    'shadow-opacity': 0
+        selector: 'node[placeholder = true]',
+        style: {
+          'background-color': '#FFF1F2',
+          'border-color': '#FBCFE8',
+          'color': '#9F1239',
+          'shadow-opacity': 0
         }
       },
 
@@ -315,8 +299,6 @@ function initCy(elements){
 
       /* ===== interaction ===== */
       { selector: '.faded', style: { 'opacity': 0.2 } },
-
-      /* 既存 highlight はそのまま（検索とクリックで使う） */
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
     layout: { name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }

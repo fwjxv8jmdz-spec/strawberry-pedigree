@@ -167,7 +167,7 @@ function setDetail(n){
     ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
     : '';
 
-  const ph = d.placeholder ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
+  const ph = (d.placeholder === true) ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
 
   document.getElementById('detail').innerHTML = `
     <div class="box">
@@ -219,12 +219,9 @@ function initCy(elements){
         }
       },
 
-      /* =======================================================
-         ①：登録品種（year がある & placeholder=true ではない）
-         - 枠/影/文字の強調（①のみ）
-         ======================================================= */
+      /* ①：登録品種（.registered クラスで確実に適用） */
       {
-        selector: 'node[year][placeholder != true]',
+        selector: 'node.registered',
         style: {
           'border-width': 2.6,
           'border-color': '#ff5fa2',
@@ -236,9 +233,9 @@ function initCy(elements){
         }
       },
 
-      /* 未登録（placeholder=true のみ） */
+      /* 未登録（placeholder=true のみ）※ registered より後に置いて上書き */
       {
-        selector: 'node[placeholder = true]',
+        selector: 'node.isPlaceholder',
         style: {
           'background-color': '#FFF1F2',
           'border-color': '#FBCFE8',
@@ -268,7 +265,7 @@ function initCy(elements){
           'line-style': 'solid',
           'line-color': '#F472B6',
           'target-arrow-color': '#F472B6',
-          'control-point-distance': 30,   /* + = clockwise */
+          'control-point-distance': 30,
           'control-point-weight': 0.5
         }
       },
@@ -280,7 +277,7 @@ function initCy(elements){
           'line-style': 'dashed',
           'line-color': '#FBCFE8',
           'target-arrow-color': '#FBCFE8',
-          'control-point-distance': -30,  /* - = counterclockwise */
+          'control-point-distance': -30,
           'control-point-weight': 0.5
         }
       },
@@ -302,6 +299,23 @@ function initCy(elements){
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
     layout: { name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }
+  });
+
+  /* ★ここが重要：データからクラス付与（selector問題を回避） */
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const d = n.data();
+
+      // year があるノードを登録品種として強調
+      if (d.year !== undefined && d.year !== null && d.year !== '') {
+        n.addClass('registered');
+      }
+
+      // placeholder=true のみ未登録扱い
+      if (d.placeholder === true) {
+        n.addClass('isPlaceholder');
+      }
+    });
   });
 
   // click handlers
@@ -361,7 +375,7 @@ function initCy(elements){
 async function loadElements(){
   const status = document.getElementById('status');
   try{
-    const url = "elements.json?ts=" + Date.now(); // cache-bust
+    const url = "elements.json?ts=" + Date.now();
     const res = await fetch(url, { cache: "no-store" });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const elements = await res.json();

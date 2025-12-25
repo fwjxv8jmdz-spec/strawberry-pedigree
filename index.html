@@ -253,14 +253,13 @@ function initCy(elements){
 
       /* 未登録（placeholder=true） */
       {
-        selector: 'node[placeholder]',
-        style: {
-          'background-color': '#FFF1F2',
-          'border-color': '#FBCFE8',
-          'color': '#9F1239',
-          /* 右上ドットが付かないように念のため */
-          'background-image': 'none',
-          'shadow-opacity': 0
+    selector: 'node[placeholder = true]',
+  style: {
+    'background-color': '#FFF1F2',
+    'border-color': '#FBCFE8',
+    'color': '#9F1239',
+    'background-image': 'none',
+    'shadow-opacity': 0
         }
       },
 

@@ -501,6 +501,8 @@ async function loadElements(){
   try{
     const url = "elements.json?ts=" + Date.now();
     const res = await fetch(url, { cache: "no-store" });
+
+    
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const elements = await res.json();
 

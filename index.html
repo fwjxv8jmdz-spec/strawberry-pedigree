@@ -3,514 +3,389 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strawberry Pedigree</title>
-
-  <!-- Cytoscape core -->
-  <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
-
-  <!-- dagre -->
-  <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
-  <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
-
+  <title>Strawberry Pedigree (Cytoscape.js)</title>
   <style>
-    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; }
-    #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
-    #left, #right { padding: 12px; border-right: 1px solid #e5e7eb; overflow: auto; }
-    #right { border-right: none; border-left: 1px solid #e5e7eb; }
-    #cy { width: 100%; height: 100%; }
-
-    .h { font-weight: 700; margin: 6px 0 10px; }
-    .muted { color: #6b7280; font-size: 12px; line-height: 1.4; }
-    .box { border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px; margin: 10px 0; }
-
-    input[type="text"], select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      background: #fff;
+    :root{
+      --bg:#fff7fb;
+      --panel:#ffffff;
+      --panelBorder:#ffd3e7;
+      --accent:#ff6aa6;
+      --accent2:#ff9cc6;
+      --text:#2b2b2b;
+      --muted:#6b6b6b;
     }
-
-    button {
+    html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; background: var(--bg); color: var(--text); }
+    #app { height: 100%; display: grid; grid-template-rows: auto 1fr; }
+    header{
+      display:flex; gap:12px; flex-wrap:wrap;
+      align-items:center;
+      padding:10px 12px;
+      background: linear-gradient(90deg, #fff 0%, #ffe6f1 100%);
+      border-bottom: 1px solid var(--panelBorder);
+      position: sticky; top:0; z-index: 10;
+    }
+    .box{
+      background: var(--panel);
+      border: 1px solid var(--panelBorder);
+      border-radius: 12px;
       padding: 8px 10px;
-      border: 1px solid #d1d5db;
-      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      display:flex; gap:10px; align-items:center;
+    }
+    .box label{ font-size: 12px; color: var(--muted); }
+    select, input[type="text"]{
+      font-size: 13px;
+      border: 1px solid #ffd3e7;
       border-radius: 10px;
+      padding: 6px 10px;
+      outline: none;
+      background:#fff;
+    }
+    button{
+      border: 0;
+      border-radius: 12px;
+      padding: 8px 12px;
       cursor: pointer;
+      color: #fff;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);
+      box-shadow: 0 4px 14px rgba(255,106,166,0.35);
+      font-weight: 600;
+      font-size: 13px;
     }
-    button:hover { background: #f9fafb; }
-
-    .row { display: flex; gap: 8px; }
-    .row > * { flex: 1; }
-
-    .tag {
-      display:inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      font-size: 12px;
-      margin-right: 6px;
-      background: #fff;
-    }
-
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    button:active{ transform: translateY(1px); }
+    #cy { width: 100%; height: 100%; }
+    .hint{ font-size: 12px; color: var(--muted); }
+    .sep{ width:1px; height:28px; background:#ffd3e7; margin:0 4px; }
   </style>
+
+  <!--
+    ★重要★
+    CDN / raw.github がブロックされている前提なので、
+    ここは「ローカルに置いたJS」を読み込む形にしてください。
+
+    例:
+      ./lib/cytoscape.min.js
+      ./lib/dagre.min.js
+      ./lib/cytoscape-dagre.js
+
+    すでに dagre が動いている完成版HTMLがあるとのことなので、
+    その時に使っているローカルパスに合わせて書き換えてOKです。
+  -->
+  <script src="./lib/cytoscape.min.js"></script>
+
+  <!-- dagre layout (すでにローカルで動いている前提) -->
+  <script src="./lib/dagre.min.js"></script>
+  <script src="./lib/cytoscape-dagre.js"></script>
 </head>
 
 <body>
 <div id="app">
-  <div id="left">
-    <div class="h">検索</div>
-    <input id="q" type="text" placeholder="品種名 / 品種登録者で検索（例：とちおとめ、栃木県）" />
-
-    <div class="row" style="margin-top:10px;">
-      <button id="fit">全体表示</button>
-      <button id="clear">選択解除</button>
+  <header>
+    <div class="box">
+      <label for="layoutSel">Layout</label>
+      <!-- ★breadthfirst / concentric / circle / grid を削除し、dagre/cose のみに -->
+      <select id="layoutSel">
+        <option value="dagre">dagre</option>
+        <option value="cose">cose</option>
+      </select>
+      <button id="btnLayout">レイアウト実行</button>
     </div>
+
+    <div class="sep"></div>
 
     <div class="box">
-      <div class="h" style="margin:0 0 6px;">レイアウト</div>
-
-      <div class="row">
-        <select id="layoutMode">
-          <option value="cose" selected>COSE（力学・初期）</option>
-          <option value="dagreLR">Dagre 横（左→右）</option>
-          <option value="breadthfirstTB">Breadthfirst 縦（上→下）</option>
-          <option value="concentric">Concentric（中心化）</option>
-          <option value="circle">Circle</option>
-          <option value="grid">Grid</option>
-        </select>
-        <button id="applyLayout">適用</button>
-      </div>
-
-      <div style="margin-top:8px;">
-        <button id="layout_reset" style="width:100%;">配置リセット（COSE）</button>
-      </div>
-
-      <div class="muted" style="margin-top:6px;">
-        Dagre/COSE に加えて、探索向けの標準レイアウト（Breadthfirst/Concentric/Circle/Grid）を試せます。
-      </div>
+      <label for="qName">品種名</label>
+      <input id="qName" type="text" placeholder="品種名で検索" />
+      <label for="qBreeder">登録者</label>
+      <input id="qBreeder" type="text" placeholder="登録者で検索" />
+      <button id="btnFind">検索</button>
+      <button id="btnReset">リセット</button>
     </div>
 
-    <div class="box">
-      <div class="h" style="margin:0 0 6px;">凡例</div>
-      <div><span class="tag">母 → 子</span> 実線</div>
-      <div><span class="tag">父 → 子</span> 破線</div>
-      <div><span class="tag">不明 → 子</span> 点線</div>
-      <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更・ホイールで拡大縮小できます。</div>
-    </div>
+    <div class="sep"></div>
 
-    <div class="box">
-      <div class="h" style="margin:0 0 6px;">読み込み</div>
-      <div id="status" class="muted">elements.json を読み込み中…</div>
-      <div class="muted" style="margin-top:6px;">更新が反映されない時は Ctrl+F5（強制再読み込み）も試してください。</div>
+    <div class="hint">
+      cose の「invalid endpoints」対策：<b>ノード重なりを減らす</b>＋<b>重なったエッジだけ straight に落とす</b>
     </div>
-  </div>
+  </header>
 
   <div id="cy"></div>
-
-  <div id="right">
-    <div class="h">詳細</div>
-    <div id="detail" class="muted">ノードをクリックすると情報が表示されます。</div>
-  </div>
 </div>
 
 <script>
-let cy = null;
+/** =========================
+ *  ここに要素（nodes/edges）を入れる
+ *  既存の完成版HTMLの elements をそのまま差し替えればOK
+ *  ========================= */
+const elements = {
+  nodes: [
+    // 例（置き換えてください）
+    { data: { id: "A", label: "Parent A", breeder: "Breeder X" } },
+    { data: { id: "B", label: "Parent B", breeder: "Breeder Y" } },
+    { data: { id: "C", label: "Child C", breeder: "Breeder Z" } },
+  ],
+  edges: [
+    // 例：母→子、父→子（あなたの既存データ構造に合わせてOK）
+    // id はユニーク推奨
+    { data: { id: "e1", source: "A", target: "C", rel: "mother" } },
+    { data: { id: "e2", source: "B", target: "C", rel: "father" } },
+  ]
+};
 
-function esc(s){
-  return (s ?? '').toString()
-    .replaceAll('&','&amp;')
-    .replaceAll('<','&lt;')
-    .replaceAll('>','&gt;');
-}
+/** =========================
+ *  スタイル
+ *  ========================= */
+const style = [
+  {
+    selector: "node",
+    style: {
+      "shape": "round-rectangle",
+      "background-color": "#fff",
+      "border-width": 2,
+      "border-color": "#ff9cc6",
+      "color": "#2b2b2b",
 
-function uniq(arr){
-  const seen = new Set();
-  const out = [];
-  for(const v of arr){
-    const s = (v ?? '').toString().trim();
-    if(!s) continue;
-    if(seen.has(s)) continue;
-    seen.add(s);
-    out.push(s);
-  }
-  return out;
-}
+      // ラベルをノード内で折り返し、横長になりやすくする
+      "label": "data(label)",
+      "text-wrap": "wrap",
+      "text-max-width": 160,
+      "text-valign": "center",
+      "text-halign": "center",
+      "font-size": 12,
+      "padding": "10px",
 
-function setDetail(n){
-  if(!n){
-    document.getElementById('detail').innerHTML =
-      '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
-    return;
-  }
-
-  const d = n.data();
-
-  const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
-  const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
-  const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
-
-  // 品種登録情報（品種そのものの出典）
-  let sourcesHtml = '';
-  if(d.sources){
-    const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
-    const links = parts.map(p => {
-      const isUrl = /^https?:\/\//i.test(p);
-      return isUrl
-        ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">${esc(p)}</a></div>`
-        : `<div>${esc(p)}</div>`;
-    }).join('');
-    sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
-  }
-
-  // parents / children
-  const incomers = n.incomers('edge');
-  const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
-  const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
-  const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
-
-  const outgoers = n.outgoers('edge');
-  const children = outgoers.targets().map(x => x.data('label'));
-
-  const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
-  const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
-  const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
-  const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
-
-  // 交配出典（この品種が「子」である交配エッジの source_id）
-  const crossSources = uniq(incomers.map(e => e.data('source_id')));
-  const crossSourcesHtml = crossSources.length
-    ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
-    : '';
-
-  const ph = (d.placeholder === true) ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
-
-  document.getElementById('detail').innerHTML = `
-    <div class="box">
-      <div class="h" style="margin:0 0 6px;">${esc(d.label)}</div>
-      ${year}
-      ${inst}
-      ${motherHtml}
-      ${fatherHtml}
-      ${unknownHtml}
-      ${childHtml}
-      ${notes}
-      ${crossSourcesHtml}
-      ${sourcesHtml}
-      ${ph}
-    </div>
-  `;
-}
-
-/* ===== roots helper for breadthfirst =====
-   - "parentsがいないノード" を roots とする（複数可）
-   - ひとつも見つからなければ空（layoutに任せる）
-*/
-function getRoots(){
-  if(!cy) return [];
-  const roots = cy.nodes().filter(n => n.incomers('edge').length === 0);
-  return roots.length ? roots : [];
-}
-
-function runLayout(mode){
-  if(!cy) return;
-  cy.stop();
-
-  const padding = 30;
-  let opts;
-
-  switch(mode){
-    case 'dagreLR':
-      opts = {
-        name: 'dagre',
-        rankDir: 'LR',
-        nodeSep: 20,
-        edgeSep: 5,
-        rankSep: 90,
-        padding,
-        nodeDimensionsIncludeLabels: true,
-        animate: true
-      };
-      break;
-
-    case 'breadthfirstTB': {
-      const roots = getRoots();
-      opts = {
-        name: 'breadthfirst',
-        directed: true,
-        padding,
-        spacingFactor: 1.1,
-        circle: false,
-        animate: true,
-        // rootsが取れた時だけ指定
-        roots: roots.length ? roots : undefined
-      };
-      break;
+      // ノードサイズをラベルに寄せる（重なり回避にも効く）
+      "width": "label",
+      "height": "label"
     }
+  },
 
-    case 'concentric':
-      opts = {
-        name: 'concentric',
-        padding,
-        animate: true,
-        minNodeSpacing: 20,
-        levelWidth: () => 1,
-        concentric: (n) => n.degree()
-      };
-      break;
+  // 通常エッジ：曲線（あなたの「母は時計回り、父は反時計回り」の表現を維持）
+  {
+    selector: "edge",
+    style: {
+      "width": 2,
+      "line-color": "#ff6aa6",
+      "target-arrow-color": "#ff6aa6",
+      "target-arrow-shape": "triangle",
+      "arrow-scale": 0.9,
 
-    case 'circle':
-      opts = {
-        name: 'circle',
-        padding,
-        animate: true
-      };
-      break;
+      // 基本はベジェ曲線
+      "curve-style": "bezier",
 
-    case 'grid':
-      opts = {
-        name: 'grid',
-        padding,
-        animate: true,
-        avoidOverlap: true,
-        avoidOverlapPadding: 10
-      };
-      break;
+      // ラベル（必要なら）
+      // "label": "data(rel)",
+      // "font-size": 10,
+      // "text-rotation": "autorotate",
+      // "color": "#6b6b6b",
+    }
+  },
 
-    case 'cose':
-    default:
-      opts = {
-        name: 'cose',
-        padding,
-        animate: true,
-        randomize: true,
-        nodeRepulsion: 4500,
-        idealEdgeLength: 120
-      };
+  // 母→子（時計回りのカーブっぽく）
+  {
+    selector: 'edge[rel = "mother"]',
+    style: {
+      "control-point-step-size": 35,
+      "control-point-distance": 60,
+      "control-point-weight": 0.25
+    }
+  },
+  // 父→子（反時計回りのカーブっぽく）
+  {
+    selector: 'edge[rel = "father"]',
+    style: {
+      "control-point-step-size": 35,
+      "control-point-distance": -60,
+      "control-point-weight": 0.25
+    }
+  },
+
+  // ★重なり検出されたエッジだけ straight に落とす（invalid endpoints 回避）
+  {
+    selector: "edge.overlapFix",
+    style: {
+      "curve-style": "straight"
+    }
+  },
+
+  // 検索ハイライト
+  { selector: "node.hit", style: { "border-color": "#ff2f7d", "border-width": 4 } },
+  { selector: "node.dim", style: { "opacity": 0.25 } },
+  { selector: "edge.dim", style: { "opacity": 0.15 } },
+];
+
+/** =========================
+ *  Cytoscape 初期化
+ *  ========================= */
+const cy = cytoscape({
+  container: document.getElementById("cy"),
+  elements,
+  style,
+  wheelSensitivity: 0.18,
+});
+
+/** =========================
+ *  レイアウト定義（dagre / cose のみ）
+ *  ========================= */
+const layoutPresets = {
+  dagre: {
+    name: "dagre",
+    rankDir: "TB",
+    nodeSep: 25,
+    edgeSep: 10,
+    rankSep: 60,
+    spacingFactor: 1.1,
+    animate: true,
+    animationDuration: 350,
+    fit: true,
+    padding: 20
+  },
+
+  // ★cose：重なり回避を強める
+  cose: {
+    name: "cose",
+    animate: true,
+    animationDuration: 500,
+    fit: true,
+    padding: 30,
+
+    // 重なり回避（ここが主対策）
+    avoidOverlap: true,
+    nodeOverlap: 20,               // 重なり許容量（大きいほど離す）
+    nodeDimensionsIncludeLabels: true,
+
+    // 余白・反発など
+    componentSpacing: 90,
+    idealEdgeLength: 140,
+    edgeElasticity: 0.25,
+    nodeRepulsion: 90000,          // 重要：重なりが起きるなら上げる
+    gravity: 0.25,
+
+    // 初期位置ランダム（同一点スタートで重なりが起きやすい時に有効）
+    randomize: true,
+
+    // 実行回数・収束
+    numIter: 1200,
+    initialTemp: 250,
+    coolingFactor: 0.98,
+    minTemp: 1.0
   }
+};
 
-  cy.layout(opts).run();
-  cy.fit(undefined, 30);
+function runLayout(layoutName){
+  const opts = layoutPresets[layoutName] || layoutPresets.dagre;
+
+  // エッジ重なり対策のクラスをいったん外す（毎回評価し直す）
+  cy.edges().removeClass("overlapFix");
+
+  const lay = cy.layout(opts);
+
+  // layoutstop 後に「まだ重なっているノード間のエッジ」だけ curve-style を straight にする
+  lay.on("layoutstop", () => {
+    applyOverlapEdgeFix();
+  });
+
+  lay.run();
 }
 
-function initCy(elements){
-  cy = cytoscape({
-    container: document.getElementById('cy'),
-    elements,
-    style: [
-      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
-      {
-        selector: 'node',
-        style: {
-          'label': 'data(label)',
-          'font-size': 12,
-          'text-wrap': 'wrap',
-          'text-max-width': 150,
-          'text-valign': 'center',
-          'text-halign': 'center',
+function applyOverlapEdgeFix(){
+  // 同一点 / ほぼ同一点のノード間エッジは bezier の制御点が作れず
+  // "invalid endpoints" が出ることがあるので、該当エッジだけ straight に落とす。
+  const EPS = 0.5; // px（しきい値）
+  cy.edges().forEach(e => {
+    const s = e.source();
+    const t = e.target();
+    if (!s || !t) return;
 
-          'background-color': '#FCE7F3',
-          'border-width': 1.5,
-          'border-color': '#F9A8D4',
-          'color': '#831843',
+    const ps = s.position();
+    const pt = t.position();
+    const dx = ps.x - pt.x;
+    const dy = ps.y - pt.y;
+    const dist = Math.sqrt(dx*dx + dy*dy);
 
-          /* make it rectangle that fits label */
-          'width': 'label',
-          'padding': '12px',
-          'shape': 'round-rectangle'
-        }
-      },
-
-      /* ①：登録品種（.registered クラスで確実に適用） */
-      {
-        selector: 'node.registered',
-        style: {
-          'border-width': 2.6,
-          'border-color': '#ff5fa2',
-          'background-color': '#ffd9eb',
-          'font-weight': '600',
-          'shadow-blur': 10,
-          'shadow-color': '#ff9ac6',
-          'shadow-opacity': 0.35
-        }
-      },
-
-      /* 未登録（placeholder=true のみ）※ registered より後に置いて上書き */
-      {
-        selector: 'node.isPlaceholder',
-        style: {
-          'background-color': '#FFF5FB',
-          'border-color': '#FBCFE8',
-          'color': '#9F1239',
-          'shadow-opacity': 0
-        }
-      },
-
-      /* ===== edges ===== */
-      {
-        selector: 'edge',
-        style: {
-          'curve-style': 'unbundled-bezier',
-          'edge-distances': 'node-position',
-          'target-arrow-shape': 'triangle',
-          'arrow-scale': 0.9,
-          'width': 2,
-          'line-color': '#F472B6',
-          'target-arrow-color': '#F472B6'
-        }
-      },
-
-      /* mother: solid + CLOCKWISE curve (positive distance) */
-      {
-        selector: 'edge[role="mother"]',
-        style: {
-          'line-style': 'solid',
-          'line-color': '#F472B6',
-          'target-arrow-color': '#F472B6',
-          'control-point-distance': 30,
-          'control-point-weight': 0.5
-        }
-      },
-
-      /* father: dashed + COUNTERCLOCKWISE curve (negative distance) */
-      {
-        selector: 'edge[role="father"]',
-        style: {
-          'line-style': 'dashed',
-          'line-color': '#F472B6',
-          'target-arrow-color': '#F472B6',
-          'control-point-distance': -30,
-          'control-point-weight': 0.5
-        }
-      },
-
-      /* unknown */
-      {
-        selector: 'edge[role="unknown"]',
-        style: {
-          'line-style': 'dotted',
-          'line-color': '#E5E7EB',
-          'target-arrow-color': '#E5E7EB',
-          'control-point-distance': 18,
-          'control-point-weight': 0.5
-        }
-      },
-
-      /* ===== interaction ===== */
-      { selector: '.faded', style: { 'opacity': 0.2 } },
-      { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
-    ],
-
-    // 初期は COSE
-    layout: {
-      name: 'cose',
-      padding: 30,
-      animate: true,
-      randomize: true,
-      nodeRepulsion: 4500,
-      idealEdgeLength: 120
+    if (dist < EPS) {
+      e.addClass("overlapFix");
     }
   });
 
-  /* ★ここが重要：データからクラス付与（selector問題を回避） */
-  cy.batch(() => {
-    cy.nodes().forEach(n => {
-      const d = n.data();
+  // 見た目が変わるので必要なら再描画
+  cy.resize();
+  cy.render();
+}
 
-      // year があるノードを登録品種として強調
-      if (d.year !== undefined && d.year !== null && d.year !== '') {
-        n.addClass('registered');
-      }
+/** =========================
+ *  検索（品種名 / 登録者）
+ *  ========================= */
+function normalize(s){ return (s ?? "").toString().trim().toLowerCase(); }
 
-      // placeholder=true のみ未登録扱い
-      if (d.placeholder === true) {
-        n.addClass('isPlaceholder');
-      }
+function resetSearch(){
+  cy.nodes().removeClass("hit dim");
+  cy.edges().removeClass("dim");
+}
+
+function applySearch(){
+  const qName = normalize(document.getElementById("qName").value);
+  const qBreeder = normalize(document.getElementById("qBreeder").value);
+
+  resetSearch();
+
+  if (!qName && !qBreeder) return;
+
+  const hits = cy.nodes().filter(n => {
+    const label = normalize(n.data("label"));
+    const breeder = normalize(n.data("breeder"));
+    const okName = qName ? label.includes(qName) : true;
+    const okBreeder = qBreeder ? breeder.includes(qBreeder) : true;
+    return okName && okBreeder;
+  });
+
+  // dim
+  const nonHits = cy.nodes().difference(hits);
+  nonHits.addClass("dim");
+  cy.edges().addClass("dim");
+
+  // hit
+  hits.removeClass("dim").addClass("hit");
+
+  // hit を中心に表示
+  if (hits.length > 0){
+    cy.animate({
+      fit: { eles: hits, padding: 80 },
+      duration: 280
     });
-  });
-
-  // click handlers
-  cy.on('tap', 'node', (evt) => {
-    const n = evt.target;
-    setDetail(n);
-
-    cy.elements().removeClass('faded');
-    cy.elements().removeClass('highlight');
-
-    const neighborhood = n.closedNeighborhood();
-    cy.elements().not(neighborhood).addClass('faded');
-    n.addClass('highlight');
-  });
-
-  cy.on('tap', (evt) => {
-    if(evt.target === cy){
-      cy.elements().removeClass('faded');
-      cy.elements().removeClass('highlight');
-      setDetail(null);
-    }
-  });
-
-  // search (cultivar name OR institute)
-  const q = document.getElementById('q');
-  q.addEventListener('input', () => {
-    const term = q.value.trim().toLowerCase();
-    cy.nodes().removeClass('highlight');
-    if(!term) return;
-
-    const matched = cy.nodes().filter(n => {
-      const label = ((n.data('label') || '') + '').toLowerCase();
-      const inst  = ((n.data('institute') || '') + '').toLowerCase();
-      return label.includes(term) || inst.includes(term);
-    });
-
-    matched.addClass('highlight');
-    if(matched.length){
-      cy.animate({ fit: { eles: matched, padding: 80 } }, { duration: 200 });
-    }
-  });
-
-  // buttons
-  document.getElementById('fit').addEventListener('click', () => cy.fit(undefined, 30));
-  document.getElementById('clear').addEventListener('click', () => {
-    q.value = '';
-    cy.elements().removeClass('faded');
-    cy.elements().removeClass('highlight');
-    setDetail(null);
-  });
-
-  document.getElementById('applyLayout').addEventListener('click', () => {
-    const mode = document.getElementById('layoutMode').value;
-    runLayout(mode);
-  });
-
-  document.getElementById('layout_reset').addEventListener('click', () => {
-    document.getElementById('layoutMode').value = 'cose';
-    runLayout('cose');
-  });
-
-  // initial fit
-  cy.fit(undefined, 30);
-}
-
-async function loadElements(){
-  const status = document.getElementById('status');
-  try{
-    const url = "elements.json?ts=" + Date.now();
-    const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    const elements = await res.json();
-
-    status.textContent = `読み込み完了：nodes+edges=${elements.length}`;
-    initCy(elements);
-  }catch(err){
-    status.innerHTML = `読み込み失敗：${esc(err.message)}<br>（elements.json がリポジトリの root にあるか確認してください）`;
   }
 }
 
-loadElements();
+/** =========================
+ *  UI
+ *  ========================= */
+document.getElementById("btnLayout").addEventListener("click", () => {
+  const name = document.getElementById("layoutSel").value;
+  runLayout(name);
+});
+
+document.getElementById("layoutSel").addEventListener("change", () => {
+  runLayout(document.getElementById("layoutSel").value);
+});
+
+document.getElementById("btnFind").addEventListener("click", applySearch);
+document.getElementById("btnReset").addEventListener("click", () => {
+  document.getElementById("qName").value = "";
+  document.getElementById("qBreeder").value = "";
+  resetSearch();
+});
+
+document.getElementById("qName").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") applySearch();
+});
+document.getElementById("qBreeder").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") applySearch();
+});
+
+/** =========================
+ *  初期レイアウト
+ *  ========================= */
+runLayout("dagre");
 </script>
 </body>
 </html>

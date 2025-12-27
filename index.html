@@ -232,8 +232,8 @@ function isRegisteredNode(n){
 }
 
 /*
-  ★親が不明（定義）：
-  - mother または father の「親名（source側ノードのlabel）」に unknown / 不明 が含まれるもの
+  親が不明（定義）：
+  - mother または father の親名（source側ノードlabel）が unknown / 不明
 */
 function hasUnknownParentByRole(n){
   const incomers = n.incomers('edge');
@@ -250,15 +250,41 @@ function hasUnknownParentByRole(n){
 }
 
 /* ===== Sorting helpers =====
-  - 全品種/親が不明: 50音 → アルファベット → 数字（自然順）
-  - 登録品種: 年(降順) → 同年/年なしは上と同じ
+   - 全品種/親が不明: 日本語(50音) → アルファベット → 数字
+   - 登録品種: 年(降順) → 同年/年なしは上と同じ
 */
-const jaCollator = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' });
+const collJa = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' });
+const collEn = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
 
-function compareLabel(a, b){
+// 0:日本語, 1:英字, 2:数字, 3:その他（最後）
+function labelGroup(label){
+  const s = (label ?? '').toString().trim();
+  if(!s) return 3;
+  const ch = s[0];
+
+  // 数字
+  if(/[0-9]/.test(ch)) return 2;
+
+  // 英字
+  if(/[A-Za-z]/.test(ch)) return 1;
+
+  // 日本語（ひらがな・カタカナ・漢字あたりをざっくり包含）
+  if(/[\u3040-\u30FF\u3400-\u9FFF]/.test(ch)) return 0;
+
+  return 3;
+}
+
+function compareLabelJPENNUM(a, b){
   const la = (a.data('label') ?? '').toString();
   const lb = (b.data('label') ?? '').toString();
-  return jaCollator.compare(la, lb);
+
+  const ga = labelGroup(la);
+  const gb = labelGroup(lb);
+  if(ga !== gb) return ga - gb; // ★ 日本語→英字→数字→その他
+
+  // 同じグループ内の比較
+  if(ga === 1) return collEn.compare(la, lb); // 英字
+  return collJa.compare(la, lb);              // 日本語・数字・その他は ja の自然順
 }
 
 function parseYear(n){
@@ -463,7 +489,7 @@ function updateListAndHighlights(){
 
   const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
 
-  // リスト候補：unknown / 不明 ノードは除外（全品種でも残らない）
+  // リスト候補：unknown / 不明 ノードは除外
   let base = cy.nodes().filter(n => !isUnknownNode(n));
 
   // フィルタ適用
@@ -480,7 +506,7 @@ function updateListAndHighlights(){
 
   // ===== ソート仕様の反映 =====
   const sorted = nodes.toArray().sort((a, b) => {
-    // 登録品種：年の降順 → 同年/年なしは 50音→英字→数字
+    // 登録品種：年の降順 → 同年/年なしは 日本語→英字→数字
     if(listFilter === 'reg'){
       const ya = parseYear(a);
       const yb = parseYear(b);
@@ -491,11 +517,11 @@ function updateListAndHighlights(){
       if(va && vb && ya !== yb) return yb - ya; // 降順
       if(va !== vb) return va ? -1 : 1;        // 年あり優先
 
-      return compareLabel(a, b);
+      return compareLabelJPENNUM(a, b);
     }
 
-    // 全品種 / 親が不明：50音 → アルファベット → 数字（自然順）
-    return compareLabel(a, b);
+    // 全品種 / 親が不明：日本語(50音) → 英字 → 数字
+    return compareLabelJPENNUM(a, b);
   });
 
   const badgeText = term
@@ -582,11 +608,8 @@ function initCy(elements){
       {
         selector: 'edge',
         style: {
-          // 矢印を箱の外周に吸着
           'source-endpoint': 'outside-to-node',
           'target-endpoint': 'outside-to-node',
-
-          // 押し出しは最小（吸着のまま見やすく）
           'source-distance-from-node': 0,
           'target-distance-from-node': 2,
 
@@ -715,9 +738,8 @@ function initCy(elements){
     runLayout('dagre');
   });
 
-  // 初期：全品種一覧（unknownはリストに出さない）
+  // 初期：全品種一覧
   updateListAndHighlights();
-
   cy.fit(undefined, 30);
 }
 

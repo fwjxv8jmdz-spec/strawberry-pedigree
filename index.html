@@ -140,7 +140,7 @@
 <div id="app">
   <div id="left">
     <div class="h">検索</div>
-    <input id="q" type="text" placeholder="品種名 / 品種登録者で検索（例：とちおとめ、栃木県）" />
+    <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
 
     <div class="box">
       <div class="listHeader">
@@ -149,7 +149,7 @@
       </div>
 
       <div class="muted" style="margin:0 0 6px;">
-        行をクリックするとその品種へ移動します（詳細表示＋近傍ハイライト）。
+        行をクリックするとその品種へ移動します。
       </div>
 
       <div class="seg" role="tablist" aria-label="品種リスト フィルタ">
@@ -163,14 +163,14 @@
       </div>
 
       <div class="muted" style="margin-top:8px;">
-        検索中はフィルタに加えて検索条件でも絞り込みます（「不明/unknown」ノードはリストに表示しません）。
+        全品種: 本系統図に含まれるすべての品種; 登録品種: 農林水産省による登録を受けた品種; 親が不明: 情報を募集しています。
       </div>
     </div>
 
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
       <div class="layoutBtns">
-        <button id="btnCose" class="active" type="button">COSE</button>
+        <button id="btnCose" class="active" type="button">CoSE>Cose>Cos
         <button id="btnDagre" type="button">Dagre</button>
       </div>
       <div class="muted" style="margin-top:6px;">
@@ -182,7 +182,7 @@
       <div class="h" style="margin:0 0 6px;">凡例</div>
       <div><span class="tag">母 → 子</span> 実線</div>
       <div><span class="tag">父 → 子</span> 破線</div>
-      <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更・ホイールで拡大縮小できます。</div>
+      <div class="muted" style="margin-top:6px;">品種名をドラッグして配置変更・ホイールで拡大縮小できます。</div>
     </div>
   </div>
 
@@ -190,7 +190,7 @@
 
   <div id="right">
     <div class="h">詳細</div>
-    <div id="detail" class="muted">ノードをクリックすると情報が表示されます。</div>
+    <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
   </div>
 </div>
 
@@ -464,7 +464,7 @@ function renderCultivarList(nodes, badgeText){
     <table>
       <thead>
         <tr>
-          <th style="width:44%;">品種</th>
+          <th style="width:35%;">品種</th>
           <th style="width:18%;">年</th>
           <th>登録者</th>
         </tr>

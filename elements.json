@@ -2581,18 +2581,6 @@
   },
   {
     "data": {
-      "id": "Cal 45.5_1",
-      "label": "Cal 45.5_1",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "Cal 53.10_2(complex hybrid)",
       "label": "Cal 53.10_2(complex hybrid)",
       "year": "",
@@ -3133,18 +3121,6 @@
   },
   {
     "data": {
-      "id": "unknown_father__aiko",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "unknown_father__america",
       "label": "不明",
       "year": "",
@@ -3494,18 +3470,6 @@
   {
     "data": {
       "id": "unknown_mother__Florida 69_266",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_mother__aiko",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4381,7 +4345,7 @@
   },
   {
     "data": {
-      "source": "Cal 45.5_1",
+      "source": "aiberry",
       "target": "aiberry_mishokeito",
       "role": "mother",
       "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12062&LANGUAGE=Japanese)"
@@ -4389,7 +4353,7 @@
   },
   {
     "data": {
-      "source": "Cal 59.51_11",
+      "source": "aiberry",
       "target": "aiberry_mishokeito",
       "role": "father",
       "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12062&LANGUAGE=Japanese)"
@@ -4397,7 +4361,7 @@
   },
   {
     "data": {
-      "source": "unknown_mother__aiko",
+      "source": "Cal 46.5_1",
       "target": "aiko",
       "role": "mother",
       "source_id": "https://www.ars-grin.gov/npgs/pi_books/scans/pi200pt2.pdf"
@@ -4405,7 +4369,7 @@
   },
   {
     "data": {
-      "source": "unknown_father__aiko",
+      "source": "Cal 59.51_11",
       "target": "aiko",
       "role": "father",
       "source_id": "https://www.ars-grin.gov/npgs/pi_books/scans/pi200pt2.pdf"

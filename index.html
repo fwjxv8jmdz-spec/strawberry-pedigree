@@ -12,6 +12,22 @@
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre/cytoscape-dagre.js"></script>
 
+  <!-- fCoSE -->
+  <script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
+
+  <!-- cose-bilkent (optional but nice) -->
+  <script src="https://unpkg.com/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.js"></script>
+
+  <!-- spread (optional, fun for exploration) -->
+  <script src="https://unpkg.com/cytoscape-spread@3.0.0/cytoscape-spread.js"></script>
+
+  <script>
+    // register plugins
+    if (window.cytoscapeFcose) cytoscape.use(window.cytoscapeFcose);
+    if (window.cytoscapeCoseBilkent) cytoscape.use(window.cytoscapeCoseBilkent);
+    if (window.cytoscapeSpread) cytoscape.use(window.cytoscapeSpread);
+  </script>
+
   <style>
     body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; }
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
@@ -70,29 +86,29 @@
       <button id="clear">選択解除</button>
     </div>
 
-    <!-- ★レイアウト切替UI（追加） -->
+    <!-- Layout switch UI -->
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
 
       <div class="row">
         <select id="layoutMode">
-          <option value="dagreTB">Dagre 縦（親→子）</option>
+          <option value="cose" selected>COSE（力学・初期）</option>
+          <option value="fcose">fCoSE（大規模向け）</option>
           <option value="dagreLR">Dagre 横（左→右）</option>
-          <option value="breadthfirstTB">Breadthfirst 縦</option>
-          <option value="breadthfirstLR">Breadthfirst 横</option>
-          <option value="cose">COSE（力学）</option>
-          <option value="grid">Grid</option>
-          <option value="circle">Circle</option>
+          <option value="coseBilkent">COSE-Bilkent（安定・見やすい）</option>
+          <option value="concentric">Concentric（中心化）</option>
+          <option value="spread">Spread（ばらけ探索）</option>
         </select>
         <button id="applyLayout">適用</button>
       </div>
 
-      <!-- 互換：昔のボタン（残したければ） -->
       <div style="margin-top:8px;">
-        <button id="layout_dagre" style="width:100%;">配置リセット（Dagre 縦）</button>
+        <button id="layout_reset" style="width:100%;">配置リセット（COSE）</button>
       </div>
 
-      <div class="muted" style="margin-top:6px;">レイアウトを切り替えて見比べできます。</div>
+      <div class="muted" style="margin-top:6px;">
+        COSE を初期表示にして、いろいろなレイアウトを試せます。
+      </div>
     </div>
 
     <div class="box">
@@ -154,7 +170,6 @@ function setDetail(n){
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
 
-  // 品種登録情報（品種そのものの出典）
   let sourcesHtml = '';
   if(d.sources){
     const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
@@ -167,7 +182,6 @@ function setDetail(n){
     sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
   }
 
-  // parents / children
   const incomers = n.incomers('edge');
   const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
   const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
@@ -181,7 +195,6 @@ function setDetail(n){
   const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
   const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
 
-  // 交配出典（この品種が「子」である交配エッジの source_id）
   const crossSources = uniq(incomers.map(e => e.data('source_id')));
   const crossSourcesHtml = crossSources.length
     ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
@@ -206,88 +219,88 @@ function setDetail(n){
   `;
 }
 
-/* ★モードで切り替える runLayout(mode) */
 function runLayout(mode){
   if(!cy) return;
-
   cy.stop();
+
+  const common = { animate: true, padding: 30 };
 
   let opts;
   switch(mode){
+    case 'fcose':
+      opts = {
+        name: 'fcose',
+        ...common,
+        quality: 'default',
+        randomize: true,
+        nodeRepulsion: 9000,
+        idealEdgeLength: 140,
+        edgeElasticity: 0.45,
+        nestingFactor: 0.9,
+        gravity: 0.35,
+        numIter: 2500
+      };
+      break;
+
     case 'dagreLR':
       opts = {
         name: 'dagre',
+        ...common,
         rankDir: 'LR',
         nodeSep: 20,
         edgeSep: 5,
         rankSep: 90,
-        padding: 30,
-        nodeDimensionsIncludeLabels: true,
-        animate: true
+        nodeDimensionsIncludeLabels: true
       };
       break;
 
-    case 'breadthfirstTB':
+    case 'coseBilkent':
       opts = {
-        name: 'breadthfirst',
-        directed: true,
-        padding: 30,
-        spacingFactor: 1.25,
-        animate: true
+        name: 'cose-bilkent',
+        ...common,
+        randomize: true,
+        nodeRepulsion: 9000,
+        idealEdgeLength: 140,
+        edgeElasticity: 0.45,
+        gravity: 0.25,
+        numIter: 2500
       };
       break;
 
-    case 'breadthfirstLR':
+    case 'concentric':
       opts = {
-        name: 'breadthfirst',
-        directed: true,
+        name: 'concentric',
+        ...common,
+        startAngle: 3/2 * Math.PI,
+        levelWidth: () => 1,
+        minNodeSpacing: 20,
+        concentric: (n) => {
+          // 子が多い/接続が多いノードほど中心へ
+          const deg = n.degree ? n.degree() : 0;
+          return deg;
+        }
+      };
+      break;
+
+    case 'spread':
+      opts = {
+        name: 'spread',
+        ...common,
+        minDist: 50,
         padding: 30,
-        spacingFactor: 1.25,
-        animate: true,
-        // breadthfirst の向き
-        orientation: 'horizontal'
+        expandFactor: 1.2,
+        randomize: true
       };
       break;
 
     case 'cose':
-      opts = {
-        name: 'cose',
-        animate: true,
-        padding: 30,
-        nodeRepulsion: 4500,
-        idealEdgeLength: 120
-      };
-      break;
-
-    case 'grid':
-      opts = {
-        name: 'grid',
-        animate: true,
-        padding: 30,
-        spacingFactor: 1.2
-      };
-      break;
-
-    case 'circle':
-      opts = {
-        name: 'circle',
-        animate: true,
-        padding: 30,
-        spacingFactor: 1.1
-      };
-      break;
-
-    // default: dagreTB
     default:
       opts = {
-        name: 'dagre',
-        rankDir: 'TB',
-        nodeSep: 20,
-        edgeSep: 5,
-        rankSep: 90,
-        padding: 30,
-        nodeDimensionsIncludeLabels: true,
-        animate: true
+        name: 'cose',
+        ...common,
+        randomize: true,
+        nodeRepulsion: 4500,
+        idealEdgeLength: 120
       };
   }
 
@@ -300,7 +313,6 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
-      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
       {
         selector: 'node',
         style: {
@@ -316,14 +328,12 @@ function initCy(elements){
           'border-color': '#F9A8D4',
           'color': '#831843',
 
-          /* make it rectangle that fits label */
           'width': 'label',
           'padding': '12px',
           'shape': 'round-rectangle'
         }
       },
 
-      /* ①：登録品種（.registered クラスで確実に適用） */
       {
         selector: 'node.registered',
         style: {
@@ -337,7 +347,6 @@ function initCy(elements){
         }
       },
 
-      /* 未登録（placeholder=true のみ）※ registered より後に置いて上書き */
       {
         selector: 'node.isPlaceholder',
         style: {
@@ -348,7 +357,6 @@ function initCy(elements){
         }
       },
 
-      /* ===== edges ===== */
       {
         selector: 'edge',
         style: {
@@ -362,7 +370,6 @@ function initCy(elements){
         }
       },
 
-      /* mother: solid + CLOCKWISE curve (positive distance) */
       {
         selector: 'edge[role="mother"]',
         style: {
@@ -374,7 +381,6 @@ function initCy(elements){
         }
       },
 
-      /* father: dashed + COUNTERCLOCKWISE curve (negative distance) */
       {
         selector: 'edge[role="father"]',
         style: {
@@ -386,7 +392,6 @@ function initCy(elements){
         }
       },
 
-      /* unknown */
       {
         selector: 'edge[role="unknown"]',
         style: {
@@ -398,24 +403,21 @@ function initCy(elements){
         }
       },
 
-      /* ===== interaction ===== */
       { selector: '.faded', style: { 'opacity': 0.2 } },
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
 
-    // 初期レイアウトは dagreTB（あとで runLayout で切り替える）
+    // ★初期レイアウトを COSE に
     layout: {
-      name: 'dagre',
-      rankDir: 'TB',
-      nodeSep: 20,
-      rankSep: 90,
-      edgeSep: 5,
+      name: 'cose',
       padding: 30,
-      nodeDimensionsIncludeLabels: true
+      animate: true,
+      randomize: true,
+      nodeRepulsion: 4500,
+      idealEdgeLength: 120
     }
   });
 
-  /* ★データからクラス付与（selector問題を回避） */
   cy.batch(() => {
     cy.nodes().forEach(n => {
       const d = n.data();
@@ -424,7 +426,6 @@ function initCy(elements){
     });
   });
 
-  // click handlers
   cy.on('tap', 'node', (evt) => {
     const n = evt.target;
     setDetail(n);
@@ -445,7 +446,6 @@ function initCy(elements){
     }
   });
 
-  // search (cultivar name OR institute)
   const q = document.getElementById('q');
   q.addEventListener('input', () => {
     const term = q.value.trim().toLowerCase();
@@ -464,7 +464,6 @@ function initCy(elements){
     }
   });
 
-  // buttons
   document.getElementById('fit').addEventListener('click', () => cy.fit(undefined, 30));
   document.getElementById('clear').addEventListener('click', () => {
     q.value = '';
@@ -473,19 +472,16 @@ function initCy(elements){
     setDetail(null);
   });
 
-  // ★適用ボタン：選択されたレイアウトへ
   document.getElementById('applyLayout').addEventListener('click', () => {
     const mode = document.getElementById('layoutMode').value;
     runLayout(mode);
   });
 
-  // 互換ボタン：Dagre縦
-  document.getElementById('layout_dagre').addEventListener('click', () => {
-    document.getElementById('layoutMode').value = 'dagreTB';
-    runLayout('dagreTB');
+  document.getElementById('layout_reset').addEventListener('click', () => {
+    document.getElementById('layoutMode').value = 'cose';
+    runLayout('cose');
   });
 
-  // 初期 fit
   cy.fit(undefined, 30);
 }
 

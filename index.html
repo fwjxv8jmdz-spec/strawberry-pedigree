@@ -133,7 +133,6 @@
     <div class="h">検索</div>
     <input id="q" type="text" placeholder="品種名 / 品種登録者で検索（例：とちおとめ、栃木県）" />
 
-    <!-- ★ 品種リストを「検索」のすぐ下へ -->
     <div class="box">
       <div class="listHeader">
         <div class="h" style="margin:0;">品種リスト</div>
@@ -144,7 +143,6 @@
         行をクリックするとその品種へ移動します（詳細表示＋近傍ハイライト）。
       </div>
 
-      <!-- ★ フィルタ切替（全品種 / 登録品種 / 親が不明品種） -->
       <div class="seg" role="tablist" aria-label="品種リスト フィルタ">
         <button id="f_all" class="active" type="button">全品種</button>
         <button id="f_reg" type="button">登録品種</button>
@@ -156,7 +154,7 @@
       </div>
 
       <div class="muted" style="margin-top:8px;">
-        検索中はフィルタに加えて検索条件でも絞り込みます。
+        検索中はフィルタに加えて検索条件でも絞り込みます（品種リストでは unknown を非表示）。
       </div>
     </div>
 
@@ -219,14 +217,19 @@ function uniq(arr){
   return out;
 }
 
+function isUnknownNode(n){
+  const label = ((n.data('label') ?? '') + '').trim().toLowerCase();
+  return label === 'unknown';
+}
+
 function isRegisteredNode(n){
   const y = n.data('year');
   return (y !== undefined && y !== null && ('' + y).trim() !== '');
 }
 
 function isParentUnknownNode(n){
-  // 「親が不明」= 親エッジ（incomers edge）が1本も無いノード
-  return n.incomers('edge').length === 0;
+  // ★ 定義変更：「親が不明」= 親エッジ role="unknown" が存在する
+  return n.incomers('edge[role="unknown"]').length > 0;
 }
 
 function setDetail(n){
@@ -364,7 +367,7 @@ function applyListFilter(nodes){
   if(listFilter === 'orphan'){
     return nodes.filter(n => isParentUnknownNode(n));
   }
-  return nodes; // all
+  return nodes;
 }
 
 function filterLabel(){
@@ -428,15 +431,13 @@ function updateListAndHighlights(){
 
   const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
 
-  // 1) まず候補（全ノード）→ フィルタ適用
-  let base = cy.nodes();
+  // 1) リスト候補（unknownノードは除外）
+  let base = cy.nodes().filter(n => !isUnknownNode(n));
 
-  // （任意）placeholder除外したいならここで条件を入れる：
-  // base = base.filter(n => n.data('placeholder') !== true);
-
+  // 2) フィルタ適用
   let nodes = applyListFilter(base);
 
-  // 2) 検索があればさらに絞る（フィルタ + 検索のAND）
+  // 3) 検索があればさらに絞る
   if(term){
     nodes = nodes.filter(n => {
       const label = ((n.data('label') || '') + '').toLowerCase();
@@ -445,7 +446,7 @@ function updateListAndHighlights(){
     });
   }
 
-  // 3) ソート：登録年あり優先 → 年 → 名前
+  // 4) ソート：登録年あり優先 → 年 → 名前
   const sorted = nodes.toArray().sort((a,b) => {
     const ra = isRegisteredNode(a), rb = isRegisteredNode(b);
     if(ra !== rb) return ra ? -1 : 1;
@@ -469,7 +470,7 @@ function updateListAndHighlights(){
 
   renderCultivarList(sorted, badgeText);
 
-  // 4) グラフ側のハイライトは「検索語がある時だけ」
+  // 5) グラフ側のハイライトは「検索語がある時だけ」
   cy.nodes().removeClass('highlight');
   if(term){
     const matched = cy.nodes().filter(n => {
@@ -545,13 +546,20 @@ function initCy(elements){
       {
         selector: 'edge',
         style: {
+          /*
+            overlap時の invalid endpoints 対策は維持（inside-to-node）
+            その代わり、距離で矢印をノード外へ押し出して「矢印の頭を見せる」
+          */
           'source-endpoint': 'inside-to-node',
           'target-endpoint': 'inside-to-node',
+          'source-distance-from-node': 10,
+          'target-distance-from-node': 14,
 
           'curve-style': 'unbundled-bezier',
           'edge-distances': 'node-position',
           'target-arrow-shape': 'triangle',
-          'arrow-scale': 0.9,
+          'target-arrow-fill': 'filled',
+          'arrow-scale': 1.0,
           'width': 2,
           'line-color': '#F472B6',
           'target-arrow-color': '#F472B6'
@@ -661,7 +669,7 @@ function initCy(elements){
     runLayout(mode);
   });
 
-  // 初期：全品種一覧（検索なし）
+  // 初期：全品種一覧（unknownはリストに出さない）
   updateListAndHighlights();
 
   cy.fit(undefined, 30);

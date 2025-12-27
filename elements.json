@@ -1791,8 +1791,8 @@
     "data": {
       "id": "reiko",
       "label": "麗紅",
-      "year": "1978(?)",
-      "institute": "千葉県（?）",
+      "year": "",
+      "institute": "",
       "notes": "農産種苗法による名称登録342号",
       "sources": "",
       "db_registration_date": "2025/12/25",
@@ -2114,7 +2114,7 @@
   {
     "data": {
       "id": "tochigii27go",
-      "label": "栃木i27号",
+      "label": "栃木i27号(スカイベリー)",
       "year": 2014,
       "institute": "栃木県",
       "notes": "商標名: スカイベリー(https://www.pref.tochigi.lg.jp/g61/hinsyu/tochigii27.html)",
@@ -2126,7 +2126,7 @@
   {
     "data": {
       "id": "tochigii37go",
-      "label": "栃木i37号",
+      "label": "栃木i37号(とちあいか)",
       "year": 2024,
       "institute": "栃木県",
       "notes": "商標名: とちあいか(https://www.pref.tochigi.lg.jp/g61/hinsyu/tochigii37.html)",
@@ -2138,7 +2138,7 @@
   {
     "data": {
       "id": "tochigiiW1go",
-      "label": "栃木iW1号",
+      "label": "栃木iW1号(ミルキーベリー)",
       "year": 2024,
       "institute": "栃木県",
       "notes": "商標名: ミルキーベリー(https://www.pref.tochigi.lg.jp/g61/hinsyu/tochigiiw1.html)",
@@ -2176,7 +2176,7 @@
       "id": "tochinomine",
       "label": "栃の峰",
       "year": 1993,
-      "institute": "",
+      "institute": "栃木県?",
       "notes": "",
       "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3452&LANGUAGE=Japanese",
       "db_registration_date": "2025/12/25",
@@ -2272,7 +2272,7 @@
       "id": "wadahatsukoi",
       "label": "和田初こい",
       "year": 2009,
-      "institute": "三好アグリテック株式会社?(山梨県)",
+      "institute": "三好アグリテック株式会社(山梨県)",
       "notes": "商標名: 初恋の香り",
       "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=18011&LANGUAGE=Japanese",
       "db_registration_date": "2025/12/26",
@@ -2533,6 +2533,150 @@
   },
   {
     "data": {
+      "id": "uzushio",
+      "label": "うずしお",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています",
+      "sources": "",
+      "db_registration_date": "2025/12/27",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kitaekubo",
+      "label": "きたえくぼ",
+      "year": 1995,
+      "institute": "地方独立行政法人北海道立総合研究機構(北海道)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4535&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/27",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "59ko13_37",
+      "label": "59交13_37",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/27",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "oishisikinari2go",
+      "label": "大石四季成2号",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています",
+      "sources": "",
+      "db_registration_date": "2025/12/27",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "selva_mishokeito",
+      "label": "Selva実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/27",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aiberry",
+      "label": "アイベリー",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています",
+      "sources": "",
+      "db_registration_date": "2025/12/27",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nouhime",
+      "label": "濃姫",
+      "year": 1998,
+      "institute": "岐阜県?",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6207&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yotsuboshi",
+      "label": "よつぼし",
+      "year": 2017,
+      "institute": "三重県 , 香川県, 国立研究開発法人農業・食品産業技術総合研究機構, 千葉県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25605&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miebohon1go",
+      "label": "三重母本1号",
+      "year": "",
+      "institute": "",
+      "notes": "かおり野の4回自殖系統",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "A8S4_147",
+      "label": "A8S4_147",
+      "year": "",
+      "institute": "",
+      "notes": "A8の4回自殖系統",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "A8_self",
+      "label": "A8",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sachinoka_tochiotome",
+      "label": "さちのか×とちおとめ",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "Banner",
       "label": "Banner",
       "year": "",
@@ -2689,18 +2833,6 @@
   },
   {
     "data": {
-      "id": "Redheart",
-      "label": "Redheart",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "U.S.D.A.634",
       "label": "U.S.D.A.634",
       "year": "",
@@ -2715,30 +2847,6 @@
     "data": {
       "id": "aberdeen",
       "label": "aberdeen",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "aibbery",
-      "label": "aibbery",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "aiberry",
-      "label": "aiberry",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -2857,6 +2965,18 @@
   },
   {
     "data": {
+      "id": "kaorino",
+      "label": "kaorino",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "lassen",
       "label": "lassen",
       "year": "",
@@ -2881,18 +3001,6 @@
   },
   {
     "data": {
-      "id": "oishisikinari2go",
-      "label": "oishisikinari2go",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "redglow",
       "label": "redglow",
       "year": "",
@@ -2907,18 +3015,6 @@
     "data": {
       "id": "redheart",
       "label": "redheart",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "selva_mishokeito",
-      "label": "selva_mishokeito",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -3110,6 +3206,18 @@
   {
     "data": {
       "id": "unknown_father__Florida 69_266",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__aiberry",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -3313,6 +3421,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__oishisikinari2go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__pajaro",
       "label": "不明",
       "year": "",
@@ -3362,6 +3482,18 @@
   {
     "data": {
       "id": "unknown_father__tochigisozai2go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__uzushio",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -3433,6 +3565,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__A8_self",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__Cal 39.82_19",
       "label": "不明",
       "year": "",
@@ -3470,6 +3614,18 @@
   {
     "data": {
       "id": "unknown_mother__Florida 69_266",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__aiberry",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -3673,6 +3829,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__oishisikinari2go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__pajaro",
       "label": "不明",
       "year": "",
@@ -3733,6 +3901,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__uzushio",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__wadahatsukoi",
       "label": "不明",
       "year": "",
@@ -3750,18 +3930,6 @@
       "year": "",
       "institute": "",
       "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "uzushio",
-      "label": "uzushio",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
       "sources": "",
       "db_registration_date": "",
       "placeholder": true
@@ -3897,7 +4065,7 @@
   },
   {
     "data": {
-      "source": "aibbery",
+      "source": "aiberry",
       "target": "14×5_2",
       "role": "mother",
       "source_id": "斎藤ら(1992; https://agriknowledge.affrc.go.jp/RN/2010490073.pdf)"
@@ -4625,7 +4793,7 @@
   },
   {
     "data": {
-      "source": "Redheart",
+      "source": "redheart",
       "target": "Cal 145.52",
       "role": "father",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7141,6 +7309,198 @@
       "target": "MS_1",
       "role": "father",
       "source_id": "高橋(2006; https://agriknowledge.affrc.go.jp/RN/2010731078)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__uzushio",
+      "target": "uzushio",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__uzushio",
+      "target": "uzushio",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "59ko13_37",
+      "target": "kitaekubo",
+      "role": "mother",
+      "source_id": "今野ら(2001; https://agriknowledge.affrc.go.jp/RN/2030631826)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "kitaekubo",
+      "role": "father",
+      "source_id": "今野ら(2001; https://agriknowledge.affrc.go.jp/RN/2030631826)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiko",
+      "target": "59ko13_37",
+      "role": "mother",
+      "source_id": "今野ら(2001; https://agriknowledge.affrc.go.jp/RN/2030631826)"
+    }
+  },
+  {
+    "data": {
+      "source": "morioka19go",
+      "target": "59ko13_37",
+      "role": "father",
+      "source_id": "今野ら(2001; https://agriknowledge.affrc.go.jp/RN/2030631826)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__oishisikinari2go",
+      "target": "oishisikinari2go",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__oishisikinari2go",
+      "target": "oishisikinari2go",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "selva_mishokeito",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1743&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "selva_mishokeito",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1743&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__aiberry",
+      "target": "aiberry",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__aiberry",
+      "target": "aiberry",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "nouhime",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6207&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "nouhime",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6207&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "miebohon1go",
+      "target": "yotsuboshi",
+      "role": "mother",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "A8S4_147",
+      "target": "yotsuboshi",
+      "role": "father",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "miebohon1go",
+      "role": "mother",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "miebohon1go",
+      "role": "father",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "A8_self",
+      "target": "A8S4_147",
+      "role": "mother",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "A8_self",
+      "target": "A8S4_147",
+      "role": "father",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__A8_self",
+      "target": "A8_self",
+      "role": "mother",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka_tochiotome",
+      "target": "A8_self",
+      "role": "father",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "sachinoka_tochiotome",
+      "role": "mother",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "sachinoka_tochiotome",
+      "role": "father",
+      "source_id": "森ら(2015; https://www.jstage.jst.go.jp/article/hrj/14/4/14_409/_article/-char/ja/)"
     }
   }
 ]

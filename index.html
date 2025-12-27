@@ -188,7 +188,14 @@ function setDetail(n){
 
 function runLayout(){
   if(!cy) return;
-  cy.layout({ name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }).run();
+  cy.layout({ name: 'dagre', 
+             rankDir: 'TB', 
+             //横方向の間隔
+             nodeSep: 20, 
+             edgeSep: 5,
+             //縦方向の間隔
+             rankSep: 90, 
+             padding: 30 }).run();
 }
 
 function initCy(elements){
@@ -298,7 +305,12 @@ function initCy(elements){
       { selector: '.faded', style: { 'opacity': 0.2 } },
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
-    layout: { name: 'dagre', rankDir: 'TB', nodeSep: 40, rankSep: 90, edgeSep: 20, padding: 30 }
+    layout: { name: 'dagre', 
+             rankDir: 'TB', 
+             nodeSep: 20, 
+             rankSep: 90,
+             edgeSep: 5,
+             padding: 30 }
   });
 
   /* ★ここが重要：データからクラス付与（selector問題を回避） */

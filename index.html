@@ -13,9 +13,18 @@
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 
   <!-- fCoSE / cose-bilkent / spread -->
-  <script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
-  <script src="https://unpkg.com/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.js"></script>
-  <script src="https://unpkg.com/cytoscape-spread@3.0.0/cytoscape-spread.js"></script>
+<!-- local plugins -->
+<script src="./vendor/cytoscape-fcose.js"></script>
+<script src="./vendor/cytoscape-cose-bilkent.js"></script>
+<script src="./vendor/cytoscape-spread.js"></script>
+
+<script>
+  // プラグイン登録（ローカルならこれで確実に通る）
+  cytoscape.use(cytoscapeFcose);
+  cytoscape.use(cytoscapeCoseBilkent);
+  cytoscape.use(cytoscapeSpread);
+</script>
+
 
   <script>
     // ---- Robust plugin registration (works across UMD/default exports) ----

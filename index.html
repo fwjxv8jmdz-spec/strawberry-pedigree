@@ -154,7 +154,7 @@
       </div>
 
       <div class="muted" style="margin-top:8px;">
-        検索中はフィルタに加えて検索条件でも絞り込みます（品種リストでは unknown を非表示）。
+        検索中はフィルタに加えて検索条件でも絞り込みます（unknownノードはリストに表示しません）。
       </div>
     </div>
 
@@ -228,7 +228,7 @@ function isRegisteredNode(n){
 }
 
 function isParentUnknownNode(n){
-  // ★ 定義変更：「親が不明」= 親エッジ role="unknown" が存在する
+  // 「親が不明」= 親エッジ role="unknown" が存在する
   return n.incomers('edge[role="unknown"]').length > 0;
 }
 
@@ -319,10 +319,9 @@ function runLayout(mode){
     default:
       opts = {
         name: 'cose',
-        padding,
+        padding: 30,
         animate: true,
         randomize: true,
-
         nodeOverlap: 40,
         nodeRepulsion: 6500,
         idealEdgeLength: 140,
@@ -431,13 +430,13 @@ function updateListAndHighlights(){
 
   const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
 
-  // 1) リスト候補（unknownノードは除外）
+  // リスト候補（unknownノードは除外）
   let base = cy.nodes().filter(n => !isUnknownNode(n));
 
-  // 2) フィルタ適用
+  // フィルタ適用
   let nodes = applyListFilter(base);
 
-  // 3) 検索があればさらに絞る
+  // 検索があればさらに絞る
   if(term){
     nodes = nodes.filter(n => {
       const label = ((n.data('label') || '') + '').toLowerCase();
@@ -446,7 +445,7 @@ function updateListAndHighlights(){
     });
   }
 
-  // 4) ソート：登録年あり優先 → 年 → 名前
+  // ソート：登録年あり優先 → 年 → 名前
   const sorted = nodes.toArray().sort((a,b) => {
     const ra = isRegisteredNode(a), rb = isRegisteredNode(b);
     if(ra !== rb) return ra ? -1 : 1;
@@ -470,7 +469,7 @@ function updateListAndHighlights(){
 
   renderCultivarList(sorted, badgeText);
 
-  // 5) グラフ側のハイライトは「検索語がある時だけ」
+  // グラフ側のハイライトは「検索語がある時だけ」
   cy.nodes().removeClass('highlight');
   if(term){
     const matched = cy.nodes().filter(n => {
@@ -497,29 +496,29 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
-      /* ===== nodes ===== */
+      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
       {
-        selector: 'edge',
+        selector: 'node',
         style: {
-          // ★矢印を外周に出す
-          'source-endpoint': 'outside-to-node',
-          'target-endpoint': 'outside-to-node',
+          'label': 'data(label)',
+          'font-size': 12,
+          'text-wrap': 'wrap',
+          'text-max-width': 150,
+          'text-valign': 'center',
+          'text-halign': 'center',
 
-          // ★矢印をさらに少し外へ（見切れ対策）
-          'source-distance-from-node': 6,
-          'target-distance-from-node': 14,
+          'background-color': '#FCE7F3',
+          'border-width': 1.5,
+          'border-color': '#F9A8D4',
+          'color': '#831843',
 
-          'curve-style': 'unbundled-bezier',
-          'edge-distances': 'node-position',
-          'target-arrow-shape': 'triangle',
-          'target-arrow-fill': 'filled',
-          'arrow-scale': 1.15,
-          'width': 2,
-          'line-color': '#F472B6',
-          'target-arrow-color': '#F472B6'
+          'width': 'label',
+          'padding': '12px',
+          'shape': 'round-rectangle'
         }
       },
 
+      /* 登録品種 */
       {
         selector: 'node.registered',
         style: {
@@ -533,6 +532,7 @@ function initCy(elements){
         }
       },
 
+      /* 未登録 */
       {
         selector: 'node.isPlaceholder',
         style: {
@@ -547,26 +547,26 @@ function initCy(elements){
       {
         selector: 'edge',
         style: {
-          /*
-            overlap時の invalid endpoints 対策は維持（inside-to-node）
-            その代わり、距離で矢印をノード外へ押し出して「矢印の頭を見せる」
-          */
+          // 安定優先：重なりに強い inside-to-node
           'source-endpoint': 'inside-to-node',
           'target-endpoint': 'inside-to-node',
+
+          // ★矢印が見えるように：距離＆サイズを少し強め
           'source-distance-from-node': 10,
-          'target-distance-from-node': 14,
+          'target-distance-from-node': 26,
+          'arrow-scale': 1.35,
 
           'curve-style': 'unbundled-bezier',
           'edge-distances': 'node-position',
           'target-arrow-shape': 'triangle',
           'target-arrow-fill': 'filled',
-          'arrow-scale': 1.0,
           'width': 2,
           'line-color': '#F472B6',
           'target-arrow-color': '#F472B6'
         }
       },
 
+      /* mother */
       {
         selector: 'edge[role="mother"]',
         style: {
@@ -578,6 +578,7 @@ function initCy(elements){
         }
       },
 
+      /* father */
       {
         selector: 'edge[role="father"]',
         style: {
@@ -589,6 +590,7 @@ function initCy(elements){
         }
       },
 
+      /* unknown */
       {
         selector: 'edge[role="unknown"]',
         style: {
@@ -616,34 +618,7 @@ function initCy(elements){
       componentSpacing: 80,
       numIter: 1200
     }
-  })
-    function jitterOverlaps(){
-  const seen = new Map(); // key -> count
-  const eps = 1;          // 同一判定の丸め
-  const step = 18;        // ずらす量（px）
-
-  cy.batch(() => {
-    cy.nodes().forEach(n => {
-      const p = n.position();
-      const key = `${Math.round(p.x/eps)}_${Math.round(p.y/eps)}`;
-      const c = (seen.get(key) ?? 0);
-      if(c > 0){
-        // 2個目以降だけ少しずらす
-        n.position({
-          x: p.x + (c * step),
-          y: p.y + (c * step * 0.6)
-        });
-      }
-      seen.set(key, c + 1);
-    });
   });
-}
-
-// COSE / dagre でレイアウトが終わったら毎回実行
-cy.on('layoutstop', () => {
-  jitterOverlaps();
-});
-;
 
   // データからクラス付与
   cy.batch(() => {

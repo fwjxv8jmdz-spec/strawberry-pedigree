@@ -56,6 +56,63 @@
 
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* ===== cultivar list ===== */
+    .listHeader {
+      display:flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 0 0 8px;
+    }
+    .pill {
+      display:inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      background: #fff;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+    #listWrap {
+      max-height: 38vh; /* 左パネル内で邪魔しない程度に */
+      overflow: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #fff;
+    }
+    table { border-collapse: collapse; width: 100%; }
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 1;
+      font-size: 12px;
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid #e5e7eb;
+      color: #374151;
+    }
+    tbody td {
+      font-size: 12px;
+      padding: 8px 10px;
+      border-bottom: 1px solid #f3f4f6;
+      vertical-align: top;
+      color: #111827;
+    }
+    tbody tr {
+      cursor: pointer;
+    }
+    tbody tr:hover {
+      background: #fff1f7; /* 薄ピンク */
+    }
+    .td-muted { color: #6b7280; }
+    .emptyRow {
+      padding: 12px 10px;
+      font-size: 12px;
+      color: #6b7280;
+    }
   </style>
 </head>
 
@@ -86,7 +143,7 @@
       </div>
 
       <div class="muted" style="margin-top:6px;">
-        レイアウトは COSE / Dagre のみを使用します（外部プラグイン不要な標準レイアウトは削除済み）。
+        レイアウトは COSE / Dagre のみを使用します。
       </div>
     </div>
 
@@ -98,10 +155,20 @@
       <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更・ホイールで拡大縮小できます。</div>
     </div>
 
+    <!-- ★「読み込み」欄は削除し、品種リストに置換 -->
     <div class="box">
-      <div class="h" style="margin:0 0 6px;">読み込み</div>
-      <div id="status" class="muted">elements.json を読み込み中…</div>
-      <div class="muted" style="margin-top:6px;">更新が反映されない時は Ctrl+F5（強制再読み込み）も試してください。</div>
+      <div class="listHeader">
+        <div class="h" style="margin:0;">品種リスト</div>
+        <span id="listBadge" class="pill">準備中…</span>
+      </div>
+
+      <div id="listHint" class="muted" style="margin:0 0 8px;">
+        検索していない時は「登録品種（登録年あり）」を表示します。行をクリックするとその品種へ移動します。
+      </div>
+
+      <div id="listWrap">
+        <div class="emptyRow">elements.json 読み込み中…</div>
+      </div>
     </div>
   </div>
 
@@ -136,6 +203,11 @@ function uniq(arr){
   return out;
 }
 
+function isRegisteredNode(n){
+  const y = n.data('year');
+  return (y !== undefined && y !== null && ('' + y).trim() !== '');
+}
+
 function setDetail(n){
   if(!n){
     document.getElementById('detail').innerHTML =
@@ -149,7 +221,6 @@ function setDetail(n){
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
 
-  // 品種登録情報（品種そのものの出典）
   let sourcesHtml = '';
   if(d.sources){
     const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
@@ -162,7 +233,6 @@ function setDetail(n){
     sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
   }
 
-  // parents / children
   const incomers = n.incomers('edge');
   const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
   const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
@@ -176,7 +246,6 @@ function setDetail(n){
   const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
   const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
 
-  // 交配出典（この品種が「子」である交配エッジの source_id）
   const crossSources = uniq(incomers.map(e => e.data('source_id')));
   const crossSourcesHtml = crossSources.length
     ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
@@ -230,13 +299,10 @@ function runLayout(mode){
         animate: true,
         randomize: true,
 
-        // 重なりにくくする（= overlap起因の edge invalid endpoints を起こしにくくする）
         nodeOverlap: 40,
         nodeRepulsion: 6500,
         idealEdgeLength: 140,
         componentSpacing: 80,
-
-        // 収束を少し丁寧に（環境次第で重ければ下げてOK）
         numIter: 1200
       };
   }
@@ -245,12 +311,147 @@ function runLayout(mode){
   cy.fit(undefined, 30);
 }
 
+/* ===== selection helper (node click と同じ体験を、一覧クリックでも) ===== */
+function selectNode(n, doFit=true){
+  if(!n) return;
+
+  setDetail(n);
+
+  cy.elements().removeClass('faded');
+  cy.elements().removeClass('highlight');
+
+  const neighborhood = n.closedNeighborhood();
+  cy.elements().not(neighborhood).addClass('faded');
+  n.addClass('highlight');
+
+  if(doFit){
+    cy.animate({ fit: { eles: neighborhood, padding: 80 } }, { duration: 250 });
+  }
+}
+
+/* ===== list rendering ===== */
+function sortKeyYear(n){
+  const y = (n.data('year') ?? '').toString().trim();
+  // 年が数字なら数字として扱う（空は最後へ）
+  const num = /^\d{3,4}$/.test(y) ? parseInt(y, 10) : null;
+  return { has: y !== '', num, raw: y };
+}
+
+function renderCultivarList(nodes, modeLabel){
+  const wrap = document.getElementById('listWrap');
+  const badge = document.getElementById('listBadge');
+
+  badge.textContent = `${modeLabel}：${nodes.length}件`;
+
+  if(!nodes.length){
+    wrap.innerHTML = `<div class="emptyRow">該当する品種がありません。</div>`;
+    return;
+  }
+
+  // 表を作る
+  const rows = nodes.map(n => {
+    const d = n.data();
+    const label = esc(d.label ?? '');
+    const year = esc(d.year ?? '');
+    const inst = esc(d.institute ?? '');
+    const id = esc(d.id ?? n.id()); // data(id) があれば優先
+    return `
+      <tr data-node-id="${id}">
+        <td>${label || '<span class="td-muted">（無名）</span>'}</td>
+        <td class="td-muted" style="white-space:nowrap;">${year || '-'}</td>
+        <td class="td-muted">${inst || '-'}</td>
+      </tr>
+    `;
+  }).join('');
+
+  wrap.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th style="width:44%;">品種</th>
+          <th style="width:18%;">年</th>
+          <th>登録者</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+  `;
+
+  // click handler
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    tr.addEventListener('click', () => {
+      const nodeId = tr.getAttribute('data-node-id');
+      const n = cy.getElementById(nodeId);
+      if(n && n.length){
+        selectNode(n, true);
+      }
+    });
+  });
+}
+
+function updateListBySearch(term){
+  if(!cy) return;
+
+  const t = (term ?? '').trim().toLowerCase();
+
+  if(!t){
+    // 検索なし：登録品種のみ表示
+    const regs = cy.nodes().filter(n => isRegisteredNode(n) && n.data('placeholder') !== true);
+
+    // できれば年昇順→名前、年無しは最後（ここでは登録年あり前提なので殆ど年あり）
+    const sorted = regs.toArray().sort((a,b) => {
+      const ka = sortKeyYear(a), kb = sortKeyYear(b);
+      if(ka.has && kb.has){
+        // 年が数字なら数字比較
+        if(ka.num !== null && kb.num !== null && ka.num !== kb.num) return ka.num - kb.num;
+        if(ka.raw !== kb.raw) return ka.raw.localeCompare(kb.raw, 'ja');
+      }
+      // fallback 名前
+      const la = (a.data('label') ?? '').toString();
+      const lb = (b.data('label') ?? '').toString();
+      return la.localeCompare(lb, 'ja');
+    });
+
+    renderCultivarList(sorted, '登録品種');
+    return;
+  }
+
+  // 検索あり：マッチしたノード（登録/未登録問わず）
+  const matched = cy.nodes().filter(n => {
+    const label = ((n.data('label') || '') + '').toLowerCase();
+    const inst  = ((n.data('institute') || '') + '').toLowerCase();
+    return label.includes(t) || inst.includes(t);
+  });
+
+  // 見やすさ：登録年ありを先頭→年→名前
+  const sorted = matched.toArray().sort((a,b) => {
+    const ra = isRegisteredNode(a), rb = isRegisteredNode(b);
+    if(ra !== rb) return ra ? -1 : 1;
+
+    const ka = sortKeyYear(a), kb = sortKeyYear(b);
+    if(ka.has && kb.has){
+      if(ka.num !== null && kb.num !== null && ka.num !== kb.num) return ka.num - kb.num;
+      if(ka.raw !== kb.raw) return ka.raw.localeCompare(kb.raw, 'ja');
+    } else if(ka.has !== kb.has){
+      return ka.has ? -1 : 1;
+    }
+
+    const la = (a.data('label') ?? '').toString();
+    const lb = (b.data('label') ?? '').toString();
+    return la.localeCompare(lb, 'ja');
+  });
+
+  renderCultivarList(sorted, '検索結果');
+}
+
 function initCy(elements){
   cy = cytoscape({
     container: document.getElementById('cy'),
     elements,
     style: [
-      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
+      /* ===== nodes ===== */
       {
         selector: 'node',
         style: {
@@ -266,14 +467,12 @@ function initCy(elements){
           'border-color': '#F9A8D4',
           'color': '#831843',
 
-          /* make it rectangle that fits label */
           'width': 'label',
           'padding': '12px',
           'shape': 'round-rectangle'
         }
       },
 
-      /* ①：登録品種（.registered クラスで確実に適用） */
       {
         selector: 'node.registered',
         style: {
@@ -287,7 +486,6 @@ function initCy(elements){
         }
       },
 
-      /* 未登録（placeholder=true のみ）※ registered より後に置いて上書き */
       {
         selector: 'node.isPlaceholder',
         style: {
@@ -302,12 +500,7 @@ function initCy(elements){
       {
         selector: 'edge',
         style: {
-          /*
-            ★重要：重なり時の "invalid endpoints" 対策
-            outside-to-node は、ノード外周との交点計算が必要で、
-            source/target が重なると交点が定義できずエラーになります。
-            inside-to-node にすると常に定義でき、エラーが止まります。
-          */
+          /* overlap時の invalid endpoints 対策 */
           'source-endpoint': 'inside-to-node',
           'target-endpoint': 'inside-to-node',
 
@@ -321,7 +514,6 @@ function initCy(elements){
         }
       },
 
-      /* mother: solid + CLOCKWISE curve (positive distance) */
       {
         selector: 'edge[role="mother"]',
         style: {
@@ -333,7 +525,6 @@ function initCy(elements){
         }
       },
 
-      /* father: dashed + COUNTERCLOCKWISE curve (negative distance) */
       {
         selector: 'edge[role="father"]',
         style: {
@@ -345,7 +536,6 @@ function initCy(elements){
         }
       },
 
-      /* unknown */
       {
         selector: 'edge[role="unknown"]',
         style: {
@@ -362,7 +552,6 @@ function initCy(elements){
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
 
-    // 初期は COSE
     layout: {
       name: 'cose',
       padding: 30,
@@ -376,17 +565,14 @@ function initCy(elements){
     }
   });
 
-  /* ★ここが重要：データからクラス付与（selector問題を回避） */
+  // データからクラス付与
   cy.batch(() => {
     cy.nodes().forEach(n => {
       const d = n.data();
 
-      // year があるノードを登録品種として強調
       if (d.year !== undefined && d.year !== null && d.year !== '') {
         n.addClass('registered');
       }
-
-      // placeholder=true のみ未登録扱い
       if (d.placeholder === true) {
         n.addClass('isPlaceholder');
       }
@@ -395,15 +581,7 @@ function initCy(elements){
 
   // click handlers
   cy.on('tap', 'node', (evt) => {
-    const n = evt.target;
-    setDetail(n);
-
-    cy.elements().removeClass('faded');
-    cy.elements().removeClass('highlight');
-
-    const neighborhood = n.closedNeighborhood();
-    cy.elements().not(neighborhood).addClass('faded');
-    n.addClass('highlight');
+    selectNode(evt.target, false);
   });
 
   cy.on('tap', (evt) => {
@@ -414,23 +592,27 @@ function initCy(elements){
     }
   });
 
-  // search (cultivar name OR institute)
+  // search
   const q = document.getElementById('q');
   q.addEventListener('input', () => {
     const term = q.value.trim().toLowerCase();
+
+    // ハイライト制御
     cy.nodes().removeClass('highlight');
-    if(!term) return;
-
-    const matched = cy.nodes().filter(n => {
-      const label = ((n.data('label') || '') + '').toLowerCase();
-      const inst  = ((n.data('institute') || '') + '').toLowerCase();
-      return label.includes(term) || inst.includes(term);
-    });
-
-    matched.addClass('highlight');
-    if(matched.length){
-      cy.animate({ fit: { eles: matched, padding: 80 } }, { duration: 200 });
+    if(term){
+      const matched = cy.nodes().filter(n => {
+        const label = ((n.data('label') || '') + '').toLowerCase();
+        const inst  = ((n.data('institute') || '') + '').toLowerCase();
+        return label.includes(term) || inst.includes(term);
+      });
+      matched.addClass('highlight');
+      if(matched.length){
+        cy.animate({ fit: { eles: matched, padding: 80 } }, { duration: 200 });
+      }
     }
+
+    // 一覧更新（検索/登録品種）
+    updateListBySearch(term);
   });
 
   // buttons
@@ -440,6 +622,7 @@ function initCy(elements){
     cy.elements().removeClass('faded');
     cy.elements().removeClass('highlight');
     setDetail(null);
+    updateListBySearch('');
   });
 
   document.getElementById('applyLayout').addEventListener('click', () => {
@@ -452,22 +635,29 @@ function initCy(elements){
     runLayout('cose');
   });
 
+  // 初期表示：登録品種リスト
+  updateListBySearch('');
+
   // initial fit
   cy.fit(undefined, 30);
 }
 
 async function loadElements(){
-  const status = document.getElementById('status');
+  const wrap = document.getElementById('listWrap');
+  const badge = document.getElementById('listBadge');
+
   try{
     const url = "elements.json?ts=" + Date.now();
     const res = await fetch(url, { cache: "no-store" });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const elements = await res.json();
 
-    status.textContent = `読み込み完了：nodes+edges=${elements.length}`;
     initCy(elements);
+
+    badge.textContent = '登録品種：読込OK';
   }catch(err){
-    status.innerHTML = `読み込み失敗：${esc(err.message)}<br>（elements.json がリポジトリの root にあるか確認してください）`;
+    badge.textContent = '読み込み失敗';
+    wrap.innerHTML = `<div class="emptyRow">読み込み失敗：${esc(err.message)}<br>（elements.json が root にあるか確認）</div>`;
   }
 }
 

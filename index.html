@@ -499,23 +499,24 @@ function initCy(elements){
     style: [
       /* ===== nodes ===== */
       {
-        selector: 'node',
+        selector: 'edge',
         style: {
-          'label': 'data(label)',
-          'font-size': 12,
-          'text-wrap': 'wrap',
-          'text-max-width': 150,
-          'text-valign': 'center',
-          'text-halign': 'center',
+          // ★矢印を外周に出す
+          'source-endpoint': 'outside-to-node',
+          'target-endpoint': 'outside-to-node',
 
-          'background-color': '#FCE7F3',
-          'border-width': 1.5,
-          'border-color': '#F9A8D4',
-          'color': '#831843',
+          // ★矢印をさらに少し外へ（見切れ対策）
+          'source-distance-from-node': 6,
+          'target-distance-from-node': 14,
 
-          'width': 'label',
-          'padding': '12px',
-          'shape': 'round-rectangle'
+          'curve-style': 'unbundled-bezier',
+          'edge-distances': 'node-position',
+          'target-arrow-shape': 'triangle',
+          'target-arrow-fill': 'filled',
+          'arrow-scale': 1.15,
+          'width': 2,
+          'line-color': '#F472B6',
+          'target-arrow-color': '#F472B6'
         }
       },
 
@@ -615,7 +616,34 @@ function initCy(elements){
       componentSpacing: 80,
       numIter: 1200
     }
+  })
+    function jitterOverlaps(){
+  const seen = new Map(); // key -> count
+  const eps = 1;          // 同一判定の丸め
+  const step = 18;        // ずらす量（px）
+
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const p = n.position();
+      const key = `${Math.round(p.x/eps)}_${Math.round(p.y/eps)}`;
+      const c = (seen.get(key) ?? 0);
+      if(c > 0){
+        // 2個目以降だけ少しずらす
+        n.position({
+          x: p.x + (c * step),
+          y: p.y + (c * step * 0.6)
+        });
+      }
+      seen.set(key, c + 1);
+    });
   });
+}
+
+// COSE / dagre でレイアウトが終わったら毎回実行
+cy.on('layoutstop', () => {
+  jitterOverlaps();
+});
+;
 
   // データからクラス付与
   cy.batch(() => {

@@ -124,6 +124,15 @@
       color: #831843;
       font-weight: 600;
     }
+
+    /* layout two buttons */
+    .layoutBtns { display:flex; gap: 8px; margin-top: 6px; }
+    .layoutBtns button.active{
+      border-color: #F9A8D4;
+      background: #FCE7F3;
+      color: #831843;
+      font-weight: 700;
+    }
   </style>
 </head>
 
@@ -154,23 +163,18 @@
       </div>
 
       <div class="muted" style="margin-top:8px;">
-        検索中はフィルタに加えて検索条件でも絞り込みます（unknownノードはリストに表示しません）。
+        検索中はフィルタに加えて検索条件でも絞り込みます（「不明/unknown」ノードはリストに表示しません）。
       </div>
     </div>
 
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
-
-      <div class="row">
-        <select id="layoutMode">
-          <option value="cose" selected>COSE（力学・初期）</option>
-          <option value="dagreLR">Dagre 横（左→右）</option>
-        </select>
-        <button id="applyLayout">適用</button>
+      <div class="layoutBtns">
+        <button id="btnCose" class="active" type="button">COSE</button>
+        <button id="btnDagre" type="button">Dagre</button>
       </div>
-
       <div class="muted" style="margin-top:6px;">
-        レイアウトは COSE / Dagre のみを使用します。
+        ボタンでレイアウトを即時適用します。
       </div>
     </div>
 
@@ -178,7 +182,6 @@
       <div class="h" style="margin:0 0 6px;">凡例</div>
       <div><span class="tag">母 → 子</span> 実線</div>
       <div><span class="tag">父 → 子</span> 破線</div>
-      <div><span class="tag">不明 → 子</span> 点線</div>
       <div class="muted" style="margin-top:6px;">ノードをドラッグして配置変更・ホイールで拡大縮小できます。</div>
     </div>
   </div>
@@ -217,9 +220,10 @@ function uniq(arr){
   return out;
 }
 
+/* 「不明」ノードをリストから除外：label が unknown / 不明（大文字小文字無視） */
 function isUnknownNode(n){
   const label = ((n.data('label') ?? '') + '').trim().toLowerCase();
-  return label === 'unknown';
+  return (label === 'unknown' || label === '不明');
 }
 
 function isRegisteredNode(n){
@@ -227,9 +231,25 @@ function isRegisteredNode(n){
   return (y !== undefined && y !== null && ('' + y).trim() !== '');
 }
 
-function isParentUnknownNode(n){
-  // 「親が不明」= 親エッジ role="unknown" が存在する
-  return n.incomers('edge[role="unknown"]').length > 0;
+/*
+  ★親が不明（新定義）：
+  - mother または father の「親名（source側ノードのlabel）」に unknown / 不明 が含まれるもの
+  - 具体的には、incomers の role=mother/father の sourceノードlabel を見て判定
+*/
+function hasUnknownParentByRole(n){
+  const incomers = n.incomers('edge');
+  const mfEdges = incomers.filter(e => {
+    const r = e.data('role');
+    return r === 'mother' || r === 'father';
+  });
+
+  // mother/father edges の source node label をチェック
+  const parents = mfEdges.sources();
+  for(const p of parents){
+    const pl = ((p.data('label') ?? '') + '').trim().toLowerCase();
+    if(pl === 'unknown' || pl === '不明') return true;
+  }
+  return false;
 }
 
 function setDetail(n){
@@ -294,6 +314,11 @@ function setDetail(n){
   `;
 }
 
+function setActiveLayout(btnId){
+  document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
+  document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
+}
+
 function runLayout(mode){
   if(!cy) return;
   cy.stop();
@@ -301,33 +326,32 @@ function runLayout(mode){
   const padding = 30;
   let opts;
 
-  switch(mode){
-    case 'dagreLR':
-      opts = {
-        name: 'dagre',
-        rankDir: 'LR',
-        nodeSep: 20,
-        edgeSep: 5,
-        rankSep: 90,
-        padding,
-        nodeDimensionsIncludeLabels: true,
-        animate: true
-      };
-      break;
-
-    case 'cose':
-    default:
-      opts = {
-        name: 'cose',
-        padding: 30,
-        animate: true,
-        randomize: true,
-        nodeOverlap: 40,
-        nodeRepulsion: 6500,
-        idealEdgeLength: 140,
-        componentSpacing: 80,
-        numIter: 1200
-      };
+  if(mode === 'dagre'){
+    opts = {
+      name: 'dagre',
+      rankDir: 'LR',
+      nodeSep: 20,
+      edgeSep: 5,
+      rankSep: 90,
+      padding,
+      nodeDimensionsIncludeLabels: true,
+      animate: true
+    };
+  }else{
+    // COSE
+    opts = {
+      name: 'cose',
+      padding: 30,
+      animate: true,
+      randomize: true,
+      avoidOverlap: true,
+      avoidOverlapPadding: 20,
+      nodeOverlap: 40,
+      nodeRepulsion: 6500,
+      idealEdgeLength: 140,
+      componentSpacing: 80,
+      numIter: 1200
+    };
   }
 
   cy.layout(opts).run();
@@ -364,7 +388,8 @@ function applyListFilter(nodes){
     return nodes.filter(n => isRegisteredNode(n) && n.data('placeholder') !== true);
   }
   if(listFilter === 'orphan'){
-    return nodes.filter(n => isParentUnknownNode(n));
+    // ★新定義：mother/father に unknown（親名がunknown/不明）を含む
+    return nodes.filter(n => hasUnknownParentByRole(n));
   }
   return nodes;
 }
@@ -430,7 +455,7 @@ function updateListAndHighlights(){
 
   const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
 
-  // リスト候補（unknownノードは除外）
+  // ★リスト候補：unknown / 不明 ノードは除外（全品種でも残らない）
   let base = cy.nodes().filter(n => !isUnknownNode(n));
 
   // フィルタ適用
@@ -496,7 +521,7 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
-      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
+      /* ===== nodes ===== */
       {
         selector: 'node',
         style: {
@@ -547,19 +572,19 @@ function initCy(elements){
       {
         selector: 'edge',
         style: {
-          // 安定優先：重なりに強い inside-to-node
-          'source-endpoint': 'inside-to-node',
-          'target-endpoint': 'inside-to-node',
+          // ★矢印を箱の外周に吸着
+          'source-endpoint': 'outside-to-node',
+          'target-endpoint': 'outside-to-node',
 
-          // ★矢印が見えるように：距離＆サイズを少し強め
-          'source-distance-from-node': 10,
-          'target-distance-from-node': 26,
-          'arrow-scale': 1.35,
+          // ★押し出しは最小（吸着のまま見やすく）
+          'source-distance-from-node': 0,
+          'target-distance-from-node': 2,
 
           'curve-style': 'unbundled-bezier',
           'edge-distances': 'node-position',
           'target-arrow-shape': 'triangle',
           'target-arrow-fill': 'filled',
+          'arrow-scale': 1.2,
           'width': 2,
           'line-color': '#F472B6',
           'target-arrow-color': '#F472B6'
@@ -607,11 +632,14 @@ function initCy(elements){
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
 
+    // 初期は COSE
     layout: {
       name: 'cose',
       padding: 30,
       animate: true,
       randomize: true,
+      avoidOverlap: true,
+      avoidOverlapPadding: 20,
       nodeOverlap: 40,
       nodeRepulsion: 6500,
       idealEdgeLength: 140,
@@ -666,10 +694,15 @@ function initCy(elements){
     updateListAndHighlights();
   });
 
-  // layout apply
-  document.getElementById('applyLayout').addEventListener('click', () => {
-    const mode = document.getElementById('layoutMode').value;
-    runLayout(mode);
+  // layout buttons
+  document.getElementById('btnCose').addEventListener('click', () => {
+    setActiveLayout('btnCose');
+    runLayout('cose');
+  });
+
+  document.getElementById('btnDagre').addEventListener('click', () => {
+    setActiveLayout('btnDagre');
+    runLayout('dagre');
   });
 
   // 初期：全品種一覧（unknownはリストに出さない）

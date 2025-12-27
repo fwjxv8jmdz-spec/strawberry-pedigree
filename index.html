@@ -23,12 +23,13 @@
     .muted { color: #6b7280; font-size: 12px; line-height: 1.4; }
     .box { border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px; margin: 10px 0; }
 
-    input[type="text"] {
+    input[type="text"], select {
       width: 100%;
       box-sizing: border-box;
       padding: 10px;
       border: 1px solid #d1d5db;
       border-radius: 10px;
+      background: #fff;
     }
 
     button {
@@ -69,10 +70,29 @@
       <button id="clear">選択解除</button>
     </div>
 
+    <!-- ★レイアウト切替UI（追加） -->
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
-      <button id="layout_dagre">配置リセット</button>
-      <div class="muted" style="margin-top:6px;">ノード配置を階層（親→子）にリセットします。</div>
+
+      <div class="row">
+        <select id="layoutMode">
+          <option value="dagreTB">Dagre 縦（親→子）</option>
+          <option value="dagreLR">Dagre 横（左→右）</option>
+          <option value="breadthfirstTB">Breadthfirst 縦</option>
+          <option value="breadthfirstLR">Breadthfirst 横</option>
+          <option value="cose">COSE（力学）</option>
+          <option value="grid">Grid</option>
+          <option value="circle">Circle</option>
+        </select>
+        <button id="applyLayout">適用</button>
+      </div>
+
+      <!-- 互換：昔のボタン（残したければ） -->
+      <div style="margin-top:8px;">
+        <button id="layout_dagre" style="width:100%;">配置リセット（Dagre 縦）</button>
+      </div>
+
+      <div class="muted" style="margin-top:6px;">レイアウトを切り替えて見比べできます。</div>
     </div>
 
     <div class="box">
@@ -186,18 +206,93 @@ function setDetail(n){
   `;
 }
 
-function runLayout(){
+/* ★モードで切り替える runLayout(mode) */
+function runLayout(mode){
   if(!cy) return;
-  cy.layout({ name: 'dagre', 
-             rankDir: 'TB', 
-             //横方向の間隔
-             nodeSep: 20, 
-             edgeSep: 5,
-             //縦方向の間隔
-             rankSep: 90, 
-             padding: 30,
-            nodeDimensionsIncludeLabels: true }).run();
-    cy.fit(undefined, 30);
+
+  cy.stop();
+
+  let opts;
+  switch(mode){
+    case 'dagreLR':
+      opts = {
+        name: 'dagre',
+        rankDir: 'LR',
+        nodeSep: 20,
+        edgeSep: 5,
+        rankSep: 90,
+        padding: 30,
+        nodeDimensionsIncludeLabels: true,
+        animate: true
+      };
+      break;
+
+    case 'breadthfirstTB':
+      opts = {
+        name: 'breadthfirst',
+        directed: true,
+        padding: 30,
+        spacingFactor: 1.25,
+        animate: true
+      };
+      break;
+
+    case 'breadthfirstLR':
+      opts = {
+        name: 'breadthfirst',
+        directed: true,
+        padding: 30,
+        spacingFactor: 1.25,
+        animate: true,
+        // breadthfirst の向き
+        orientation: 'horizontal'
+      };
+      break;
+
+    case 'cose':
+      opts = {
+        name: 'cose',
+        animate: true,
+        padding: 30,
+        nodeRepulsion: 4500,
+        idealEdgeLength: 120
+      };
+      break;
+
+    case 'grid':
+      opts = {
+        name: 'grid',
+        animate: true,
+        padding: 30,
+        spacingFactor: 1.2
+      };
+      break;
+
+    case 'circle':
+      opts = {
+        name: 'circle',
+        animate: true,
+        padding: 30,
+        spacingFactor: 1.1
+      };
+      break;
+
+    // default: dagreTB
+    default:
+      opts = {
+        name: 'dagre',
+        rankDir: 'TB',
+        nodeSep: 20,
+        edgeSep: 5,
+        rankSep: 90,
+        padding: 30,
+        nodeDimensionsIncludeLabels: true,
+        animate: true
+      };
+  }
+
+  cy.layout(opts).run();
+  cy.fit(undefined, 30);
 }
 
 function initCy(elements){
@@ -307,29 +402,25 @@ function initCy(elements){
       { selector: '.faded', style: { 'opacity': 0.2 } },
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
-    layout: { name: 'dagre', 
-             rankDir: 'TB', 
-             nodeSep: 20, 
-             rankSep: 90,
-             edgeSep: 5,
-             padding: 30,
-             nodeDimensionsIncludeLabels: true}
+
+    // 初期レイアウトは dagreTB（あとで runLayout で切り替える）
+    layout: {
+      name: 'dagre',
+      rankDir: 'TB',
+      nodeSep: 20,
+      rankSep: 90,
+      edgeSep: 5,
+      padding: 30,
+      nodeDimensionsIncludeLabels: true
+    }
   });
 
-  /* ★ここが重要：データからクラス付与（selector問題を回避） */
+  /* ★データからクラス付与（selector問題を回避） */
   cy.batch(() => {
     cy.nodes().forEach(n => {
       const d = n.data();
-
-      // year があるノードを登録品種として強調
-      if (d.year !== undefined && d.year !== null && d.year !== '') {
-        n.addClass('registered');
-      }
-
-      // placeholder=true のみ未登録扱い
-      if (d.placeholder === true) {
-        n.addClass('isPlaceholder');
-      }
+      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
+      if (d.placeholder === true) n.addClass('isPlaceholder');
     });
   });
 
@@ -381,9 +472,20 @@ function initCy(elements){
     cy.elements().removeClass('highlight');
     setDetail(null);
   });
-  document.getElementById('layout_dagre').addEventListener('click', () => runLayout());
 
-  // initial fit
+  // ★適用ボタン：選択されたレイアウトへ
+  document.getElementById('applyLayout').addEventListener('click', () => {
+    const mode = document.getElementById('layoutMode').value;
+    runLayout(mode);
+  });
+
+  // 互換ボタン：Dagre縦
+  document.getElementById('layout_dagre').addEventListener('click', () => {
+    document.getElementById('layoutMode').value = 'dagreTB';
+    runLayout('dagreTB');
+  });
+
+  // 初期 fit
   cy.fit(undefined, 30);
 }
 

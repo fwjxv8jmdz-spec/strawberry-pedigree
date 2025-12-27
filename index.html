@@ -8,24 +8,40 @@
   <!-- Cytoscape core -->
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
 
-  <!-- Layout plugins -->
+  <!-- dagre -->
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
-  <script src="https://unpkg.com/cytoscape-dagre/cytoscape-dagre.js"></script>
+  <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 
-  <!-- fCoSE -->
+  <!-- fCoSE / cose-bilkent / spread -->
   <script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
-
-  <!-- cose-bilkent (optional but nice) -->
   <script src="https://unpkg.com/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.js"></script>
-
-  <!-- spread (optional, fun for exploration) -->
   <script src="https://unpkg.com/cytoscape-spread@3.0.0/cytoscape-spread.js"></script>
 
   <script>
+    // ---- Robust plugin registration (works across UMD/default exports) ----
+    function usePlugin(nameCandidates){
+      for(const key of nameCandidates){
+        const v = window[key];
+        if(!v) continue;
+
+        // some bundles export { default: fn }
+        const fn = (typeof v === 'function') ? v
+                 : (v && typeof v.default === 'function') ? v.default
+                 : null;
+
+        if(fn){
+          try { cytoscape.use(fn); }
+          catch(e){ /* ignore double-register */ }
+          return true;
+        }
+      }
+      return false;
+    }
+
     // register plugins
-    if (window.cytoscapeFcose) cytoscape.use(window.cytoscapeFcose);
-    if (window.cytoscapeCoseBilkent) cytoscape.use(window.cytoscapeCoseBilkent);
-    if (window.cytoscapeSpread) cytoscape.use(window.cytoscapeSpread);
+    window.__hasFcose = usePlugin(['cytoscapeFcose']);
+    window.__hasCoseBilkent = usePlugin(['cytoscapeCoseBilkent']);
+    window.__hasSpread = usePlugin(['cytoscapeSpread']);
   </script>
 
   <style>
@@ -86,7 +102,6 @@
       <button id="clear">選択解除</button>
     </div>
 
-    <!-- Layout switch UI -->
     <div class="box">
       <div class="h" style="margin:0 0 6px;">レイアウト</div>
 
@@ -94,9 +109,8 @@
         <select id="layoutMode">
           <option value="cose" selected>COSE（力学・初期）</option>
           <option value="fcose">fCoSE（大規模向け）</option>
-          <option value="dagreLR">Dagre 横（左→右）</option>
           <option value="coseBilkent">COSE-Bilkent（安定・見やすい）</option>
-          <option value="concentric">Concentric（中心化）</option>
+          <option value="dagreLR">Dagre 横（左→右）</option>
           <option value="spread">Spread（ばらけ探索）</option>
         </select>
         <button id="applyLayout">適用</button>
@@ -107,7 +121,7 @@
       </div>
 
       <div class="muted" style="margin-top:6px;">
-        COSE を初期表示にして、いろいろなレイアウトを試せます。
+        ※ fCoSE / COSE-Bilkent / Spread が動かない場合は、プラグイン読み込み失敗の可能性があります。
       </div>
     </div>
 
@@ -165,7 +179,6 @@ function setDetail(n){
   }
 
   const d = n.data();
-
   const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
@@ -219,8 +232,26 @@ function setDetail(n){
   `;
 }
 
+function ensurePlugin(mode){
+  if(mode === 'fcose' && !window.__hasFcose){
+    alert('fCoSE プラグインが読み込めていません（script URL / ネットワーク / CSP を確認）');
+    return false;
+  }
+  if(mode === 'coseBilkent' && !window.__hasCoseBilkent){
+    alert('COSE-Bilkent プラグインが読み込めていません（script URL / ネットワーク / CSP を確認）');
+    return false;
+  }
+  if(mode === 'spread' && !window.__hasSpread){
+    alert('Spread プラグインが読み込めていません（script URL / ネットワーク / CSP を確認）');
+    return false;
+  }
+  return true;
+}
+
 function runLayout(mode){
   if(!cy) return;
+  if(!ensurePlugin(mode)) return;
+
   cy.stop();
 
   const common = { animate: true, padding: 30 };
@@ -236,21 +267,8 @@ function runLayout(mode){
         nodeRepulsion: 9000,
         idealEdgeLength: 140,
         edgeElasticity: 0.45,
-        nestingFactor: 0.9,
         gravity: 0.35,
         numIter: 2500
-      };
-      break;
-
-    case 'dagreLR':
-      opts = {
-        name: 'dagre',
-        ...common,
-        rankDir: 'LR',
-        nodeSep: 20,
-        edgeSep: 5,
-        rankSep: 90,
-        nodeDimensionsIncludeLabels: true
       };
       break;
 
@@ -267,18 +285,15 @@ function runLayout(mode){
       };
       break;
 
-    case 'concentric':
+    case 'dagreLR':
       opts = {
-        name: 'concentric',
+        name: 'dagre',
         ...common,
-        startAngle: 3/2 * Math.PI,
-        levelWidth: () => 1,
-        minNodeSpacing: 20,
-        concentric: (n) => {
-          // 子が多い/接続が多いノードほど中心へ
-          const deg = n.degree ? n.degree() : 0;
-          return deg;
-        }
+        rankDir: 'LR',
+        nodeSep: 20,
+        edgeSep: 5,
+        rankSep: 90,
+        nodeDimensionsIncludeLabels: true
       };
       break;
 
@@ -287,7 +302,6 @@ function runLayout(mode){
         name: 'spread',
         ...common,
         minDist: 50,
-        padding: 30,
         expandFactor: 1.2,
         randomize: true
       };
@@ -322,18 +336,15 @@ function initCy(elements){
           'text-max-width': 150,
           'text-valign': 'center',
           'text-halign': 'center',
-
           'background-color': '#FCE7F3',
           'border-width': 1.5,
           'border-color': '#F9A8D4',
           'color': '#831843',
-
           'width': 'label',
           'padding': '12px',
           'shape': 'round-rectangle'
         }
       },
-
       {
         selector: 'node.registered',
         style: {
@@ -346,7 +357,6 @@ function initCy(elements){
           'shadow-opacity': 0.35
         }
       },
-
       {
         selector: 'node.isPlaceholder',
         style: {
@@ -369,7 +379,6 @@ function initCy(elements){
           'target-arrow-color': '#F472B6'
         }
       },
-
       {
         selector: 'edge[role="mother"]',
         style: {
@@ -380,7 +389,6 @@ function initCy(elements){
           'control-point-weight': 0.5
         }
       },
-
       {
         selector: 'edge[role="father"]',
         style: {
@@ -391,7 +399,6 @@ function initCy(elements){
           'control-point-weight': 0.5
         }
       },
-
       {
         selector: 'edge[role="unknown"]',
         style: {
@@ -407,7 +414,7 @@ function initCy(elements){
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
 
-    // ★初期レイアウトを COSE に
+    // 初期は COSE
     layout: {
       name: 'cose',
       padding: 30,
@@ -418,6 +425,7 @@ function initCy(elements){
     }
   });
 
+  // クラス付与
   cy.batch(() => {
     cy.nodes().forEach(n => {
       const d = n.data();
@@ -426,6 +434,7 @@ function initCy(elements){
     });
   });
 
+  // click handlers
   cy.on('tap', 'node', (evt) => {
     const n = evt.target;
     setDetail(n);
@@ -446,6 +455,7 @@ function initCy(elements){
     }
   });
 
+  // search
   const q = document.getElementById('q');
   q.addEventListener('input', () => {
     const term = q.value.trim().toLowerCase();
@@ -464,6 +474,7 @@ function initCy(elements){
     }
   });
 
+  // buttons
   document.getElementById('fit').addEventListener('click', () => cy.fit(undefined, 30));
   document.getElementById('clear').addEventListener('click', () => {
     q.value = '';

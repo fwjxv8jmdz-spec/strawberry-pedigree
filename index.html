@@ -12,47 +12,6 @@
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 
-  <!-- fCoSE / cose-bilkent / spread -->
-<!-- local plugins -->
-<script src="./vendor/cytoscape-fcose.js"></script>
-<script src="./vendor/cytoscape-cose-bilkent.js"></script>
-<script src="./vendor/cytoscape-spread.js"></script>
-
-<script>
-  // プラグイン登録（ローカルならこれで確実に通る）
-  cytoscape.use(cytoscapeFcose);
-  cytoscape.use(cytoscapeCoseBilkent);
-  cytoscape.use(cytoscapeSpread);
-</script>
-
-
-  <script>
-    // ---- Robust plugin registration (works across UMD/default exports) ----
-    function usePlugin(nameCandidates){
-      for(const key of nameCandidates){
-        const v = window[key];
-        if(!v) continue;
-
-        // some bundles export { default: fn }
-        const fn = (typeof v === 'function') ? v
-                 : (v && typeof v.default === 'function') ? v.default
-                 : null;
-
-        if(fn){
-          try { cytoscape.use(fn); }
-          catch(e){ /* ignore double-register */ }
-          return true;
-        }
-      }
-      return false;
-    }
-
-    // register plugins
-    window.__hasFcose = usePlugin(['cytoscapeFcose']);
-    window.__hasCoseBilkent = usePlugin(['cytoscapeCoseBilkent']);
-    window.__hasSpread = usePlugin(['cytoscapeSpread']);
-  </script>
-
   <style>
     body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; }
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
@@ -117,10 +76,11 @@
       <div class="row">
         <select id="layoutMode">
           <option value="cose" selected>COSE（力学・初期）</option>
-          <option value="fcose">fCoSE（大規模向け）</option>
-          <option value="coseBilkent">COSE-Bilkent（安定・見やすい）</option>
           <option value="dagreLR">Dagre 横（左→右）</option>
-          <option value="spread">Spread（ばらけ探索）</option>
+          <option value="breadthfirstTB">Breadthfirst 縦（上→下）</option>
+          <option value="concentric">Concentric（中心化）</option>
+          <option value="circle">Circle</option>
+          <option value="grid">Grid</option>
         </select>
         <button id="applyLayout">適用</button>
       </div>
@@ -130,7 +90,7 @@
       </div>
 
       <div class="muted" style="margin-top:6px;">
-        ※ fCoSE / COSE-Bilkent / Spread が動かない場合は、プラグイン読み込み失敗の可能性があります。
+        Dagre/COSE に加えて、探索向けの標準レイアウト（Breadthfirst/Concentric/Circle/Grid）を試せます。
       </div>
     </div>
 
@@ -188,10 +148,12 @@ function setDetail(n){
   }
 
   const d = n.data();
+
   const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
 
+  // 品種登録情報（品種そのものの出典）
   let sourcesHtml = '';
   if(d.sources){
     const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
@@ -204,6 +166,7 @@ function setDetail(n){
     sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
   }
 
+  // parents / children
   const incomers = n.incomers('edge');
   const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
   const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
@@ -217,6 +180,7 @@ function setDetail(n){
   const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
   const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
 
+  // 交配出典（この品種が「子」である交配エッジの source_id）
   const crossSources = uniq(incomers.map(e => e.data('source_id')));
   const crossSourcesHtml = crossSources.length
     ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
@@ -241,78 +205,78 @@ function setDetail(n){
   `;
 }
 
-function ensurePlugin(mode){
-  if(mode === 'fcose' && !window.__hasFcose){
-    alert('fCoSE プラグインが読み込めていません（script URL / ネットワーク / CSP を確認）');
-    return false;
-  }
-  if(mode === 'coseBilkent' && !window.__hasCoseBilkent){
-    alert('COSE-Bilkent プラグインが読み込めていません（script URL / ネットワーク / CSP を確認）');
-    return false;
-  }
-  if(mode === 'spread' && !window.__hasSpread){
-    alert('Spread プラグインが読み込めていません（script URL / ネットワーク / CSP を確認）');
-    return false;
-  }
-  return true;
+/* ===== roots helper for breadthfirst =====
+   - "parentsがいないノード" を roots とする（複数可）
+   - ひとつも見つからなければ空（layoutに任せる）
+*/
+function getRoots(){
+  if(!cy) return [];
+  const roots = cy.nodes().filter(n => n.incomers('edge').length === 0);
+  return roots.length ? roots : [];
 }
 
 function runLayout(mode){
   if(!cy) return;
-  if(!ensurePlugin(mode)) return;
-
   cy.stop();
 
-  const common = { animate: true, padding: 30 };
-
+  const padding = 30;
   let opts;
+
   switch(mode){
-    case 'fcose':
-      opts = {
-        name: 'fcose',
-        ...common,
-        quality: 'default',
-        randomize: true,
-        nodeRepulsion: 9000,
-        idealEdgeLength: 140,
-        edgeElasticity: 0.45,
-        gravity: 0.35,
-        numIter: 2500
-      };
-      break;
-
-    case 'coseBilkent':
-      opts = {
-        name: 'cose-bilkent',
-        ...common,
-        randomize: true,
-        nodeRepulsion: 9000,
-        idealEdgeLength: 140,
-        edgeElasticity: 0.45,
-        gravity: 0.25,
-        numIter: 2500
-      };
-      break;
-
     case 'dagreLR':
       opts = {
         name: 'dagre',
-        ...common,
         rankDir: 'LR',
         nodeSep: 20,
         edgeSep: 5,
         rankSep: 90,
-        nodeDimensionsIncludeLabels: true
+        padding,
+        nodeDimensionsIncludeLabels: true,
+        animate: true
       };
       break;
 
-    case 'spread':
+    case 'breadthfirstTB': {
+      const roots = getRoots();
       opts = {
-        name: 'spread',
-        ...common,
-        minDist: 50,
-        expandFactor: 1.2,
-        randomize: true
+        name: 'breadthfirst',
+        directed: true,
+        padding,
+        spacingFactor: 1.1,
+        circle: false,
+        animate: true,
+        // rootsが取れた時だけ指定
+        roots: roots.length ? roots : undefined
+      };
+      break;
+    }
+
+    case 'concentric':
+      opts = {
+        name: 'concentric',
+        padding,
+        animate: true,
+        minNodeSpacing: 20,
+        levelWidth: () => 1,
+        concentric: (n) => n.degree()
+      };
+      break;
+
+    case 'circle':
+      opts = {
+        name: 'circle',
+        padding,
+        animate: true
+      };
+      break;
+
+    case 'grid':
+      opts = {
+        name: 'grid',
+        padding,
+        animate: true,
+        avoidOverlap: true,
+        avoidOverlapPadding: 10
       };
       break;
 
@@ -320,7 +284,8 @@ function runLayout(mode){
     default:
       opts = {
         name: 'cose',
-        ...common,
+        padding,
+        animate: true,
         randomize: true,
         nodeRepulsion: 4500,
         idealEdgeLength: 120
@@ -336,6 +301,7 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
+      /* ===== nodes (soft pink, label-friendly rectangle) ===== */
       {
         selector: 'node',
         style: {
@@ -345,15 +311,20 @@ function initCy(elements){
           'text-max-width': 150,
           'text-valign': 'center',
           'text-halign': 'center',
+
           'background-color': '#FCE7F3',
           'border-width': 1.5,
           'border-color': '#F9A8D4',
           'color': '#831843',
+
+          /* make it rectangle that fits label */
           'width': 'label',
           'padding': '12px',
           'shape': 'round-rectangle'
         }
       },
+
+      /* ①：登録品種（.registered クラスで確実に適用） */
       {
         selector: 'node.registered',
         style: {
@@ -366,6 +337,8 @@ function initCy(elements){
           'shadow-opacity': 0.35
         }
       },
+
+      /* 未登録（placeholder=true のみ）※ registered より後に置いて上書き */
       {
         selector: 'node.isPlaceholder',
         style: {
@@ -376,6 +349,7 @@ function initCy(elements){
         }
       },
 
+      /* ===== edges ===== */
       {
         selector: 'edge',
         style: {
@@ -388,6 +362,8 @@ function initCy(elements){
           'target-arrow-color': '#F472B6'
         }
       },
+
+      /* mother: solid + CLOCKWISE curve (positive distance) */
       {
         selector: 'edge[role="mother"]',
         style: {
@@ -398,6 +374,8 @@ function initCy(elements){
           'control-point-weight': 0.5
         }
       },
+
+      /* father: dashed + COUNTERCLOCKWISE curve (negative distance) */
       {
         selector: 'edge[role="father"]',
         style: {
@@ -408,6 +386,8 @@ function initCy(elements){
           'control-point-weight': 0.5
         }
       },
+
+      /* unknown */
       {
         selector: 'edge[role="unknown"]',
         style: {
@@ -419,6 +399,7 @@ function initCy(elements){
         }
       },
 
+      /* ===== interaction ===== */
       { selector: '.faded', style: { 'opacity': 0.2 } },
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
@@ -434,12 +415,20 @@ function initCy(elements){
     }
   });
 
-  // クラス付与
+  /* ★ここが重要：データからクラス付与（selector問題を回避） */
   cy.batch(() => {
     cy.nodes().forEach(n => {
       const d = n.data();
-      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
-      if (d.placeholder === true) n.addClass('isPlaceholder');
+
+      // year があるノードを登録品種として強調
+      if (d.year !== undefined && d.year !== null && d.year !== '') {
+        n.addClass('registered');
+      }
+
+      // placeholder=true のみ未登録扱い
+      if (d.placeholder === true) {
+        n.addClass('isPlaceholder');
+      }
     });
   });
 
@@ -464,7 +453,7 @@ function initCy(elements){
     }
   });
 
-  // search
+  // search (cultivar name OR institute)
   const q = document.getElementById('q');
   q.addEventListener('input', () => {
     const term = q.value.trim().toLowerCase();
@@ -502,6 +491,7 @@ function initCy(elements){
     runLayout('cose');
   });
 
+  // initial fit
   cy.fit(undefined, 30);
 }
 

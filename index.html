@@ -220,8 +220,10 @@ function initCy(elements){
           'color': '#831843',
 
           /* make it rectangle that fits label */
-          'width': 'label',
+          'width': 120,          // ← 固定幅（110〜140で調整）
+          'height': 'label',     // ← 高さはラベルに応じて伸びる（縦に改行）
           'padding': '12px',
+          'text-max-width': 110, // ← 幅に合わせて折り返す（120なら110くらいが安定）
           'shape': 'round-rectangle'
         }
       },

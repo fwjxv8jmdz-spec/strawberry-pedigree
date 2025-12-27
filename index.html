@@ -77,10 +77,6 @@
         <select id="layoutMode">
           <option value="cose" selected>COSE（力学・初期）</option>
           <option value="dagreLR">Dagre 横（左→右）</option>
-          <option value="breadthfirstTB">Breadthfirst 縦（上→下）</option>
-          <option value="concentric">Concentric（中心化）</option>
-          <option value="circle">Circle</option>
-          <option value="grid">Grid</option>
         </select>
         <button id="applyLayout">適用</button>
       </div>
@@ -90,7 +86,7 @@
       </div>
 
       <div class="muted" style="margin-top:6px;">
-        Dagre/COSE に加えて、探索向けの標準レイアウト（Breadthfirst/Concentric/Circle/Grid）を試せます。
+        レイアウトは COSE / Dagre のみを使用します（外部プラグイン不要な標準レイアウトは削除済み）。
       </div>
     </div>
 
@@ -205,16 +201,6 @@ function setDetail(n){
   `;
 }
 
-/* ===== roots helper for breadthfirst =====
-   - "parentsがいないノード" を roots とする（複数可）
-   - ひとつも見つからなければ空（layoutに任せる）
-*/
-function getRoots(){
-  if(!cy) return [];
-  const roots = cy.nodes().filter(n => n.incomers('edge').length === 0);
-  return roots.length ? roots : [];
-}
-
 function runLayout(mode){
   if(!cy) return;
   cy.stop();
@@ -236,50 +222,6 @@ function runLayout(mode){
       };
       break;
 
-    case 'breadthfirstTB': {
-      const roots = getRoots();
-      opts = {
-        name: 'breadthfirst',
-        directed: true,
-        padding,
-        spacingFactor: 1.1,
-        circle: false,
-        animate: true,
-        // rootsが取れた時だけ指定
-        roots: roots.length ? roots : undefined
-      };
-      break;
-    }
-
-    case 'concentric':
-      opts = {
-        name: 'concentric',
-        padding,
-        animate: true,
-        minNodeSpacing: 20,
-        levelWidth: () => 1,
-        concentric: (n) => n.degree()
-      };
-      break;
-
-    case 'circle':
-      opts = {
-        name: 'circle',
-        padding,
-        animate: true
-      };
-      break;
-
-    case 'grid':
-      opts = {
-        name: 'grid',
-        padding,
-        animate: true,
-        avoidOverlap: true,
-        avoidOverlapPadding: 10
-      };
-      break;
-
     case 'cose':
     default:
       opts = {
@@ -287,8 +229,15 @@ function runLayout(mode){
         padding,
         animate: true,
         randomize: true,
-        nodeRepulsion: 4500,
-        idealEdgeLength: 120
+
+        // 重なりにくくする（= overlap起因の edge invalid endpoints を起こしにくくする）
+        nodeOverlap: 40,
+        nodeRepulsion: 6500,
+        idealEdgeLength: 140,
+        componentSpacing: 80,
+
+        // 収束を少し丁寧に（環境次第で重ければ下げてOK）
+        numIter: 1200
       };
   }
 
@@ -353,6 +302,15 @@ function initCy(elements){
       {
         selector: 'edge',
         style: {
+          /*
+            ★重要：重なり時の "invalid endpoints" 対策
+            outside-to-node は、ノード外周との交点計算が必要で、
+            source/target が重なると交点が定義できずエラーになります。
+            inside-to-node にすると常に定義でき、エラーが止まります。
+          */
+          'source-endpoint': 'inside-to-node',
+          'target-endpoint': 'inside-to-node',
+
           'curve-style': 'unbundled-bezier',
           'edge-distances': 'node-position',
           'target-arrow-shape': 'triangle',
@@ -410,8 +368,11 @@ function initCy(elements){
       padding: 30,
       animate: true,
       randomize: true,
-      nodeRepulsion: 4500,
-      idealEdgeLength: 120
+      nodeOverlap: 40,
+      nodeRepulsion: 6500,
+      idealEdgeLength: 140,
+      componentSpacing: 80,
+      numIter: 1200
     }
   });
 

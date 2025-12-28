@@ -59,6 +59,9 @@
     #left, #right { padding: 12px; overflow: auto; }
     #left { border-right: 1px solid var(--border); }
     #right { border-left: 1px solid var(--border); }
+
+    /* graph area wrapper (for floating buttons) */
+    #cyWrap{ position: relative; width:100%; height:100%; }
     #cy { width: 100%; height: 100%; }
 
     .h { font-weight: 700; margin: 6px 0 10px; }
@@ -172,6 +175,39 @@
       font-weight: 700;
     }
 
+    /* ===== floating zoom controls ===== */
+    #zoomCtrl{
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 50;
+      pointer-events: auto;
+    }
+    .zbtn{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .zbtn:active{ transform: translateY(1px); }
+    .zbtn small{ font-size: 12px; font-weight: 800; }
+
+    /* small tooltip-like label on long press not needed; keep clean */
+
     /* ===== mobile tabs (hidden on desktop) ===== */
     #mobileTabs{ display:none; }
 
@@ -185,10 +221,10 @@
       }
 
       /* hide all by default; tabs will show one */
-      #left, #right, #cy{ display:none; border: none; padding: 12px; }
+      #left, #right, #cyWrap{ display:none; border: none; padding: 12px; }
 
       /* Graph gets almost full height */
-      #cy{
+      #cyWrap{
         padding: 0;
         height: calc(100vh - 64px); /* tabs height */
         min-height: 520px;
@@ -241,8 +277,11 @@
 
       /* one visible */
       body.tab-left  #left{ display:block; }
-      body.tab-cy    #cy  { display:block; }
+      body.tab-cy    #cyWrap{ display:block; }
       body.tab-right #right{ display:block; }
+
+      /* put zoom ctrl a bit higher so it doesn't clash with browser UI */
+      #zoomCtrl{ right: 12px; bottom: 14px; }
 
       /* footer fixed is annoying on mobile */
       footer{ display:none !important; }
@@ -297,7 +336,17 @@
       </div>
     </div>
 
-    <div id="cy"></div>
+    <!-- Graph wrapper for floating controls -->
+    <div id="cyWrap">
+      <div id="cy"></div>
+
+      <!-- floating zoom controls -->
+      <div id="zoomCtrl" aria-label="zoom controls">
+        <div class="zbtn" id="btnZoomIn" title="拡大">＋</div>
+        <div class="zbtn" id="btnZoomOut" title="縮小">－</div>
+        <div class="zbtn" id="btnFit" title="全体表示"><small>fit</small></div>
+      </div>
+    </div>
 
     <div id="right">
       <div class="h">詳細</div>
@@ -489,10 +538,49 @@
       });
     }
 
-    /* ===== Detail renderer (auto-tab option; default OFF) ===== */
-    function setDetail(n, opts = {}){
-      const { autoTab = false } = opts;
+    /* ===== zoom controls ===== */
+    function clamp(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); }
 
+    function zoomBy(factor){
+      if(!cy) return;
+      const current = cy.zoom();
+      const next = clamp(current * factor, 0.08, 3.5);
+      const center = cy.extent().center(); // view center
+      cy.zoom({ level: next, renderedPosition: { x: cy.width()/2, y: cy.height()/2 } });
+      cy.center();
+    }
+
+    function fitAll(pad = 70){
+      if(!cy) return;
+      cy.fit(undefined, pad);
+    }
+
+    function initZoomButtons(){
+      const inBtn = document.getElementById('btnZoomIn');
+      const outBtn = document.getElementById('btnZoomOut');
+      const fitBtn = document.getElementById('btnFit');
+
+      if(inBtn) inBtn.addEventListener('click', () => {
+        if(!cy) return;
+        const next = Math.min(cy.zoom() * 1.2, 3.5);
+        cy.animate({ zoom: next, center: { eles: cy.elements() } }, { duration: 120 });
+      });
+
+      if(outBtn) outBtn.addEventListener('click', () => {
+        if(!cy) return;
+        const next = Math.max(cy.zoom() / 1.2, 0.08);
+        cy.animate({ zoom: next, center: { eles: cy.elements() } }, { duration: 120 });
+      });
+
+      if(fitBtn) fitBtn.addEventListener('click', () => {
+        if(!cy) return;
+        const pad = isMobileNow() ? 90 : 30;
+        cy.animate({ fit: { eles: cy.elements(), padding: pad } }, { duration: 160 });
+      });
+    }
+
+    /* ===== Detail renderer ===== */
+    function setDetail(n){
       if(!n){
         document.getElementById('detail').innerHTML =
           '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
@@ -552,11 +640,6 @@
           ${ph}
         </div>
       `;
-
-      // ★今回の要件では autoTab を使わない（必要なら将来ONにできる）
-      if(isMobileNow() && autoTab){
-        setTab('right');
-      }
     }
 
     function runLayout(mode){
@@ -603,12 +686,12 @@
       document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
     }
 
-    /* ===== selection helper (NO auto tab by default) ===== */
-    function selectNode(n, doFit=true, autoDetailTab=false){
+    /* ===== selection helper ===== */
+    function selectNode(n, doFit=true){
       if(!n) return;
 
-      // ★タップした瞬間に「詳細内容」は更新しておく（タブは移動しない）
-      setDetail(n, { autoTab: autoDetailTab });
+      // update detail content but do not change tabs
+      setDetail(n);
 
       cy.elements().removeClass('faded');
       cy.elements().removeClass('highlight');
@@ -683,9 +766,8 @@
           const nodeId = tr.getAttribute('data-node-id');
           const n = cy.getElementById(nodeId);
           if(n && n.length){
-            // ★Fix #1: list click -> go graph tab (not detail)
             if(isMobileNow()) setTab('cy');
-            selectNode(n, true, false); // autoDetailTab=false
+            selectNode(n, true);
           }
         });
       });
@@ -873,10 +955,9 @@
         });
       });
 
-      // ★今回の修正ポイント：
-      // グラフでノードをタップしてもタブ移動しない（でも詳細内容は更新される）
+      // Graph tap: keep tab, just update highlight + detail content
       cy.on('tap', 'node', (evt) => {
-        selectNode(evt.target, false, false); // autoDetailTab=false なのでタブはそのまま
+        selectNode(evt.target, false);
       });
 
       cy.on('tap', (evt) => {
@@ -945,6 +1026,7 @@
 
       try{
         initMobileTabs();
+        initZoomButtons(); // ★ added
 
         const url = "elements.json?ts=" + Date.now();
         const res = await fetch(url, { cache: "no-store" });

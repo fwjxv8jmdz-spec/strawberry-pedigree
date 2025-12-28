@@ -680,14 +680,14 @@ function initZoomButtons(){
           name: 'cose',
           padding: 30,
           animate: true,
-          randomize: true,
+          randomize: false,
           avoidOverlap: true,
-          avoidOverlapPadding: isM ? 40 : 20,
+          avoidOverlapPadding: isM ? 60 : 40,
           nodeOverlap: 40,
-          nodeRepulsion: isM ? 12000 : 6500,
-          idealEdgeLength: isM ? 220 : 140,
+          nodeRepulsion: isM ? 22000 : 14000,
+          idealEdgeLength: isM ? 280 : 200,
           componentSpacing: isM ? 120 : 80,
-          numIter: 1200
+          numIter: 2000
         };
       }
 

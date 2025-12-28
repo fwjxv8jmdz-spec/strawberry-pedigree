@@ -555,29 +555,43 @@
       cy.fit(undefined, pad);
     }
 
-    function initZoomButtons(){
-      const inBtn = document.getElementById('btnZoomIn');
-      const outBtn = document.getElementById('btnZoomOut');
-      const fitBtn = document.getElementById('btnFit');
+function initZoomButtons(){
+  const inBtn = document.getElementById('btnZoomIn');
+  const outBtn = document.getElementById('btnZoomOut');
+  const fitBtn = document.getElementById('btnFit');
 
-      if(inBtn) inBtn.addEventListener('click', () => {
-        if(!cy) return;
-        const next = Math.min(cy.zoom() * 1.2, 3.5);
-        cy.animate({ zoom: next, center: { eles: cy.elements() } }, { duration: 120 });
-      });
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-      if(outBtn) outBtn.addEventListener('click', () => {
-        if(!cy) return;
-        const next = Math.max(cy.zoom() / 1.2, 0.08);
-        cy.animate({ zoom: next, center: { eles: cy.elements() } }, { duration: 120 });
-      });
+  // いま見ている「画面の中央」を固定してズーム
+  function zoomAtViewportCenter(nextLevel){
+    if(!cy) return;
 
-      if(fitBtn) fitBtn.addEventListener('click', () => {
-        if(!cy) return;
-        const pad = isMobileNow() ? 90 : 30;
-        cy.animate({ fit: { eles: cy.elements(), padding: pad } }, { duration: 160 });
-      });
-    }
+    const level = clamp(nextLevel, 0.08, 3.5);
+    const center = { x: cy.width() / 2, y: cy.height() / 2 };
+
+    // ★中心固定ズーム（パンは変わらない）
+    cy.zoom({ level, renderedPosition: center });
+  }
+
+  if(inBtn) inBtn.addEventListener('click', () => {
+    if(!cy) return;
+    const next = cy.zoom() * 1.2;
+    zoomAtViewportCenter(next);
+  });
+
+  if(outBtn) outBtn.addEventListener('click', () => {
+    if(!cy) return;
+    const next = cy.zoom() / 1.2;
+    zoomAtViewportCenter(next);
+  });
+
+  if(fitBtn) fitBtn.addEventListener('click', () => {
+    if(!cy) return;
+    const pad = isMobileNow() ? 90 : 30;
+    cy.fit(undefined, pad);
+  });
+}
+
 
     /* ===== Detail renderer ===== */
     function setDetail(n){

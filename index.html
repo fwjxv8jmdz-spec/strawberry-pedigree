@@ -55,7 +55,7 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ===== layout ===== */
+    /* ===== layout (desktop) ===== */
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
     #left, #right { padding: 12px; overflow: auto; }
     #left { border-right: 1px solid var(--border); }
@@ -83,9 +83,6 @@
       cursor: pointer;
     }
     button:hover { background: #f9fafb; }
-
-    .row { display: flex; gap: 8px; }
-    .row > * { flex: 1; }
 
     .tag {
       display:inline-block;
@@ -166,7 +163,7 @@
       font-weight: 600;
     }
 
-    /* layout two buttons */
+    /* layout buttons */
     .layoutBtns { display:flex; gap: 8px; margin-top: 6px; }
     .layoutBtns button{ flex:1; }
     .layoutBtns button.active{
@@ -176,83 +173,98 @@
       font-weight: 700;
     }
 
-    /* right panel: mobile toggle header */
-    .rightHeader{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:8px;
-      margin: 0 0 8px;
-    }
-    #toggleRight{
-      display:none;
-      padding: 8px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-    }
+    /* ===== mobile tabs (hidden on desktop) ===== */
+    #mobileTabs{ display:none; }
 
-    /* ===== Mobile ===== */
+    /* ===== Mobile: tabs make graph dominant ===== */
     @media (max-width: 900px) {
-      /* 3カラム→1カラム */
-      #app {
+      /* grid -> stacked but only one panel visible at a time (tabs) */
+      #app{
         grid-template-columns: 1fr;
-        grid-template-rows: auto minmax(55vh, 1fr) auto;
+        grid-template-rows: auto;
         height: auto;
         min-height: 100vh;
       }
 
-      #left, #right{
-        border-right: none;
-        border-left: none;
-        border-bottom: 1px solid var(--border);
-        padding: 10px;
-      }
+      /* hide all by default; tabs will show one */
+      #left, #right, #cy{ display:none; border: none; padding: 12px; }
 
+      /* Graph gets almost full height */
       #cy{
-        height: 60vh;
-        min-height: 420px;
+        padding: 0;
+        height: calc(100vh - 64px); /* tabs height */
+        min-height: 520px;
       }
 
-      #listWrap{
-        max-height: 34vh;
+      /* Search/list/detail panels scroll naturally */
+      #left, #right{
+        height: calc(100vh - 64px);
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
-      /* iOSの入力ズーム防止にも効く */
+      /* Input bigger for phone */
       input[type="text"], select{
         padding: 12px;
-        font-size: 16px;
+        font-size: 16px; /* prevent iOS zoom */
       }
-      button{
-        padding: 10px 12px;
-        font-size: 14px;
-      }
+      button{ padding: 10px 12px; font-size: 14px; }
 
-      /* 表が崩れる場合は横スクロールで逃がす */
+      /* list height: don't hog */
+      #listWrap{ max-height: 40vh; }
+
+      /* table: allow horizontal scroll if needed */
       table{ min-width: 520px; }
 
-      /* footer fixedは邪魔なので解除 */
-      footer{
-        position: static !important;
-        margin: 10px;
-        display:block;
+      /* tabs */
+      #mobileTabs{
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        display: flex;
+        gap: 8px;
+        padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255,255,255,0.92);
+        border-top: 1px solid var(--border);
+        backdrop-filter: blur(8px);
+        z-index: 1000;
+      }
+      #mobileTabs button{
+        flex: 1;
+        border-radius: 999px;
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+      #mobileTabs button.active{
+        border-color: var(--pink-300);
+        background: var(--pink-100);
+        color: var(--wine);
+        font-weight: 800;
       }
 
-      /* right panel toggle */
-      #toggleRight{ display:inline-block !important; }
-      #rightBody{ display:none; }
-      #right.open #rightBody{ display:block; }
+      /* one visible */
+      body.tab-left  #left{ display:block; }
+      body.tab-cy    #cy  { display:block; }
+      body.tab-right #right{ display:block; }
+
+      /* footer fixed is annoying on mobile */
+      footer{ display:none !important; }
     }
   </style>
 </head>
 
 <body>
-  <div class="muted" style="margin:8px 0 12px; padding:0 12px;">
+  <!-- Desktop only intro (kept small). On mobile, it's inside left panel to avoid shrinking graph. -->
+  <div id="introDesktop" class="muted" style="margin:8px 0 12px; padding:0 12px;">
     いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
   </div>
 
   <div id="app">
     <div id="left">
       <h1 style="font-size:16px; margin:0 0 8px;">いちご 品種系統図（交配図）</h1>
+
+      <div class="muted" style="margin:0 0 10px;">
+        いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
+      </div>
 
       <div class="h">検索</div>
       <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
@@ -290,67 +302,69 @@
     <div id="cy"></div>
 
     <div id="right">
-      <div class="rightHeader">
-        <div class="h" style="margin:0;">詳細</div>
-        <button id="toggleRight" type="button">開く</button>
+      <div class="h">詳細</div>
+      <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
+
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">利用条件・免責</div>
+        <div class="muted">
+          本サイトのデータの利用条件は以下をご確認ください。
+          <ul style="padding-left:16px; margin:6px 0;">
+            <li>
+              <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html"
+                 target="_blank" rel="noopener noreferrer">利用上の注意</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div id="rightBody">
-        <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
-
-        <div class="box">
-          <div class="h" style="margin:0 0 6px;">利用条件・免責</div>
-          <div class="muted">
-            本サイトのデータの利用条件は以下をご確認ください。
-            <ul style="padding-left:16px; margin:6px 0;">
-              <li>
-                <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html"
-                   target="_blank" rel="noopener noreferrer">利用上の注意</a>
-              </li>
-            </ul>
-          </div>
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">レイアウト</div>
+        <div class="layoutBtns">
+          <button id="btnCose" class="active" type="button">CoSE</button>
+          <button id="btnDagre" type="button">Dagre</button>
         </div>
+      </div>
 
-        <div class="box">
-          <div class="h" style="margin:0 0 6px;">レイアウト</div>
-          <div class="layoutBtns">
-            <button id="btnCose" class="active" type="button">CoSE</button>
-            <button id="btnDagre" type="button">Dagre</button>
-          </div>
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">問い合わせフォーム</div>
+        <div class="muted">
+          情報提供、誤情報の指摘、追加してほしい品種のリクエストなどを歓迎しています。ぜひ、リンク先のGoogleフォームにてお知らせください。
+          お問い合わせフォームでは、確認・返信の目的で連絡先をお預かりする場合があります。詳細はフォーム内の個人情報の取り扱いをご確認ください。
+          <ul style="padding-left:16px; margin:6px 0;">
+            <li>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScw4ppm9q-qG53L1dYKLOBYp_AV7yECx0Q2ui8dxKajDHESaA/viewform?usp=dialog"
+                 target="_blank" rel="noopener noreferrer">問い合わせフォーム</a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="box">
-          <div class="h" style="margin:0 0 6px;">問い合わせフォーム</div>
-          <div class="muted">
-            情報提供、誤情報の指摘、追加してほしい品種のリクエストなどを歓迎しています。ぜひ、リンク先のGoogleフォームにてお知らせください。
-            お問い合わせフォームでは、確認・返信の目的で連絡先をお預かりする場合があります。詳細はフォーム内の個人情報の取り扱いをご確認ください。
-            <ul style="padding-left:16px; margin:6px 0;">
-              <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScw4ppm9q-qG53L1dYKLOBYp_AV7yECx0Q2ui8dxKajDHESaA/viewform?usp=dialog"
-                   target="_blank" rel="noopener noreferrer">問い合わせフォーム</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="h" style="margin:0 0 6px;">凡例</div>
-          <div><span class="tag">母 → 子</span> 実線</div>
-          <div><span class="tag">父 → 子</span> 破線</div>
-          <div class="muted" style="margin-top:6px;">品種名をドラッグして配置変更・ホイールで拡大縮小できます。</div>
-        </div>
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">凡例</div>
+        <div><span class="tag">母 → 子</span> 実線</div>
+        <div><span class="tag">父 → 子</span> 破線</div>
+        <div class="muted" style="margin-top:6px;">品種名をドラッグして配置変更・ピンチで拡大縮小できます。</div>
       </div>
     </div>
+  </div>
+
+  <!-- Mobile bottom tabs -->
+  <div id="mobileTabs" aria-label="mobile tabs">
+    <button type="button" data-tab="left">検索</button>
+    <button type="button" data-tab="cy" class="active">グラフ</button>
+    <button type="button" data-tab="right">詳細</button>
   </div>
 
   <script>
     let cy = null;
 
-    /* ===== responsive params for Cytoscape ===== */
+    /* ===== responsive params ===== */
     const mqMobile = window.matchMedia('(max-width: 900px)');
     const isMobileNow = () => mqMobile.matches;
-    const nodeFontSize = () => (isMobileNow() ? 14 : 12);
-    const textMaxWidth = () => (isMobileNow() ? 180 : 150);
+
+    const nodeFontSize = () => (isMobileNow() ? 18 : 12);
+    const textMaxWidth = () => (isMobileNow() ? 240 : 150);
 
     /* ===== list state ===== */
     let listFilter = 'all'; // 'all' | 'reg' | 'orphan'
@@ -404,22 +418,18 @@
       return false;
     }
 
-    /* ===== Sorting helpers =====
-       - 全品種/親が不明: 日本語(50音) → アルファベット → 数字
-       - 登録品種: 年(降順) → 同年/年なしは上と同じ
-    */
+    /* ===== Sorting helpers ===== */
     const collJa = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' });
     const collEn = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
 
-    // 0:日本語, 1:英字, 2:数字, 3:その他（最後）
+    // 0:日本語, 1:英字, 2:数字, 3:その他
     function labelGroup(label){
       const s = (label ?? '').toString().trim();
       if(!s) return 3;
       const ch = s[0];
-
-      if(/[0-9]/.test(ch)) return 2;               // 数字
-      if(/[A-Za-z]/.test(ch)) return 1;            // 英字
-      if(/[\u3040-\u30FF\u3400-\u9FFF]/.test(ch)) return 0; // 日本語ざっくり
+      if(/[0-9]/.test(ch)) return 2;
+      if(/[A-Za-z]/.test(ch)) return 1;
+      if(/[\u3040-\u30FF\u3400-\u9FFF]/.test(ch)) return 0;
       return 3;
     }
 
@@ -429,16 +439,59 @@
 
       const ga = labelGroup(la);
       const gb = labelGroup(lb);
-      if(ga !== gb) return ga - gb; // 日本語→英字→数字→その他
+      if(ga !== gb) return ga - gb;
 
-      if(ga === 1) return collEn.compare(la, lb); // 英字
-      return collJa.compare(la, lb);              // 日本語・数字・その他は ja の自然順
+      if(ga === 1) return collEn.compare(la, lb);
+      return collJa.compare(la, lb);
     }
 
     function parseYear(n){
       const y = (n.data('year') ?? '').toString().trim();
       const num = parseInt(y, 10);
       return Number.isFinite(num) ? num : null;
+    }
+
+    /* ===== mobile tabs ===== */
+    function setTab(name){
+      document.body.classList.remove('tab-left','tab-cy','tab-right');
+      document.body.classList.add(`tab-${name}`);
+
+      document.querySelectorAll('#mobileTabs button[data-tab]').forEach(b=>{
+        b.classList.toggle('active', b.dataset.tab === name);
+      });
+
+      if(name === 'cy' && cy){
+        // display切替直後に resize/fit しないとズームが変になることがある
+        setTimeout(()=>{
+          cy.resize();
+          cy.fit(undefined, 70);
+        }, 60);
+      }
+    }
+
+    function initMobileTabs(){
+      function onChange(){
+        if(isMobileNow()){
+          // mobileはグラフ優先
+          setTab('cy');
+          // デスクトップ用説明はスマホだと邪魔なので隠す
+          const intro = document.getElementById('introDesktop');
+          if(intro) intro.style.display = 'none';
+        }else{
+          document.body.classList.remove('tab-left','tab-cy','tab-right');
+          const intro = document.getElementById('introDesktop');
+          if(intro) intro.style.display = '';
+        }
+      }
+      mqMobile.addEventListener('change', onChange);
+      onChange();
+
+      const tabs = document.getElementById('mobileTabs');
+      tabs.addEventListener('click', (e)=>{
+        const btn = e.target.closest('button[data-tab]');
+        if(!btn) return;
+        setTab(btn.dataset.tab);
+      });
     }
 
     function setDetail(n){
@@ -502,22 +555,17 @@
         </div>
       `;
 
-      // mobile: detailを自動で開く
+      // mobile: show detail tab automatically
       if(isMobileNow()){
-        document.getElementById('right').classList.add('open');
-        syncRightToggleBtn();
+        setTab('right');
       }
-    }
-
-    function setActiveLayout(btnId){
-      document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
-      document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
     }
 
     function runLayout(mode){
       if(!cy) return;
       cy.stop();
 
+      const isM = isMobileNow();
       const padding = 30;
       let opts;
 
@@ -525,32 +573,37 @@
         opts = {
           name: 'dagre',
           rankDir: 'LR',
-          nodeSep: 20,
-          edgeSep: 5,
-          rankSep: 90,
+          nodeSep: isM ? 40 : 20,
+          edgeSep: isM ? 10 : 5,
+          rankSep: isM ? 140 : 90,
           padding,
           nodeDimensionsIncludeLabels: true,
           animate: true
         };
       }else{
-        // COSE
+        // COSE (mobile is more spaced)
         opts = {
           name: 'cose',
           padding: 30,
           animate: true,
           randomize: true,
           avoidOverlap: true,
-          avoidOverlapPadding: 20,
+          avoidOverlapPadding: isM ? 40 : 20,
           nodeOverlap: 40,
-          nodeRepulsion: 6500,
-          idealEdgeLength: 140,
-          componentSpacing: 80,
+          nodeRepulsion: isM ? 12000 : 6500,
+          idealEdgeLength: isM ? 220 : 140,
+          componentSpacing: isM ? 120 : 80,
           numIter: 1200
         };
       }
 
       cy.layout(opts).run();
-      cy.fit(undefined, isMobileNow() ? 50 : 30);
+      cy.fit(undefined, isM ? 70 : 30);
+    }
+
+    function setActiveLayout(btnId){
+      document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
+      document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
     }
 
     /* ===== selection helper ===== */
@@ -632,10 +685,9 @@
           const nodeId = tr.getAttribute('data-node-id');
           const n = cy.getElementById(nodeId);
           if(n && n.length){
+            // mobile: go graph first (so list doesn't feel in the way)
+            if(isMobileNow()) setTab('cy');
             selectNode(n, true);
-            if(isMobileNow()){
-              document.getElementById('cy').scrollIntoView({ behavior:'smooth', block:'start' });
-            }
           }
         });
       });
@@ -661,7 +713,7 @@
         });
       }
 
-      // ===== ソート仕様の反映 =====
+      // ===== ソート仕様 =====
       const sorted = nodes.toArray().sort((a, b) => {
         if(listFilter === 'reg'){
           const ya = parseYear(a);
@@ -670,8 +722,9 @@
           const va = (ya !== null);
           const vb = (yb !== null);
 
-          if(va && vb && ya !== yb) return yb - ya; // 降順
-          if(va !== vb) return va ? -1 : 1;        // 年あり優先
+          if(va && vb && ya !== yb) return yb - ya;
+          if(va !== vb) return va ? -1 : 1;
+
           return compareLabelJPENNUM(a, b);
         }
         return compareLabelJPENNUM(a, b);
@@ -693,6 +746,7 @@
         });
         matched.addClass('highlight');
         if(matched.length){
+          if(isMobileNow()) setTab('cy');
           cy.animate({ fit: { eles: matched, padding: isMobileNow() ? 90 : 80 } }, { duration: 200 });
         }
       }
@@ -705,44 +759,12 @@
       });
     }
 
-    /* ===== right panel toggle (mobile) ===== */
-    function syncRightToggleBtn(){
-      const right = document.getElementById('right');
-      const btn = document.getElementById('toggleRight');
-      if(!right || !btn) return;
-      const opened = right.classList.contains('open');
-      btn.textContent = opened ? '閉じる' : '開く';
-    }
-
-    function initRightToggle(){
-      const right = document.getElementById('right');
-      const btn = document.getElementById('toggleRight');
-      if(!right || !btn) return;
-
-      btn.addEventListener('click', () => {
-        right.classList.toggle('open');
-        syncRightToggleBtn();
-      });
-
-      function onChange(){
-        if(!mqMobile.matches){
-          right.classList.add('open');
-        }else{
-          right.classList.remove('open');
-        }
-        syncRightToggleBtn();
-      }
-
-      mqMobile.addEventListener('change', onChange);
-      onChange();
-    }
-
     function initCy(elements){
       cy = cytoscape({
         container: document.getElementById('cy'),
         elements,
         style: [
-          /* ===== nodes ===== */
+          /* nodes */
           {
             selector: 'node',
             style: {
@@ -754,31 +776,31 @@
               'text-halign': 'center',
 
               'background-color': '#FCE7F3',
-              'border-width': 1.5,
+              'border-width': 1.8,
               'border-color': '#F9A8D4',
               'color': '#831843',
 
               'width': 'label',
-              'padding': '12px',
+              'padding': isMobileNow() ? '16px' : '12px',
               'shape': 'round-rectangle'
             }
           },
 
-          /* 登録品種 */
+          /* registered */
           {
             selector: 'node.registered',
             style: {
-              'border-width': 2.6,
+              'border-width': 2.8,
               'border-color': '#ff5fa2',
               'background-color': '#ffd9eb',
-              'font-weight': '600',
+              'font-weight': '700',
               'shadow-blur': 10,
               'shadow-color': '#ff9ac6',
               'shadow-opacity': 0.35
             }
           },
 
-          /* 未登録 */
+          /* placeholder */
           {
             selector: 'node.isPlaceholder',
             style: {
@@ -789,23 +811,21 @@
             }
           },
 
-          /* ===== edges ===== */
+          /* edges */
           {
             selector: 'edge',
             style: {
               'source-endpoint': 'outside-to-node',
               'target-endpoint': 'outside-to-node',
-              'source-distance-from-node': 0,
-              'target-distance-from-node': 2,
-
-              'curve-style': 'unbundled-bezier',
-              'edge-distances': 'node-position',
               'target-arrow-shape': 'triangle',
               'target-arrow-fill': 'filled',
-              'arrow-scale': 1.2,
-              'width': 2,
+              'arrow-scale': isMobileNow() ? 1.4 : 1.2,
+              'width': isMobileNow() ? 2.4 : 2,
               'line-color': '#F472B6',
-              'target-arrow-color': '#F472B6'
+              'target-arrow-color': '#F472B6',
+
+              'curve-style': 'unbundled-bezier',
+              'edge-distances': 'node-position'
             }
           },
 
@@ -814,9 +834,7 @@
             selector: 'edge[role="mother"]',
             style: {
               'line-style': 'solid',
-              'line-color': '#F472B6',
-              'target-arrow-color': '#F472B6',
-              'control-point-distance': 30,
+              'control-point-distance': isMobileNow() ? 40 : 30,
               'control-point-weight': 0.5
             }
           },
@@ -826,9 +844,7 @@
             selector: 'edge[role="father"]',
             style: {
               'line-style': 'dashed',
-              'line-color': '#F472B6',
-              'target-arrow-color': '#F472B6',
-              'control-point-distance': -30,
+              'control-point-distance': isMobileNow() ? -40 : -30,
               'control-point-weight': 0.5
             }
           },
@@ -845,12 +861,10 @@
             }
           },
 
-          /* ===== interaction ===== */
           { selector: '.faded', style: { 'opacity': 0.2 } },
           { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
         ],
 
-        // 初期は COSE
         layout: {
           name: 'cose',
           padding: 30,
@@ -866,7 +880,7 @@
         }
       });
 
-      // データからクラス付与
+      // add classes
       cy.batch(() => {
         cy.nodes().forEach(n => {
           const d = n.data();
@@ -875,7 +889,6 @@
         });
       });
 
-      // click handlers
       cy.on('tap', 'node', (evt) => {
         selectNode(evt.target, false);
       });
@@ -923,19 +936,26 @@
         runLayout('dagre');
       });
 
-      // 初期：全品種一覧
+      // initial
       updateListAndHighlights();
-      cy.fit(undefined, isMobileNow() ? 50 : 30);
 
-      // 画面幅切り替え時に node の文字幅を更新（必要最低限）
+      // IMPORTANT: fit after visible
+      setTimeout(()=>{
+        cy.resize();
+        cy.fit(undefined, isMobileNow() ? 70 : 30);
+      }, 50);
+
+      // viewport changes: update node font size/max width and refit
       mqMobile.addEventListener('change', () => {
         if(!cy) return;
         cy.style()
           .selector('node')
           .style('font-size', nodeFontSize())
           .style('text-max-width', textMaxWidth())
+          .style('padding', isMobileNow() ? '16px' : '12px')
           .update();
-        cy.fit(undefined, isMobileNow() ? 50 : 30);
+        cy.resize();
+        cy.fit(undefined, isMobileNow() ? 70 : 30);
       });
     }
 
@@ -944,12 +964,13 @@
       const badge = document.getElementById('listBadge');
 
       try{
+        initMobileTabs();
+
         const url = "elements.json?ts=" + Date.now();
         const res = await fetch(url, { cache: "no-store" });
         if(!res.ok) throw new Error(`HTTP ${res.status}`);
         const elements = await res.json();
 
-        initRightToggle();
         initCy(elements);
 
       }catch(err){
@@ -959,11 +980,6 @@
     }
 
     loadElements();
-
-    function setActiveLayout(btnId){
-      document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
-      document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
-    }
   </script>
 
   <footer style="

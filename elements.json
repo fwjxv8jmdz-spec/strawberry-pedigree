@@ -1743,8 +1743,8 @@
     "data": {
       "id": "chibaS4go",
       "label": "千葉S4号(チーバベリー)",
-      "year": "",
-      "institute": "",
+      "year": 2015,
+      "institute": "千葉県",
       "notes": "",
       "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=24428&LANGUAGE=Japanese",
       "db_registration_date": "2025/12/28",
@@ -1826,7 +1826,7 @@
   {
     "data": {
       "id": "donner",
-      "label": "ダナー",
+      "label": "Donner",
       "year": "",
       "institute": "",
       "notes": "UC Davis(アメリカ）育成。",
@@ -1958,7 +1958,7 @@
   {
     "data": {
       "id": "fukuokaS7go",
-      "label": "福岡S7号",
+      "label": "福岡S7号(あまおう)",
       "year": 2005,
       "institute": "",
       "notes": "商標名: あまおう",
@@ -3110,7 +3110,7 @@
   {
     "data": {
       "id": "rindamore_cruz",
-      "label": "リンダモール×クルズ",
+      "label": "リンダモール×Cruz",
       "year": "",
       "institute": "",
       "notes": "",
@@ -3122,7 +3122,7 @@
   {
     "data": {
       "id": "rindamore_cruz_nyoho",
-      "label": "(リンダモール×クルズ)×女峰",
+      "label": "(リンダモール×Cruz)×女峰",
       "year": "",
       "institute": "",
       "notes": "",
@@ -3194,7 +3194,7 @@
   {
     "data": {
       "id": "sagai9go",
-      "label": "佐賀i9号",
+      "label": "佐賀i9号(いちごさん)",
       "year": 2018,
       "institute": "佐賀県",
       "notes": "商標名: いちごさん",
@@ -3710,7 +3710,7 @@
   {
     "data": {
       "id": "wadahatsukoi",
-      "label": "和田初こい",
+      "label": "和田初こい(初恋の香り)",
       "year": 2009,
       "institute": "三好アグリテック株式会社(山梨県)",
       "notes": "商標名: 初恋の香り",
@@ -3817,32 +3817,164 @@
   },
   {
     "data": {
+      "id": "toyoyukihime",
+      "label": "豊雪姫",
+      "year": 2014,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=23753&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kitanokagayaki_chandler",
+      "label": "北の輝×Chandler",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "karenberry",
+      "label": "カレンベリー",
+      "year": 2010,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=19474&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hatsukuni",
+      "label": "はつくに",
+      "year": 1982,
+      "institute": "奈良県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kurumesokusei3go_hokowase",
+      "label": "久留米促成3号×宝交早生",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "donner_hokowase",
+      "label": "Donner×宝交早生",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kurumesokusei3go_hokowase_donner_hokowase",
+      "label": "(久留米促成3号×宝交早生)×(Donner×宝交早生)",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ichigochukanbohon2go",
+      "label": "いちご中間母本農2号",
+      "year": 2006,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13757&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kurume54go",
+      "label": "久留米54号",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "midland",
+      "label": "Midland",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "howard 17",
+      "label": "Howard 17(Premier)",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "crimson monarch",
+      "label": "Crimson Monarch",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "chandler",
+      "label": "Chandler",
+      "year": 1984,
+      "institute": "",
+      "notes": "",
+      "sources": "https://patents.google.com/patent/USPP5262P/en",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "93_123_06",
       "label": "93_123_06",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Banner",
-      "label": "Banner",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Blakemore",
-      "label": "Blakemore",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -3901,8 +4033,8 @@
   },
   {
     "data": {
-      "id": "Cal BH 14(mixed crosses)",
-      "label": "Cal BH 14(mixed crosses)",
+      "id": "Cal 72.361_105",
+      "label": "Cal 72.361_105",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -3913,8 +4045,8 @@
   },
   {
     "data": {
-      "id": "Crimson Monarch",
-      "label": "Crimson Monarch",
+      "id": "Cal BH 14(mixed crosses)",
+      "label": "Cal BH 14(mixed crosses)",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -3937,44 +4069,8 @@
   },
   {
     "data": {
-      "id": "General Chanzy",
-      "label": "General Chanzy",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "Institute X2",
       "label": "Institute X2",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Narcissa",
-      "label": "Narcissa",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Nich Ohmer",
-      "label": "Nich Ohmer",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4021,8 +4117,56 @@
   },
   {
     "data": {
+      "id": "banner",
+      "label": "banner",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "blakemore",
+      "label": "blakemore",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "chesapeake",
+      "label": "chesapeake",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "cyclone",
       "label": "cyclone",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "douglas",
+      "label": "douglas",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4093,8 +4237,8 @@
   },
   {
     "data": {
-      "id": "huxley",
-      "label": "huxley",
+      "id": "general chanzy",
+      "label": "general chanzy",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4105,8 +4249,8 @@
   },
   {
     "data": {
-      "id": "kurume54go",
-      "label": "kurume54go",
+      "id": "huxley",
+      "label": "huxley",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4129,8 +4273,32 @@
   },
   {
     "data": {
-      "id": "midland",
-      "label": "midland",
+      "id": "narcissa",
+      "label": "narcissa",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "nich nhmer",
+      "label": "nich nhmer",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "nich ohmer",
+      "label": "nich ohmer",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4227,30 +4395,6 @@
     "data": {
       "id": "tennessee beauty",
       "label": "tennessee beauty",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "the_sun",
-      "label": "the_sun",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "tigoa",
-      "label": "tigoa",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4441,7 +4585,7 @@
   },
   {
     "data": {
-      "id": "unknown_father__fairpeake",
+      "id": "unknown_father__crimson monarch",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4466,6 +4610,18 @@
   {
     "data": {
       "id": "unknown_father__hoko_oishikinari1go_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__howard 17",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4526,6 +4682,18 @@
   {
     "data": {
       "id": "unknown_father__kurume47go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__kurume54go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4634,18 +4802,6 @@
   {
     "data": {
       "id": "unknown_father__oishisikinari2go",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_father__pajaro",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4933,7 +5089,7 @@
   },
   {
     "data": {
-      "id": "unknown_mother__fairpeake",
+      "id": "unknown_mother__crimson monarch",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4958,6 +5114,18 @@
   {
     "data": {
       "id": "unknown_mother__hoko_oishikinari1go_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__howard 17",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5018,6 +5186,18 @@
   {
     "data": {
       "id": "unknown_mother__kurume47go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__kurume54go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5126,18 +5306,6 @@
   {
     "data": {
       "id": "unknown_mother__oishisikinari2go",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_mother__pajaro",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5733,7 +5901,7 @@
   },
   {
     "data": {
-      "source": "tigoa",
+      "source": "tioga",
       "target": "69_1320",
       "role": "father",
       "source_id": "Howard and Albregts (1980; https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/15/4/article-p540.pdf/watermark-pdf/)"
@@ -7261,7 +7429,7 @@
   },
   {
     "data": {
-      "source": "Narcissa",
+      "source": "narcissa",
       "target": "Cal 143.32",
       "role": "mother",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7277,7 +7445,7 @@
   },
   {
     "data": {
-      "source": "Narcissa",
+      "source": "narcissa",
       "target": "Cal 144.21",
       "role": "mother",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7285,7 +7453,7 @@
   },
   {
     "data": {
-      "source": "Nich Ohmer",
+      "source": "nich nhmer",
       "target": "Cal 144.21",
       "role": "father",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7461,7 +7629,7 @@
   },
   {
     "data": {
-      "source": "Banner",
+      "source": "banner",
       "target": "Cal 66.2",
       "role": "father",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7469,7 +7637,7 @@
   },
   {
     "data": {
-      "source": "Blakemore",
+      "source": "blakemore",
       "target": "Cal 7.20",
       "role": "mother",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7477,7 +7645,7 @@
   },
   {
     "data": {
-      "source": "Nich Ohmer",
+      "source": "nich ohmer",
       "target": "Cal 7.20",
       "role": "father",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -7757,18 +7925,18 @@
   },
   {
     "data": {
-      "source": "unknown_mother__fairpeake",
+      "source": "chesapeake",
       "target": "fairpeake",
       "role": "mother",
-      "source_id": "Draper et al.(1981; https://journals.ashs.org/view/journals/hortsci/16/6/article-p794.xml)"
+      "source_id": "Darrow(1944; https://upload.wikimedia.org/wikipedia/commons/0/01/The_Midland_and_Fairpeake_strawberries_%28IA_midlandfairpeake694darr%29.pdf)"
     }
   },
   {
     "data": {
-      "source": "unknown_father__fairpeake",
+      "source": "fairfax",
       "target": "fairpeake",
       "role": "father",
-      "source_id": "Draper et al.(1981; https://journals.ashs.org/view/journals/hortsci/16/6/article-p794.xml)"
+      "source_id": "Darrow(1944; https://upload.wikimedia.org/wikipedia/commons/0/01/The_Midland_and_Fairpeake_strawberries_%28IA_midlandfairpeake694darr%29.pdf)"
     }
   },
   {
@@ -7805,7 +7973,7 @@
   },
   {
     "data": {
-      "source": "General Chanzy",
+      "source": "general chanzy",
       "target": "fukuba",
       "role": "mother",
       "source_id": "成川_1981"
@@ -7813,7 +7981,7 @@
   },
   {
     "data": {
-      "source": "General Chanzy",
+      "source": "general chanzy",
       "target": "fukuba",
       "role": "father",
       "source_id": "成川_1981"
@@ -9165,7 +9333,7 @@
   },
   {
     "data": {
-      "source": "Crimson Monarch",
+      "source": "crimson monarch",
       "target": "oishisikinari1go",
       "role": "mother",
       "source_id": "高橋(2006; https://agriknowledge.affrc.go.jp/RN/2010731078)"
@@ -9229,18 +9397,18 @@
   },
   {
     "data": {
-      "source": "unknown_mother__pajaro",
+      "source": "Cal 63.7_101",
       "target": "pajaro",
       "role": "mother",
-      "source_id": "沖村・五十嵐(1997; https://agriknowledge.affrc.go.jp/RN/2010560635)"
+      "source_id": "https://plantbreeding.ucdavis.edu/strawberry-varieties-released"
     }
   },
   {
     "data": {
-      "source": "unknown_father__pajaro",
+      "source": "sequoia",
       "target": "pajaro",
       "role": "father",
-      "source_id": "沖村・五十嵐(1997; https://agriknowledge.affrc.go.jp/RN/2010560635)"
+      "source_id": "https://plantbreeding.ucdavis.edu/strawberry-varieties-released"
     }
   },
   {
@@ -9685,7 +9853,7 @@
   },
   {
     "data": {
-      "source": "the_sun",
+      "source": "the sun",
       "target": "sokusei2go",
       "role": "father",
       "source_id": "農林認定品種データベース_はるのか"
@@ -10313,6 +10481,214 @@
       "target": "yumenoka",
       "role": "father",
       "source_id": "番・矢部(2005; https://agriknowledge.affrc.go.jp/RN/2010730414)"
+    }
+  },
+  {
+    "data": {
+      "source": "kitanokagayaki_chandler",
+      "target": "toyoyukihime",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/043925.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "karenberry",
+      "target": "toyoyukihime",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/043925.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "kitanokagayaki",
+      "target": "kitanokagayaki_chandler",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/043925.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "kitanokagayaki_chandler",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/043925.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "hatsukuni",
+      "target": "karenberry",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/publicity_report/press/laboratory/karc/013048.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "terunoka",
+      "target": "karenberry",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/publicity_report/press/laboratory/karc/013048.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "uzushio",
+      "target": "hatsukuni",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurumesokusei3go_hokowase_donner_hokowase",
+      "target": "hatsukuni",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurumesokusei3go",
+      "target": "kurumesokusei3go_hokowase",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "kurumesokusei3go_hokowase",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "donner",
+      "target": "donner_hokowase",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "donner_hokowase",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurumesokusei3go_hokowase",
+      "target": "kurumesokusei3go_hokowase_donner_hokowase",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "donner_hokowase",
+      "target": "kurumesokusei3go_hokowase_donner_hokowase",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=290&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "83118_41",
+      "target": "ichigochukanbohon2go",
+      "role": "mother",
+      "source_id": "沖村ら(2004; https://www.jstage.jst.go.jp/article/hrj/3/3/3_3_257/_pdf/-char/ja)"
+    }
+  },
+  {
+    "data": {
+      "source": "dover",
+      "target": "ichigochukanbohon2go",
+      "role": "father",
+      "source_id": "沖村ら(2004; https://www.jstage.jst.go.jp/article/hrj/3/3/3_3_257/_pdf/-char/ja)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__kurume54go",
+      "target": "kurume54go",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__kurume54go",
+      "target": "kurume54go",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "midland",
+      "role": "mother",
+      "source_id": "Darrow(1944; https://upload.wikimedia.org/wikipedia/commons/0/01/The_Midland_and_Fairpeake_strawberries_%28IA_midlandfairpeake694darr%29.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "redheart",
+      "target": "midland",
+      "role": "father",
+      "source_id": "Darrow(1944; https://upload.wikimedia.org/wikipedia/commons/0/01/The_Midland_and_Fairpeake_strawberries_%28IA_midlandfairpeake694darr%29.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__howard 17",
+      "target": "howard 17",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__howard 17",
+      "target": "howard 17",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__crimson monarch",
+      "target": "crimson monarch",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__crimson monarch",
+      "target": "crimson monarch",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "douglas",
+      "target": "chandler",
+      "role": "mother",
+      "source_id": "Brooks and Olmo(1984; https://journals.ashs.org/view/journals/hortsci/19/3/article-p359.xml)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 72.361_105",
+      "target": "chandler",
+      "role": "father",
+      "source_id": "Brooks and Olmo(1984; https://journals.ashs.org/view/journals/hortsci/19/3/article-p359.xml)"
     }
   }
 ]

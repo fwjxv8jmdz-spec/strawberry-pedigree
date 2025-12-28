@@ -738,7 +738,7 @@ function initCy(elements){
     runLayout('dagre');
   });
 
-  // 初期：全品種一覧
+  // 初期：全品種一覧（ここで badge も「全品種：XXX件」になる）
   updateListAndHighlights();
   cy.fit(undefined, 30);
 }
@@ -754,7 +754,10 @@ async function loadElements(){
     const elements = await res.json();
 
     initCy(elements);
-    badge.textContent = '全品種：読込OK';
+
+    // ★ ここで「全品種：読込OK」を表示しない（件数表示は initCy→updateListAndHighlights が担当）
+    // badge.textContent = '全品種：読込OK';
+
   }catch(err){
     badge.textContent = '読み込み失敗';
     wrap.innerHTML = `<div class="emptyRow">読み込み失敗：${esc(err.message)}<br>（elements.json が root にあるか確認）</div>`;

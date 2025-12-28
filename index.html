@@ -6,7 +6,6 @@
 
   <title>いちご 品種系統図（交配図） | Strawberry Pedigree</title>
   <meta name="description" content="日本のいちご品種が中心の品種系統図（交配図）です。品種名や登録者で検索し、親子関係や登録情報を確認できます。研究・参考目的のデータです。">
-
   <link rel="canonical" href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/">
 
   <!-- OGP -->
@@ -178,7 +177,6 @@
 
     /* ===== Mobile: tabs make graph dominant ===== */
     @media (max-width: 900px) {
-      /* grid -> stacked but only one panel visible at a time (tabs) */
       #app{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -206,7 +204,7 @@
       /* Input bigger for phone */
       input[type="text"], select{
         padding: 12px;
-        font-size: 16px; /* prevent iOS zoom */
+        font-size: 16px;
       }
       button{ padding: 10px 12px; font-size: 14px; }
 
@@ -253,7 +251,7 @@
 </head>
 
 <body>
-  <!-- Desktop only intro (kept small). On mobile, it's inside left panel to avoid shrinking graph. -->
+  <!-- Desktop intro -->
   <div id="introDesktop" class="muted" style="margin:8px 0 12px; padding:0 12px;">
     いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
   </div>
@@ -461,7 +459,6 @@
       });
 
       if(name === 'cy' && cy){
-        // display切替直後に resize/fit しないとズームが変になることがある
         setTimeout(()=>{
           cy.resize();
           cy.fit(undefined, 70);
@@ -472,9 +469,7 @@
     function initMobileTabs(){
       function onChange(){
         if(isMobileNow()){
-          // mobileはグラフ優先
           setTab('cy');
-          // デスクトップ用説明はスマホだと邪魔なので隠す
           const intro = document.getElementById('introDesktop');
           if(intro) intro.style.display = 'none';
         }else{
@@ -494,7 +489,10 @@
       });
     }
 
-    function setDetail(n){
+    /* ===== Detail renderer (auto-tab option) ===== */
+    function setDetail(n, opts = {}){
+      const { autoTab = false } = opts; // ★default: do not move tabs
+
       if(!n){
         document.getElementById('detail').innerHTML =
           '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
@@ -555,9 +553,10 @@
         </div>
       `;
 
-      // mobile: show detail tab automatically
-      if(isMobileNow()){
+      if(isMobileNow() && autoTab){
         setTab('right');
+        const r = document.getElementById('right');
+        if(r && r.scrollTo) r.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
 
@@ -581,7 +580,6 @@
           animate: true
         };
       }else{
-        // COSE (mobile is more spaced)
         opts = {
           name: 'cose',
           padding: 30,
@@ -606,11 +604,11 @@
       document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
     }
 
-    /* ===== selection helper ===== */
-    function selectNode(n, doFit=true){
+    /* ===== selection helper (autoDetailTab) ===== */
+    function selectNode(n, doFit=true, autoDetailTab=false){
       if(!n) return;
 
-      setDetail(n);
+      setDetail(n, { autoTab: autoDetailTab });
 
       cy.elements().removeClass('faded');
       cy.elements().removeClass('highlight');
@@ -685,9 +683,9 @@
           const nodeId = tr.getAttribute('data-node-id');
           const n = cy.getElementById(nodeId);
           if(n && n.length){
-            // mobile: go graph first (so list doesn't feel in the way)
+            // ★Fix #1: list click -> go graph (not detail)
             if(isMobileNow()) setTab('cy');
-            selectNode(n, true);
+            selectNode(n, true, false); // autoDetailTab=false
           }
         });
       });
@@ -698,13 +696,9 @@
 
       const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
 
-      // リスト候補：unknown / 不明 ノードは除外
       let base = cy.nodes().filter(n => !isUnknownNode(n));
-
-      // フィルタ適用
       let nodes = applyListFilter(base);
 
-      // 検索があればさらに絞る
       if(term){
         nodes = nodes.filter(n => {
           const label = ((n.data('label') || '') + '').toLowerCase();
@@ -713,7 +707,6 @@
         });
       }
 
-      // ===== ソート仕様 =====
       const sorted = nodes.toArray().sort((a, b) => {
         if(listFilter === 'reg'){
           const ya = parseYear(a);
@@ -736,7 +729,6 @@
 
       renderCultivarList(sorted, badgeText);
 
-      // グラフ側のハイライトは「検索語がある時だけ」
       cy.nodes().removeClass('highlight');
       if(term){
         const matched = cy.nodes().filter(n => {
@@ -764,7 +756,6 @@
         container: document.getElementById('cy'),
         elements,
         style: [
-          /* nodes */
           {
             selector: 'node',
             style: {
@@ -786,7 +777,6 @@
             }
           },
 
-          /* registered */
           {
             selector: 'node.registered',
             style: {
@@ -800,7 +790,6 @@
             }
           },
 
-          /* placeholder */
           {
             selector: 'node.isPlaceholder',
             style: {
@@ -811,7 +800,6 @@
             }
           },
 
-          /* edges */
           {
             selector: 'edge',
             style: {
@@ -829,7 +817,6 @@
             }
           },
 
-          /* mother */
           {
             selector: 'edge[role="mother"]',
             style: {
@@ -839,7 +826,6 @@
             }
           },
 
-          /* father */
           {
             selector: 'edge[role="father"]',
             style: {
@@ -849,7 +835,6 @@
             }
           },
 
-          /* unknown */
           {
             selector: 'edge[role="unknown"]',
             style: {
@@ -880,7 +865,6 @@
         }
       });
 
-      // add classes
       cy.batch(() => {
         cy.nodes().forEach(n => {
           const d = n.data();
@@ -889,8 +873,9 @@
         });
       });
 
+      // ★Fix #2: graph node click -> go detail tab on mobile
       cy.on('tap', 'node', (evt) => {
-        selectNode(evt.target, false);
+        selectNode(evt.target, false, true); // autoDetailTab=true
       });
 
       cy.on('tap', (evt) => {
@@ -901,12 +886,10 @@
         }
       });
 
-      // search
       document.getElementById('q').addEventListener('input', () => {
         updateListAndHighlights();
       });
 
-      // filter buttons
       document.getElementById('f_all').addEventListener('click', () => {
         listFilter = 'all';
         setActiveFilter('f_all');
@@ -925,7 +908,6 @@
         updateListAndHighlights();
       });
 
-      // layout buttons
       document.getElementById('btnCose').addEventListener('click', () => {
         setActiveLayout('btnCose');
         runLayout('cose');
@@ -936,16 +918,13 @@
         runLayout('dagre');
       });
 
-      // initial
       updateListAndHighlights();
 
-      // IMPORTANT: fit after visible
       setTimeout(()=>{
         cy.resize();
         cy.fit(undefined, isMobileNow() ? 70 : 30);
       }, 50);
 
-      // viewport changes: update node font size/max width and refit
       mqMobile.addEventListener('change', () => {
         if(!cy) return;
         cy.style()

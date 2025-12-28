@@ -489,9 +489,9 @@
       });
     }
 
-    /* ===== Detail renderer (auto-tab option) ===== */
+    /* ===== Detail renderer (auto-tab option; default OFF) ===== */
     function setDetail(n, opts = {}){
-      const { autoTab = false } = opts; // ★default: do not move tabs
+      const { autoTab = false } = opts;
 
       if(!n){
         document.getElementById('detail').innerHTML =
@@ -553,10 +553,9 @@
         </div>
       `;
 
+      // ★今回の要件では autoTab を使わない（必要なら将来ONにできる）
       if(isMobileNow() && autoTab){
         setTab('right');
-        const r = document.getElementById('right');
-        if(r && r.scrollTo) r.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
 
@@ -604,10 +603,11 @@
       document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
     }
 
-    /* ===== selection helper (autoDetailTab) ===== */
+    /* ===== selection helper (NO auto tab by default) ===== */
     function selectNode(n, doFit=true, autoDetailTab=false){
       if(!n) return;
 
+      // ★タップした瞬間に「詳細内容」は更新しておく（タブは移動しない）
       setDetail(n, { autoTab: autoDetailTab });
 
       cy.elements().removeClass('faded');
@@ -683,7 +683,7 @@
           const nodeId = tr.getAttribute('data-node-id');
           const n = cy.getElementById(nodeId);
           if(n && n.length){
-            // ★Fix #1: list click -> go graph (not detail)
+            // ★Fix #1: list click -> go graph tab (not detail)
             if(isMobileNow()) setTab('cy');
             selectNode(n, true, false); // autoDetailTab=false
           }
@@ -873,9 +873,10 @@
         });
       });
 
-      // ★Fix #2: graph node click -> go detail tab on mobile
+      // ★今回の修正ポイント：
+      // グラフでノードをタップしてもタブ移動しない（でも詳細内容は更新される）
       cy.on('tap', 'node', (evt) => {
-        selectNode(evt.target, false, true); // autoDetailTab=true
+        selectNode(evt.target, false, false); // autoDetailTab=false なのでタブはそのまま
       });
 
       cy.on('tap', (evt) => {

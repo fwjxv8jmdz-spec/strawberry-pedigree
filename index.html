@@ -214,6 +214,26 @@
     .dpad .center{ font-size: 12px; }
     .dpad .arrow{ font-size: 16px; }
 
+    /* ★ 追加：ハイライト解除ボタン（浮動） */
+    #btnClearHL{
+      display:none; /* JSで必要時のみ表示 */
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      place-items: center;
+      font-size: 12px;
+      font-weight: 900;
+      color: #111827;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #btnClearHL:active{ transform: translateY(1px); }
+
     /* mobile tabs */
     #mobileTabs{ display:none; }
     .onlyMobile{ display:none; }
@@ -357,6 +377,9 @@
           <div class="fbtn" id="btnZoomIn" title="拡大">＋</div>
           <div class="fbtn" id="btnZoomOut" title="縮小">－</div>
           <div class="fbtn" id="btnFit" title="全体表示"><small>fit</small></div>
+
+          <!-- ★ 追加：ハイライト解除（ハイライト中のみ表示） -->
+          <div id="btnClearHL" title="ハイライト解除"><small>CLR</small></div>
         </div>
 
         <div class="dpad" aria-label="pan controls">
@@ -379,6 +402,17 @@
     <div id="right">
       <div class="h">詳細</div>
       <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
+
+      <!-- ★ 追加：PCでも押せる「ハイライト解除」 -->
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">操作</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button id="btnClearHLDesk" type="button">ハイライト解除</button>
+        </div>
+        <div class="muted" style="margin-top:6px;">
+          品種を選択すると親・本人・子（1ホップ）がハイライトされます。
+        </div>
+      </div>
 
       <div class="box">
         <div class="h" style="margin:0 0 6px;">利用条件・免責</div>
@@ -454,6 +488,24 @@ const nodeFontSize = () => (isMobileNow() ? 18 : 12);
 const textMaxWidth = () => (isMobileNow() ? 240 : 150);
 
 let listFilter = 'all'; // 'all' | 'reg' | 'orphan'
+
+/* ★ ハイライト状態管理 */
+let hasHighlight = false;
+function updateClearButtons(){
+  const m = document.getElementById('btnClearHL');
+  const d = document.getElementById('btnClearHLDesk');
+  const show = !!hasHighlight;
+  if(m) m.style.display = show ? 'grid' : 'none';
+  if(d) d.disabled = !show;
+}
+function clearHighlight(){
+  if(!cy) return;
+  cy.elements().removeClass('faded');
+  cy.elements().removeClass('highlight');
+  setDetail(null);
+  hasHighlight = false;
+  updateClearButtons();
+}
 
 function esc(s){
   return (s ?? '').toString()
@@ -582,11 +634,13 @@ function initZoomButtons(){
 
 /* ===== pan controls (D-pad) ===== */
 function initPanButtons(){
-  // ボタンが無い（=PC表示など）ときは何もしない
   const need = ['panUp','panDown','panLeft','panRight','panCenter'];
   if(!need.every(id => document.getElementById(id))) return;
 
-  const stepPx = () => (isMobileNow() ? 60 : 40);
+  /* ★ 修正①：十字ボタンを「ゆっくり」動かす（初動も連続も遅く） */
+  const stepPx = () => (isMobileNow() ? 42 : 28);   // 60/40 → 42/28
+  const intervalMs = 90;                            // 60 → 90（更新頻度を下げてゆっくり）
+  const holdScale = 0.40;                           // 0.55 → 0.40（1回あたりの移動量を減らす）
 
   function panBy(dx, dy){
     if(!cy) return;
@@ -594,7 +648,6 @@ function initPanButtons(){
     cy.pan({ x: p.x + dx, y: p.y + dy });
   }
 
-  // 押しっぱなしで連続移動（pointer）
   function bindHold(btnId, dx, dy){
     const el = document.getElementById(btnId);
     let timer = null;
@@ -602,8 +655,9 @@ function initPanButtons(){
     const start = (e)=>{
       e.preventDefault();
       const s = stepPx();
-      panBy(dx * s, dy * s);
-      timer = setInterval(()=> panBy(dx * s * 0.55, dy * s * 0.55), 60);
+      // 初動（1回目）も少し控えめに
+      panBy(dx * s * 0.75, dy * s * 0.75);
+      timer = setInterval(()=> panBy(dx * s * holdScale, dy * s * holdScale), intervalMs);
     };
     const stop = ()=>{
       if(timer){ clearInterval(timer); timer = null; }
@@ -691,6 +745,15 @@ function setDetail(n){
 }
 
 /* ===== selection ===== */
+/* ★ 追加：特定ノードを「画面中央へ」寄せる（検索タブ→グラフで中央に来る用） */
+function centerOnNode(n, duration=360){
+  if(!cy || !n || !n.length) return;
+  cy.animate(
+    { center: { eles: n } },
+    { duration }
+  );
+}
+
 function selectNode(n, doFit=true){
   if(!n || !cy) return;
 
@@ -700,12 +763,15 @@ function selectNode(n, doFit=true){
   cy.elements().removeClass('faded');
   cy.elements().removeClass('highlight');
 
-  // ★ 親子を含む近傍（1ホップ）＝ 3世代（親・本人・子）
+  // 親子を含む近傍（1ホップ）＝ 親・本人・子
   const neighborhood = n.closedNeighborhood();
 
   // 近傍をハイライト、その他を薄く
   neighborhood.addClass('highlight');
   cy.elements().not(neighborhood).addClass('faded');
+
+  hasHighlight = true;
+  updateClearButtons();
 
   if(doFit){
     cy.animate(
@@ -715,6 +781,20 @@ function selectNode(n, doFit=true){
   }
 }
 
+/* ★ 追加：検索リストから選んだとき専用
+   - グラフタブへ切替
+   - 選択ノードを画面中央へ
+   - その後にハイライト（fitではなく“中央寄せ”を優先） */
+function focusFromList(n){
+  if(!cy || !n || !n.length) return;
+  if(isMobileNow()) setTab('cy');
+
+  // まず中心に寄せる（見失いにくい）
+  centerOnNode(n, 380);
+
+  // 中央寄せが進んだ後にハイライト（fitしない）
+  setTimeout(()=> selectNode(n, false), 220);
+}
 
 /* ===== list ===== */
 function applyListFilter(nodes){
@@ -770,8 +850,8 @@ function renderCultivarList(nodes, badgeText){
       const nodeId = tr.getAttribute('data-node-id');
       const n = cy.getElementById(nodeId);
       if(n && n.length){
-        if(isMobileNow()) setTab('cy');
-        selectNode(n, true);
+        /* ★ 修正②：検索タブでタップ→グラフ中央へ */
+        focusFromList(n);
       }
     });
   });
@@ -953,13 +1033,13 @@ function initCy(elements){
     });
   });
 
+  /* グラフ内タップ：ハイライト（fitはしない） */
   cy.on('tap', 'node', (evt) => selectNode(evt.target, false));
 
+  /* 背景タップ：解除 */
   cy.on('tap', (evt) => {
     if(evt.target === cy){
-      cy.elements().removeClass('faded');
-      cy.elements().removeClass('highlight');
-      setDetail(null);
+      clearHighlight();
     }
   });
 
@@ -971,6 +1051,17 @@ function initCy(elements){
 
   document.getElementById('btnCose').addEventListener('click', () => { setActiveLayout('btnCose'); runLayout('cose'); });
   document.getElementById('btnDagre').addEventListener('click', () => { setActiveLayout('btnDagre'); runLayout('dagre'); });
+
+  /* ★ 修正③：ハイライト解除ボタン */
+  const btnClearHL = document.getElementById('btnClearHL');
+  if(btnClearHL){
+    btnClearHL.addEventListener('click', (e)=>{ e.preventDefault(); clearHighlight(); });
+  }
+  const btnClearHLDesk = document.getElementById('btnClearHLDesk');
+  if(btnClearHLDesk){
+    btnClearHLDesk.addEventListener('click', ()=> clearHighlight());
+  }
+  updateClearButtons();
 
   updateListAndHighlights();
 

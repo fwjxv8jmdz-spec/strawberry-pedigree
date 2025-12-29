@@ -586,7 +586,7 @@ function initPanButtons(){
   const need = ['panUp','panDown','panLeft','panRight','panCenter'];
   if(!need.every(id => document.getElementById(id))) return;
 
-  const stepPx = () => (isMobileNow() ? 80 : 50);
+  const stepPx = () => (isMobileNow() ? 60 : 40);
 
   function panBy(dx, dy){
     if(!cy) return;

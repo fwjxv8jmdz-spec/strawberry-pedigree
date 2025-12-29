@@ -265,6 +265,18 @@
   },
   {
     "data": {
+      "id": "ettersburg_mishokeito",
+      "label": "Ettersburg実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "Ettersburgは系統群の名称で、具体的な系統名は分かりませんでした。情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "22_19_1",
       "label": "22_19_1",
       "year": "",
@@ -1421,7 +1433,7 @@
       "label": "アメリカ",
       "year": "",
       "institute": "",
-      "notes": "情報を募集しています。",
+      "notes": "別名にMarshallがあるが、アメリカ合衆国のMarshallとは別物であろうという意見がある https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up; 18章）",
       "sources": "",
       "db_registration_date": "2025/12/27",
       "placeholder": false
@@ -1826,7 +1838,7 @@
   {
     "data": {
       "id": "donner",
-      "label": "Donner",
+      "label": "Donner(ダナー)",
       "year": "",
       "institute": "",
       "notes": "UC Davis(アメリカ）育成。",
@@ -3410,7 +3422,7 @@
   {
     "data": {
       "id": "tahoe",
-      "label": "Tahoe",
+      "label": "Tahoe(タホー)",
       "year": "",
       "institute": "",
       "notes": "UC Davis(アメリカ）育成。",
@@ -3458,10 +3470,10 @@
   {
     "data": {
       "id": "the sun",
-      "label": "The sun",
+      "label": "The sun(ザサン)",
       "year": "",
       "institute": "",
-      "notes": "情報を募集しています。ザサンという表記も見られます。",
+      "notes": "情報を募集しています。",
       "sources": "",
       "db_registration_date": "2025/12/24",
       "placeholder": false
@@ -3973,6 +3985,1350 @@
   },
   {
     "data": {
+      "id": "general chanzy",
+      "label": "General Chanzy",
+      "year": "",
+      "institute": "",
+      "notes": "1889年にフランスから導入された4つの品種のうちの1つ。もう一つはDocteur Morereであることがわかっている。(Darrow, 1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up; 18章）",
+      "sources": "",
+      "db_registration_date": "2025/12/28",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fairfax",
+      "label": "Fairfax",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 37.20_45",
+      "label": "Cal 37.20_45",
+      "year": "",
+      "institute": "",
+      "notes": "親にDriscoll J-6があることは分かっているが、詳細が不明。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nich ohmer",
+      "label": "Nich Ohmer",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tioga",
+      "label": "Tioga",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lassen",
+      "label": "Lassen",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 21.9",
+      "label": "Cal 21.9",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal Z9",
+      "label": "Cal Z9",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 161.1",
+      "label": "Cal 161.1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 86.6",
+      "label": "Cal 86.6",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal Z11",
+      "label": "Cal Z11",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shasta",
+      "label": "Shasta",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 67.5",
+      "label": "Cal 67.5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 177.21",
+      "label": "Cal 177.21",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 68.24",
+      "label": "Cal 68.24",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sierra",
+      "label": "Sierra",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sequoia",
+      "label": "Sequoia",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 51s1_1",
+      "label": "Cal 51s1_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 52.16_15",
+      "label": "Cal 52.16_15",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 39.96_18",
+      "label": "Cal 39.96_18",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 35.107_2",
+      "label": "Cal 35.107_2",
+      "year": "",
+      "institute": "",
+      "notes": "Blakemore, Nich Ohmer, Redheart, Ruby, B.H. 14, N.Y. 4626, U.S.D.A. 543, U.S.D.A. 634を祖先に含む。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 36.48_1",
+      "label": "Cal 36.48_1",
+      "year": "",
+      "institute": "",
+      "notes": "Blakemore, Nich Ohmer, Redheart, Ruby, B.H. 14, N.Y. 4626, U.S.D.A. 543, U.S.D.A. 634を祖先に含む。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 39.117_4",
+      "label": "Cal 39.117_4",
+      "year": "",
+      "institute": "",
+      "notes": "cupertinoの姉妹であるらしい。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "douglas",
+      "label": "Douglas",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 64.57_108",
+      "label": "Cal 64.57_108",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "saieni1go",
+      "label": "埼園い1号(かおりん)",
+      "year": 2019,
+      "institute": "埼玉県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=27265&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "saieni3go",
+      "label": "埼園い3号(あまりん)",
+      "year": 2019,
+      "institute": "埼玉県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=27266&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sai6go",
+      "label": "彩6号(べにたま)",
+      "year": 2025,
+      "institute": "埼玉県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=31022&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hyogoI_3go",
+      "label": "兵庫I_3号(あまクイーン)",
+      "year": 2017,
+      "institute": "兵庫県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25609&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hyogoI_4go",
+      "label": "兵庫I_4号(紅クイーン)",
+      "year": 2017,
+      "institute": "兵庫県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25610&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukushimaST14go",
+      "label": "福島ST14号(ゆうやけベリー)",
+      "year": "",
+      "institute": "福島県",
+      "notes": "品種登録出願中（2025年12月29日現在）",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM111.aspx?SHUTSUGAN_NO=36009&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukuharuka",
+      "label": "ふくはる香",
+      "year": 2006,
+      "institute": "福島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13640&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukuayaka",
+      "label": "ふくあや香",
+      "year": 2006,
+      "institute": "福島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13641&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukushima2go",
+      "label": "福島2号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "8905_28",
+      "label": "8905_28",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukushima1go",
+      "label": "福島1号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "osuzu",
+      "label": "大鈴",
+      "year": 1986,
+      "institute": "石橋光治(千葉県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=963&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "chizuru",
+      "label": "千鶴",
+      "year": 1986,
+      "institute": "石橋光治(千葉県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=962&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shunho",
+      "label": "春訪",
+      "year": 2001,
+      "institute": "千葉県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8648&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "suzuakane",
+      "label": "すずあかね",
+      "year": 2010,
+      "institute": "ホクサン株式会社 (北海道)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=19205&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "HKW_02",
+      "label": "HKW_02",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summerlyrical",
+      "label": "サマーリリカル",
+      "year": 2021,
+      "institute": "長野県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=28470&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summeramigo",
+      "label": "サマーアミーゴ",
+      "year": 2011,
+      "institute": "徳島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20813&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tokukei2go_summerberry_mishokeito",
+      "label": "徳系2号×サマーベリー実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tokukei2go_summerberry",
+      "label": "徳系2号×サマーベリー",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tokukei2go",
+      "label": "徳系2号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summerfairy",
+      "label": "サマーフェアリー",
+      "year": 2009,
+      "institute": "徳島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=17390&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tokukei5",
+      "label": "徳系5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miyoshi_kurume48go",
+      "label": "みよし×久留米48号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miyoshi_misyokeito",
+      "label": "みよし実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summercandy",
+      "label": "サマーキャンディ",
+      "year": 2008,
+      "institute": "宮城県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=16153&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "morioka26go_summerberry",
+      "label": "盛岡26号×サマーベリー",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summerangel",
+      "label": "サマーエンジェル",
+      "year": 2010,
+      "institute": "長野県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=19733&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summertiara",
+      "label": "サマーティアラ",
+      "year": 2011,
+      "institute": "山形県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20497&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summerdrop",
+      "label": "サマードロップ",
+      "year": 2011,
+      "institute": "宮城県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20762&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "rosa linda_misyokeito",
+      "label": "Rosalinda実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kaisummer",
+      "label": "かいサマー",
+      "year": 2009,
+      "institute": "山梨県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=18012&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "rosa linda",
+      "label": "Rosa Linda",
+      "year": 1997,
+      "institute": "Florida Foundation Seed Producers Inc(United States)",
+      "notes": "",
+      "sources": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 87_418",
+      "label": "FL 87_418",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 83_418",
+      "label": "FL 83_418",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 80_456",
+      "label": "FL 80_456",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US 78_1832",
+      "label": "US 78_1832",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 77_163",
+      "label": "FL 77_163",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 84_1389",
+      "label": "FL 84_1389",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 81_2465",
+      "label": "FL 81_2465",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 87_200",
+      "label": "FL 87_200",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 84_3163",
+      "label": "FL 84_3163",
+      "year": "",
+      "institute": "",
+      "notes": "Open Pollinated",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 83_1452",
+      "label": "FL 83_1452",
+      "year": "",
+      "institute": "",
+      "notes": "Open Pollinated",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 81_149",
+      "label": "FL 81_149",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 80_1425",
+      "label": "FL 80_1425",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "FL 74_6",
+      "label": "FL 74_6",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kenshiro",
+      "label": "堅しろう",
+      "year": "",
+      "institute": "",
+      "notes": "品種登録出願中（2025年12月29日現在）",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM111.aspx?SHUTSUGAN_NO=37324&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "10133_03",
+      "label": "10133_03",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miyagii3go",
+      "label": "みやぎ13号",
+      "year": "",
+      "institute": "",
+      "notes": "品種登録出願中（2025年12月29日現在）",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM111.aspx?SHUTSUGAN_NO=36725&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yamagataS7go",
+      "label": "山形S7号",
+      "year": "",
+      "institute": "",
+      "notes": "品種登録出願中（2025年12月29日現在）",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM111.aspx?SHUTSUGAN_NO=36700&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shigaSB2go",
+      "label": "滋賀SB2号(みおしずく)",
+      "year": 2025,
+      "institute": "滋賀県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=31334&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "naraakari",
+      "label": "ならあかり",
+      "year": 2025,
+      "institute": "奈良県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=31333&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "23_1_33",
+      "label": "23_1_33",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "24_5_C",
+      "label": "24_5_C",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kinoka",
+      "label": "紀の香",
+      "year": 2018,
+      "institute": "和歌山県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=27050&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nanoka",
+      "label": "奈乃香",
+      "year": 2014,
+      "institute": "奈良県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=30498&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "soyokano",
+      "label": "そよかの",
+      "year": 2024,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構, 岩手県, 秋田県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=30605&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kagoshima6go",
+      "label": "鹿児島6号(ぴかいちご)",
+      "year": 2024,
+      "institute": "鹿児島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=30255&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "amaekubo",
+      "label": "あまえくぼ",
+      "year": 2024,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=30603&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "oita6go",
+      "label": "大分6号(ベリーツ)",
+      "year": 2021,
+      "institute": "大分県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=28275&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "oita3go",
+      "label": "大分3号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "awahoubeni",
+      "label": "阿波ほうべに",
+      "year": 2021,
+      "institute": "徳島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=28273&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yukirara",
+      "label": "ゆきララ",
+      "year": 2020,
+      "institute": "地方独立行政法人北海道立総合研究機構(北海道)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=28185&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kentaro",
+      "label": "けんたろう",
+      "year": 2024,
+      "institute": "地方独立行政法人北海道立総合研究機構(北海道)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12061&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tokyoohisamaberry",
+      "label": "東京おひさまベリー",
+      "year": 2019,
+      "institute": "公益財団法人東京都農林水産振興財団 (東京都)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=27386&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "99_8_tokyoohisamaberry_mother",
+      "label": "",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "01_1_5_tokyoohisamaberry_father",
+      "label": "",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hogyoku",
+      "label": "芳玉",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "koiharuka",
+      "label": "こいはるか",
+      "year": 2022,
+      "institute": "宮崎県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=27264&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "07_26_3",
+      "label": "07_26_3",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "05_51_1",
+      "label": "05_51_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "04_5_1",
+      "label": "04_5_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "03_61_1",
+      "label": "03_61_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "01_23_4",
+      "label": "01_23_4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hanakagari",
+      "label": "華かがり",
+      "year": 2017,
+      "institute": "岐阜県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=26286&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "akaisizuku",
+      "label": "紅い雫",
+      "year": 2017,
+      "institute": "愛媛県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25595&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "waC19",
+      "label": "和C19",
+      "year": 2011,
+      "institute": "和歌山県",
+      "notes": "和C19ではなくC19という記述も見られる。",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=21162&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ozeakarin",
+      "label": "おぜあかりん",
+      "year": 2011,
+      "institute": "群馬県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20812&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "9702_375",
+      "label": "9702_375",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "koinoka",
+      "label": "こいのか",
+      "year": 2011,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構?",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20811&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "totteoki",
+      "label": "とっておき",
+      "year": 2018,
+      "institute": "鳥取県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=27049&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "E0836_12",
+      "label": "E0836_12",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "F0851_24",
+      "label": "F0851_24",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "natsujiro",
+      "label": "なつじろう",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "minomusume",
+      "label": "美濃娘",
+      "year": 2007,
+      "institute": "岐阜県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14898&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "63_2_3",
+      "label": "63_2_3",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "3_31_3",
+      "label": "3_31_3",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/29",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "93_123_06",
       "label": "93_123_06",
       "year": "",
@@ -3985,8 +5341,8 @@
   },
   {
     "data": {
-      "id": "Cal 37.20_45",
-      "label": "Cal 37.20_45",
+      "id": "9_2_3_hanakagari",
+      "label": "9_2_3_hanakagari",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -3997,8 +5353,32 @@
   },
   {
     "data": {
-      "id": "Cal 39.117_4",
-      "label": "Cal 39.117_4",
+      "id": "B0205_1",
+      "label": "B0205_1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "C0915_18",
+      "label": "C0915_18",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 42.8_16",
+      "label": "Cal 42.8_16",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4057,6 +5437,18 @@
   },
   {
     "data": {
+      "id": "Cal. 177.21",
+      "label": "Cal. 177.21",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "F. virginiana glauca (wild, Utah)",
       "label": "F. virginiana glauca (wild, Utah)",
       "year": "",
@@ -4069,8 +5461,104 @@
   },
   {
     "data": {
+      "id": "FL 69_736",
+      "label": "FL 69_736",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "FL 70_30",
+      "label": "FL 70_30",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "FL 72_1198",
+      "label": "FL 72_1198",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "FL 73_1889",
+      "label": "FL 73_1889",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "FL 73_2006",
+      "label": "FL 73_2006",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "Institute X2",
       "label": "Institute X2",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "LA 2556",
+      "label": "LA 2556",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "N.Y. 4626",
+      "label": "N.Y. 4626",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "U.S.D.A.543",
+      "label": "U.S.D.A.543",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4165,8 +5653,8 @@
   },
   {
     "data": {
-      "id": "douglas",
-      "label": "douglas",
+      "id": "elan",
+      "label": "elan",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4177,8 +5665,8 @@
   },
   {
     "data": {
-      "id": "etters burg",
-      "label": "etters burg",
+      "id": "ettersburg",
+      "label": "ettersburg",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4189,8 +5677,8 @@
   },
   {
     "data": {
-      "id": "fairfax",
-      "label": "fairfax",
+      "id": "fendalcino",
+      "label": "fendalcino",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4237,18 +5725,6 @@
   },
   {
     "data": {
-      "id": "general chanzy",
-      "label": "general chanzy",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "huxley",
       "label": "huxley",
       "year": "",
@@ -4261,8 +5737,20 @@
   },
   {
     "data": {
-      "id": "lassen",
-      "label": "lassen",
+      "id": "kurume48go",
+      "label": "kurume48go",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "middlefield",
+      "label": "middlefield",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4285,20 +5773,8 @@
   },
   {
     "data": {
-      "id": "nich nhmer",
-      "label": "nich nhmer",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "nich ohmer",
-      "label": "nich ohmer",
+      "id": "parker",
+      "label": "parker",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4333,20 +5809,8 @@
   },
   {
     "data": {
-      "id": "sequoia",
-      "label": "sequoia",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "shasta",
-      "label": "shasta",
+      "id": "royal sovereigh",
+      "label": "royal sovereigh",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4359,6 +5823,18 @@
     "data": {
       "id": "solana",
       "label": "solana",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "sunangel",
+      "label": "sunangel",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4405,8 +5881,32 @@
   },
   {
     "data": {
-      "id": "tioga",
-      "label": "tioga",
+      "id": "tochiotomr",
+      "label": "tochiotomr",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "toro",
+      "label": "toro",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "totiotome",
+      "label": "totiotome",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -4501,6 +6001,54 @@
   },
   {
     "data": {
+      "id": "unknown_father__Cal 35.107_2",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__Cal 36.48_1",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__Cal 37.20_45",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__Cal 39.117_4",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__Cal 39.82_19",
       "label": "不明",
       "year": "",
@@ -4537,7 +6085,43 @@
   },
   {
     "data": {
+      "id": "unknown_father__FL 83_1452",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__FL 84_3163",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__Florida 69_266",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__HKW_02",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4597,7 +6181,31 @@
   },
   {
     "data": {
+      "id": "unknown_father__general chanzy",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__himeiku",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__hogyoku",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -4790,6 +6398,18 @@
   {
     "data": {
       "id": "unknown_father__morioka30go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__natsujiro",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5005,6 +6625,54 @@
   },
   {
     "data": {
+      "id": "unknown_mother__Cal 35.107_2",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__Cal 36.48_1",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__Cal 37.20_45",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__Cal 39.117_4",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__Cal 39.82_19",
       "label": "不明",
       "year": "",
@@ -5042,6 +6710,18 @@
   {
     "data": {
       "id": "unknown_mother__Florida 69_266",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__HKW_02",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5101,7 +6781,31 @@
   },
   {
     "data": {
+      "id": "unknown_mother__general chanzy",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__himeiku",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__hogyoku",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5294,6 +6998,18 @@
   {
     "data": {
       "id": "unknown_mother__morioka30go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__natsujiro",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -5757,8 +7473,24 @@
   },
   {
     "data": {
-      "source": "etters burg",
+      "source": "ettersburg_mishokeito",
       "target": "2_8_morioka16go_mother",
+      "role": "father",
+      "source_id": "北海道立総合研究機構(https://www.hro.or.jp/agricultural/center/result/kenkyuseika/gaiyosho/S48gaiyo/1972068.htm)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg",
+      "target": "ettersburg_mishokeito",
+      "role": "mother",
+      "source_id": "北海道立総合研究機構(https://www.hro.or.jp/agricultural/center/result/kenkyuseika/gaiyosho/S48gaiyo/1972068.htm)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg",
+      "target": "ettersburg_mishokeito",
       "role": "father",
       "source_id": "北海道立総合研究機構(https://www.hro.or.jp/agricultural/center/result/kenkyuseika/gaiyosho/S48gaiyo/1972068.htm)"
     }
@@ -7288,7 +9020,7 @@
       "source": "unknown_mother__america",
       "target": "america",
       "role": "mother",
-      "source_id": ""
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 18章)"
     }
   },
   {
@@ -7296,7 +9028,7 @@
       "source": "unknown_father__america",
       "target": "america",
       "role": "father",
-      "source_id": ""
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 18章)"
     }
   },
   {
@@ -7453,7 +9185,7 @@
   },
   {
     "data": {
-      "source": "nich nhmer",
+      "source": "nich ohmer",
       "target": "Cal 144.21",
       "role": "father",
       "source_id": "Baker and Voth(1949; https://www.survivorlibrary.com/library/breeding_and_testing_strawberry_varieties_1949.pdf)"
@@ -10689,6 +12421,1798 @@
       "target": "chandler",
       "role": "father",
       "source_id": "Brooks and Olmo(1984; https://journals.ashs.org/view/journals/hortsci/19/3/article-p359.xml)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__general chanzy",
+      "target": "general chanzy",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__general chanzy",
+      "target": "general chanzy",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "royal sovereigh",
+      "target": "fairfax",
+      "role": "mother",
+      "source_id": "Darrow(https://journal.americanpomological.org/index.php/jofaps/article/view/486/490)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "fairfax",
+      "role": "father",
+      "source_id": "Darrow(https://journal.americanpomological.org/index.php/jofaps/article/view/486/490)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__Cal 37.20_45",
+      "target": "Cal 37.20_45",
+      "role": "mother",
+      "source_id": "https://www.ars-grin.gov/npgs/pi_books/scans/pi200pt2.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__Cal 37.20_45",
+      "target": "Cal 37.20_45",
+      "role": "father",
+      "source_id": "https://www.ars-grin.gov/npgs/pi_books/scans/pi200pt2.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "middlefield",
+      "target": "nich ohmer",
+      "role": "mother",
+      "source_id": "https://www.chathamapples.com/SmallFruitsNY/Strawberries.htm#NichOhmer"
+    }
+  },
+  {
+    "data": {
+      "source": "middlefield",
+      "target": "nich ohmer",
+      "role": "father",
+      "source_id": "https://www.chathamapples.com/SmallFruitsNY/Strawberries.htm#NichOhmer"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 42.8_16",
+      "target": "tioga",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/api/v1/articles/113055-tioga-a-new-california-strawberry.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "lassen",
+      "target": "tioga",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/api/v1/articles/113055-tioga-a-new-california-strawberry.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 21.9",
+      "target": "lassen",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 161.1",
+      "target": "lassen",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "Cal 21.9",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal Z9",
+      "target": "Cal 21.9",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "banner",
+      "target": "Cal Z9",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "fendalcino",
+      "target": "Cal Z9",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 161.1",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 86.6",
+      "target": "Cal 161.1",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.634",
+      "target": "Cal 86.6",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal Z11",
+      "target": "Cal 86.6",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "banner",
+      "target": "Cal Z11",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "fendalcino",
+      "target": "Cal Z11",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 67.5",
+      "target": "shasta",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 177.21",
+      "target": "shasta",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 67.5",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.634",
+      "target": "Cal 67.5",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.543",
+      "target": "Cal 177.21",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 68.24",
+      "target": "Cal 177.21",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.634",
+      "target": "Cal 68.24",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.Y. 4626",
+      "target": "Cal 68.24",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "sierra",
+      "role": "mother",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 177.21",
+      "target": "sierra",
+      "role": "father",
+      "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 52.16_15",
+      "target": "sequoia",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/api/v1/articles/112668-sequoia-university-of-california-centennial-strawberry-variety.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 51s1_1",
+      "target": "sequoia",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/api/v1/articles/112668-sequoia-university-of-california-centennial-strawberry-variety.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "lassen",
+      "target": "Cal 51s1_1",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/api/v1/articles/112668-sequoia-university-of-california-centennial-strawberry-variety.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "lassen",
+      "target": "Cal 51s1_1",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/api/v1/articles/112668-sequoia-university-of-california-centennial-strawberry-variety.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 39.117_4",
+      "target": "Cal 52.16_15",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 39.96_18",
+      "target": "Cal 52.16_15",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 35.107_2",
+      "target": "Cal 39.96_18",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 36.48_1",
+      "target": "Cal 39.96_18",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__Cal 35.107_2",
+      "target": "Cal 35.107_2",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__Cal 35.107_2",
+      "target": "Cal 35.107_2",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__Cal 36.48_1",
+      "target": "Cal 36.48_1",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__Cal 36.48_1",
+      "target": "Cal 36.48_1",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__Cal 39.117_4",
+      "target": "Cal 39.117_4",
+      "role": "mother",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__Cal 39.117_4",
+      "target": "Cal 39.117_4",
+      "role": "father",
+      "source_id": "https://californiaagriculture.org/article/113346-new-strawberry-varieties-fresno-torrey-wiltguard-for-california-growing-areas"
+    }
+  },
+  {
+    "data": {
+      "source": "tufts",
+      "target": "douglas",
+      "role": "mother",
+      "source_id": "Bringhurst and Voth(1980; https://doaj.org/article/032f658f41154ef68fdb18f1a2257cbf)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 64.57_108",
+      "target": "douglas",
+      "role": "father",
+      "source_id": "Bringhurst and Voth(1980; https://doaj.org/article/032f658f41154ef68fdb18f1a2257cbf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sequoia",
+      "target": "Cal 64.57_108",
+      "role": "mother",
+      "source_id": "Bringhurst and Voth(1980; https://doaj.org/article/032f658f41154ef68fdb18f1a2257cbf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tioga",
+      "target": "Cal 64.57_108",
+      "role": "father",
+      "source_id": "Bringhurst and Voth(1980; https://doaj.org/article/032f658f41154ef68fdb18f1a2257cbf)"
+    }
+  },
+  {
+    "data": {
+      "source": "fukuayaka",
+      "target": "saieni1go",
+      "role": "mother",
+      "source_id": "尾田ら(2018; https://agriknowledge.affrc.go.jp/RN/2010922781.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "yumenoka",
+      "target": "saieni1go",
+      "role": "father",
+      "source_id": "尾田ら(2018; https://agriknowledge.affrc.go.jp/RN/2010922781.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "yayoihime",
+      "target": "saieni3go",
+      "role": "mother",
+      "source_id": "尾田ら(2018; https://agriknowledge.affrc.go.jp/RN/2010922781.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "fukuharuka",
+      "target": "saieni3go",
+      "role": "father",
+      "source_id": "尾田ら(2018; https://agriknowledge.affrc.go.jp/RN/2010922781.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "saieni1go",
+      "target": "sai6go",
+      "role": "mother",
+      "source_id": "尾田・内田（2022; https://agriknowledge.affrc.go.jp/RN/2010942001.pdf）"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "sai6go",
+      "role": "father",
+      "source_id": "尾田・内田（2022; https://agriknowledge.affrc.go.jp/RN/2010942001.pdf）"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "hyogoI_3go",
+      "role": "mother",
+      "source_id": "兵庫県立農林水産技術総合センター(https://hyogo-nourinsuisangc.jp/_99nouka/20161209I-3,4manual.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "hyogoI_3go",
+      "role": "father",
+      "source_id": "兵庫県立農林水産技術総合センター(https://hyogo-nourinsuisangc.jp/_99nouka/20161209I-3,4manual.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "hyogoI_4go",
+      "role": "mother",
+      "source_id": "兵庫県立農林水産技術総合センター(https://hyogo-nourinsuisangc.jp/_99nouka/20161209I-3,4manual.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "hyogoI_4go",
+      "role": "father",
+      "source_id": "兵庫県立農林水産技術総合センター(https://hyogo-nourinsuisangc.jp/_99nouka/20161209I-3,4manual.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "fukushimaST14go",
+      "role": "mother",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/life/781120_2238498_misc.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "fukushimaST14go",
+      "role": "father",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/life/781120_2238498_misc.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "fukuharuka",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13640&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "fukuharuka",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13640&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "fukushima2go",
+      "target": "fukuayaka",
+      "role": "mother",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "fukushima1go",
+      "target": "fukuayaka",
+      "role": "father",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "8905_28",
+      "target": "fukushima2go",
+      "role": "mother",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "fukushima2go",
+      "role": "father",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "osuzu",
+      "target": "8905_28",
+      "role": "mother",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "8905_28",
+      "role": "father",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "fukushima1go",
+      "role": "mother",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "fukushima1go",
+      "role": "father",
+      "source_id": "福島県(https://www.pref.fukushima.lg.jp/uploaded/attachment/448776.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "donner",
+      "target": "osuzu",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=963&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "osuzu",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=963&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "donner",
+      "target": "chizuru",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=962&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "chizuru",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=962&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "shunho",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8648&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "chizuru",
+      "target": "shunho",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8648&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "HS_138",
+      "target": "suzuakane",
+      "role": "mother",
+      "source_id": "日並(2009; https://cir.nii.ac.jp/crid/1522825130689038976)"
+    }
+  },
+  {
+    "data": {
+      "source": "HKW_02",
+      "target": "suzuakane",
+      "role": "father",
+      "source_id": "日並(2009; https://cir.nii.ac.jp/crid/1522825130689038976)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__HKW_02",
+      "target": "HKW_02",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__HKW_02",
+      "target": "HKW_02",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "summeramigo",
+      "target": "summerlyrical",
+      "role": "mother",
+      "source_id": "江原ら(2020; https://agriknowledge.affrc.go.jp/RN/2030937818.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerprincess",
+      "target": "summerlyrical",
+      "role": "father",
+      "source_id": "江原ら(2020; https://agriknowledge.affrc.go.jp/RN/2030937818.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tokukei2go_summerberry_mishokeito",
+      "target": "summeramigo",
+      "role": "mother",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerfairy",
+      "target": "summeramigo",
+      "role": "father",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tokukei2go_summerberry",
+      "target": "tokukei2go_summerberry_mishokeito",
+      "role": "mother",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tokukei2go_summerberry",
+      "target": "tokukei2go_summerberry_mishokeito",
+      "role": "father",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tokukei2go",
+      "target": "tokukei2go_summerberry",
+      "role": "mother",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry",
+      "target": "tokukei2go_summerberry",
+      "role": "father",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "tokukei2go",
+      "role": "mother",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurume48go",
+      "target": "tokukei2go",
+      "role": "father",
+      "source_id": "林・新居(2014; https://agriknowledge.affrc.go.jp/RN/2010922801.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tokukei5",
+      "target": "summerfairy",
+      "role": "mother",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "asukaruby",
+      "target": "summerfairy",
+      "role": "father",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi_kurume48go",
+      "target": "tokukei5",
+      "role": "mother",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi_misyokeito",
+      "target": "tokukei5",
+      "role": "father",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "miyoshi_kurume48go",
+      "role": "mother",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurume48go",
+      "target": "miyoshi_kurume48go",
+      "role": "father",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "miyoshi_misyokeito",
+      "role": "mother",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "miyoshi_misyokeito",
+      "role": "father",
+      "source_id": "徳島県(https://www.pref.tokushima.lg.jp/file/attachment/432003.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "summercandy",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "morioka26go_summerberry",
+      "target": "summercandy",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "morioka26go",
+      "target": "morioka26go_summerberry",
+      "role": "mother",
+      "source_id": "鹿野ら(2010; https://agriknowledge.affrc.go.jp/RN/2030893062.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry",
+      "target": "morioka26go_summerberry",
+      "role": "father",
+      "source_id": "鹿野ら(2010; https://agriknowledge.affrc.go.jp/RN/2030893062.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerprincess",
+      "target": "summerangel",
+      "role": "mother",
+      "source_id": "木下(2009; https://jglobal.jst.go.jp/detail?JGLOBAL_ID=200902258170169874)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "summerangel",
+      "role": "father",
+      "source_id": "木下(2009; https://jglobal.jst.go.jp/detail?JGLOBAL_ID=200902258170169874)"
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "summertiara",
+      "role": "mother",
+      "source_id": "荘司ら(2012; https://agriknowledge.affrc.go.jp/RN/2030833153.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "summertiara",
+      "role": "father",
+      "source_id": "荘司ら(2012; https://agriknowledge.affrc.go.jp/RN/2030833153.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "summerdrop",
+      "role": "mother",
+      "source_id": "宮城県(https://www.pref.miyagi.jp/documents/20418/70180.pdf#:~:text=%E5%B9%B3%E6%88%90%2014%E5%B9%B4%E3%81%AB%E3%80%8C%E3%81%BF%E3%82%88%E3%81%97%E3%80%8D%E3%82%92%E5%AD%90%E6%88%BF%E8%A6%AA%EF%BC%8C%E3%80%8C%20Rosalinda%E3%80%8D%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E6%A0%AA%E3%82%92%E8%8A%B1%E7%B2%89%E8%A6%AA%E3%81%A8%E3%81%97%E4%BA%A4%E9%85%8D%E3%81%97%20%2C%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F.%201011%E6%A0%AA%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E3%81%8B%E3%82%89%E5%BD%A2%E8%B3%AA%E3%81%AE%E5%84%AA%E3%82%8C%E3%82%8B%E7%B3%BB%E7%B5%B1%E3%82%92%E9%81%B8%E6%8A%9C%E3%81%97%EF%BC%8C%E8%82%B2%E6%88%90%E3%81%95%E3%82%8C%E3%81%9F%E5%93%81%E7%A8%AE%E3%81%A7%E3%81%99%E3%80%82%20%E5%85%88%E8%A1%8C%E5%93%81%E7%A8%AE%E3%81%AE%E3%80%8C%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%87%E3%82%A3%E3%80%8D%E3%81%A8%E6%AF%94%E3%81%B9%EF%BC%8C%E6%9E%9C%E8%89%B2%E3%81%AF%E3%82%84%E3%82%84%E8%96%84%E3%81%84%E3%81%8C%EF%BC%8C%E7%9D%80%E8%89%B2%E5%A7%8B%E3%82%81%E3%81%8B%E3%82%89%E6%9E%9C%E5%AE%9F%E5%85%A8%E4%BD%93%E3%81%AB.)"
+    }
+  },
+  {
+    "data": {
+      "source": "rosa linda_misyokeito",
+      "target": "summerdrop",
+      "role": "father",
+      "source_id": "宮城県(https://www.pref.miyagi.jp/documents/20418/70180.pdf#:~:text=%E5%B9%B3%E6%88%90%2014%E5%B9%B4%E3%81%AB%E3%80%8C%E3%81%BF%E3%82%88%E3%81%97%E3%80%8D%E3%82%92%E5%AD%90%E6%88%BF%E8%A6%AA%EF%BC%8C%E3%80%8C%20Rosalinda%E3%80%8D%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E6%A0%AA%E3%82%92%E8%8A%B1%E7%B2%89%E8%A6%AA%E3%81%A8%E3%81%97%E4%BA%A4%E9%85%8D%E3%81%97%20%2C%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F.%201011%E6%A0%AA%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E3%81%8B%E3%82%89%E5%BD%A2%E8%B3%AA%E3%81%AE%E5%84%AA%E3%82%8C%E3%82%8B%E7%B3%BB%E7%B5%B1%E3%82%92%E9%81%B8%E6%8A%9C%E3%81%97%EF%BC%8C%E8%82%B2%E6%88%90%E3%81%95%E3%82%8C%E3%81%9F%E5%93%81%E7%A8%AE%E3%81%A7%E3%81%99%E3%80%82%20%E5%85%88%E8%A1%8C%E5%93%81%E7%A8%AE%E3%81%AE%E3%80%8C%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%87%E3%82%A3%E3%80%8D%E3%81%A8%E6%AF%94%E3%81%B9%EF%BC%8C%E6%9E%9C%E8%89%B2%E3%81%AF%E3%82%84%E3%82%84%E8%96%84%E3%81%84%E3%81%8C%EF%BC%8C%E7%9D%80%E8%89%B2%E5%A7%8B%E3%82%81%E3%81%8B%E3%82%89%E6%9E%9C%E5%AE%9F%E5%85%A8%E4%BD%93%E3%81%AB.)"
+    }
+  },
+  {
+    "data": {
+      "source": "rosa linda",
+      "target": "rosa linda_misyokeito",
+      "role": "mother",
+      "source_id": "宮城県(https://www.pref.miyagi.jp/documents/20418/70180.pdf#:~:text=%E5%B9%B3%E6%88%90%2014%E5%B9%B4%E3%81%AB%E3%80%8C%E3%81%BF%E3%82%88%E3%81%97%E3%80%8D%E3%82%92%E5%AD%90%E6%88%BF%E8%A6%AA%EF%BC%8C%E3%80%8C%20Rosalinda%E3%80%8D%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E6%A0%AA%E3%82%92%E8%8A%B1%E7%B2%89%E8%A6%AA%E3%81%A8%E3%81%97%E4%BA%A4%E9%85%8D%E3%81%97%20%2C%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F.%201011%E6%A0%AA%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E3%81%8B%E3%82%89%E5%BD%A2%E8%B3%AA%E3%81%AE%E5%84%AA%E3%82%8C%E3%82%8B%E7%B3%BB%E7%B5%B1%E3%82%92%E9%81%B8%E6%8A%9C%E3%81%97%EF%BC%8C%E8%82%B2%E6%88%90%E3%81%95%E3%82%8C%E3%81%9F%E5%93%81%E7%A8%AE%E3%81%A7%E3%81%99%E3%80%82%20%E5%85%88%E8%A1%8C%E5%93%81%E7%A8%AE%E3%81%AE%E3%80%8C%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%87%E3%82%A3%E3%80%8D%E3%81%A8%E6%AF%94%E3%81%B9%EF%BC%8C%E6%9E%9C%E8%89%B2%E3%81%AF%E3%82%84%E3%82%84%E8%96%84%E3%81%84%E3%81%8C%EF%BC%8C%E7%9D%80%E8%89%B2%E5%A7%8B%E3%82%81%E3%81%8B%E3%82%89%E6%9E%9C%E5%AE%9F%E5%85%A8%E4%BD%93%E3%81%AB.)"
+    }
+  },
+  {
+    "data": {
+      "source": "rosa linda",
+      "target": "rosa linda_misyokeito",
+      "role": "father",
+      "source_id": "宮城県(https://www.pref.miyagi.jp/documents/20418/70180.pdf#:~:text=%E5%B9%B3%E6%88%90%2014%E5%B9%B4%E3%81%AB%E3%80%8C%E3%81%BF%E3%82%88%E3%81%97%E3%80%8D%E3%82%92%E5%AD%90%E6%88%BF%E8%A6%AA%EF%BC%8C%E3%80%8C%20Rosalinda%E3%80%8D%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E6%A0%AA%E3%82%92%E8%8A%B1%E7%B2%89%E8%A6%AA%E3%81%A8%E3%81%97%E4%BA%A4%E9%85%8D%E3%81%97%20%2C%E5%BE%97%E3%82%89%E3%82%8C%E3%81%9F.%201011%E6%A0%AA%E3%81%AE%E5%AE%9F%E7%94%9F%E8%8B%97%E3%81%8B%E3%82%89%E5%BD%A2%E8%B3%AA%E3%81%AE%E5%84%AA%E3%82%8C%E3%82%8B%E7%B3%BB%E7%B5%B1%E3%82%92%E9%81%B8%E6%8A%9C%E3%81%97%EF%BC%8C%E8%82%B2%E6%88%90%E3%81%95%E3%82%8C%E3%81%9F%E5%93%81%E7%A8%AE%E3%81%A7%E3%81%99%E3%80%82%20%E5%85%88%E8%A1%8C%E5%93%81%E7%A8%AE%E3%81%AE%E3%80%8C%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%87%E3%82%A3%E3%80%8D%E3%81%A8%E6%AF%94%E3%81%B9%EF%BC%8C%E6%9E%9C%E8%89%B2%E3%81%AF%E3%82%84%E3%82%84%E8%96%84%E3%81%84%E3%81%8C%EF%BC%8C%E7%9D%80%E8%89%B2%E5%A7%8B%E3%82%81%E3%81%8B%E3%82%89%E6%9E%9C%E5%AE%9F%E5%85%A8%E4%BD%93%E3%81%AB.)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "kaisummer",
+      "role": "mother",
+      "source_id": "加藤(2010; https://agriknowledge.affrc.go.jp/RN/2010782749)"
+    }
+  },
+  {
+    "data": {
+      "source": "elan",
+      "target": "kaisummer",
+      "role": "father",
+      "source_id": "加藤(2010; https://agriknowledge.affrc.go.jp/RN/2010782749)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 87_418",
+      "target": "rosa linda",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 87_200",
+      "target": "rosa linda",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 83_418",
+      "target": "FL 87_418",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 84_1389",
+      "target": "FL 87_418",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 80_456",
+      "target": "FL 83_418",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "toro",
+      "target": "FL 83_418",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 77_163",
+      "target": "FL 80_456",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "US 78_1832",
+      "target": "FL 80_456",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "dover",
+      "target": "US 78_1832",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "LA 2556",
+      "target": "US 78_1832",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 73_1889",
+      "target": "FL 77_163",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 73_2006",
+      "target": "FL 77_163",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 81_2465",
+      "target": "FL 84_1389",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "FL 84_1389",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 70_30",
+      "target": "FL 81_2465",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 77_163",
+      "target": "FL 81_2465",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 84_3163",
+      "target": "FL 87_200",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 83_1452",
+      "target": "FL 87_200",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 81_149",
+      "target": "FL 84_3163",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__FL 84_3163",
+      "target": "FL 84_3163",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 80_1425",
+      "target": "FL 83_1452",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__FL 83_1452",
+      "target": "FL 83_1452",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 77_163",
+      "target": "FL 81_149",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiko",
+      "target": "FL 81_149",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 74_6",
+      "target": "FL 80_1425",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiko",
+      "target": "FL 80_1425",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 72_1198",
+      "target": "FL 74_6",
+      "role": "mother",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "FL 69_736",
+      "target": "FL 74_6",
+      "role": "father",
+      "source_id": "USPP9866P(https://patents.google.com/patent/USPP9866P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "10133_03",
+      "target": "kenshiro",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/project/results/5th_laboratory/karc/2024/24_016.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "totteoki",
+      "target": "kenshiro",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/project/results/5th_laboratory/karc/2024/24_016.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "10133_03",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/project/results/5th_laboratory/karc/2024/24_016.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "10133_03",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/project/results/5th_laboratory/karc/2024/24_016.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "mouikko",
+      "target": "miyagii3go",
+      "role": "mother",
+      "source_id": "尾形ら(2024; https://agriknowledge.affrc.go.jp/RN/2010950949.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "okimi",
+      "target": "miyagii3go",
+      "role": "father",
+      "source_id": "尾形ら(2024; https://agriknowledge.affrc.go.jp/RN/2010950949.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summertiara",
+      "target": "yamagataS7go",
+      "role": "mother",
+      "source_id": "https://agrin.jp/documents/3767/4fukyu-yasai4-ichigo-yamagatas7gou.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "natsujiro",
+      "target": "yamagataS7go",
+      "role": "father",
+      "source_id": "https://agrin.jp/documents/3767/4fukyu-yasai4-ichigo-yamagatas7gou.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "shigaSB2go",
+      "role": "mother",
+      "source_id": "https://www.pref.shiga.lg.jp/file/attachment/5248429.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "shigaSB2go",
+      "role": "father",
+      "source_id": "https://www.pref.shiga.lg.jp/file/attachment/5248429.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "23_1_33",
+      "target": "naraakari",
+      "role": "mother",
+      "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "24_5_C",
+      "target": "naraakari",
+      "role": "father",
+      "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kotoka",
+      "target": "23_1_33",
+      "role": "mother",
+      "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "totiotome",
+      "target": "23_1_33",
+      "role": "father",
+      "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kotoka",
+      "target": "24_5_C",
+      "role": "mother",
+      "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "24_5_C",
+      "role": "father",
+      "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "kinoka",
+      "role": "mother",
+      "source_id": "東ら(2017; https://www.pref.wakayama.lg.jp/prefg/070100/070109/gaiyou/001/d00205144_d/fil/5kinoka.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "koinoka",
+      "target": "kinoka",
+      "role": "father",
+      "source_id": "東ら(2017; https://www.pref.wakayama.lg.jp/prefg/070100/070109/gaiyou/001/d00205144_d/fil/5kinoka.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "nanoka",
+      "role": "mother",
+      "source_id": "矢奥ら(2022; https://agriknowledge.affrc.go.jp/RN/2030941774.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "nanoka",
+      "role": "father",
+      "source_id": "矢奥ら(2022; https://agriknowledge.affrc.go.jp/RN/2030941774.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyoyukihime",
+      "target": "soyokano",
+      "role": "mother",
+      "source_id": "https://www.naro.go.jp/collab/breed/0300/0301/131361.html"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "soyokano",
+      "role": "father",
+      "source_id": "https://www.naro.go.jp/collab/breed/0300/0301/131361.html"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "kagoshima6go",
+      "role": "mother",
+      "source_id": "田中ら(2019; https://www.pref.kagoshima.jp/ag11/kenpou/documents/80634_20200331190355-1.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "kagoshima6go",
+      "role": "father",
+      "source_id": "田中ら(2019; https://www.pref.kagoshima.jp/ag11/kenpou/documents/80634_20200331190355-1.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "nouhime",
+      "target": "amaekubo",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/project/results/4th_laboratory/karc/2017/karc17_s18.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "amaekubo",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/project/results/4th_laboratory/karc/2017/karc17_s18.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "oita3go",
+      "target": "oita6go",
+      "role": "mother",
+      "source_id": "池永ら(2020;https://pref.oita.jp/uploaded/attachment/2181600.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "oita6go",
+      "role": "father",
+      "source_id": "池永ら(2020;https://pref.oita.jp/uploaded/attachment/2181600.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "oita3go",
+      "role": "mother",
+      "source_id": "佐藤ら(2011; https://agriknowledge.affrc.go.jp/RN/2030831504.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotomr",
+      "target": "oita3go",
+      "role": "father",
+      "source_id": "佐藤ら(2011; https://agriknowledge.affrc.go.jp/RN/2030831504.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "awahoubeni",
+      "role": "mother",
+      "source_id": "澤口ら(2018; https://agriknowledge.affrc.go.jp/RN/2030926088.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "awahoubeni",
+      "role": "father",
+      "source_id": "澤口ら(2018; https://agriknowledge.affrc.go.jp/RN/2030926088.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "fukuokaS6go",
+      "target": "yukirara",
+      "role": "mother",
+      "source_id": "https://www.hro.or.jp/upload/13965/1-2.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "kentaro",
+      "target": "yukirara",
+      "role": "father",
+      "source_id": "https://www.hro.or.jp/upload/13965/1-2.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "kitaekubo",
+      "target": "kentaro",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12061&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "kentaro",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12061&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "99_8_tokyoohisamaberry_mother",
+      "target": "tokyoohisamaberry",
+      "role": "mother",
+      "source_id": "https://www.tokyo-aff.or.jp/uploaded/attachment/4306.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "01_1_5_tokyoohisamaberry_father",
+      "target": "tokyoohisamaberry",
+      "role": "father",
+      "source_id": "https://www.tokyo-aff.or.jp/uploaded/attachment/4306.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "99_8_tokyoohisamaberry_mother",
+      "role": "mother",
+      "source_id": "https://www.tokyo-aff.or.jp/uploaded/attachment/4306.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "99_8_tokyoohisamaberry_mother",
+      "role": "father",
+      "source_id": "https://www.tokyo-aff.or.jp/uploaded/attachment/4306.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "99_8_tokyoohisamaberry_mother",
+      "target": "01_1_5_tokyoohisamaberry_father",
+      "role": "mother",
+      "source_id": "https://www.tokyo-aff.or.jp/uploaded/attachment/4306.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "hogyoku",
+      "target": "01_1_5_tokyoohisamaberry_father",
+      "role": "father",
+      "source_id": "https://www.tokyo-aff.or.jp/uploaded/attachment/4306.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__hogyoku",
+      "target": "hogyoku",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__hogyoku",
+      "target": "hogyoku",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "07_26_3",
+      "target": "koiharuka",
+      "role": "mother",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sanchigo",
+      "target": "koiharuka",
+      "role": "father",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "05_51_1",
+      "target": "07_26_3",
+      "role": "mother",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "04_5_1",
+      "target": "07_26_3",
+      "role": "father",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "03_61_1",
+      "target": "05_51_1",
+      "role": "mother",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "05_51_1",
+      "role": "father",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "01_23_4",
+      "target": "04_5_1",
+      "role": "mother",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "04_5_1",
+      "role": "father",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "satsumaotome",
+      "target": "03_61_1",
+      "role": "mother",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sunangel",
+      "target": "03_61_1",
+      "role": "father",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "asukaruby",
+      "target": "01_23_4",
+      "role": "mother",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurume54go",
+      "target": "01_23_4",
+      "role": "father",
+      "source_id": "野崎ら(2017; https://agriknowledge.affrc.go.jp/RN/2010912043.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "9_2_3_hanakagari",
+      "target": "hanakagari",
+      "role": "mother",
+      "source_id": "菊井(2018; https://agriknowledge.affrc.go.jp/RN/2010922295)"
+    }
+  },
+  {
+    "data": {
+      "source": "minomusume",
+      "target": "hanakagari",
+      "role": "father",
+      "source_id": "菊井(2018; https://agriknowledge.affrc.go.jp/RN/2010922295)"
+    }
+  },
+  {
+    "data": {
+      "source": "amaotome",
+      "target": "akaisizuku",
+      "role": "mother",
+      "source_id": "松澤ら(2015; https://www.pref.ehime.jp/uploaded/attachment/26544.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "akaisizuku",
+      "role": "father",
+      "source_id": "松澤ら(2015; https://www.pref.ehime.jp/uploaded/attachment/26544.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "waC19",
+      "role": "mother",
+      "source_id": "田中ら(2019; https://www.pref.wakayama.lg.jp/prefg/070100/070109/kanko/3_1_3_11_kenpo_senter11_d/fil/11_kenhou_02.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "waC19",
+      "role": "father",
+      "source_id": "田中ら(2019; https://www.pref.wakayama.lg.jp/prefg/070100/070109/kanko/3_1_3_11_kenpo_senter11_d/fil/11_kenhou_02.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "9702_375",
+      "target": "ozeakarin",
+      "role": "mother",
+      "source_id": "日戸・武井(2011; https://agriknowledge.affrc.go.jp/RN/2030812690.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "morioka26go",
+      "target": "ozeakarin",
+      "role": "father",
+      "source_id": "日戸・武井(2011; https://agriknowledge.affrc.go.jp/RN/2030812690.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tonehoppe",
+      "target": "9702_375",
+      "role": "mother",
+      "source_id": "日戸・武井(2011; https://agriknowledge.affrc.go.jp/RN/2030812690.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "9702_375",
+      "role": "father",
+      "source_id": "日戸・武井(2011; https://agriknowledge.affrc.go.jp/RN/2030812690.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "koinoka",
+      "role": "mother",
+      "source_id": "https://www.naro.go.jp/publicity_report/press/laboratory/karc/013044.html"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "koinoka",
+      "role": "father",
+      "source_id": "https://www.naro.go.jp/publicity_report/press/laboratory/karc/013044.html"
+    }
+  },
+  {
+    "data": {
+      "source": "E0836_12",
+      "target": "totteoki",
+      "role": "mother",
+      "source_id": "白岩ら(2023; https://www.pref.tottori.lg.jp/secure/1345357/6-itigototteoki.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "F0851_24",
+      "target": "totteoki",
+      "role": "father",
+      "source_id": "白岩ら(2023; https://www.pref.tottori.lg.jp/secure/1345357/6-itigototteoki.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "E0836_12",
+      "role": "mother",
+      "source_id": "白岩ら(2023; https://www.pref.tottori.lg.jp/secure/1345357/6-itigototteoki.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "B0205_1",
+      "target": "E0836_12",
+      "role": "father",
+      "source_id": "白岩ら(2023; https://www.pref.tottori.lg.jp/secure/1345357/6-itigototteoki.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "F0851_24",
+      "role": "mother",
+      "source_id": "白岩ら(2023; https://www.pref.tottori.lg.jp/secure/1345357/6-itigototteoki.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "C0915_18",
+      "target": "F0851_24",
+      "role": "father",
+      "source_id": "白岩ら(2023; https://www.pref.tottori.lg.jp/secure/1345357/6-itigototteoki.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__natsujiro",
+      "target": "natsujiro",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__natsujiro",
+      "target": "natsujiro",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "63_2_3",
+      "target": "minomusume",
+      "role": "mother",
+      "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
+    }
+  },
+  {
+    "data": {
+      "source": "3_31_3",
+      "target": "minomusume",
+      "role": "father",
+      "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "63_2_3",
+      "role": "mother",
+      "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "63_2_3",
+      "role": "father",
+      "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "3_31_3",
+      "role": "mother",
+      "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
+    }
+  },
+  {
+    "data": {
+      "source": "nouhime",
+      "target": "3_31_3",
+      "role": "father",
+      "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
     }
   }
 ]

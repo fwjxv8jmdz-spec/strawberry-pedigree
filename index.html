@@ -8,20 +8,25 @@
   <meta name="description" content="日本のいちご品種が中心の品種系統図（交配図）です。品種名や登録者で検索し、親子関係や登録情報を確認できます。研究・参考目的のデータです。">
   <link rel="canonical" href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/">
 
+  <!-- OGP -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="いちご 品種系統図（交配図） | Strawberry Pedigree">
   <meta property="og:description" content="日本のいちご品種が中心の品種系統図（交配図）です。品種名や登録者で検索し、親子関係や登録情報を確認できます。研究・参考目的のデータです。">
   <meta property="og:url" content="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/">
   <meta property="og:site_name" content="Strawberry Pedigree">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="いちご 品種系統図（交配図） | Strawberry Pedigree">
   <meta name="twitter:description" content="いちごの品種系統図（交配図）を検索・閲覧。親子関係や登録情報を確認できます。">
 
+  <!-- Cytoscape -->
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
+  <!-- dagre -->
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ7RR1J4L2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -48,11 +53,13 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* desktop layout */
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
     #left, #right { padding: 12px; overflow: auto; }
     #left { border-right: 1px solid var(--border); }
     #right { border-left: 1px solid var(--border); }
 
+    /* graph wrapper */
     #cyWrap{ position: relative; width:100%; height:100%; }
     #cy { width: 100%; height: 100%; }
 
@@ -88,6 +95,7 @@
       background: #fff;
     }
 
+    /* list */
     .listHeader {
       display:flex;
       align-items: baseline;
@@ -137,6 +145,7 @@
     .td-muted { color: var(--muted); }
     .emptyRow { padding: 12px 10px; font-size: 12px; color: var(--muted); }
 
+    /* filter segmented buttons */
     .seg { display:flex; gap: 6px; margin: 8px 0 8px; }
     .seg button{ flex: 1; font-size: 12px; padding: 8px 8px; border-radius: 999px; }
     .seg button.active{
@@ -146,6 +155,7 @@
       font-weight: 600;
     }
 
+    /* layout buttons */
     .layoutBtns { display:flex; gap: 8px; margin-top: 6px; }
     .layoutBtns button{ flex:1; }
     .layoutBtns button.active{
@@ -155,7 +165,7 @@
       font-weight: 700;
     }
 
-    /* ===== floating controls: zoom + dpad ===== */
+    /* ===== floating controls: zoom + dpad (mobile only) ===== */
     #floatCtrl{
       position: absolute;
       right: 12px;
@@ -166,14 +176,12 @@
       z-index: 50;
       pointer-events: auto;
     }
-
     .zcol{
       display:flex;
       flex-direction: column;
       gap: 8px;
       align-items: flex-end;
     }
-
     .fbtn{
       width: 44px;
       height: 44px;
@@ -194,7 +202,6 @@
     .fbtn:active{ transform: translateY(1px); }
     .fbtn small{ font-size: 12px; font-weight: 900; }
 
-    /* D-pad */
     .dpad{
       display: grid;
       grid-template-columns: 44px 44px 44px;
@@ -207,9 +214,23 @@
     .dpad .center{ font-size: 12px; }
     .dpad .arrow{ font-size: 16px; }
 
-    /* hide on desktop, show on mobile */
+    /* mobile tabs */
     #mobileTabs{ display:none; }
     .onlyMobile{ display:none; }
+    .onlyDesktop{ display:block; }
+
+    /* footer (desktop fixed) */
+    footer#deskFooter{
+      position: fixed;
+      bottom: 6px;
+      right: 10px;
+      font-size: 11px;
+      color: #6b7280;
+      background: rgba(255,255,255,0.82);
+      padding: 2px 6px;
+      border-radius: 6px;
+      z-index: 10;
+    }
 
     @media (max-width: 900px) {
       #app{
@@ -218,7 +239,7 @@
         height: auto;
         min-height: 100vh;
       }
-
+      /* hide all by default; tabs will show one */
       #left, #right, #cyWrap{ display:none; border: none; padding: 12px; }
 
       #cyWrap{
@@ -226,7 +247,6 @@
         height: calc(100vh - 64px);
         min-height: 520px;
       }
-
       #left, #right{
         height: calc(100vh - 64px);
         overflow: auto;
@@ -267,24 +287,28 @@
       body.tab-cy    #cyWrap{ display:block; }
       body.tab-right #right{ display:block; }
 
-      /* floating controls: keep above tab bar */
+      /* floating controls above tab bar */
       #floatCtrl{
         right: 12px;
         bottom: calc(84px + env(safe-area-inset-bottom));
       }
 
       .onlyMobile{ display:block; }
-      footer{ display:none !important; }
+      .onlyDesktop{ display:none; }
+
+      /* mobile: hide fixed footer (邪魔) */
+      footer#deskFooter{ display:none; }
     }
   </style>
 </head>
 
 <body>
-  <div id="introDesktop" class="muted" style="margin:8px 0 12px; padding:0 12px;">
+  <div id="introDesktop" class="muted onlyDesktop" style="margin:8px 0 12px; padding:0 12px;">
     いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
   </div>
 
   <div id="app">
+    <!-- LEFT -->
     <div id="left">
       <h1 style="font-size:16px; margin:0 0 8px;">いちご 品種系統図（交配図）</h1>
 
@@ -301,9 +325,7 @@
           <span id="listBadge" class="pill">準備中…</span>
         </div>
 
-        <div class="muted" style="margin:0 0 6px;">
-          行をクリックするとその品種へ移動します。
-        </div>
+        <div class="muted" style="margin:0 0 6px;">行をクリックするとその品種へ移動します。</div>
 
         <div class="seg" role="tablist" aria-label="品種リスト フィルタ">
           <button id="f_all" class="active" type="button">全品種</button>
@@ -314,22 +336,29 @@
         <div id="listWrap">
           <div class="emptyRow">elements.json 読み込み中…</div>
         </div>
+
+        <div class="muted" style="margin-top:8px;">
+          <ul style="padding-left:16px; margin:6px 0;">
+            <li>全品種: 本系統図に含まれるすべての品種</li>
+            <li>登録品種: 農林水産省による登録を受けた品種</li>
+            <li>親が不明: 情報を募集しています。</li>
+          </ul>
+        </div>
       </div>
     </div>
 
+    <!-- GRAPH -->
     <div id="cyWrap">
       <div id="cy"></div>
 
-      <!-- floating controls -->
+      <!-- floating controls (mobile only) -->
       <div id="floatCtrl" class="onlyMobile" aria-label="floating controls">
-        <!-- zoom column -->
         <div class="zcol" aria-label="zoom">
           <div class="fbtn" id="btnZoomIn" title="拡大">＋</div>
           <div class="fbtn" id="btnZoomOut" title="縮小">－</div>
           <div class="fbtn" id="btnFit" title="全体表示"><small>fit</small></div>
         </div>
 
-        <!-- D-pad -->
         <div class="dpad" aria-label="pan controls">
           <div class="blank"></div>
           <div class="fbtn arrow" id="panUp" title="上へ">▲</div>
@@ -346,9 +375,23 @@
       </div>
     </div>
 
+    <!-- RIGHT -->
     <div id="right">
       <div class="h">詳細</div>
       <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
+
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">利用条件・免責</div>
+        <div class="muted">
+          本サイトのデータの利用条件は以下をご確認ください。
+          <ul style="padding-left:16px; margin:6px 0;">
+            <li>
+              <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html"
+                 target="_blank" rel="noopener noreferrer">利用上の注意</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <div class="box">
         <div class="h" style="margin:0 0 6px;">レイアウト</div>
@@ -357,14 +400,50 @@
           <button id="btnDagre" type="button">Dagre</button>
         </div>
       </div>
+
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">問い合わせフォーム</div>
+        <div class="muted">
+          情報提供、誤情報の指摘、追加してほしい品種のリクエストなどを歓迎しています。ぜひ、リンク先のGoogleフォームにてお知らせください。
+          お問い合わせフォームでは、確認・返信の目的で連絡先をお預かりする場合があります。詳細はフォーム内の個人情報の取り扱いをご確認ください。
+          <ul style="padding-left:16px; margin:6px 0;">
+            <li>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScw4ppm9q-qG53L1dYKLOBYp_AV7yECx0Q2ui8dxKajDHESaA/viewform?usp=dialog"
+                 target="_blank" rel="noopener noreferrer">問い合わせフォーム</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="h" style="margin:0 0 6px;">凡例</div>
+        <div><span class="tag">母 → 子</span> 実線</div>
+        <div><span class="tag">父 → 子</span> 破線</div>
+        <div class="muted" style="margin-top:6px;">品種名をドラッグして配置変更・ピンチで拡大縮小できます。</div>
+      </div>
+
+      <!-- mobile: author block shown inside detail tab too -->
+      <div class="box onlyMobile">
+        <div class="muted" style="font-size:12px;">
+          © 2025 Takumi Fujiki.
+          <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html" target="_blank" rel="noopener noreferrer">利用上の注意</a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Mobile bottom tabs -->
   <div id="mobileTabs" aria-label="mobile tabs">
     <button type="button" data-tab="left">検索</button>
     <button type="button" data-tab="cy" class="active">グラフ</button>
     <button type="button" data-tab="right">詳細</button>
   </div>
+
+  <!-- Desktop footer (fixed) -->
+  <footer id="deskFooter" class="onlyDesktop">
+    © 2025 Takumi Fujiki.
+    <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html" target="_blank" rel="noopener noreferrer">利用上の注意</a>
+  </footer>
 
 <script>
 let cy = null;
@@ -374,18 +453,23 @@ const isMobileNow = () => mqMobile.matches;
 const nodeFontSize = () => (isMobileNow() ? 18 : 12);
 const textMaxWidth = () => (isMobileNow() ? 240 : 150);
 
-let listFilter = 'all';
+let listFilter = 'all'; // 'all' | 'reg' | 'orphan'
 
 function esc(s){
-  return (s ?? '').toString().replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+  return (s ?? '').toString()
+    .replaceAll('&','&amp;')
+    .replaceAll('<','&lt;')
+    .replaceAll('>','&gt;');
 }
 function uniq(arr){
-  const seen = new Set(); const out = [];
+  const seen = new Set();
+  const out = [];
   for(const v of arr){
     const s = (v ?? '').toString().trim();
     if(!s) continue;
     if(seen.has(s)) continue;
-    seen.add(s); out.push(s);
+    seen.add(s);
+    out.push(s);
   }
   return out;
 }
@@ -411,9 +495,9 @@ function hasUnknownParentByRole(n){
   return false;
 }
 
+/* Sorting */
 const collJa = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' });
 const collEn = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
-
 function labelGroup(label){
   const s = (label ?? '').toString().trim();
   if(!s) return 3;
@@ -445,6 +529,7 @@ function setTab(name){
   document.querySelectorAll('#mobileTabs button[data-tab]').forEach(b=>{
     b.classList.toggle('active', b.dataset.tab === name);
   });
+
   if(name === 'cy' && cy){
     setTimeout(()=>{ cy.resize(); }, 60);
   }
@@ -476,28 +561,20 @@ function initZoomButtons(){
   const inBtn = document.getElementById('btnZoomIn');
   const outBtn = document.getElementById('btnZoomOut');
   const fitBtn = document.getElementById('btnFit');
+  if(!inBtn || !outBtn || !fitBtn) return;
 
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
   function zoomAtViewportCenter(nextLevel){
     if(!cy) return;
     const level = clamp(nextLevel, 0.08, 3.5);
-    const center = { x: cy.width() / 2, y: cy.height() / 2 };
+    const center = { x: cy.width()/2, y: cy.height()/2 };
     cy.zoom({ level, renderedPosition: center });
   }
 
-  if(inBtn) inBtn.addEventListener('click', () => {
-    if(!cy) return;
-    zoomAtViewportCenter(cy.zoom() * 1.2);
-  });
-
-  if(outBtn) outBtn.addEventListener('click', () => {
-    if(!cy) return;
-    zoomAtViewportCenter(cy.zoom() / 1.2);
-  });
-
-  if(fitBtn) fitBtn.addEventListener('click', () => {
-    if(!cy) return;
+  inBtn.addEventListener('click', () => zoomAtViewportCenter(cy.zoom() * 1.2));
+  outBtn.addEventListener('click', () => zoomAtViewportCenter(cy.zoom() / 1.2));
+  fitBtn.addEventListener('click', () => {
     const pad = isMobileNow() ? 90 : 30;
     cy.fit(undefined, pad);
   });
@@ -505,7 +582,11 @@ function initZoomButtons(){
 
 /* ===== pan controls (D-pad) ===== */
 function initPanButtons(){
-  const stepPx = () => (isMobileNow() ? 120 : 80); // “見た目の移動量”をpxで
+  // ボタンが無い（=PC表示など）ときは何もしない
+  const need = ['panUp','panDown','panLeft','panRight','panCenter'];
+  if(!need.every(id => document.getElementById(id))) return;
+
+  const stepPx = () => (isMobileNow() ? 120 : 80);
 
   function panBy(dx, dy){
     if(!cy) return;
@@ -513,18 +594,16 @@ function initPanButtons(){
     cy.pan({ x: p.x + dx, y: p.y + dy });
   }
 
-  // 押しっぱなしで連続移動（スマホで気持ちいい）
+  // 押しっぱなしで連続移動（pointer）
   function bindHold(btnId, dx, dy){
     const el = document.getElementById(btnId);
-    if(!el) return;
-
     let timer = null;
 
     const start = (e)=>{
       e.preventDefault();
       const s = stepPx();
       panBy(dx * s, dy * s);
-      timer = setInterval(()=> panBy(dx * s * 0.5, dy * s * 0.5), 60);
+      timer = setInterval(()=> panBy(dx * s * 0.55, dy * s * 0.55), 60);
     };
     const stop = ()=>{
       if(timer){ clearInterval(timer); timer = null; }
@@ -536,30 +615,43 @@ function initPanButtons(){
     el.addEventListener('pointerleave', stop);
   }
 
-  bindHold('panUp',    0,  1);  // y+ は “上に見える”
+  // NOTE: cy.pan() は「グラフ座標系の移動」なので、
+  //      画面上で“上へ見える”方向は y を増やすのが自然です。
+  bindHold('panUp',    0,  1);
   bindHold('panDown',  0, -1);
   bindHold('panLeft',  1,  0);
   bindHold('panRight', -1, 0);
 
-  const centerBtn = document.getElementById('panCenter');
-  if(centerBtn){
-    centerBtn.addEventListener('click', ()=>{
-      if(!cy) return;
-      cy.center();
-    });
-  }
+  document.getElementById('panCenter').addEventListener('click', ()=>{
+    if(!cy) return;
+    cy.center();
+  });
 }
 
-/* ===== details ===== */
+/* ===== detail ===== */
 function setDetail(n){
-  const el = document.getElementById('detail');
   if(!n){
-    el.innerHTML = '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
+    document.getElementById('detail').innerHTML =
+      '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
     return;
   }
+
   const d = n.data();
   const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
+  const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
+
+  let sourcesHtml = '';
+  if(d.sources){
+    const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
+    const links = parts.map(p => {
+      const isUrl = /^https?:\/\//i.test(p);
+      return isUrl
+        ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">${esc(p)}</a></div>`
+        : `<div>${esc(p)}</div>`;
+    }).join('');
+    sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
+  }
 
   const incomers = n.incomers('edge');
   const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
@@ -574,7 +666,14 @@ function setDetail(n){
   const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
   const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
 
-  el.innerHTML = `
+  const crossSources = uniq(incomers.map(e => e.data('source_id')));
+  const crossSourcesHtml = crossSources.length
+    ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
+    : '';
+
+  const ph = (d.placeholder === true) ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
+
+  document.getElementById('detail').innerHTML = `
     <div class="box">
       <div class="h" style="margin:0 0 6px;">${esc(d.label)}</div>
       ${year}
@@ -583,6 +682,10 @@ function setDetail(n){
       ${fatherHtml}
       ${unknownHtml}
       ${childHtml}
+      ${notes}
+      ${crossSourcesHtml}
+      ${sourcesHtml}
+      ${ph}
     </div>
   `;
 }
@@ -590,13 +693,14 @@ function setDetail(n){
 /* ===== selection ===== */
 function selectNode(n, doFit=true){
   if(!n) return;
+
   setDetail(n);
 
   cy.elements().removeClass('faded');
   cy.elements().removeClass('highlight');
 
   const neighborhood = n.closedNeighborhood();
-  cy.elements().not(neighborhood).addClass('faded');
+  cy.elements().not(neighborhood).addClass('f(aded');
   n.addClass('highlight');
 
   if(doFit){
@@ -664,6 +768,7 @@ function renderCultivarList(nodes, badgeText){
     });
   });
 }
+
 function updateListAndHighlights(){
   if(!cy) return;
 
@@ -686,6 +791,7 @@ function updateListAndHighlights(){
       const yb = parseYear(b);
       const va = (ya !== null);
       const vb = (yb !== null);
+
       if(va && vb && ya !== yb) return yb - ya;
       if(va !== vb) return va ? -1 : 1;
       return compareLabelJPENNUM(a, b);
@@ -704,6 +810,7 @@ function updateListAndHighlights(){
 function runLayout(mode){
   if(!cy) return;
   cy.stop();
+
   const isM = isMobileNow();
   let opts;
 
@@ -743,6 +850,14 @@ function setActiveLayout(btnId){
   document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
 }
 
+function setActiveFilter(btnId){
+  ['f_all','f_reg','f_orphan'].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.toggle('active', id === btnId);
+  });
+}
+
+/* ===== init cy ===== */
 function initCy(elements){
   cy = cytoscape({
     container: document.getElementById('cy'),
@@ -821,6 +936,7 @@ function initCy(elements){
     }
   });
 
+  // classes from data
   cy.batch(() => {
     cy.nodes().forEach(n => {
       const d = n.data();
@@ -829,7 +945,7 @@ function initCy(elements){
     });
   });
 
-  cy.on('tap', 'node', (evt) => { selectNode(evt.target, false); });
+  cy.on('tap', 'node', (evt) => selectNode(evt.target, false));
 
   cy.on('tap', (evt) => {
     if(evt.target === cy){
@@ -841,9 +957,9 @@ function initCy(elements){
 
   document.getElementById('q').addEventListener('input', updateListAndHighlights);
 
-  document.getElementById('f_all').addEventListener('click', () => { listFilter = 'all';  setActiveFilter('f_all');  updateListAndHighlights(); });
-  document.getElementById('f_reg').addEventListener('click', () => { listFilter = 'reg';  setActiveFilter('f_reg');  updateListAndHighlights(); });
-  document.getElementById('f_orphan').addEventListener('click', () => { listFilter = 'orphan';setActiveFilter('f_orphan');updateListAndHighlights(); });
+  document.getElementById('f_all').addEventListener('click', () => { listFilter='all'; setActiveFilter('f_all'); updateListAndHighlights(); });
+  document.getElementById('f_reg').addEventListener('click', () => { listFilter='reg'; setActiveFilter('f_reg'); updateListAndHighlights(); });
+  document.getElementById('f_orphan').addEventListener('click', () => { listFilter='orphan'; setActiveFilter('f_orphan'); updateListAndHighlights(); });
 
   document.getElementById('btnCose').addEventListener('click', () => { setActiveLayout('btnCose'); runLayout('cose'); });
   document.getElementById('btnDagre').addEventListener('click', () => { setActiveLayout('btnDagre'); runLayout('dagre'); });
@@ -864,13 +980,7 @@ function initCy(elements){
   });
 }
 
-function setActiveFilter(btnId){
-  ['f_all','f_reg','f_orphan'].forEach(id => {
-    const el = document.getElementById(id);
-    el.classList.toggle('active', id === btnId);
-  });
-}
-
+/* ===== load ===== */
 async function loadElements(){
   const wrap = document.getElementById('listWrap');
   const badge = document.getElementById('listBadge');
@@ -886,7 +996,6 @@ async function loadElements(){
     const elements = await res.json();
 
     initCy(elements);
-
   }catch(err){
     badge.textContent = '読み込み失敗';
     wrap.innerHTML = `<div class="emptyRow">読み込み失敗：${esc(err.message)}<br>（elements.json が root にあるか確認）</div>`;
@@ -894,6 +1003,5 @@ async function loadElements(){
 }
 loadElements();
 </script>
-
 </body>
 </html>

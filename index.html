@@ -459,7 +459,7 @@
   <!-- Mobile bottom tabs -->
   <div id="mobileTabs" aria-label="mobile tabs">
     <button type="button" data-tab="left">検索</button>
-    <button type="button" data-tab="cy" class="active">グラフ</button>
+    <button type="button" data-tab="cy" class="active">系統図</button>
     <button type="button" data-tab="right">詳細</button>
   </div>
 
@@ -632,9 +632,9 @@ function initPanButtons(){
   if(!need.every(id => document.getElementById(id))) return;
 
   /* ★ 修正①：十字ボタンを「ゆっくり」動かす（初動も連続も遅く） */
-  const stepPx = () => (isMobileNow() ? 42 : 28);   // 60/40 → 42/28
+  const stepPx = () => (isMobileNow() ? 30 : 20);   // 60/40 → 42/28
   const intervalMs = 90;                            // 60 → 90（更新頻度を下げてゆっくり）
-  const holdScale = 0.40;                           // 0.55 → 0.40（1回あたりの移動量を減らす）
+  const holdScale = 0.30;                           // 0.55 → 0.40（1回あたりの移動量を減らす）
 
   function panBy(dx, dy){
     if(!cy) return;
@@ -680,7 +680,7 @@ function initPanButtons(){
 function setDetail(n){
   if(!n){
     document.getElementById('detail').innerHTML =
-      '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
+      '<span class="muted">品種名をクリックすると詳細が表示されます。系統図の配置安定までに数秒間かかります。</span>';
     return;
   }
 
@@ -844,7 +844,7 @@ function renderCultivarList(nodes, badgeText){
       <thead>
         <tr>
           <th style="width:35%;">品種</th>
-          <th style="width:18%;">年</th>
+          <th style="width:18%;">登録年</th>
           <th>登録者</th>
         </tr>
       </thead>

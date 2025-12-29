@@ -633,8 +633,8 @@ function initPanButtons(){
 
   /* ★ 修正①：十字ボタンを「ゆっくり」動かす（初動も連続も遅く） */
   const stepPx = () => (isMobileNow() ? 30 : 20);   // 60/40 → 42/28
-  const intervalMs = 90;                            // 60 → 90（更新頻度を下げてゆっくり）
-  const holdScale = 0.30;                           // 0.55 → 0.40（1回あたりの移動量を減らす）
+  const intervalMs = 50;                            // 60 → 90（更新頻度を下げてゆっくり）
+  const holdScale = 0.10;                           // 0.55 → 0.40（1回あたりの移動量を減らす）
 
   function panBy(dx, dy){
     if(!cy) return;

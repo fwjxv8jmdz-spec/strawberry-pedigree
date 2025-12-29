@@ -583,7 +583,11 @@ function setTab(name){
   });
 
   if(name === 'cy' && cy){
-    setTimeout(()=>{ cy.resize(); }, 60);
+    // 表示切替直後はサイズが不安定なので2回resize
+    requestAnimationFrame(() => {
+      cy.resize();
+      setTimeout(() => cy.resize(), 80);
+    });
   }
 }
 function initMobileTabs(){
@@ -787,14 +791,27 @@ function selectNode(n, doFit=true){
    - その後にハイライト（fitではなく“中央寄せ”を優先） */
 function focusFromList(n){
   if(!cy || !n || !n.length) return;
-  if(isMobileNow()) setTab('cy');
 
-  // まず中心に寄せる（見失いにくい）
+  if(isMobileNow()){
+    setTab('cy');
+
+    // ★ 重要：タブ切替でcyが表示・サイズ確定してから中央寄せする
+    requestAnimationFrame(() => {
+      cy.resize();
+      setTimeout(() => {
+        cy.resize();         // 念のため2回目
+        centerOnNode(n, 420);
+        setTimeout(() => selectNode(n, false), 220);
+      }, 120);
+    });
+    return;
+  }
+
+  // PCは今まで通りでOK
   centerOnNode(n, 380);
-
-  // 中央寄せが進んだ後にハイライト（fitしない）
   setTimeout(()=> selectNode(n, false), 220);
 }
+
 
 /* ===== list ===== */
 function applyListFilter(nodes){

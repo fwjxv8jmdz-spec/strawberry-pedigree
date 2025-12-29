@@ -8,26 +8,20 @@
   <meta name="description" content="日本のいちご品種が中心の品種系統図（交配図）です。品種名や登録者で検索し、親子関係や登録情報を確認できます。研究・参考目的のデータです。">
   <link rel="canonical" href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/">
 
-  <!-- OGP -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="いちご 品種系統図（交配図） | Strawberry Pedigree">
   <meta property="og:description" content="日本のいちご品種が中心の品種系統図（交配図）です。品種名や登録者で検索し、親子関係や登録情報を確認できます。研究・参考目的のデータです。">
   <meta property="og:url" content="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/">
   <meta property="og:site_name" content="Strawberry Pedigree">
 
-  <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="いちご 品種系統図（交配図） | Strawberry Pedigree">
   <meta name="twitter:description" content="いちごの品種系統図（交配図）を検索・閲覧。親子関係や登録情報を確認できます。">
 
-  <!-- Cytoscape core -->
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
-
-  <!-- dagre -->
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ7RR1J4L2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -54,13 +48,11 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ===== layout (desktop) ===== */
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
     #left, #right { padding: 12px; overflow: auto; }
     #left { border-right: 1px solid var(--border); }
     #right { border-left: 1px solid var(--border); }
 
-    /* graph area wrapper (for floating buttons) */
     #cyWrap{ position: relative; width:100%; height:100%; }
     #cy { width: 100%; height: 100%; }
 
@@ -96,7 +88,6 @@
       background: #fff;
     }
 
-    /* ===== cultivar list ===== */
     .listHeader {
       display:flex;
       align-items: baseline;
@@ -146,18 +137,8 @@
     .td-muted { color: var(--muted); }
     .emptyRow { padding: 12px 10px; font-size: 12px; color: var(--muted); }
 
-    /* filter segmented buttons */
-    .seg {
-      display:flex;
-      gap: 6px;
-      margin: 8px 0 8px;
-    }
-    .seg button{
-      flex: 1;
-      font-size: 12px;
-      padding: 8px 8px;
-      border-radius: 999px;
-    }
+    .seg { display:flex; gap: 6px; margin: 8px 0 8px; }
+    .seg button{ flex: 1; font-size: 12px; padding: 8px 8px; border-radius: 999px; }
     .seg button.active{
       border-color: var(--pink-300);
       background: var(--pink-100);
@@ -165,7 +146,6 @@
       font-weight: 600;
     }
 
-    /* layout buttons */
     .layoutBtns { display:flex; gap: 8px; margin-top: 6px; }
     .layoutBtns button{ flex:1; }
     .layoutBtns button.active{
@@ -175,18 +155,26 @@
       font-weight: 700;
     }
 
-    /* ===== floating zoom controls ===== */
-    #zoomCtrl{
+    /* ===== floating controls: zoom + dpad ===== */
+    #floatCtrl{
       position: absolute;
-      right: 14px;
-      bottom: 14px;
+      right: 12px;
+      bottom: 12px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       z-index: 50;
       pointer-events: auto;
     }
-    .zbtn{
+
+    .zcol{
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .fbtn{
       width: 44px;
       height: 44px;
       border-radius: 14px;
@@ -203,15 +191,26 @@
       user-select: none;
       -webkit-tap-highlight-color: transparent;
     }
-    .zbtn:active{ transform: translateY(1px); }
-    .zbtn small{ font-size: 12px; font-weight: 800; }
+    .fbtn:active{ transform: translateY(1px); }
+    .fbtn small{ font-size: 12px; font-weight: 900; }
 
-    /* small tooltip-like label on long press not needed; keep clean */
+    /* D-pad */
+    .dpad{
+      display: grid;
+      grid-template-columns: 44px 44px 44px;
+      grid-template-rows: 44px 44px 44px;
+      gap: 6px;
+      justify-items: center;
+      align-items: center;
+    }
+    .dpad .blank{ width:44px; height:44px; visibility:hidden; }
+    .dpad .center{ font-size: 12px; }
+    .dpad .arrow{ font-size: 16px; }
 
-    /* ===== mobile tabs (hidden on desktop) ===== */
+    /* hide on desktop, show on mobile */
     #mobileTabs{ display:none; }
+    .onlyMobile{ display:none; }
 
-    /* ===== Mobile: tabs make graph dominant ===== */
     @media (max-width: 900px) {
       #app{
         grid-template-columns: 1fr;
@@ -220,37 +219,26 @@
         min-height: 100vh;
       }
 
-      /* hide all by default; tabs will show one */
       #left, #right, #cyWrap{ display:none; border: none; padding: 12px; }
 
-      /* Graph gets almost full height */
       #cyWrap{
         padding: 0;
-        height: calc(100vh - 64px); /* tabs height */
+        height: calc(100vh - 64px);
         min-height: 520px;
       }
 
-      /* Search/list/detail panels scroll naturally */
       #left, #right{
         height: calc(100vh - 64px);
         overflow: auto;
         -webkit-overflow-scrolling: touch;
       }
 
-      /* Input bigger for phone */
-      input[type="text"], select{
-        padding: 12px;
-        font-size: 16px;
-      }
+      input[type="text"], select{ padding: 12px; font-size: 16px; }
       button{ padding: 10px 12px; font-size: 14px; }
 
-      /* list height: don't hog */
       #listWrap{ max-height: 40vh; }
-
-      /* table: allow horizontal scroll if needed */
       table{ min-width: 520px; }
 
-      /* tabs */
       #mobileTabs{
         position: fixed;
         left: 0; right: 0; bottom: 0;
@@ -275,22 +263,23 @@
         font-weight: 800;
       }
 
-      /* one visible */
       body.tab-left  #left{ display:block; }
       body.tab-cy    #cyWrap{ display:block; }
       body.tab-right #right{ display:block; }
 
-      /* put zoom ctrl a bit higher so it doesn't clash with browser UI */
-      #zoomCtrl{ right: 12px; bottom: 14px; }
+      /* floating controls: keep above tab bar */
+      #floatCtrl{
+        right: 12px;
+        bottom: calc(84px + env(safe-area-inset-bottom));
+      }
 
-      /* footer fixed is annoying on mobile */
+      .onlyMobile{ display:block; }
       footer{ display:none !important; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Desktop intro -->
   <div id="introDesktop" class="muted" style="margin:8px 0 12px; padding:0 12px;">
     いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
   </div>
@@ -299,7 +288,9 @@
     <div id="left">
       <h1 style="font-size:16px; margin:0 0 8px;">いちご 品種系統図（交配図）</h1>
 
-
+      <div class="muted" style="margin:0 0 10px;">
+        いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
+      </div>
 
       <div class="h">検索</div>
       <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
@@ -323,26 +314,35 @@
         <div id="listWrap">
           <div class="emptyRow">elements.json 読み込み中…</div>
         </div>
-
-        <div class="muted" style="margin-top:8px;">
-          <ul style="padding-left:16px; margin:6px 0;">
-            <li>全品種: 本系統図に含まれるすべての品種</li>
-            <li>登録品種: 農林水産省による登録を受けた品種</li>
-            <li>親が不明: 情報を募集しています。</li>
-          </ul>
-        </div>
       </div>
     </div>
 
-    <!-- Graph wrapper for floating controls -->
     <div id="cyWrap">
       <div id="cy"></div>
 
-      <!-- floating zoom controls -->
-      <div id="zoomCtrl" aria-label="zoom controls">
-        <div class="zbtn" id="btnZoomIn" title="拡大">＋</div>
-        <div class="zbtn" id="btnZoomOut" title="縮小">－</div>
-        <div class="zbtn" id="btnFit" title="全体表示"><small>fit</small></div>
+      <!-- floating controls -->
+      <div id="floatCtrl" class="onlyMobile" aria-label="floating controls">
+        <!-- zoom column -->
+        <div class="zcol" aria-label="zoom">
+          <div class="fbtn" id="btnZoomIn" title="拡大">＋</div>
+          <div class="fbtn" id="btnZoomOut" title="縮小">－</div>
+          <div class="fbtn" id="btnFit" title="全体表示"><small>fit</small></div>
+        </div>
+
+        <!-- D-pad -->
+        <div class="dpad" aria-label="pan controls">
+          <div class="blank"></div>
+          <div class="fbtn arrow" id="panUp" title="上へ">▲</div>
+          <div class="blank"></div>
+
+          <div class="fbtn arrow" id="panLeft" title="左へ">◀</div>
+          <div class="fbtn center" id="panCenter" title="中央へ"><small>center</small></div>
+          <div class="fbtn arrow" id="panRight" title="右へ">▶</div>
+
+          <div class="blank"></div>
+          <div class="fbtn arrow" id="panDown" title="下へ">▼</div>
+          <div class="blank"></div>
+        </div>
       </div>
     </div>
 
@@ -351,208 +351,127 @@
       <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
 
       <div class="box">
-        <div class="h" style="margin:0 0 6px;">利用条件・免責</div>
-        <div class="muted">
-          本サイトのデータの利用条件は以下をご確認ください。
-          <ul style="padding-left:16px; margin:6px 0;">
-            <li>
-              <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html"
-                 target="_blank" rel="noopener noreferrer">利用上の注意</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="box">
         <div class="h" style="margin:0 0 6px;">レイアウト</div>
         <div class="layoutBtns">
           <button id="btnCose" class="active" type="button">CoSE</button>
           <button id="btnDagre" type="button">Dagre</button>
         </div>
       </div>
-
-      <div class="box">
-        <div class="h" style="margin:0 0 6px;">問い合わせフォーム</div>
-        <div class="muted">
-          情報提供、誤情報の指摘、追加してほしい品種のリクエストなどを歓迎しています。ぜひ、リンク先のGoogleフォームにてお知らせください。
-          お問い合わせフォームでは、確認・返信の目的で連絡先をお預かりする場合があります。詳細はフォーム内の個人情報の取り扱いをご確認ください。
-          <ul style="padding-left:16px; margin:6px 0;">
-            <li>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScw4ppm9q-qG53L1dYKLOBYp_AV7yECx0Q2ui8dxKajDHESaA/viewform?usp=dialog"
-                 target="_blank" rel="noopener noreferrer">問い合わせフォーム</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="h" style="margin:0 0 6px;">凡例</div>
-        <div><span class="tag">母 → 子</span> 実線</div>
-        <div><span class="tag">父 → 子</span> 破線</div>
-        <div class="muted" style="margin-top:6px;">品種名をドラッグして配置変更・ピンチで拡大縮小できます。</div>
-      </div>
     </div>
   </div>
 
-  <!-- Mobile bottom tabs -->
   <div id="mobileTabs" aria-label="mobile tabs">
     <button type="button" data-tab="left">検索</button>
-    <button type="button" data-tab="cy" class="active">系統図</button>
+    <button type="button" data-tab="cy" class="active">グラフ</button>
     <button type="button" data-tab="right">詳細</button>
   </div>
 
-  <script>
-    let cy = null;
+<script>
+let cy = null;
 
-    /* ===== responsive params ===== */
-    const mqMobile = window.matchMedia('(max-width: 900px)');
-    const isMobileNow = () => mqMobile.matches;
+const mqMobile = window.matchMedia('(max-width: 900px)');
+const isMobileNow = () => mqMobile.matches;
+const nodeFontSize = () => (isMobileNow() ? 18 : 12);
+const textMaxWidth = () => (isMobileNow() ? 240 : 150);
 
-    const nodeFontSize = () => (isMobileNow() ? 18 : 12);
-    const textMaxWidth = () => (isMobileNow() ? 240 : 150);
+let listFilter = 'all';
 
-    /* ===== list state ===== */
-    let listFilter = 'all'; // 'all' | 'reg' | 'orphan'
+function esc(s){
+  return (s ?? '').toString().replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+}
+function uniq(arr){
+  const seen = new Set(); const out = [];
+  for(const v of arr){
+    const s = (v ?? '').toString().trim();
+    if(!s) continue;
+    if(seen.has(s)) continue;
+    seen.add(s); out.push(s);
+  }
+  return out;
+}
+function isUnknownNode(n){
+  const label = ((n.data('label') ?? '') + '').trim().toLowerCase();
+  return (label === 'unknown' || label === '不明');
+}
+function isRegisteredNode(n){
+  const y = n.data('year');
+  return (y !== undefined && y !== null && ('' + y).trim() !== '');
+}
+function hasUnknownParentByRole(n){
+  const incomers = n.incomers('edge');
+  const mfEdges = incomers.filter(e => {
+    const r = e.data('role');
+    return r === 'mother' || r === 'father';
+  });
+  const parents = mfEdges.sources();
+  for(const p of parents){
+    const pl = ((p.data('label') ?? '') + '').trim().toLowerCase();
+    if(pl === 'unknown' || pl === '不明') return true;
+  }
+  return false;
+}
 
-    function esc(s){
-      return (s ?? '').toString()
-        .replaceAll('&','&amp;')
-        .replaceAll('<','&lt;')
-        .replaceAll('>','&gt;');
-    }
+const collJa = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' });
+const collEn = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
 
-    function uniq(arr){
-      const seen = new Set();
-      const out = [];
-      for(const v of arr){
-        const s = (v ?? '').toString().trim();
-        if(!s) continue;
-        if(seen.has(s)) continue;
-        seen.add(s);
-        out.push(s);
-      }
-      return out;
-    }
+function labelGroup(label){
+  const s = (label ?? '').toString().trim();
+  if(!s) return 3;
+  const ch = s[0];
+  if(/[0-9]/.test(ch)) return 2;
+  if(/[A-Za-z]/.test(ch)) return 1;
+  if(/[\u3040-\u30FF\u3400-\u9FFF]/.test(ch)) return 0;
+  return 3;
+}
+function compareLabelJPENNUM(a, b){
+  const la = (a.data('label') ?? '').toString();
+  const lb = (b.data('label') ?? '').toString();
+  const ga = labelGroup(la);
+  const gb = labelGroup(lb);
+  if(ga !== gb) return ga - gb;
+  if(ga === 1) return collEn.compare(la, lb);
+  return collJa.compare(la, lb);
+}
+function parseYear(n){
+  const y = (n.data('year') ?? '').toString().trim();
+  const num = parseInt(y, 10);
+  return Number.isFinite(num) ? num : null;
+}
 
-    /* 「不明」ノードをリストから除外：label が unknown / 不明（大文字小文字無視） */
-    function isUnknownNode(n){
-      const label = ((n.data('label') ?? '') + '').trim().toLowerCase();
-      return (label === 'unknown' || label === '不明');
-    }
-
-    function isRegisteredNode(n){
-      const y = n.data('year');
-      return (y !== undefined && y !== null && ('' + y).trim() !== '');
-    }
-
-    /*
-      親が不明（定義）：
-      - mother または father の親名（source側ノードlabel）が unknown / 不明
-    */
-    function hasUnknownParentByRole(n){
-      const incomers = n.incomers('edge');
-      const mfEdges = incomers.filter(e => {
-        const r = e.data('role');
-        return r === 'mother' || r === 'father';
-      });
-      const parents = mfEdges.sources();
-      for(const p of parents){
-        const pl = ((p.data('label') ?? '') + '').trim().toLowerCase();
-        if(pl === 'unknown' || pl === '不明') return true;
-      }
-      return false;
-    }
-
-    /* ===== Sorting helpers ===== */
-    const collJa = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' });
-    const collEn = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
-
-    // 0:日本語, 1:英字, 2:数字, 3:その他
-    function labelGroup(label){
-      const s = (label ?? '').toString().trim();
-      if(!s) return 3;
-      const ch = s[0];
-      if(/[0-9]/.test(ch)) return 2;
-      if(/[A-Za-z]/.test(ch)) return 1;
-      if(/[\u3040-\u30FF\u3400-\u9FFF]/.test(ch)) return 0;
-      return 3;
-    }
-
-    function compareLabelJPENNUM(a, b){
-      const la = (a.data('label') ?? '').toString();
-      const lb = (b.data('label') ?? '').toString();
-
-      const ga = labelGroup(la);
-      const gb = labelGroup(lb);
-      if(ga !== gb) return ga - gb;
-
-      if(ga === 1) return collEn.compare(la, lb);
-      return collJa.compare(la, lb);
-    }
-
-    function parseYear(n){
-      const y = (n.data('year') ?? '').toString().trim();
-      const num = parseInt(y, 10);
-      return Number.isFinite(num) ? num : null;
-    }
-
-    /* ===== mobile tabs ===== */
-    function setTab(name){
+/* ===== mobile tabs ===== */
+function setTab(name){
+  document.body.classList.remove('tab-left','tab-cy','tab-right');
+  document.body.classList.add(`tab-${name}`);
+  document.querySelectorAll('#mobileTabs button[data-tab]').forEach(b=>{
+    b.classList.toggle('active', b.dataset.tab === name);
+  });
+  if(name === 'cy' && cy){
+    setTimeout(()=>{ cy.resize(); }, 60);
+  }
+}
+function initMobileTabs(){
+  function onChange(){
+    if(isMobileNow()){
+      setTab('cy');
+      const intro = document.getElementById('introDesktop');
+      if(intro) intro.style.display = 'none';
+    }else{
       document.body.classList.remove('tab-left','tab-cy','tab-right');
-      document.body.classList.add(`tab-${name}`);
-
-      document.querySelectorAll('#mobileTabs button[data-tab]').forEach(b=>{
-        b.classList.toggle('active', b.dataset.tab === name);
-      });
-
-      if(name === 'cy' && cy){
-        setTimeout(()=>{
-          cy.resize();
-          cy.fit(undefined, 70);
-        }, 60);
-      }
+      const intro = document.getElementById('introDesktop');
+      if(intro) intro.style.display = '';
     }
+  }
+  mqMobile.addEventListener('change', onChange);
+  onChange();
 
-    function initMobileTabs(){
-      function onChange(){
-        if(isMobileNow()){
-          setTab('cy');
-          const intro = document.getElementById('introDesktop');
-          if(intro) intro.style.display = 'none';
-        }else{
-          document.body.classList.remove('tab-left','tab-cy','tab-right');
-          const intro = document.getElementById('introDesktop');
-          if(intro) intro.style.display = '';
-        }
-      }
-      mqMobile.addEventListener('change', onChange);
-      onChange();
+  document.getElementById('mobileTabs').addEventListener('click', (e)=>{
+    const btn = e.target.closest('button[data-tab]');
+    if(!btn) return;
+    setTab(btn.dataset.tab);
+  });
+}
 
-      const tabs = document.getElementById('mobileTabs');
-      tabs.addEventListener('click', (e)=>{
-        const btn = e.target.closest('button[data-tab]');
-        if(!btn) return;
-        setTab(btn.dataset.tab);
-      });
-    }
-
-    /* ===== zoom controls ===== */
-    function clamp(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); }
-
-    function zoomBy(factor){
-      if(!cy) return;
-      const current = cy.zoom();
-      const next = clamp(current * factor, 0.08, 3.5);
-      const center = cy.extent().center(); // view center
-      cy.zoom({ level: next, renderedPosition: { x: cy.width()/2, y: cy.height()/2 } });
-      cy.center();
-    }
-
-    function fitAll(pad = 70){
-      if(!cy) return;
-      cy.fit(undefined, pad);
-    }
-
+/* ===== zoom (viewport center fixed) ===== */
 function initZoomButtons(){
   const inBtn = document.getElementById('btnZoomIn');
   const outBtn = document.getElementById('btnZoomOut');
@@ -560,27 +479,21 @@ function initZoomButtons(){
 
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-  // いま見ている「画面の中央」を固定してズーム
   function zoomAtViewportCenter(nextLevel){
     if(!cy) return;
-
     const level = clamp(nextLevel, 0.08, 3.5);
     const center = { x: cy.width() / 2, y: cy.height() / 2 };
-
-    // ★中心固定ズーム（パンは変わらない）
     cy.zoom({ level, renderedPosition: center });
   }
 
   if(inBtn) inBtn.addEventListener('click', () => {
     if(!cy) return;
-    const next = cy.zoom() * 1.2;
-    zoomAtViewportCenter(next);
+    zoomAtViewportCenter(cy.zoom() * 1.2);
   });
 
   if(outBtn) outBtn.addEventListener('click', () => {
     if(!cy) return;
-    const next = cy.zoom() / 1.2;
-    zoomAtViewportCenter(next);
+    zoomAtViewportCenter(cy.zoom() / 1.2);
   });
 
   if(fitBtn) fitBtn.addEventListener('click', () => {
@@ -590,485 +503,397 @@ function initZoomButtons(){
   });
 }
 
+/* ===== pan controls (D-pad) ===== */
+function initPanButtons(){
+  const stepPx = () => (isMobileNow() ? 120 : 80); // “見た目の移動量”をpxで
 
-    /* ===== Detail renderer ===== */
-    function setDetail(n){
-      if(!n){
-        document.getElementById('detail').innerHTML =
-          '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
-        return;
-      }
+  function panBy(dx, dy){
+    if(!cy) return;
+    const p = cy.pan();
+    cy.pan({ x: p.x + dx, y: p.y + dy });
+  }
 
-      const d = n.data();
+  // 押しっぱなしで連続移動（スマホで気持ちいい）
+  function bindHold(btnId, dx, dy){
+    const el = document.getElementById(btnId);
+    if(!el) return;
 
-      const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
-      const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
-      const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
+    let timer = null;
 
-      let sourcesHtml = '';
-      if(d.sources){
-        const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
-        const links = parts.map(p => {
-          const isUrl = /^https?:\/\//i.test(p);
-          return isUrl
-            ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">${esc(p)}</a></div>`
-            : `<div>${esc(p)}</div>`;
-        }).join('');
-        sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
-      }
+    const start = (e)=>{
+      e.preventDefault();
+      const s = stepPx();
+      panBy(dx * s, dy * s);
+      timer = setInterval(()=> panBy(dx * s * 0.5, dy * s * 0.5), 60);
+    };
+    const stop = ()=>{
+      if(timer){ clearInterval(timer); timer = null; }
+    };
 
-      const incomers = n.incomers('edge');
-      const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
-      const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
-      const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
+    el.addEventListener('pointerdown', start);
+    el.addEventListener('pointerup', stop);
+    el.addEventListener('pointercancel', stop);
+    el.addEventListener('pointerleave', stop);
+  }
 
-      const outgoers = n.outgoers('edge');
-      const children = outgoers.targets().map(x => x.data('label'));
+  bindHold('panUp',    0,  1);  // y+ は “上に見える”
+  bindHold('panDown',  0, -1);
+  bindHold('panLeft',  1,  0);
+  bindHold('panRight', -1, 0);
 
-      const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
-      const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
-      const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
-      const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
-
-      const crossSources = uniq(incomers.map(e => e.data('source_id')));
-      const crossSourcesHtml = crossSources.length
-        ? `<div style="margin-top:8px;"><b>交配出典</b><div>${crossSources.map(esc).join('<br>')}</div></div>`
-        : '';
-
-      const ph = (d.placeholder === true) ? `<div class="muted" style="margin-top:6px;">※この品種情報は未登録です。</div>` : '';
-
-      document.getElementById('detail').innerHTML = `
-        <div class="box">
-          <div class="h" style="margin:0 0 6px;">${esc(d.label)}</div>
-          ${year}
-          ${inst}
-          ${motherHtml}
-          ${fatherHtml}
-          ${unknownHtml}
-          ${childHtml}
-          ${notes}
-          ${crossSourcesHtml}
-          ${sourcesHtml}
-          ${ph}
-        </div>
-      `;
-    }
-
-    function runLayout(mode){
+  const centerBtn = document.getElementById('panCenter');
+  if(centerBtn){
+    centerBtn.addEventListener('click', ()=>{
       if(!cy) return;
-      cy.stop();
+      cy.center();
+    });
+  }
+}
 
-      const isM = isMobileNow();
-      const padding = 30;
-      let opts;
+/* ===== details ===== */
+function setDetail(n){
+  const el = document.getElementById('detail');
+  if(!n){
+    el.innerHTML = '<span class="muted">ノードをクリックすると情報が表示されます。</span>';
+    return;
+  }
+  const d = n.data();
+  const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
+  const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
 
-      if(mode === 'dagre'){
-        opts = {
-          name: 'dagre',
-          rankDir: 'LR',
-          nodeSep: isM ? 40 : 20,
-          edgeSep: isM ? 10 : 5,
-          rankSep: isM ? 140 : 90,
-          padding,
-          nodeDimensionsIncludeLabels: true,
-          animate: true
-        };
-      }else{
-        opts = {
-          name: 'cose',
-          padding: 30,
-          animate: true,
-          randomize: false,
-          avoidOverlap: true,
-          avoidOverlapPadding: isM ? 60 : 40,
-          nodeOverlap: 40,
-          nodeRepulsion: isM ? 22000 : 14000,
-          idealEdgeLength: isM ? 280 : 200,
-          componentSpacing: isM ? 120 : 80,
-          numIter: 2000
-        };
+  const incomers = n.incomers('edge');
+  const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
+  const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
+  const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
+
+  const outgoers = n.outgoers('edge');
+  const children = outgoers.targets().map(x => x.data('label'));
+
+  const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
+  const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
+  const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
+  const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
+
+  el.innerHTML = `
+    <div class="box">
+      <div class="h" style="margin:0 0 6px;">${esc(d.label)}</div>
+      ${year}
+      ${inst}
+      ${motherHtml}
+      ${fatherHtml}
+      ${unknownHtml}
+      ${childHtml}
+    </div>
+  `;
+}
+
+/* ===== selection ===== */
+function selectNode(n, doFit=true){
+  if(!n) return;
+  setDetail(n);
+
+  cy.elements().removeClass('faded');
+  cy.elements().removeClass('highlight');
+
+  const neighborhood = n.closedNeighborhood();
+  cy.elements().not(neighborhood).addClass('faded');
+  n.addClass('highlight');
+
+  if(doFit){
+    cy.animate({ fit: { eles: neighborhood, padding: isMobileNow() ? 90 : 80 } }, { duration: 250 });
+  }
+}
+
+/* ===== list ===== */
+function applyListFilter(nodes){
+  if(listFilter === 'reg') return nodes.filter(n => isRegisteredNode(n) && n.data('placeholder') !== true);
+  if(listFilter === 'orphan') return nodes.filter(n => hasUnknownParentByRole(n));
+  return nodes;
+}
+function filterLabel(){
+  if(listFilter === 'reg') return '登録品種';
+  if(listFilter === 'orphan') return '親が不明';
+  return '全品種';
+}
+function renderCultivarList(nodes, badgeText){
+  const wrap = document.getElementById('listWrap');
+  const badge = document.getElementById('listBadge');
+  badge.textContent = badgeText;
+
+  if(!nodes.length){
+    wrap.innerHTML = `<div class="emptyRow">該当する品種がありません。</div>`;
+    return;
+  }
+
+  const rows = nodes.map(n => {
+    const d = n.data();
+    const label = esc(d.label ?? '');
+    const year = esc(d.year ?? '');
+    const inst = esc(d.institute ?? '');
+    const id = esc(d.id ?? n.id());
+    return `
+      <tr data-node-id="${id}">
+        <td>${label || '<span class="td-muted">（無名）</span>'}</td>
+        <td class="td-muted" style="white-space:nowrap;">${year || '-'}</td>
+        <td class="td-muted">${inst || '-'}</td>
+      </tr>
+    `;
+  }).join('');
+
+  wrap.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th style="width:35%;">品種</th>
+          <th style="width:18%;">年</th>
+          <th>登録者</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    tr.addEventListener('click', () => {
+      const nodeId = tr.getAttribute('data-node-id');
+      const n = cy.getElementById(nodeId);
+      if(n && n.length){
+        if(isMobileNow()) setTab('cy');
+        selectNode(n, true);
       }
+    });
+  });
+}
+function updateListAndHighlights(){
+  if(!cy) return;
 
-      cy.layout(opts).run();
-      cy.fit(undefined, isM ? 70 : 30);
+  const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
+
+  let base = cy.nodes().filter(n => !isUnknownNode(n));
+  let nodes = applyListFilter(base);
+
+  if(term){
+    nodes = nodes.filter(n => {
+      const label = ((n.data('label') || '') + '').toLowerCase();
+      const inst  = ((n.data('institute') || '') + '').toLowerCase();
+      return label.includes(term) || inst.includes(term);
+    });
+  }
+
+  const sorted = nodes.toArray().sort((a, b) => {
+    if(listFilter === 'reg'){
+      const ya = parseYear(a);
+      const yb = parseYear(b);
+      const va = (ya !== null);
+      const vb = (yb !== null);
+      if(va && vb && ya !== yb) return yb - ya;
+      if(va !== vb) return va ? -1 : 1;
+      return compareLabelJPENNUM(a, b);
     }
+    return compareLabelJPENNUM(a, b);
+  });
 
-    function setActiveLayout(btnId){
-      document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
-      document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
+  const badgeText = term
+    ? `検索結果（${filterLabel()}）：${sorted.length}件`
+    : `${filterLabel()}：${sorted.length}件`;
+
+  renderCultivarList(sorted, badgeText);
+}
+
+/* ===== layout ===== */
+function runLayout(mode){
+  if(!cy) return;
+  cy.stop();
+  const isM = isMobileNow();
+  let opts;
+
+  if(mode === 'dagre'){
+    opts = {
+      name: 'dagre',
+      rankDir: 'LR',
+      nodeSep: isM ? 40 : 20,
+      edgeSep: isM ? 10 : 5,
+      rankSep: isM ? 140 : 90,
+      padding: 30,
+      nodeDimensionsIncludeLabels: true,
+      animate: true
+    };
+  }else{
+    opts = {
+      name: 'cose',
+      padding: 30,
+      animate: true,
+      randomize: true,
+      avoidOverlap: true,
+      avoidOverlapPadding: isM ? 40 : 20,
+      nodeOverlap: 40,
+      nodeRepulsion: isM ? 12000 : 6500,
+      idealEdgeLength: isM ? 220 : 140,
+      componentSpacing: isM ? 120 : 80,
+      numIter: 1200
+    };
+  }
+
+  cy.layout(opts).run();
+  cy.fit(undefined, isM ? 70 : 30);
+}
+
+function setActiveLayout(btnId){
+  document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
+  document.getElementById('btnDagre').classList.toggle('active', btnId === 'btnDagre');
+}
+
+function initCy(elements){
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements,
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'label': 'data(label)',
+          'font-size': nodeFontSize(),
+          'text-wrap': 'wrap',
+          'text-max-width': textMaxWidth(),
+          'text-valign': 'center',
+          'text-halign': 'center',
+          'background-color': '#FCE7F3',
+          'border-width': 1.8,
+          'border-color': '#F9A8D4',
+          'color': '#831843',
+          'width': 'label',
+          'padding': isMobileNow() ? '16px' : '12px',
+          'shape': 'round-rectangle'
+        }
+      },
+      {
+        selector: 'node.registered',
+        style: {
+          'border-width': 2.8,
+          'border-color': '#ff5fa2',
+          'background-color': '#ffd9eb',
+          'font-weight': '700',
+          'shadow-blur': 10,
+          'shadow-color': '#ff9ac6',
+          'shadow-opacity': 0.35
+        }
+      },
+      {
+        selector: 'node.isPlaceholder',
+        style: {
+          'background-color': '#FFF5FB',
+          'border-color': '#FBCFE8',
+          'color': '#9F1239',
+          'shadow-opacity': 0
+        }
+      },
+      {
+        selector: 'edge',
+        style: {
+          'target-arrow-shape': 'triangle',
+          'target-arrow-fill': 'filled',
+          'arrow-scale': isMobileNow() ? 1.4 : 1.2,
+          'width': isMobileNow() ? 2.4 : 2,
+          'line-color': '#F472B6',
+          'target-arrow-color': '#F472B6',
+          'curve-style': 'unbundled-bezier',
+          'edge-distances': 'node-position'
+        }
+      },
+      { selector: 'edge[role="mother"]', style: { 'line-style': 'solid',  'control-point-distance': isMobileNow() ? 40 : 30, 'control-point-weight': 0.5 } },
+      { selector: 'edge[role="father"]', style: { 'line-style': 'dashed', 'control-point-distance': isMobileNow() ? -40 : -30,'control-point-weight': 0.5 } },
+      { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted','line-color': '#E5E7EB','target-arrow-color': '#E5E7EB','control-point-distance': 18,'control-point-weight': 0.5 } },
+      { selector: '.faded', style: { 'opacity': 0.2 } },
+      { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
+    ],
+    layout: {
+      name: 'cose',
+      padding: 30,
+      animate: true,
+      randomize: true,
+      avoidOverlap: true,
+      avoidOverlapPadding: 20,
+      nodeOverlap: 40,
+      nodeRepulsion: 6500,
+      idealEdgeLength: 140,
+      componentSpacing: 80,
+      numIter: 1200
     }
+  });
 
-    /* ===== selection helper ===== */
-    function selectNode(n, doFit=true){
-      if(!n) return;
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const d = n.data();
+      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
+      if (d.placeholder === true) n.addClass('isPlaceholder');
+    });
+  });
 
-      // update detail content but do not change tabs
-      setDetail(n);
+  cy.on('tap', 'node', (evt) => { selectNode(evt.target, false); });
 
+  cy.on('tap', (evt) => {
+    if(evt.target === cy){
       cy.elements().removeClass('faded');
       cy.elements().removeClass('highlight');
-
-      const neighborhood = n.closedNeighborhood();
-      cy.elements().not(neighborhood).addClass('faded');
-      n.addClass('highlight');
-
-      if(doFit){
-        cy.animate({ fit: { eles: neighborhood, padding: isMobileNow() ? 90 : 80 } }, { duration: 250 });
-      }
+      setDetail(null);
     }
+  });
 
-    /* ===== list rendering ===== */
-    function applyListFilter(nodes){
-      if(listFilter === 'reg'){
-        return nodes.filter(n => isRegisteredNode(n) && n.data('placeholder') !== true);
-      }
-      if(listFilter === 'orphan'){
-        return nodes.filter(n => hasUnknownParentByRole(n));
-      }
-      return nodes;
-    }
+  document.getElementById('q').addEventListener('input', updateListAndHighlights);
 
-    function filterLabel(){
-      if(listFilter === 'reg') return '登録品種';
-      if(listFilter === 'orphan') return '親が不明';
-      return '全品種';
-    }
+  document.getElementById('f_all').addEventListener('click', () => { listFilter = 'all';  setActiveFilter('f_all');  updateListAndHighlights(); });
+  document.getElementById('f_reg').addEventListener('click', () => { listFilter = 'reg';  setActiveFilter('f_reg');  updateListAndHighlights(); });
+  document.getElementById('f_orphan').addEventListener('click', () => { listFilter = 'orphan';setActiveFilter('f_orphan');updateListAndHighlights(); });
 
-    function renderCultivarList(nodes, badgeText){
-      const wrap = document.getElementById('listWrap');
-      const badge = document.getElementById('listBadge');
+  document.getElementById('btnCose').addEventListener('click', () => { setActiveLayout('btnCose'); runLayout('cose'); });
+  document.getElementById('btnDagre').addEventListener('click', () => { setActiveLayout('btnDagre'); runLayout('dagre'); });
 
-      badge.textContent = badgeText;
+  updateListAndHighlights();
 
-      if(!nodes.length){
-        wrap.innerHTML = `<div class="emptyRow">該当する品種がありません。</div>`;
-        return;
-      }
+  setTimeout(()=>{ cy.resize(); cy.fit(undefined, isMobileNow() ? 70 : 30); }, 50);
 
-      const rows = nodes.map(n => {
-        const d = n.data();
-        const label = esc(d.label ?? '');
-        const year = esc(d.year ?? '');
-        const inst = esc(d.institute ?? '');
-        const id = esc(d.id ?? n.id());
-        return `
-          <tr data-node-id="${id}">
-            <td>${label || '<span class="td-muted">（無名）</span>'}</td>
-            <td class="td-muted" style="white-space:nowrap;">${year || '-'}</td>
-            <td class="td-muted">${inst || '-'}</td>
-          </tr>
-        `;
-      }).join('');
+  mqMobile.addEventListener('change', () => {
+    if(!cy) return;
+    cy.style()
+      .selector('node')
+      .style('font-size', nodeFontSize())
+      .style('text-max-width', textMaxWidth())
+      .style('padding', isMobileNow() ? '16px' : '12px')
+      .update();
+    cy.resize();
+  });
+}
 
-      wrap.innerHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th style="width:35%;">品種</th>
-              <th style="width:18%;">年</th>
-              <th>登録者</th>
-            </tr>
-          </thead>
-          <tbody>${rows}</tbody>
-        </table>
-      `;
+function setActiveFilter(btnId){
+  ['f_all','f_reg','f_orphan'].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.toggle('active', id === btnId);
+  });
+}
 
-      wrap.querySelectorAll('tbody tr').forEach(tr => {
-        tr.addEventListener('click', () => {
-          const nodeId = tr.getAttribute('data-node-id');
-          const n = cy.getElementById(nodeId);
-          if(n && n.length){
-            if(isMobileNow()) setTab('cy');
-            selectNode(n, true);
-          }
-        });
-      });
-    }
+async function loadElements(){
+  const wrap = document.getElementById('listWrap');
+  const badge = document.getElementById('listBadge');
 
-    function updateListAndHighlights(){
-      if(!cy) return;
+  try{
+    initMobileTabs();
+    initZoomButtons();
+    initPanButtons();
 
-      const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
+    const url = "elements.json?ts=" + Date.now();
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const elements = await res.json();
 
-      let base = cy.nodes().filter(n => !isUnknownNode(n));
-      let nodes = applyListFilter(base);
+    initCy(elements);
 
-      if(term){
-        nodes = nodes.filter(n => {
-          const label = ((n.data('label') || '') + '').toLowerCase();
-          const inst  = ((n.data('institute') || '') + '').toLowerCase();
-          return label.includes(term) || inst.includes(term);
-        });
-      }
+  }catch(err){
+    badge.textContent = '読み込み失敗';
+    wrap.innerHTML = `<div class="emptyRow">読み込み失敗：${esc(err.message)}<br>（elements.json が root にあるか確認）</div>`;
+  }
+}
+loadElements();
+</script>
 
-      const sorted = nodes.toArray().sort((a, b) => {
-        if(listFilter === 'reg'){
-          const ya = parseYear(a);
-          const yb = parseYear(b);
-
-          const va = (ya !== null);
-          const vb = (yb !== null);
-
-          if(va && vb && ya !== yb) return yb - ya;
-          if(va !== vb) return va ? -1 : 1;
-
-          return compareLabelJPENNUM(a, b);
-        }
-        return compareLabelJPENNUM(a, b);
-      });
-
-      const badgeText = term
-        ? `検索結果（${filterLabel()}）：${sorted.length}件`
-        : `${filterLabel()}：${sorted.length}件`;
-
-      renderCultivarList(sorted, badgeText);
-
-      cy.nodes().removeClass('highlight');
-      if(term){
-        const matched = cy.nodes().filter(n => {
-          const label = ((n.data('label') || '') + '').toLowerCase();
-          const inst  = ((n.data('institute') || '') + '').toLowerCase();
-          return label.includes(term) || inst.includes(term);
-        });
-        matched.addClass('highlight');
-        if(matched.length){
-          if(isMobileNow()) setTab('cy');
-          cy.animate({ fit: { eles: matched, padding: isMobileNow() ? 90 : 80 } }, { duration: 200 });
-        }
-      }
-    }
-
-    function setActiveFilter(btnId){
-      ['f_all','f_reg','f_orphan'].forEach(id => {
-        const el = document.getElementById(id);
-        el.classList.toggle('active', id === btnId);
-      });
-    }
-
-    function initCy(elements){
-      cy = cytoscape({
-        container: document.getElementById('cy'),
-        elements,
-        style: [
-          {
-            selector: 'node',
-            style: {
-              'label': 'data(label)',
-              'font-size': nodeFontSize(),
-              'text-wrap': 'wrap',
-              'text-max-width': textMaxWidth(),
-              'text-valign': 'center',
-              'text-halign': 'center',
-
-              'background-color': '#FCE7F3',
-              'border-width': 1.8,
-              'border-color': '#F9A8D4',
-              'color': '#831843',
-
-              'width': 'label',
-              'padding': isMobileNow() ? '16px' : '12px',
-              'shape': 'round-rectangle'
-            }
-          },
-
-          {
-            selector: 'node.registered',
-            style: {
-              'border-width': 2.8,
-              'border-color': '#ff5fa2',
-              'background-color': '#ffd9eb',
-              'font-weight': '700',
-              'shadow-blur': 10,
-              'shadow-color': '#ff9ac6',
-              'shadow-opacity': 0.35
-            }
-          },
-
-          {
-            selector: 'node.isPlaceholder',
-            style: {
-              'background-color': '#FFF5FB',
-              'border-color': '#FBCFE8',
-              'color': '#9F1239',
-              'shadow-opacity': 0
-            }
-          },
-
-          {
-            selector: 'edge',
-            style: {
-              'source-endpoint': 'outside-to-node',
-              'target-endpoint': 'outside-to-node',
-              'target-arrow-shape': 'triangle',
-              'target-arrow-fill': 'filled',
-              'arrow-scale': isMobileNow() ? 1.4 : 1.2,
-              'width': isMobileNow() ? 2.4 : 2,
-              'line-color': '#F472B6',
-              'target-arrow-color': '#F472B6',
-
-              'curve-style': 'unbundled-bezier',
-              'edge-distances': 'node-position'
-            }
-          },
-
-          {
-            selector: 'edge[role="mother"]',
-            style: {
-              'line-style': 'solid',
-              'control-point-distance': isMobileNow() ? 40 : 30,
-              'control-point-weight': 0.5
-            }
-          },
-
-          {
-            selector: 'edge[role="father"]',
-            style: {
-              'line-style': 'dashed',
-              'control-point-distance': isMobileNow() ? -40 : -30,
-              'control-point-weight': 0.5
-            }
-          },
-
-          {
-            selector: 'edge[role="unknown"]',
-            style: {
-              'line-style': 'dotted',
-              'line-color': '#E5E7EB',
-              'target-arrow-color': '#E5E7EB',
-              'control-point-distance': 18,
-              'control-point-weight': 0.5
-            }
-          },
-
-          { selector: '.faded', style: { 'opacity': 0.2 } },
-          { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
-        ],
-
-        layout: {
-          name: 'cose',
-          padding: 30,
-          animate: true,
-          randomize: true,
-          avoidOverlap: true,
-          avoidOverlapPadding: 20,
-          nodeOverlap: 40,
-          nodeRepulsion: 6500,
-          idealEdgeLength: 140,
-          componentSpacing: 80,
-          numIter: 1200
-        }
-      });
-
-      cy.batch(() => {
-        cy.nodes().forEach(n => {
-          const d = n.data();
-          if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
-          if (d.placeholder === true) n.addClass('isPlaceholder');
-        });
-      });
-
-      // Graph tap: keep tab, just update highlight + detail content
-      cy.on('tap', 'node', (evt) => {
-        selectNode(evt.target, false);
-      });
-
-      cy.on('tap', (evt) => {
-        if(evt.target === cy){
-          cy.elements().removeClass('faded');
-          cy.elements().removeClass('highlight');
-          setDetail(null);
-        }
-      });
-
-      document.getElementById('q').addEventListener('input', () => {
-        updateListAndHighlights();
-      });
-
-      document.getElementById('f_all').addEventListener('click', () => {
-        listFilter = 'all';
-        setActiveFilter('f_all');
-        updateListAndHighlights();
-      });
-
-      document.getElementById('f_reg').addEventListener('click', () => {
-        listFilter = 'reg';
-        setActiveFilter('f_reg');
-        updateListAndHighlights();
-      });
-
-      document.getElementById('f_orphan').addEventListener('click', () => {
-        listFilter = 'orphan';
-        setActiveFilter('f_orphan');
-        updateListAndHighlights();
-      });
-
-      document.getElementById('btnCose').addEventListener('click', () => {
-        setActiveLayout('btnCose');
-        runLayout('cose');
-      });
-
-      document.getElementById('btnDagre').addEventListener('click', () => {
-        setActiveLayout('btnDagre');
-        runLayout('dagre');
-      });
-
-      updateListAndHighlights();
-
-      setTimeout(()=>{
-        cy.resize();
-        cy.fit(undefined, isMobileNow() ? 70 : 30);
-      }, 50);
-
-      mqMobile.addEventListener('change', () => {
-        if(!cy) return;
-        cy.style()
-          .selector('node')
-          .style('font-size', nodeFontSize())
-          .style('text-max-width', textMaxWidth())
-          .style('padding', isMobileNow() ? '16px' : '12px')
-          .update();
-        cy.resize();
-        cy.fit(undefined, isMobileNow() ? 70 : 30);
-      });
-    }
-
-    async function loadElements(){
-      const wrap = document.getElementById('listWrap');
-      const badge = document.getElementById('listBadge');
-
-      try{
-        initMobileTabs();
-        initZoomButtons(); // ★ added
-
-        const url = "elements.json?ts=" + Date.now();
-        const res = await fetch(url, { cache: "no-store" });
-        if(!res.ok) throw new Error(`HTTP ${res.status}`);
-        const elements = await res.json();
-
-        initCy(elements);
-
-      }catch(err){
-        badge.textContent = '読み込み失敗';
-        wrap.innerHTML = `<div class="emptyRow">読み込み失敗：${esc(err.message)}<br>（elements.json が root にあるか確認）</div>`;
-      }
-    }
-
-    loadElements();
-  </script>
-
-  <footer style="
-    position: fixed;
-    bottom: 6px;
-    right: 10px;
-    font-size: 11px;
-    color: #6b7280;
-    background: rgba(255,255,255,0.8);
-    padding: 2px 6px;
-    border-radius: 6px;
-    z-index: 10;
-  ">
-    © 2025 Takumi Fujiki.
-    <a href="https://fwjxv8jmdz-spec.github.io/strawberry-pedigree/README.html" target="_blank" rel="noopener noreferrer">利用上の注意</a>
-  </footer>
 </body>
 </html>

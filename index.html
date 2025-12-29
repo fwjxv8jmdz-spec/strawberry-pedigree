@@ -692,21 +692,29 @@ function setDetail(n){
 
 /* ===== selection ===== */
 function selectNode(n, doFit=true){
-  if(!n) return;
+  if(!n || !cy) return;
 
   setDetail(n);
 
+  // いったん全解除
   cy.elements().removeClass('faded');
   cy.elements().removeClass('highlight');
 
+  // ★ 親子を含む近傍（1ホップ）＝ 3世代（親・本人・子）
   const neighborhood = n.closedNeighborhood();
-  cy.elements().not(neighborhood).addClass('f(aded');
-  n.addClass('highlight');
+
+  // 近傍をハイライト、その他を薄く
+  neighborhood.addClass('highlight');
+  cy.elements().not(neighborhood).addClass('faded');
 
   if(doFit){
-    cy.animate({ fit: { eles: neighborhood, padding: isMobileNow() ? 90 : 80 } }, { duration: 250 });
+    cy.animate(
+      { fit: { eles: neighborhood, padding: isMobileNow() ? 90 : 80 } },
+      { duration: 250 }
+    );
   }
 }
+
 
 /* ===== list ===== */
 function applyListFilter(nodes){

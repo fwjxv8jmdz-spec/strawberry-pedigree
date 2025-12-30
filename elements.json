@@ -2161,7 +2161,7 @@
   },
   {
     "data": {
-      "id": "ichigochukanbohon1go",
+      "id": "ichigochukanbohonno1go",
       "label": "いちご中間母本農1号",
       "year": 2004,
       "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
@@ -6157,11 +6157,11 @@
   },
   {
     "data": {
-      "id": "f. chiloensis",
+      "id": "f. chiloensis_ettersburg 20_father",
       "label": "Fragaria chiloensis",
       "year": "",
       "institute": "",
-      "notes": "Ettersburg 20の父本",
+      "notes": "",
       "sources": "",
       "db_registration_date": "2025/12/30",
       "placeholder": false
@@ -6401,7 +6401,7 @@
       "label": "Euresko",
       "year": "",
       "institute": "",
-      "notes": "母本はCheasapeakeかRose Ettersburgとされている",
+      "notes": "母本はCheasapeakeかRose Ettersburg, 父本はEttersburg 20ではないかという意見がある。",
       "sources": "",
       "db_registration_date": "2025/12/30",
       "placeholder": false
@@ -6649,6 +6649,930 @@
   },
   {
     "data": {
+      "id": "northwest",
+      "label": "Northwest",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "brightmore",
+      "label": "Brightmore",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 154",
+      "label": "US_Oreg. 154",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 456",
+      "label": "US_Oreg. 456",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 7",
+      "label": "US_Oreg. 7",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "narcissa",
+      "label": "Narcissa",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "royal sovereign",
+      "label": "Royal Sovereign",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "noble",
+      "label": "Noble",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "robinson",
+      "label": "Robinson",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "washington",
+      "label": "Washington",
+      "year": "",
+      "institute": "",
+      "notes": "父本はFragaria ovalisとの推測がある。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "headliner",
+      "label": "Headliner",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_7_27",
+      "label": "L_7_27",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "suwannee",
+      "label": "Suwannee",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_6_30_45_7",
+      "label": "L_6_30_45_7",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "klonmore",
+      "label": "Klonmore",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_7_42",
+      "label": "L_7_42",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "konvoy",
+      "label": "Konvoy",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fairmore",
+      "label": "Fairmore",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "dixieland",
+      "label": "Dixieland",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tennessee shipper",
+      "label": "Tennessee Shipper",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "marshall",
+      "label": "Marshall",
+      "year": "",
+      "institute": "",
+      "notes": "片親はBubachまたはPresident Wilderではないかという意見がある。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sparkle",
+      "label": "Sparkle",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "catskill",
+      "label": "Catskill",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "florida ninety",
+      "label": "Florida Ninety",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pocahontas",
+      "label": "Pocahontas",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "earlidawn",
+      "label": "Earlidawn",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "jerseybelle",
+      "label": "Jerseybelle",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "N.J. 953",
+      "label": "N.J. 953",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "N.J. 72",
+      "label": "N.J. 72",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "N.J. 925",
+      "label": "N.J. 925",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pathfinder",
+      "label": "Pathfinder",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "siletz",
+      "label": "Siletz",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 2012",
+      "label": "US_Oreg. 2012",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 1491",
+      "label": "US_Oreg. 1491",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 767",
+      "label": "US_Oreg. 767",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "corvallis",
+      "label": "Corvallis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "U.S.D.A.836",
+      "label": "U.S.D.A.836",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis_father_U.S.D.A.836",
+      "label": "Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "エクアドルのambato産とのこと",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 1509",
+      "label": "US_Oreg. 1509",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 305",
+      "label": "US_Oreg. 305",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "clark",
+      "label": "Clark",
+      "year": "",
+      "institute": "",
+      "notes": "Wilson seedlingの提案有。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 812",
+      "label": "US_Oreg. 812",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "oregon selection",
+      "label": "Oregon selection",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis_mother_US_Oreg.812",
+      "label": "Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 1816",
+      "label": "US_Oreg. 1816",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 1579",
+      "label": "US_Oreg. 1579",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 834",
+      "label": "US_Oreg. 834",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. ovalis_US_Oreg. 834_father",
+      "label": "Fragaria ovalis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 913",
+      "label": "US_Oreg. 913",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_Oreg. 319",
+      "label": "US_Oreg. 319",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Oreg. 46",
+      "label": "Oreg. 46",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "surecrop",
+      "label": "Surecrop",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fairland",
+      "label": "Fairland",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Md_US_1972",
+      "label": "Md_US_1972",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Md_US_683",
+      "label": "Md_US_683",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "armore",
+      "label": "Armore",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aroma",
+      "label": "Aroma",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "dabreak",
+      "label": "Dabreak",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_3_1169",
+      "label": "L_3_1169",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_0_242",
+      "label": "L_0_242",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_7_42",
+      "label": "L_7_42",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "L_117_1_45_3",
+      "label": "L_117_1_45_3",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "marion bell",
+      "label": "Marion Bell",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "dunlap",
+      "label": "Dunlap",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "goldsmith",
+      "label": "Goldsmith",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 638.45",
+      "label": "Cal 638.45",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 337.2",
+      "label": "Cal 337.2",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 249.5",
+      "label": "Cal 249.5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 32.50",
+      "label": "Cal 32.50",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 469.5",
+      "label": "Cal 469.5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 222.4",
+      "label": "Cal 222.4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hoffman",
+      "label": "Hoffman",
+      "year": "",
+      "institute": "",
+      "notes": "母本はNeunanとの推測がある。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "redstar",
+      "label": "Redstar",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "progressive",
+      "label": "Progressive",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pan american",
+      "label": "Pan American",
+      "year": "",
+      "institute": "",
+      "notes": "Bismarck の変異とのこと",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "van deman",
+      "label": "Van Deman",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "capt. jack",
+      "label": "Capt. Jack",
+      "year": "",
+      "institute": "",
+      "notes": "Wilson seedlingの提案有。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -6747,6 +7671,18 @@
     "data": {
       "id": "Cal BH 14(mixed crosses)",
       "label": "Cal BH 14(mixed crosses)",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "E_121",
+      "label": "E_121",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -6913,8 +7849,8 @@
   },
   {
     "data": {
-      "id": "blackmore",
-      "label": "blackmore",
+      "id": "british queen",
+      "label": "british queen",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -6925,8 +7861,8 @@
   },
   {
     "data": {
-      "id": "british queen",
-      "label": "british queen",
+      "id": "bubach",
+      "label": "bubach",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -6985,6 +7921,18 @@
   },
   {
     "data": {
+      "id": "excelsior",
+      "label": "excelsior",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "florida 90",
       "label": "florida 90",
       "year": "",
@@ -7021,8 +7969,8 @@
   },
   {
     "data": {
-      "id": "hoffman",
-      "label": "hoffman",
+      "id": "howard 18",
+      "label": "howard 18",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7057,8 +8005,8 @@
   },
   {
     "data": {
-      "id": "ichigochukanbohonno1go",
-      "label": "ichigochukanbohonno1go",
+      "id": "king of the earlies",
+      "label": "king of the earlies",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7081,8 +8029,8 @@
   },
   {
     "data": {
-      "id": "marshall",
-      "label": "marshall",
+      "id": "lupton",
+      "label": "lupton",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7119,18 +8067,6 @@
     "data": {
       "id": "miyazaki_the sun",
       "label": "miyazaki_the sun",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "narcissa",
-      "label": "narcissa",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7189,8 +8125,8 @@
   },
   {
     "data": {
-      "id": "royal sovereign",
-      "label": "royal sovereign",
+      "id": "scotland BK_46",
+      "label": "scotland BK_46",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7239,18 +8175,6 @@
     "data": {
       "id": "sunrise",
       "label": "sunrise",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "surecrop",
-      "label": "surecrop",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7561,6 +8485,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__aroma",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__avant tout",
       "label": "不明",
       "year": "",
@@ -7574,6 +8510,30 @@
   {
     "data": {
       "id": "unknown_father__benitaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__capt. jack",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__clark",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -7633,7 +8593,43 @@
   },
   {
     "data": {
-      "id": "unknown_father__f. chiloensis",
+      "id": "unknown_father__f. chiloensis_ettersburg 20_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__f. chiloensis_father_U.S.D.A.836",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__f. chiloensis_mother_US_Oreg.812",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__f. ovalis_US_Oreg. 834_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -7658,6 +8654,18 @@
   {
     "data": {
       "id": "unknown_father__fendall",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__florida ninety",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -7694,6 +8702,18 @@
   {
     "data": {
       "id": "unknown_father__himeiku",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__hoffman",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -7850,6 +8870,18 @@
   {
     "data": {
       "id": "unknown_father__kyokuho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__marshall",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -8137,6 +9169,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__washington",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__yakumo",
       "label": "不明",
       "year": "",
@@ -8413,6 +9457,30 @@
   },
   {
     "data": {
+      "id": "unknown_mother__capt. jack",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__clark",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__crimson monarch",
       "label": "不明",
       "year": "",
@@ -8449,7 +9517,43 @@
   },
   {
     "data": {
-      "id": "unknown_mother__f. chiloensis",
+      "id": "unknown_mother__f. chiloensis_ettersburg 20_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__f. chiloensis_father_U.S.D.A.836",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__f. chiloensis_mother_US_Oreg.812",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__f. ovalis_US_Oreg. 834_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -8486,6 +9590,18 @@
   {
     "data": {
       "id": "unknown_mother__himeiku",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__hoffman",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -8618,6 +9734,18 @@
   {
     "data": {
       "id": "unknown_mother__kyokuho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__marshall",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -8881,6 +10009,18 @@
   },
   {
     "data": {
+      "id": "wilson",
+      "label": "wilson",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "source": "99_02505",
       "target": "00_23001",
       "role": "mother",
@@ -8969,7 +10109,7 @@
   },
   {
     "data": {
-      "source": "ichigochukanbohon1go",
+      "source": "ichigochukanbohonno1go",
       "target": "01_23_4",
       "role": "father",
       "source_id": "野崎(2011; https://agriknowledge.affrc.go.jp/RN/2010811032)"
@@ -11746,7 +12886,7 @@
   {
     "data": {
       "source": "aiberry_mishokeito",
-      "target": "ichigochukanbohon1go",
+      "target": "ichigochukanbohonno1go",
       "role": "mother",
       "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12062&LANGUAGE=Japanese)"
     }
@@ -11754,7 +12894,7 @@
   {
     "data": {
       "source": "toyonoka_mishokeito",
-      "target": "ichigochukanbohon1go",
+      "target": "ichigochukanbohonno1go",
       "role": "father",
       "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12062&LANGUAGE=Japanese)"
     }
@@ -12857,7 +13997,7 @@
   },
   {
     "data": {
-      "source": "ichigochukanbohon1go",
+      "source": "ichigochukanbohonno1go",
       "target": "okimi",
       "role": "father",
       "source_id": "農研機構ホームページ(https://www.naro.go.jp/publicity_report/press/laboratory/karc/013046.html)"
@@ -17065,7 +18205,7 @@
   },
   {
     "data": {
-      "source": "f. chiloensis",
+      "source": "f. chiloensis_ettersburg 20_father",
       "target": "ettersburg 20",
       "role": "father",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
@@ -17073,16 +18213,16 @@
   },
   {
     "data": {
-      "source": "unknown_mother__f. chiloensis",
-      "target": "f. chiloensis",
+      "source": "unknown_mother__f. chiloensis_ettersburg 20_father",
+      "target": "f. chiloensis_ettersburg 20_father",
       "role": "mother",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
   },
   {
     "data": {
-      "source": "unknown_father__f. chiloensis",
-      "target": "f. chiloensis",
+      "source": "unknown_father__f. chiloensis_ettersburg 20_father",
+      "target": "f. chiloensis_ettersburg 20_father",
       "role": "father",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
@@ -17665,7 +18805,7 @@
   },
   {
     "data": {
-      "source": "blackmore",
+      "source": "blakemore",
       "target": "Cal 720",
       "role": "mother",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
@@ -17723,6 +18863,1222 @@
     "data": {
       "source": "U.S.D.A.634",
       "target": "Cal 68.25",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "brightmore",
+      "target": "northwest",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 456",
+      "target": "northwest",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "brightmore",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 154",
+      "target": "brightmore",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121",
+      "target": "US_Oreg. 154",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "US_Oreg. 154",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 7",
+      "target": "US_Oreg. 456",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "US_Oreg. 456",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121",
+      "target": "US_Oreg. 7",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "wilson",
+      "target": "US_Oreg. 7",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "royal sovereign",
+      "target": "narcissa",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "narcissa",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "noble",
+      "target": "royal sovereign",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "king of the earlies",
+      "target": "royal sovereign",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "excelsior",
+      "target": "noble",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless",
+      "target": "noble",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "robinson",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "washington",
+      "target": "robinson",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "washington",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__washington",
+      "target": "washington",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_7_27",
+      "target": "headliner",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_7_42",
+      "target": "headliner",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "suwannee",
+      "target": "L_7_27",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_6_30_45_7",
+      "target": "L_7_27",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "suwannee",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "missionary",
+      "target": "suwannee",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "klonmore",
+      "target": "L_6_30_45_7",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "klonmore",
+      "target": "L_6_30_45_7",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "klonmore",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "klondike",
+      "target": "klonmore",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "suwannee",
+      "target": "L_7_42",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "konvoy",
+      "target": "L_7_42",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairmore",
+      "target": "konvoy",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "klondike",
+      "target": "konvoy",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "fairmore",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "fairmore",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "tennessee shipper",
+      "target": "dixieland",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "midland",
+      "target": "dixieland",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "missionary",
+      "target": "tennessee shipper",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "tennessee shipper",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__marshall",
+      "target": "marshall",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__marshall",
+      "target": "marshall",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "sparkle",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "aberdeen",
+      "target": "sparkle",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "catskill",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 18",
+      "target": "catskill",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "missionary",
+      "target": "florida ninety",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__florida ninety",
+      "target": "florida ninety",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "tennessee shipper",
+      "target": "pocahontas",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "midland",
+      "target": "pocahontas",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "midland",
+      "target": "earlidawn",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "tennessee shipper",
+      "target": "earlidawn",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.J. 953",
+      "target": "jerseybelle",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.J. 925",
+      "target": "jerseybelle",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.J. 72",
+      "target": "N.J. 953",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "N.J. 953",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "lupton",
+      "target": "N.J. 72",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "aberdeen",
+      "target": "N.J. 72",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "pathfinder",
+      "target": "N.J. 925",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "N.J. 925",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "pathfinder",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "pathfinder",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 2012",
+      "target": "siletz",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 1816",
+      "target": "siletz",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 1491",
+      "target": "US_Oreg. 2012",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 1509",
+      "target": "US_Oreg. 2012",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 767",
+      "target": "US_Oreg. 1491",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "US_Oreg. 1491",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "corvallis",
+      "target": "US_Oreg. 767",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.836",
+      "target": "US_Oreg. 767",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "E_121",
+      "target": "corvallis",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "corvallis",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "progressive",
+      "target": "U.S.D.A.836",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis_father_U.S.D.A.836",
+      "target": "U.S.D.A.836",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. chiloensis_father_U.S.D.A.836",
+      "target": "f. chiloensis_father_U.S.D.A.836",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. chiloensis_father_U.S.D.A.836",
+      "target": "f. chiloensis_father_U.S.D.A.836",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 305",
+      "target": "US_Oreg. 1509",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 812",
+      "target": "US_Oreg. 1509",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "clark",
+      "target": "US_Oreg. 305",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "US_Oreg. 305",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__clark",
+      "target": "clark",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__clark",
+      "target": "clark",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis_mother_US_Oreg.812",
+      "target": "US_Oreg. 812",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "oregon selection",
+      "target": "US_Oreg. 812",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "oregon selection",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "oregon selection",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. chiloensis_mother_US_Oreg.812",
+      "target": "f. chiloensis_mother_US_Oreg.812",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. chiloensis_mother_US_Oreg.812",
+      "target": "f. chiloensis_mother_US_Oreg.812",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 1579",
+      "target": "US_Oreg. 1816",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 319",
+      "target": "US_Oreg. 1816",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 834",
+      "target": "US_Oreg. 1579",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_Oreg. 913",
+      "target": "US_Oreg. 1579",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "clark",
+      "target": "US_Oreg. 834",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "f. ovalis_US_Oreg. 834_father",
+      "target": "US_Oreg. 834",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. ovalis_US_Oreg. 834_father",
+      "target": "f. ovalis_US_Oreg. 834_father",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. ovalis_US_Oreg. 834_father",
+      "target": "f. ovalis_US_Oreg. 834_father",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "US_Oreg. 913",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "US_Oreg. 913",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "redheart",
+      "target": "US_Oreg. 319",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Oreg. 46",
+      "target": "US_Oreg. 319",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121",
+      "target": "Oreg. 46",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "Oreg. 46",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairland",
+      "target": "surecrop",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Md_US_1972",
+      "target": "surecrop",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "aberdeen",
+      "target": "fairland",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "fairland",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "Md_US_1972",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Md_US_683",
+      "target": "Md_US_1972",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "scotland BK_46",
+      "target": "Md_US_683",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "Md_US_683",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "armore",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "aroma",
+      "target": "armore",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "cumberland triumph",
+      "target": "aroma",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__aroma",
+      "target": "aroma",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "headliner",
+      "target": "dabreak",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_3_1169",
+      "target": "dabreak",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "klonmore",
+      "target": "L_3_1169",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_0_242",
+      "target": "L_3_1169",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_7_42",
+      "target": "L_0_242",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "L_117_1_45_3",
+      "target": "L_0_242",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marion bell",
+      "target": "L_117_1_45_3",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marion bell",
+      "target": "L_117_1_45_3",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairmore",
+      "target": "marion bell",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairmore",
+      "target": "marion bell",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "dunlap",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "cumberland triumph",
+      "target": "dunlap",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 638.45",
+      "target": "goldsmith",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 469.5",
+      "target": "goldsmith",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 337.2",
+      "target": "Cal 638.45",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 249.5",
+      "target": "Cal 638.45",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 337.2",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 68.25",
+      "target": "Cal 337.2",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 68.24",
+      "target": "Cal 249.5",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 32.50",
+      "target": "Cal 249.5",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 32.50",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.253",
+      "target": "Cal 32.50",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 177.21",
+      "target": "Cal 469.5",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 222.4",
+      "target": "Cal 469.5",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 66.2",
+      "target": "Cal 222.4",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 7.20",
+      "target": "Cal 222.4",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__hoffman",
+      "target": "hoffman",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__hoffman",
+      "target": "hoffman",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "chesapeake",
+      "target": "redstar",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "redstar",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "pan american",
+      "target": "progressive",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "dunlap",
+      "target": "progressive",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "bubach",
+      "target": "pan american",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "van deman",
+      "target": "pan american",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "van deman",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "capt. jack",
+      "target": "van deman",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__capt. jack",
+      "target": "capt. jack",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__capt. jack",
+      "target": "capt. jack",
       "role": "father",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }

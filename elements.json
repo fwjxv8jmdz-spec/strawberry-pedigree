@@ -2462,7 +2462,7 @@
   {
     "data": {
       "id": "kurume",
-      "label": "久留米",
+      "label": "久留米(61_106_2)",
       "year": "",
       "institute": "",
       "notes": "",
@@ -3949,18 +3949,6 @@
   },
   {
     "data": {
-      "id": "howard 17",
-      "label": "Howard 17(Premier)",
-      "year": "",
-      "institute": "",
-      "notes": "",
-      "sources": "",
-      "db_registration_date": "2025/12/28",
-      "placeholder": false
-    }
-  },
-  {
-    "data": {
       "id": "crimson monarch",
       "label": "Crimson Monarch",
       "year": "",
@@ -4001,7 +3989,7 @@
       "label": "Fairfax",
       "year": "",
       "institute": "",
-      "notes": "",
+      "notes": "Darrowによって交配された品種。FairfaxはRoyal sovereigh×Howard 17の子という説があったものの，Darrowはこれを否定している（https://journal.americanpomological.org/index.php/jofaps/article/view/486/490）。彼は，Royal sovereighではなく, Etters Burg 450ではないかと推測している。Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)",
       "sources": "",
       "db_registration_date": "2025/12/29",
       "placeholder": false
@@ -5066,7 +5054,7 @@
   {
     "data": {
       "id": "99_8_tokyoohisamaberry_mother",
-      "label": "",
+      "label": "99_8",
       "year": "",
       "institute": "",
       "notes": "",
@@ -5078,7 +5066,7 @@
   {
     "data": {
       "id": "01_1_5_tokyoohisamaberry_father",
-      "label": "",
+      "label": "01_1_5",
       "year": "",
       "institute": "",
       "notes": "",
@@ -5236,7 +5224,7 @@
       "id": "koinoka",
       "label": "こいのか",
       "year": 2011,
-      "institute": "国立研究開発法人農業・食品産業技術総合研究機構?",
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
       "notes": "",
       "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20811&LANGUAGE=Japanese",
       "db_registration_date": "2025/12/29",
@@ -5329,6 +5317,1350 @@
   },
   {
     "data": {
+      "id": "shimakei22_148",
+      "label": "島系22-148",
+      "year": 2013,
+      "institute": "島根県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=22819&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shimakei22_111",
+      "label": "島系22-111",
+      "year": 2013,
+      "institute": "島根県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=22818&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "natsuotome",
+      "label": "なつおとめ",
+      "year": 2011,
+      "institute": "栃木県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20766&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hitachihime",
+      "label": "ひたち姫",
+      "year": 2009,
+      "institute": "茨城県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=17501&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sanukihime",
+      "label": "さぬき姫",
+      "year": 2009,
+      "institute": "香川県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=17388&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miki2go",
+      "label": "三木2号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yamaguchiST9go",
+      "label": "山口ST9号",
+      "year": 2007,
+      "institute": "山口",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=15259&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yamaguchi2go",
+      "label": "山口2号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "toyonoka_aiberry_yamaguchi2go_mother",
+      "label": "とよのか×アイベリー",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "harunoka_nyoho_yamaguchi2go_father",
+      "label": "はるのか×女峰",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "HST",
+      "label": "HST",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=15259&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "awaitsumo",
+      "label": "あわいつも",
+      "year": 2007,
+      "institute": "有限会社新居バイオ花き研究所(徳島県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=15260&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "minequeen",
+      "label": "峰クイーン",
+      "year": 2004,
+      "institute": "阿波みよし農業協同組合(徳島県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12197&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ozeharuka",
+      "label": "尾瀬はるか",
+      "year": 2005,
+      "institute": "群馬県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12575&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "otomegokoro",
+      "label": "おとめ心",
+      "year": 2006,
+      "institute": "山形県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14187&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sakyuS2go",
+      "label": "砂丘S2号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "89_81_69",
+      "label": "89_81_69",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "89_96_61",
+      "label": "89_96_61",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "morioka20go",
+      "label": "盛岡20号",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kurumeIH4go",
+      "label": "久留米IH4号",
+      "year": 2005,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13535&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "megumi",
+      "label": "めぐみ",
+      "year": 2002,
+      "institute": "徳島県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10246&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "toyonoka_aiberry_megumi_mother",
+      "label": "とよのか×アイベリー",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yumeamaka",
+      "label": "夢甘香",
+      "year": 2002,
+      "institute": "兵庫県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "meiho_(hokowase_reiko)",
+      "label": "明宝×（宝交早生×麗紅）",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hokowase_reiko",
+      "label": "宝交早生×麗紅",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "iyohime",
+      "label": "伊予姫",
+      "year": 2002,
+      "institute": "日泉化学株式会社(愛媛県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9653&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "akihime_nyoho",
+      "label": "章姫×女峰",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miyagiVS1go",
+      "label": "みやぎVS1号",
+      "year": 1998,
+      "institute": "宮城県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6922&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "beniatago",
+      "label": "べにあたご",
+      "year": 1999,
+      "institute": "茨城県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7089&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nyoho_syuko",
+      "label": "女峰×秀紅",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "syuko",
+      "label": "秀紅",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tsuburoman",
+      "label": "つぶろまん",
+      "year": 1995,
+      "institute": "富山県",
+      "notes": "「固定品種であり」との表記がある。",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4716&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ehimenoshiV1go",
+      "label": "愛媛農試V1号",
+      "year": 1993,
+      "institute": "愛媛県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3756&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "T6_ehimenoshiV1go_mother",
+      "label": "T6",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "T16_ehimenoshiV1go_father",
+      "label": "T16",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "beniyutaka",
+      "label": "紅豊",
+      "year": 1991,
+      "institute": "大分県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2580&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sanrei",
+      "label": "讃麗",
+      "year": 1989,
+      "institute": "香川県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1979&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "satohoro",
+      "label": "サトホロ",
+      "year": 1988,
+      "institute": "札幌市(北海道)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1677&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shizuchikara",
+      "label": "しずちから",
+      "year": 1989,
+      "institute": "静岡県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1854&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "benihoman",
+      "label": "紅宝満",
+      "year": 1986,
+      "institute": "福岡県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1223&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fukuokaace",
+      "label": "福岡エース",
+      "year": 1986,
+      "institute": "福岡県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1222&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "koju",
+      "label": "紅寿",
+      "year": 1986,
+      "institute": "神奈川県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=944&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "akika",
+      "label": "秋香",
+      "year": "",
+      "institute": "",
+      "notes": "静岡農試育成とのこと(佐藤, 1986; https://www.pref.kanagawa.jp/documents/27386/532051.pdf)。情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shiyuko",
+      "label": "しゆうこう",
+      "year": 1985,
+      "institute": "静岡県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=717&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kofuku",
+      "label": "紅福",
+      "year": 1982,
+      "institute": "福井県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=204&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "martondam",
+      "label": "マートンダム",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "Merton Dawnという品種が存在するようであるが、これと同一であるかは不明。",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "merton dawn",
+      "label": "Merton Dawn",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cambridge favourite",
+      "label": "Cambridge Favourite",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "etter_seedling_avant tout",
+      "label": "Etter seedling×Avant tout",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "etter_seedling",
+      "label": "Etter seedling",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "avant tout",
+      "label": "Avant tout",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "merton princess",
+      "label": "Merton Princess",
+      "year": "",
+      "institute": "",
+      "notes": "seedling of Royal Sovereign (Darrow, 1966)",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "benizuru",
+      "label": "紅鶴",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miyazaki_the sun_benizuru_mother",
+      "label": "宮崎×The sun",
+      "year": "",
+      "institute": "",
+      "notes": "同じ組み合わせの久留米と同一であるかは不明。ここでは別物として扱った。",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "blakemore",
+      "label": "Blakemore",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "U.S.D.A.634",
+      "label": "U.S.D.A.634",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "U.S.D.A.543",
+      "label": "U.S.D.A.543",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "N.Y. 4626",
+      "label": "N.Y. 4626",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tennessee beauty",
+      "label": "Tennessee Beauty",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fendalcino",
+      "label": "Fendalcino",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fendall",
+      "label": "Fendall",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "albriton",
+      "label": "Albriton",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_NC_1065",
+      "label": "US_NC_1065",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "southland",
+      "label": "Southland",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_NC_1053",
+      "label": "US_NC_1053",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "massey",
+      "label": "Massey",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ettersburg 80",
+      "label": "Ettersburg 80",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "rose etterburg_unknown_seedling",
+      "label": "Seedling of Rose Etterburg×unknown",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "rose etterburg",
+      "label": "Rose Etterburg",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ettersburg 20",
+      "label": "Ettersburg 20",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis",
+      "label": "Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "Ettersburg 20の父本",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "3rd gen. from sharp._parry",
+      "label": "3rd generation from Sharpless×Parry",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "2rd gen. from sharp._parry",
+      "label": "2rd generation from Sharpless×Parry",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sharpless_parry",
+      "label": "Sharpless×Parry",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "howard 17",
+      "label": "Howard 17(Premier)",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "crescent",
+      "label": "Crescent",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hovey",
+      "label": "Hovey",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "methven scarlet",
+      "label": "Methven Scarlet",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "keens seedling",
+      "label": "Keens Seedling",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "keens imperial",
+      "label": "Keens Imperial",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "howard 1",
+      "label": "Howard 1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "howard 4",
+      "label": "Howard 4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "haverland",
+      "label": "Haverland",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "clyde",
+      "label": "Clyde",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cyclone",
+      "label": "Cyclone",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cumberland triumph",
+      "label": "Cumberland Triumph",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "green prolific",
+      "label": "Green Prolific",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "goliath",
+      "label": "Goliath",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "redheart",
+      "label": "Redheart",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "portia",
+      "label": "Portia",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "euresko",
+      "label": "Euresko",
+      "year": "",
+      "institute": "",
+      "notes": "母本はCheasapeakeかRose Ettersburgとされている",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "solana",
+      "label": "Solana",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 177.19",
+      "label": "Cal 177.19",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 103.22",
+      "label": "Cal 103.22",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal AO8",
+      "label": "Cal AO8",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "U.S.D.A.253",
+      "label": "U.S.D.A.253",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "howard supereme",
+      "label": "Howard Supereme",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "howard 103",
+      "label": "Howard 103",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "klondike",
+      "label": "Klondike",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pickerproof",
+      "label": "Pickerproof",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lulu",
+      "label": "Lulu",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fresno",
+      "label": "Fresno",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "torrey",
+      "label": "Torrey",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 42.8_16",
+      "label": "Cal 42.8_16",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sierra",
+      "label": "Sierra",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 752.23",
+      "label": "Cal 752.23",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 370.14",
+      "label": "Cal 370.14",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 720",
+      "label": "Cal 720",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 564.7",
+      "label": "Cal 564.7",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 144.2",
+      "label": "Cal 144.2",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 68.25",
+      "label": "Cal 68.25",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/30",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "00_25_1",
+      "label": "00_25_1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "93_123_06",
       "label": "93_123_06",
       "year": "",
@@ -5367,18 +6699,6 @@
     "data": {
       "id": "C0915_18",
       "label": "C0915_18",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Cal 42.8_16",
-      "label": "Cal 42.8_16",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5437,8 +6757,8 @@
   },
   {
     "data": {
-      "id": "Cal. 177.21",
-      "label": "Cal. 177.21",
+      "id": "F. virginiana glauca (wild, Utah)",
+      "label": "F. virginiana glauca (wild, Utah)",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5449,8 +6769,8 @@
   },
   {
     "data": {
-      "id": "F. virginiana glauca (wild, Utah)",
-      "label": "F. virginiana glauca (wild, Utah)",
+      "id": "F2 of U.S.D.A.253",
+      "label": "F2 of U.S.D.A.253",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5545,32 +6865,8 @@
   },
   {
     "data": {
-      "id": "N.Y. 4626",
-      "label": "N.Y. 4626",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "U.S.D.A.543",
-      "label": "U.S.D.A.543",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "U.S.D.A.634",
-      "label": "U.S.D.A.634",
+      "id": "N.J. scarlet",
+      "label": "N.J. scarlet",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5593,18 +6889,6 @@
   },
   {
     "data": {
-      "id": "albriton",
-      "label": "albriton",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "banner",
       "label": "banner",
       "year": "",
@@ -5617,8 +6901,32 @@
   },
   {
     "data": {
-      "id": "blakemore",
-      "label": "blakemore",
+      "id": "belmont",
+      "label": "belmont",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "blackmore",
+      "label": "blackmore",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "british queen",
+      "label": "british queen",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5631,18 +6939,6 @@
     "data": {
       "id": "chesapeake",
       "label": "chesapeake",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "cyclone",
-      "label": "cyclone",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5677,8 +6973,8 @@
   },
   {
     "data": {
-      "id": "fendalcino",
-      "label": "fendalcino",
+      "id": "ettersburg 121",
+      "label": "ettersburg 121",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5725,8 +7021,44 @@
   },
   {
     "data": {
+      "id": "hoffman",
+      "label": "hoffman",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "hudson bay",
+      "label": "hudson bay",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "huxley",
       "label": "huxley",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "ichigochukanbohonno1go",
+      "label": "ichigochukanbohonno1go",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5749,8 +7081,44 @@
   },
   {
     "data": {
+      "id": "marshall",
+      "label": "marshall",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "middlefield",
       "label": "middlefield",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "missionary",
+      "label": "missionary",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "miyazaki_the sun",
+      "label": "miyazaki_the sun",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5785,6 +7153,18 @@
   },
   {
     "data": {
+      "id": "parry",
+      "label": "parry",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "redglow",
       "label": "redglow",
       "year": "",
@@ -5797,8 +7177,8 @@
   },
   {
     "data": {
-      "id": "redheart",
-      "label": "redheart",
+      "id": "redruby",
+      "label": "redruby",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5809,8 +7189,8 @@
   },
   {
     "data": {
-      "id": "royal sovereigh",
-      "label": "royal sovereigh",
+      "id": "royal sovereign",
+      "label": "royal sovereign",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5821,8 +7201,20 @@
   },
   {
     "data": {
-      "id": "solana",
-      "label": "solana",
+      "id": "sharpless",
+      "label": "sharpless",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "sizutakara",
+      "label": "sizutakara",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5869,20 +7261,8 @@
   },
   {
     "data": {
-      "id": "tennessee beauty",
-      "label": "tennessee beauty",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "tochiotomr",
-      "label": "tochiotomr",
+      "id": "tochigi24go",
+      "label": "tochigi24go",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -5905,11 +7285,11 @@
   },
   {
     "data": {
-      "id": "totiotome",
-      "label": "totiotome",
+      "id": "unknown_father__03042_08",
+      "label": "不明",
       "year": "",
       "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
+      "notes": "placeholder (unknown parent)",
       "sources": "",
       "db_registration_date": "",
       "placeholder": true
@@ -5917,7 +7297,19 @@
   },
   {
     "data": {
-      "id": "unknown_father__03042_08",
+      "id": "unknown_father__2rd gen. from sharp._parry",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__3rd gen. from sharp._parry",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6145,7 +7537,31 @@
   },
   {
     "data": {
+      "id": "unknown_father__akika",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__america",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__avant tout",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6169,6 +7585,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__clyde",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__crimson monarch",
       "label": "不明",
       "year": "",
@@ -6181,7 +7609,79 @@
   },
   {
     "data": {
+      "id": "unknown_father__cumberland triumph",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__etter_seedling",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__f. chiloensis",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__fairfax",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__fendall",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__general chanzy",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__goliath",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6229,7 +7729,7 @@
   },
   {
     "data": {
-      "id": "unknown_father__howard 17",
+      "id": "unknown_father__ikeko",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6241,7 +7741,19 @@
   },
   {
     "data": {
-      "id": "unknown_father__ikeko",
+      "id": "unknown_father__keens imperial",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__keens seedling",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6349,7 +7861,43 @@
   },
   {
     "data": {
+      "id": "unknown_father__martondam",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__meiho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__merton princess",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__methven scarlet",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6374,6 +7922,18 @@
   {
     "data": {
       "id": "unknown_father__miyazaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__morioka20go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6421,7 +7981,67 @@
   },
   {
     "data": {
+      "id": "unknown_father__nich ohmer",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__oishisikinari2go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__portia",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__rose etterburg",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__rose etterburg_unknown_seedling",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__syuko",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6745,7 +8365,31 @@
   },
   {
     "data": {
+      "id": "unknown_mother__akika",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__america",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__avant tout",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6770,6 +8414,54 @@
   {
     "data": {
       "id": "unknown_mother__crimson monarch",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__etter_seedling",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__euresko",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__f. chiloensis",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__fairfax",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6818,18 +8510,6 @@
   {
     "data": {
       "id": "unknown_mother__hoko_oishikinari1go_father",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_mother__howard 17",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6949,7 +8629,31 @@
   },
   {
     "data": {
+      "id": "unknown_mother__martondam",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__meiho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__merton princess",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -6974,6 +8678,18 @@
   {
     "data": {
       "id": "unknown_mother__miyazaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__morioka20go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -7022,6 +8738,18 @@
   {
     "data": {
       "id": "unknown_mother__oishisikinari2go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__syuko",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -7122,6 +8850,30 @@
       "year": "",
       "institute": "",
       "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "white carolina",
+      "label": "white carolina",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "william belt",
+      "label": "william belt",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
       "sources": "",
       "db_registration_date": "",
       "placeholder": true
@@ -10396,7 +12148,7 @@
       "source": "the sun",
       "target": "kurume",
       "role": "mother",
-      "source_id": "金指ら(1982; https://agriknowledge.affrc.go.jp/RN/2010262760)"
+      "source_id": "金指ら(1982; https://agriknowledge.affrc.go.jp/RN/2010262760), 吉武ら(1984; https://agriknowledge.affrc.go.jp/RN/2010293285.pdf)"
     }
   },
   {
@@ -10404,7 +12156,7 @@
       "source": "miyazaki",
       "target": "kurume",
       "role": "father",
-      "source_id": "金指ら(1982; https://agriknowledge.affrc.go.jp/RN/2010262760)"
+      "source_id": "金指ら(1982; https://agriknowledge.affrc.go.jp/RN/2010262760), 吉武ら(1984; https://agriknowledge.affrc.go.jp/RN/2010293285.pdf)"
     }
   },
   {
@@ -12377,22 +14129,6 @@
   },
   {
     "data": {
-      "source": "unknown_mother__howard 17",
-      "target": "howard 17",
-      "role": "mother",
-      "source_id": ""
-    }
-  },
-  {
-    "data": {
-      "source": "unknown_father__howard 17",
-      "target": "howard 17",
-      "role": "father",
-      "source_id": ""
-    }
-  },
-  {
-    "data": {
       "source": "unknown_mother__crimson monarch",
       "target": "crimson monarch",
       "role": "mother",
@@ -12441,18 +14177,18 @@
   },
   {
     "data": {
-      "source": "royal sovereigh",
+      "source": "unknown_mother__fairfax",
       "target": "fairfax",
       "role": "mother",
-      "source_id": "Darrow(https://journal.americanpomological.org/index.php/jofaps/article/view/486/490)"
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
   },
   {
     "data": {
-      "source": "howard 17",
+      "source": "unknown_father__fairfax",
       "target": "fairfax",
       "role": "father",
-      "source_id": "Darrow(https://journal.americanpomological.org/index.php/jofaps/article/view/486/490)"
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
   },
   {
@@ -12476,15 +14212,15 @@
       "source": "middlefield",
       "target": "nich ohmer",
       "role": "mother",
-      "source_id": "https://www.chathamapples.com/SmallFruitsNY/Strawberries.htm#NichOhmer"
+      "source_id": "https://www.chathamapples.com/SmallFruitsNY/Strawberries.htm#NichOhmer, Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
   },
   {
     "data": {
-      "source": "middlefield",
+      "source": "unknown_father__nich ohmer",
       "target": "nich ohmer",
       "role": "father",
-      "source_id": "https://www.chathamapples.com/SmallFruitsNY/Strawberries.htm#NichOhmer"
+      "source_id": "https://www.chathamapples.com/SmallFruitsNY/Strawberries.htm#NichOhmer, Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
   },
   {
@@ -12673,7 +14409,7 @@
   },
   {
     "data": {
-      "source": "Cal. 177.21",
+      "source": "Cal 177.21",
       "target": "sierra",
       "role": "father",
       "source_id": "Harold(1945; https://dp.la/item/0d4891030cbaa3fd88b92e41f820006f)"
@@ -13665,7 +15401,7 @@
   },
   {
     "data": {
-      "source": "totiotome",
+      "source": "tochiotome",
       "target": "23_1_33",
       "role": "father",
       "source_id": "矢奥ら(2023; https://agriknowledge.affrc.go.jp/RN/2030946840.pdf)"
@@ -13793,7 +15529,7 @@
   },
   {
     "data": {
-      "source": "tochiotomr",
+      "source": "tochiotome",
       "target": "oita3go",
       "role": "father",
       "source_id": "佐藤ら(2011; https://agriknowledge.affrc.go.jp/RN/2030831504.pdf)"
@@ -14213,6 +15949,1782 @@
       "target": "3_31_3",
       "role": "father",
       "source_id": "猪原ら(2005; https://agriknowledge.affrc.go.jp/RN/2010734783)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "shimakei22_148",
+      "role": "mother",
+      "source_id": "持田ら(2015; https://agriknowledge.affrc.go.jp/RN/2010902128.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "asukaruby",
+      "target": "shimakei22_148",
+      "role": "father",
+      "source_id": "持田ら(2015; https://agriknowledge.affrc.go.jp/RN/2010902128.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "benihoppe",
+      "target": "shimakei22_111",
+      "role": "mother",
+      "source_id": "持田ら(2015; https://agriknowledge.affrc.go.jp/RN/2010902128.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "asukaruby",
+      "target": "shimakei22_111",
+      "role": "father",
+      "source_id": "持田ら(2015; https://agriknowledge.affrc.go.jp/RN/2010902128.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochigi24go",
+      "target": "natsuotome",
+      "role": "mother",
+      "source_id": "小林ら(2015; https://agriknowledge.affrc.go.jp/RN/2010900717.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "00_25_1",
+      "target": "natsuotome",
+      "role": "father",
+      "source_id": "小林ら(2015; https://agriknowledge.affrc.go.jp/RN/2010900717.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "hitachihime",
+      "role": "mother",
+      "source_id": "宮城ら(2009; https://agriknowledge.affrc.go.jp/RN/2030780780.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "hitachihime",
+      "role": "father",
+      "source_id": "宮城ら(2009; https://agriknowledge.affrc.go.jp/RN/2030780780.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "miki2go",
+      "target": "sanukihime",
+      "role": "mother",
+      "source_id": "香西(2019; https://www.jstage.jst.go.jp/article/csshikoku/56/0/56_44/_pdf/-char/ja)"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "sanukihime",
+      "role": "father",
+      "source_id": "香西(2019; https://www.jstage.jst.go.jp/article/csshikoku/56/0/56_44/_pdf/-char/ja)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "miki2go",
+      "role": "mother",
+      "source_id": "香西(2019; https://www.jstage.jst.go.jp/article/csshikoku/56/0/56_44/_pdf/-char/ja)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "miki2go",
+      "role": "father",
+      "source_id": "香西(2019; https://www.jstage.jst.go.jp/article/csshikoku/56/0/56_44/_pdf/-char/ja)"
+    }
+  },
+  {
+    "data": {
+      "source": "yamaguchi2go",
+      "target": "yamaguchiST9go",
+      "role": "mother",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "HST",
+      "target": "yamaguchiST9go",
+      "role": "father",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka_aiberry_yamaguchi2go_mother",
+      "target": "yamaguchi2go",
+      "role": "mother",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka_nyoho_yamaguchi2go_father",
+      "target": "yamaguchi2go",
+      "role": "father",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "toyonoka_aiberry_yamaguchi2go_mother",
+      "role": "mother",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "toyonoka_aiberry_yamaguchi2go_mother",
+      "role": "father",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "harunoka_nyoho_yamaguchi2go_father",
+      "role": "mother",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "harunoka_nyoho_yamaguchi2go_father",
+      "role": "father",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry",
+      "target": "HST",
+      "role": "mother",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "HST",
+      "role": "father",
+      "source_id": "岡藤ら(2009; https://agriknowledge.affrc.go.jp/RN/2010773178.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "minequeen",
+      "target": "awaitsumo",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=15260&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "ikeko",
+      "target": "awaitsumo",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=15260&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "sweetcharmy",
+      "target": "minequeen",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12197&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "ikeko",
+      "target": "minequeen",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12197&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "tonehoppe",
+      "target": "ozeharuka",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12575&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "kitanokagayaki",
+      "target": "ozeharuka",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12575&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "sakyuS2go",
+      "target": "otomegokoro",
+      "role": "mother",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kitanokagayaki",
+      "target": "otomegokoro",
+      "role": "father",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "89_81_69",
+      "target": "sakyuS2go",
+      "role": "mother",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "89_96_61",
+      "target": "sakyuS2go",
+      "role": "father",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "albriton",
+      "target": "89_81_69",
+      "role": "mother",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "donner",
+      "target": "89_81_69",
+      "role": "father",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "haruyoi",
+      "target": "89_96_61",
+      "role": "mother",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "morioka20go",
+      "target": "89_96_61",
+      "role": "father",
+      "source_id": "菅原・丸山(2006; https://agriknowledge.affrc.go.jp/RN/2010814069.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__morioka20go",
+      "target": "morioka20go",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__morioka20go",
+      "target": "morioka20go",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "ichigochukanbohonno1go",
+      "target": "kurumeIH4go",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13535&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "redruby",
+      "target": "kurumeIH4go",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=13535&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka_aiberry_megumi_mother",
+      "target": "megumi",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10246&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "megumi",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10246&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "toyonoka_aiberry_megumi_mother",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10246&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "toyonoka_aiberry_megumi_mother",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10246&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "meiho_(hokowase_reiko)",
+      "target": "yumeamaka",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "yumeamaka",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "meiho",
+      "target": "meiho_(hokowase_reiko)",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase_reiko",
+      "target": "meiho_(hokowase_reiko)",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "hokowase_reiko",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "hokowase_reiko",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9921&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "tochiotome",
+      "target": "iyohime",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9653&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime_nyoho",
+      "target": "iyohime",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9653&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "akihime_nyoho",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9653&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "akihime_nyoho",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=9653&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "miyagiVS1go",
+      "role": "mother",
+      "source_id": "庄子・遠藤(1996; https://agriknowledge.affrc.go.jp/RN/2010650966.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "morioka16go",
+      "target": "miyagiVS1go",
+      "role": "father",
+      "source_id": "庄子・遠藤(1996; https://agriknowledge.affrc.go.jp/RN/2010650966.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "beniatago",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7089&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho_syuko",
+      "target": "beniatago",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7089&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "nyoho_syuko",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7089&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "syuko",
+      "target": "nyoho_syuko",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=7089&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__syuko",
+      "target": "syuko",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__syuko",
+      "target": "syuko",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "donner",
+      "target": "tsuburoman",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4716&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "chiyoda",
+      "target": "tsuburoman",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4716&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "T6_ehimenoshiV1go_mother",
+      "target": "ehimenoshiV1go",
+      "role": "mother",
+      "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "T16_ehimenoshiV1go_father",
+      "target": "ehimenoshiV1go",
+      "role": "father",
+      "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "meiho",
+      "target": "T6_ehimenoshiV1go_mother",
+      "role": "mother",
+      "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "T6_ehimenoshiV1go_mother",
+      "role": "father",
+      "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "sizutakara",
+      "target": "T16_ehimenoshiV1go_father",
+      "role": "mother",
+      "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "T16_ehimenoshiV1go_father",
+      "role": "father",
+      "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "beniyutaka",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2580&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "haruyoi",
+      "target": "beniyutaka",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2580&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "uzushio",
+      "target": "sanrei",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1979&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "sanrei",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1979&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "tioga",
+      "target": "satohoro",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1677&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "satohoro",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1677&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "shizutakara",
+      "target": "shizuchikara",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1854&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "shizuchikara",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1854&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurume103go",
+      "target": "benihoman",
+      "role": "mother",
+      "source_id": "吉武ら(1984; https://agriknowledge.affrc.go.jp/RN/2010293285.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "benihoman",
+      "role": "father",
+      "source_id": "吉武ら(1984; https://agriknowledge.affrc.go.jp/RN/2010293285.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "fukuokaace",
+      "role": "mother",
+      "source_id": "吉武ら(1984; https://agriknowledge.affrc.go.jp/RN/2010293285.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "fukuokaace",
+      "role": "father",
+      "source_id": "吉武ら(1984; https://agriknowledge.affrc.go.jp/RN/2010293285.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akika",
+      "target": "koju",
+      "role": "mother",
+      "source_id": "佐藤(1986; https://www.pref.kanagawa.jp/documents/27386/532051.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "koju",
+      "role": "father",
+      "source_id": "佐藤(1986; https://www.pref.kanagawa.jp/documents/27386/532051.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__akika",
+      "target": "akika",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__akika",
+      "target": "akika",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "shizutakara",
+      "target": "shiyuko",
+      "role": "mother",
+      "source_id": "金指ら(1984; https://agriknowledge.affrc.go.jp/RN/2010303628.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "haruyoi",
+      "target": "shiyuko",
+      "role": "father",
+      "source_id": "金指ら(1984; https://agriknowledge.affrc.go.jp/RN/2010303628.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "kofuku",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=204&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "martondam",
+      "target": "kofuku",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=204&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__martondam",
+      "target": "martondam",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__martondam",
+      "target": "martondam",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "cambridge favourite",
+      "target": "merton dawn",
+      "role": "mother",
+      "source_id": "Zebrowska et al. (2021; DOI: https://doi.org/10.24326/asphc.2021.6.13)"
+    }
+  },
+  {
+    "data": {
+      "source": "merton princess",
+      "target": "merton dawn",
+      "role": "father",
+      "source_id": "Zebrowska et al. (2021; DOI: https://doi.org/10.24326/asphc.2021.6.13)"
+    }
+  },
+  {
+    "data": {
+      "source": "etter_seedling_avant tout",
+      "target": "cambridge favourite",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "cambridge favourite",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "etter_seedling",
+      "target": "etter_seedling_avant tout",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "avant tout",
+      "target": "etter_seedling_avant tout",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__etter_seedling",
+      "target": "etter_seedling",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__etter_seedling",
+      "target": "etter_seedling",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__avant tout",
+      "target": "avant tout",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__avant tout",
+      "target": "avant tout",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__merton princess",
+      "target": "merton princess",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__merton princess",
+      "target": "merton princess",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyazaki_the sun",
+      "target": "benizuru",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "fukuba",
+      "target": "benizuru",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyazaki",
+      "target": "miyazaki_the sun_benizuru_mother",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "the sun",
+      "target": "miyazaki_the sun_benizuru_mother",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
+    }
+  },
+  {
+    "data": {
+      "source": "missionary",
+      "target": "blakemore",
+      "role": "mother",
+      "source_id": "Darrow and Waldo(1929; https://upload.wikimedia.org/wikipedia/commons/0/04/The_Blakemore_strawberry_%28IA_blakemorestrawbe93darr%29.pdf?utm_source=chatgpt.com)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "blakemore",
+      "role": "father",
+      "source_id": "Darrow and Waldo(1929; https://upload.wikimedia.org/wikipedia/commons/0/04/The_Blakemore_strawberry_%28IA_blakemorestrawbe93darr%29.pdf?utm_source=chatgpt.com)"
+    }
+  },
+  {
+    "data": {
+      "source": "royal sovereign",
+      "target": "U.S.D.A.634",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "U.S.D.A.634",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "royal sovereign",
+      "target": "U.S.D.A.543",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "U.S.D.A.543",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "N.Y. 4626",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "N.Y. 4626",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "tennessee beauty",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "missionary",
+      "target": "tennessee beauty",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "fendall",
+      "target": "fendalcino",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121",
+      "target": "fendalcino",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "william belt",
+      "target": "fendall",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__fendall",
+      "target": "fendall",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_NC_1065",
+      "target": "albriton",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "US_NC_1053",
+      "target": "albriton",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "southland",
+      "target": "US_NC_1065",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "southland",
+      "target": "US_NC_1065",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 80",
+      "target": "southland",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "southland",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "massey",
+      "target": "US_NC_1053",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "massey",
+      "target": "US_NC_1053",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.634",
+      "target": "massey",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "massey",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "rose etterburg_unknown_seedling",
+      "target": "ettersburg 80",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 20",
+      "target": "ettersburg 80",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "rose etterburg",
+      "target": "rose etterburg_unknown_seedling",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__rose etterburg_unknown_seedling",
+      "target": "rose etterburg_unknown_seedling",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "3rd gen. from sharp._parry",
+      "target": "rose etterburg",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__rose etterburg",
+      "target": "rose etterburg",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "rose etterburg",
+      "target": "ettersburg 20",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis",
+      "target": "ettersburg 20",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. chiloensis",
+      "target": "f. chiloensis",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. chiloensis",
+      "target": "f. chiloensis",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "2rd gen. from sharp._parry",
+      "target": "3rd gen. from sharp._parry",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__3rd gen. from sharp._parry",
+      "target": "3rd gen. from sharp._parry",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless_parry",
+      "target": "2rd gen. from sharp._parry",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__2rd gen. from sharp._parry",
+      "target": "2rd gen. from sharp._parry",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless",
+      "target": "sharpless_parry",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "parry",
+      "target": "sharpless_parry",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "howard 17",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 1",
+      "target": "howard 17",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "hovey",
+      "target": "crescent",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.J. scarlet",
+      "target": "crescent",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "methven scarlet",
+      "target": "hovey",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "keens seedling",
+      "target": "hovey",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "hudson bay",
+      "target": "methven scarlet",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__methven scarlet",
+      "target": "methven scarlet",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "keens imperial",
+      "target": "keens seedling",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__keens seedling",
+      "target": "keens seedling",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "white carolina",
+      "target": "keens imperial",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__keens imperial",
+      "target": "keens imperial",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 4",
+      "target": "howard 1",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "clyde",
+      "target": "howard 1",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "haverland",
+      "target": "howard 4",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "belmont",
+      "target": "howard 4",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "haverland",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless",
+      "target": "haverland",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "cyclone",
+      "target": "clyde",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__clyde",
+      "target": "clyde",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "cyclone",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "cumberland triumph",
+      "target": "cyclone",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "green prolific",
+      "target": "cumberland triumph",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__cumberland triumph",
+      "target": "cumberland triumph",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "hovey",
+      "target": "green prolific",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "goliath",
+      "target": "green prolific",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "british queen",
+      "target": "goliath",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__goliath",
+      "target": "goliath",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "portia",
+      "target": "redheart",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "euresko",
+      "target": "redheart",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "william belt",
+      "target": "portia",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__portia",
+      "target": "portia",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__euresko",
+      "target": "euresko",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 20",
+      "target": "euresko",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 177.19",
+      "target": "solana",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 103.22",
+      "target": "solana",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.543",
+      "target": "Cal 177.19",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 68.24",
+      "target": "Cal 177.19",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal AO8",
+      "target": "Cal 103.22",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 103.22",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.253",
+      "target": "Cal AO8",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "F2 of U.S.D.A.253",
+      "target": "Cal AO8",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard supereme",
+      "target": "U.S.D.A.253",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "klondike",
+      "target": "U.S.D.A.253",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 103",
+      "target": "howard supereme",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "howard supereme",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "howard 103",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "howard 103",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "pickerproof",
+      "target": "klondike",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "hoffman",
+      "target": "klondike",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "lulu",
+      "target": "pickerproof",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "hoffman",
+      "target": "pickerproof",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "crescent",
+      "target": "lulu",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "hoffman",
+      "target": "lulu",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "lassen",
+      "target": "fresno",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 42.8_16",
+      "target": "fresno",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "lassen",
+      "target": "torrey",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 42.8_16",
+      "target": "torrey",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "sierra",
+      "target": "Cal 42.8_16",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 752.23",
+      "target": "Cal 42.8_16",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "sierra",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 177.21",
+      "target": "sierra",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 370.14",
+      "target": "Cal 752.23",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 564.7",
+      "target": "Cal 752.23",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 720",
+      "target": "Cal 370.14",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 177.21",
+      "target": "Cal 370.14",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "blackmore",
+      "target": "Cal 720",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 720",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 144.2",
+      "target": "Cal 564.7",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 68.25",
+      "target": "Cal 564.7",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "Cal 144.2",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "nich ohmer",
+      "target": "Cal 144.2",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.Y. 4626",
+      "target": "Cal 68.25",
+      "role": "mother",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "U.S.D.A.634",
+      "target": "Cal 68.25",
+      "role": "father",
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
     }
   }
 ]

@@ -313,6 +313,15 @@
         bottom: calc(84px + env(safe-area-inset-bottom));
       }
 
+      /* ★ 長押しで文字選択/拡大メニューが出ないようにする（強） */
+      #floatCtrl, #floatCtrl *{
+        -webkit-user-select: none !important;
+        user-select: none !important;
+        -webkit-touch-callout: none !important; /* iOSの長押しメニュー抑止 */
+        touch-action: manipulation;             /* 余計なジェスチャ抑制 */
+      }
+
+
       .onlyMobile{ display:block; }
       .onlyDesktop{ display:none; }
 
@@ -645,6 +654,9 @@ function initPanButtons(){
   function bindHold(btnId, dx, dy){
     const el = document.getElementById(btnId);
     let timer = null;
+
+    el.addEventListener('contextmenu', (e)=> e.preventDefault());
+    el.addEventListener('selectstart', (e)=> e.preventDefault());
 
     const start = (e)=>{
       e.preventDefault();

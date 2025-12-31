@@ -996,27 +996,19 @@ function updateListAndHighlights(){
 }
 
 /* ===== layout ===== */
+/* ===== layout ===== */
 function runLayout(mode){
   if(!cy) return;
   cy.stop();
+
+  const isM = isMobileNow();
 
   showCyLoading(mode === 'dagre'
     ? 'Dagreで配置しています…'
     : 'CoSEで配置しています…'
   );
-  
-  const isM = isMobileNow();
+
   let opts;
-  const layout = cy.layout(opts);
-
-  layout.on('layoutstop', () => {
-  hideCyLoading();
-    cy.fit(undefined, isM ? 70 : 30);
-  });
-
-  layout.run();
-}
-  
   if(mode === 'dagre'){
     opts = {
       name: 'dagre',
@@ -1044,9 +1036,15 @@ function runLayout(mode){
     };
   }
 
-  cy.layout(opts).run();
-  cy.fit(undefined, isM ? 70 : 30);
+  const layout = cy.layout(opts);
+  layout.on('layoutstop', () => {
+    hideCyLoading();
+    cy.fit(undefined, isM ? 70 : 30);
+  });
+
+  layout.run();
 }
+
 
 function setActiveLayout(btnId){
   document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');

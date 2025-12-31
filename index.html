@@ -38,62 +38,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KJ7RR1J4L2');
-    // ★初期フォーカス候補（品種名ラベルで指定）
-    const initialFocusLabels = [
-      'とちおとめ',
-      '福岡S7号(あまおう)',
-      'とよのか',
-      'さがほのか',
-      '女峰'
-    ];
-
-    function pickOne(arr){
-      if(!arr || !arr.length) return null;
-    
-      const key = 'initialFocusIndex';
-      const cur = parseInt(localStorage.getItem(key) ?? '0', 10);
-      const idx = Number.isFinite(cur) ? (cur % arr.length) : 0;
-    
-      localStorage.setItem(key, String(idx + 1));
-      return arr[idx];
-    }
-
-    
-    // label（品種名）から node を探す：同名が複数なら最初の1つ
-    function getNodeByLabel(label){
-      if(!cy) return null;
-      const target = (label ?? '').toString().trim();
-      if(!target) return null;
-    
-      const n = cy.nodes().filter(n => (n.data('label') ?? '').toString().trim() === target).first();
-      return (n && n.length) ? n : null;
-    }
-    
-    function focusInitialNode(){
-      if(!cy) return false;
-    
-      const label = pickOne(initialFocusLabels);
-      const n = getNodeByLabel(label);
-    
-      if(!n) return false;
-    
-      // まず中心へ寄せる
-      cy.center(n);
-    
-      // 読みやすい倍率にズーム（“全体は見えなくてOK”の方針）
-      const base = isMobileNow() ? 1.2 : 1.0;   // 最低倍率（好みで調整）
-      const boost = isMobileNow() ? 1.6 : 1.35; // 追加ズーム（好みで調整）
-    
-      // 現在ズームが小さすぎる場合だけ底上げ → さらにブースト
-      const next = Math.max(cy.zoom(), base) * boost;
-    
-      const center = { x: cy.width()/2, y: cy.height()/2 };
-      cy.zoom({ level: next, renderedPosition: center });
-    
-      // おまけ：その品種を軽くハイライトしたいなら（不要なら削除OK）
-      // selectNode(n, false);
-    
-      return true;
+   
     }
 
 
@@ -604,6 +549,63 @@
   </footer>
 
 <script>
+ // ★初期フォーカス候補（品種名ラベルで指定）
+    const initialFocusLabels = [
+      'とちおとめ',
+      '福岡S7号(あまおう)',
+      'とよのか',
+      'さがほのか',
+      '女峰'
+    ];
+
+    function pickOne(arr){
+      if(!arr || !arr.length) return null;
+    
+      const key = 'initialFocusIndex';
+      const cur = parseInt(localStorage.getItem(key) ?? '0', 10);
+      const idx = Number.isFinite(cur) ? (cur % arr.length) : 0;
+    
+      localStorage.setItem(key, String(idx + 1));
+      return arr[idx];
+    }
+
+    
+    // label（品種名）から node を探す：同名が複数なら最初の1つ
+    function getNodeByLabel(label){
+      if(!cy) return null;
+      const target = (label ?? '').toString().trim();
+      if(!target) return null;
+    
+      const n = cy.nodes().filter(n => (n.data('label') ?? '').toString().trim() === target).first();
+      return (n && n.length) ? n : null;
+    }
+    
+    function focusInitialNode(){
+      if(!cy) return false;
+    
+      const label = pickOne(initialFocusLabels);
+      const n = getNodeByLabel(label);
+    
+      if(!n) return false;
+    
+      // まず中心へ寄せる
+      cy.center(n);
+    
+      // 読みやすい倍率にズーム（“全体は見えなくてOK”の方針）
+      const base = isMobileNow() ? 1.2 : 1.0;   // 最低倍率（好みで調整）
+      const boost = isMobileNow() ? 1.6 : 1.35; // 追加ズーム（好みで調整）
+    
+      // 現在ズームが小さすぎる場合だけ底上げ → さらにブースト
+      const next = Math.max(cy.zoom(), base) * boost;
+    
+      const center = { x: cy.width()/2, y: cy.height()/2 };
+      cy.zoom({ level: next, renderedPosition: center });
+    
+      // おまけ：その品種を軽くハイライトしたいなら（不要なら削除OK）
+      // selectNode(n, false);
+    
+      return true;
+  
 function showCyLoading(msg){
   const el = document.getElementById('cyLoading');
   if(!el) return;

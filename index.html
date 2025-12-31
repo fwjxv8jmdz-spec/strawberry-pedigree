@@ -975,24 +975,44 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
-      {
-        selector: 'node',
-        style: {
-          'label': 'data(label)',
-          'font-size': nodeFontSize(),
-          'text-wrap': 'wrap',
-          'text-max-width': textMaxWidth(),
-          'text-valign': 'center',
-          'text-halign': 'center',
-          'background-color': '#FCE7F3',
-          'border-width': 1.8,
-          'border-color': '#F9A8D4',
-          'color': '#831843',
-          'width': 'label',
-          'padding': isMobileNow() ? '16px' : '12px',
-          'shape': 'round-rectangle'
-        }
-      },
+{
+  selector: 'node',
+  style: {
+    'label': 'data(label)',
+    'font-size': nodeFontSize(),
+    'text-wrap': 'wrap',
+    'text-max-width': textMaxWidth(),
+    'text-valign': 'center',
+    'text-halign': 'center',
+    'background-color': '#FCE7F3',
+    'border-width': 1.8,
+    'border-color': '#F9A8D4',
+    'color': '#831843',
+
+    // ★ 子の数でサイズ変更（上限は適宜調整）
+    'width': 'mapData(childCount, 0, 30, 26, 78)',
+    'height': 'mapData(childCount, 0, 30, 26, 78)',
+
+    // デフォは角丸長方形（今まで通り）
+    'shape': 'round-rectangle',
+    'padding': isMobileNow() ? '16px' : '12px',
+  }
+},
+
+// ★ 子が1以下なら「丸いドット」表示（小さく・ラベルは後でズーム時に出す）
+{
+  selector: 'node[childCount <= 1]',
+  style: {
+    'shape': 'ellipse',
+    'width': 18,
+    'height': 18,
+    'padding': 0,
+
+    // ラベルはズームイン時に出すので、通常は薄く（下のズーム処理で切替）
+    'text-opacity': 0
+  }
+},
+
       {
         selector: 'node.registered',
         style: {
@@ -1050,10 +1070,14 @@ function initCy(elements){
 
   // classes from data
   cy.batch(() => {
+    // 既存の registered / isPlaceholder 付与があるなら、そのforEachの後でもOK
     cy.nodes().forEach(n => {
-      const d = n.data();
-      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
-      if (d.placeholder === true) n.addClass('isPlaceholder');
+      // outgoers('edge') の targets() が子ノード（重複があり得るのでSet）
+      const kids = n.outgoers('edge').targets();
+      const uniqKids = new Set(kids.map(k => k.id()));
+      const childCount = uniqKids.size;
+  
+      n.data('childCount', childCount);
     });
   });
 
@@ -1101,6 +1125,36 @@ function initCy(elements){
       .update();
     cy.resize();
   });
+
+  // --- ズームでラベル表示を切り替え（LOD） ---
+  function applyLabelLOD(){
+    if(!cy) return;
+    const z = cy.zoom();
+  
+    // しきい値（好みに合わせて調整）
+    const showLabel = isMobileNow() ? (z >= 0.95) : (z >= 0.75);
+  
+    cy.batch(() => {
+      // 全ノードのラベル表示を切替
+      cy.nodes().forEach(n => {
+        // 子が1以下のドットは、拡大した時だけラベルを出す
+        if((n.data('childCount') ?? 0) <= 1){
+          n.style('text-opacity', showLabel ? 1 : 0);
+        }else{
+          // 大きいノードは、ズームアウト時も薄く残す/消すは好みで
+          n.style('text-opacity', showLabel ? 1 : 0);
+        }
+      });
+    });
+  }
+  
+  // 初回と、ズームのたびに反映
+  applyLabelLOD();
+  cy.on('zoom', () => {
+    // 連続イベントなので軽く間引きしたいならrequestAnimationFrameで包む
+    requestAnimationFrame(applyLabelLOD);
+  });
+
 }
 
 /* ===== load ===== */

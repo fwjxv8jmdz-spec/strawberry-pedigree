@@ -333,6 +333,58 @@
       /* mobile: hide fixed footer (邪魔) */
       footer#deskFooter{ display:none; }
     }
+
+    /* ===== loading overlay ===== */
+    #cyLoading{
+      position: absolute;
+      inset: 0;
+      display: none;              /* JSで制御 */
+      place-items: center;
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(6px);
+      z-index: 80;
+      pointer-events: all;        /* 操作を一旦止める */
+    }
+    
+    #cyLoading.show{ display: grid; }
+    
+    .loaderBox{
+      width: min(360px, 86vw);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+      padding: 16px 16px 14px;
+      text-align: center;
+    }
+    
+    .loaderTitle{
+      margin-top: 8px;
+      font-weight: 800;
+      color: #111827;
+    }
+    .loaderSub{
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    
+    .spinner{
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 3px solid #e5e7eb;
+      border-top-color: var(--pink-500);
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin{
+      to { transform: rotate(360deg); }
+    }
+
+    
   </style>
 </head>
 
@@ -385,6 +437,15 @@
     <div id="cyWrap">
       <div id="cy"></div>
 
+      <div id="cyLoading" aria-live="polite">
+      <div class="loaderBox">
+        <div class="spinner" aria-hidden="true"></div>
+        <div class="loaderTitle">読み込み中…</div>
+        <div class="loaderSub">系統図を配置しています。しばらくお待ちください。</div>
+      </div>
+      </div>
+
+      
       <!-- floating controls (mobile only) -->
       <div id="floatCtrl" class="onlyMobile" aria-label="floating controls">
         <div class="zcol" aria-label="zoom">
@@ -484,6 +545,22 @@
   </footer>
 
 <script>
+function showCyLoading(msg){
+  const el = document.getElementById('cyLoading');
+  if(!el) return;
+  if(msg){
+    const sub = el.querySelector('.loaderSub');
+    if(sub) sub.textContent = msg;
+  }
+  el.classList.add('show');
+}
+function hideCyLoading(){
+  const el = document.getElementById('cyLoading');
+  if(!el) return;
+  el.classList.remove('show');
+}
+
+  
 let cy = null;
 
 const mqMobile = window.matchMedia('(max-width: 900px)');
@@ -923,9 +1000,23 @@ function runLayout(mode){
   if(!cy) return;
   cy.stop();
 
+  showCyLoading(mode === 'dagre'
+    ? 'Dagreで配置しています…'
+    : 'CoSEで配置しています…'
+  );
+  
   const isM = isMobileNow();
   let opts;
+  const layout = cy.layout(opts);
 
+  layout.on('layoutstop', () => {
+  hideCyLoading();
+    cy.fit(undefined, isM ? 70 : 30);
+  });
+
+  layout.run();
+}
+  
   if(mode === 'dagre'){
     opts = {
       name: 'dagre',
@@ -942,14 +1033,14 @@ function runLayout(mode){
       name: 'cose',
       padding: 30,
       animate: false,
-      randomize: true,
+      randomize: false,
       avoidOverlap: true,
       avoidOverlapPadding: isM ? 40 : 20,
       nodeOverlap: 40,
       nodeRepulsion: isM ? 12000 : 6500,
       idealEdgeLength: isM ? 220 : 140,
       componentSpacing: isM ? 120 : 80,
-      numIter: 1600
+      numIter: 1500
     };
   }
 
@@ -975,44 +1066,24 @@ function initCy(elements){
     container: document.getElementById('cy'),
     elements,
     style: [
-{
-  selector: 'node',
-  style: {
-    'label': 'data(label)',
-    'font-size': nodeFontSize(),
-    'text-wrap': 'wrap',
-    'text-max-width': textMaxWidth(),
-    'text-valign': 'center',
-    'text-halign': 'center',
-    'background-color': '#FCE7F3',
-    'border-width': 1.8,
-    'border-color': '#F9A8D4',
-    'color': '#831843',
-
-    // ★ 子の数でサイズ変更（上限は適宜調整）
-    'width': 'mapData(childCount, 0, 30, 26, 78)',
-    'height': 'mapData(childCount, 0, 30, 26, 78)',
-
-    // デフォは角丸長方形（今まで通り）
-    'shape': 'round-rectangle',
-    'padding': isMobileNow() ? '16px' : '12px',
-  }
-},
-
-// ★ 子が1以下なら「丸いドット」表示（小さく・ラベルは後でズーム時に出す）
-{
-  selector: 'node[childCount <= 1]',
-  style: {
-    'shape': 'ellipse',
-    'width': 18,
-    'height': 18,
-    'padding': 0,
-
-    // ラベルはズームイン時に出すので、通常は薄く（下のズーム処理で切替）
-    'text-opacity': 0
-  }
-},
-
+      {
+        selector: 'node',
+        style: {
+          'label': 'data(label)',
+          'font-size': nodeFontSize(),
+          'text-wrap': 'wrap',
+          'text-max-width': textMaxWidth(),
+          'text-valign': 'center',
+          'text-halign': 'center',
+          'background-color': '#FCE7F3',
+          'border-width': 1.8,
+          'border-color': '#F9A8D4',
+          'color': '#831843',
+          'width': 'label',
+          'padding': isMobileNow() ? '16px' : '12px',
+          'shape': 'round-rectangle'
+        }
+      },
       {
         selector: 'node.registered',
         style: {
@@ -1057,29 +1128,33 @@ function initCy(elements){
       name: 'cose',
       padding: 30,
       animate: false,
-      randomize: true,
+      randomize: false,
       avoidOverlap: true,
       avoidOverlapPadding: 20,
       nodeOverlap: 40,
       nodeRepulsion: 6500,
       idealEdgeLength: 140,
       componentSpacing: 80,
-      numIter: 1600
+      numIter: 1500
     }
   });
 
+  cy.once('layoutstop', () => {
+  hideCyLoading();
+  });
+
+
   // classes from data
   cy.batch(() => {
-    // 既存の registered / isPlaceholder 付与があるなら、そのforEachの後でもOK
     cy.nodes().forEach(n => {
-      // outgoers('edge') の targets() が子ノード（重複があり得るのでSet）
-      const kids = n.outgoers('edge').targets();
-      const uniqKids = new Set(kids.map(k => k.id()));
-      const childCount = uniqKids.size;
-  
-      n.data('childCount', childCount);
+      const d = n.data();
+      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
+      if (d.placeholder === true) n.addClass('isPlaceholder');
     });
   });
+
+  showCyLoading('系統図を配置しています。しばらくお待ちください。');
+
 
   /* グラフ内タップ：ハイライト（fitはしない） */
   cy.on('tap', 'node', (evt) => selectNode(evt.target, false));
@@ -1125,36 +1200,6 @@ function initCy(elements){
       .update();
     cy.resize();
   });
-
-  // --- ズームでラベル表示を切り替え（LOD） ---
-  function applyLabelLOD(){
-    if(!cy) return;
-    const z = cy.zoom();
-  
-    // しきい値（好みに合わせて調整）
-    const showLabel = isMobileNow() ? (z >= 0.95) : (z >= 0.75);
-  
-    cy.batch(() => {
-      // 全ノードのラベル表示を切替
-      cy.nodes().forEach(n => {
-        // 子が1以下のドットは、拡大した時だけラベルを出す
-        if((n.data('childCount') ?? 0) <= 1){
-          n.style('text-opacity', showLabel ? 1 : 0);
-        }else{
-          // 大きいノードは、ズームアウト時も薄く残す/消すは好みで
-          n.style('text-opacity', showLabel ? 1 : 0);
-        }
-      });
-    });
-  }
-  
-  // 初回と、ズームのたびに反映
-  applyLabelLOD();
-  cy.on('zoom', () => {
-    // 連続イベントなので軽く間引きしたいならrequestAnimationFrameで包む
-    requestAnimationFrame(applyLabelLOD);
-  });
-
 }
 
 /* ===== load ===== */

@@ -1246,10 +1246,10 @@ requestAnimationFrame(() => runLayout('cose'));
 
   // 「子=0 のとき現状維持」を守る
   const minPad  = isMobileNow() ? 8 : 6;  // ←今の値
-  const maxPad  = isMobileNow() ? 10 : 8;  // ←増えた時どこまで大きくしたいか（好みで調整）
+  const maxPad  = isMobileNow() ? 24 : 18;  // ←増えた時どこまで大きくしたいか（好みで調整）
 
   const minFont = nodeFontSize();           // ←今の値 (mobile 18 / desktop 12)
-  const maxFont = isMobileNow() ? 40 : 30;  // ←増えた時の上限（好みで調整）
+  const maxFont = isMobileNow() ? 50 : 40;  // ←増えた時の上限（好みで調整）
 
   cy.style()
     .selector('node')

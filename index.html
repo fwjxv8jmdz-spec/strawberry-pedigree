@@ -1045,11 +1045,12 @@ function runLayout(mode){
     setTimeout(() => {
       const layout = cy.layout(opts);
 
-      layout.on('layoutstop', () => {
-        clearTimeout(failSafeTimer);
-        hideCyLoading();
-        cy.fit(undefined, isM ? 30 : 10);
-      });
+  layout.on('layoutstop', () => {
+    clearTimeout(failSafeTimer);
+    hideCyLoading();
+    initialZoomIn(); // ★追加：初期表示を寄せる
+  });
+
 
       layout.run();
     }, 0);
@@ -1214,7 +1215,11 @@ requestAnimationFrame(() => runLayout('cose'));
 
 
 
-  setTimeout(()=>{ cy.resize(); cy.fit(undefined, isMobileNow() ? 30 : 10); }, 50);
+setTimeout(()=>{ 
+  cy.resize();
+  initialZoomIn(); // ★追加：こっちも寄せる（2回fitしてるので）
+}, 50);
+
 
   mqMobile.addEventListener('change', () => {
   if(!cy) return;
@@ -1238,6 +1243,20 @@ requestAnimationFrame(() => runLayout('cose'));
 
 }
 
+function initialZoomIn(boostMobile = 1.6, boostDesk = 1.3){
+if(!cy) return;
+
+  // いったん軽く fit（余白は小さめ）
+  const pad = isMobileNow() ? 20 : 6;
+  cy.fit(undefined, pad);
+
+  // fit後に「画面中心を基準に」ズームを上乗せ
+  const boost = isMobileNow() ? boostMobile : boostDesk;
+  const center = { x: cy.width()/2, y: cy.height()/2 };
+  cy.zoom({ level: cy.zoom() * boost, renderedPosition: center });
+}
+
+  
   function applyNodeScaleStyle(maxChildCount){
   if(!cy) return;
 

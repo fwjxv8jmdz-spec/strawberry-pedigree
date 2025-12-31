@@ -1008,6 +1008,12 @@ function runLayout(mode){
     : 'CoSEで配置しています…'
   );
 
+    // フェイルセーフ：layoutstopが来ない場合に解除
+  const failSafeTimer = setTimeout(() => {
+    hideCyLoading();
+    console.warn('layoutstopが来ないためフェイルセーフで解除');
+  }, 30000);
+  
   let opts;
   if(mode === 'dagre'){
     opts = {
@@ -1060,6 +1066,7 @@ function setActiveFilter(btnId){
 
 /* ===== init cy ===== */
 function initCy(elements){
+  showCyLoading('系統図を配置しています。しばらくお待ちください。');
   cy = cytoscape({
     container: document.getElementById('cy'),
     elements,
@@ -1122,25 +1129,8 @@ function initCy(elements){
       { selector: '.faded', style: { 'opacity': 0.2 } },
       { selector: '.highlight', style: { 'border-width': 3, 'border-color': '#FB7185' } }
     ],
-    layout: {
-      name: 'cose',
-      padding: 30,
-      animate: false,
-      randomize: false,
-      avoidOverlap: true,
-      avoidOverlapPadding: 20,
-      nodeOverlap: 40,
-      nodeRepulsion: 6500,
-      idealEdgeLength: 140,
-      componentSpacing: 80,
-      numIter: 1200
-    }
+layout: { name: 'preset' } 
   });
-
-  cy.once('layoutstop', () => {
-  hideCyLoading();
-  });
-
 
   // classes from data
   cy.batch(() => {
@@ -1151,7 +1141,7 @@ function initCy(elements){
     });
   });
 
-  showCyLoading('系統図を配置しています。しばらくお待ちください。');
+
 
 
   /* グラフ内タップ：ハイライト（fitはしない） */
@@ -1185,6 +1175,10 @@ function initCy(elements){
   updateClearButtons();
 
   updateListAndHighlights();
+
+  setActiveLayout('btnDagre');  // 見た目を合わせたい場合
+  runLayout('cose');        
+
 
   setTimeout(()=>{ cy.resize(); cy.fit(undefined, isMobileNow() ? 70 : 30); }, 50);
 

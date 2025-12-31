@@ -1147,6 +1147,33 @@ layout: { name: 'preset' }
     });
   });
 
+  // classes from data
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const d = n.data();
+      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
+      if (d.placeholder === true) n.addClass('isPlaceholder');
+    });
+  });
+
+  // ★追加：子の数(childCount)を計算して data に入れる
+  let maxChildCount = 0;
+
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      // 「親(このノード) → 子」なので outgoers が子
+      // 同じ子が重複しないように id でユニーク化
+      const children = n.outgoers('edge').targets().filter(t => !isUnknownNode(t));
+      const uniqIds = new Set(children.map(t => t.id()));
+      const cnt = uniqIds.size;
+
+      n.data('childCount', cnt);
+      if (cnt > maxChildCount) maxChildCount = cnt;
+    });
+  });
+
+  // ★追加：childCount に応じてサイズ/文字サイズを反映
+  applyNodeScaleStyle(maxChildCount);
 
 
 
@@ -1190,17 +1217,51 @@ requestAnimationFrame(() => runLayout('cose'));
   setTimeout(()=>{ cy.resize(); cy.fit(undefined, isMobileNow() ? 70 : 30); }, 50);
 
   mqMobile.addEventListener('change', () => {
-    if(!cy) return;
-    cy.style()
-      .selector('node')
-      .style('font-size', nodeFontSize())
-      .style('text-max-width', textMaxWidth())
-      .style('padding', isMobileNow() ? '16px' : '12px')
-      .update();
-    cy.resize();
+  if(!cy) return;
+
+  // childCount の最大値を取り直す（dataにあるので高速）
+  let maxC = 0;
+  cy.nodes().forEach(n => {
+    const c = Number(n.data('childCount') ?? 0);
+    if(c > maxC) maxC = c;
   });
+
+  cy.style()
+    .selector('node')
+    .style('text-max-width', textMaxWidth())
+    .update();
+
+  applyNodeScaleStyle(maxC);
+
+  cy.resize();
+});
+
 }
 
+  function applyNodeScaleStyle(maxChildCount){
+  if(!cy) return;
+
+  // 子が全員0のケースでも mapData が壊れないように
+  const maxC = Math.max(1, maxChildCount);
+
+  // 「子=0 のとき現状維持」を守る
+  const minPad  = isMobileNow() ? 16 : 12;  // ←今の値
+  const maxPad  = isMobileNow() ? 34 : 22;  // ←増えた時どこまで大きくしたいか（好みで調整）
+
+  const minFont = nodeFontSize();           // ←今の値 (mobile 18 / desktop 12)
+  const maxFont = isMobileNow() ? 26 : 18;  // ←増えた時の上限（好みで調整）
+
+  cy.style()
+    .selector('node')
+    // ノードの“最小サイズ”は今まで通り label + padding 依存のまま、
+    // padding を増やして「大きく」する
+    .style('padding', `mapData(childCount, 0, ${maxC}, ${minPad}, ${maxPad})`)
+    // 文字サイズも連動
+    .style('font-size', `mapData(childCount, 0, ${maxC}, ${minFont}, ${maxFont})`)
+    .update();
+}
+
+  
 /* ===== load ===== */
 async function loadElements(){
   const wrap = document.getElementById('listWrap');

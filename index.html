@@ -592,8 +592,8 @@
       cy.center(n);
     
       // 読みやすい倍率にズーム（“全体は見えなくてOK”の方針）
-      const base = isMobileNow() ? 1.2 : 1.0;   // 最低倍率（好みで調整）
-      const boost = isMobileNow() ? 1.6 : 1.35; // 追加ズーム（好みで調整）
+      const base = isMobileNow() ? 1.0 : 1.0;   // 最低倍率（好みで調整）
+      const boost = isMobileNow() ? 1.2 : 1.2; // 追加ズーム（好みで調整）
     
       // 現在ズームが小さすぎる場合だけ底上げ → さらにブースト
       const next = Math.max(cy.zoom(), base) * boost;

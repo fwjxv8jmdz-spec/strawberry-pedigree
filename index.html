@@ -1048,7 +1048,7 @@ function runLayout(mode){
       layout.on('layoutstop', () => {
         clearTimeout(failSafeTimer);
         hideCyLoading();
-        cy.fit(undefined, isM ? 70 : 30);
+        cy.fit(undefined, isM ? 30 : 10);
       });
 
       layout.run();
@@ -1214,7 +1214,7 @@ requestAnimationFrame(() => runLayout('cose'));
 
 
 
-  setTimeout(()=>{ cy.resize(); cy.fit(undefined, isMobileNow() ? 70 : 30); }, 50);
+  setTimeout(()=>{ cy.resize(); cy.fit(undefined, isMobileNow() ? 30 : 10); }, 50);
 
   mqMobile.addEventListener('change', () => {
   if(!cy) return;

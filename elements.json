@@ -1299,10 +1299,10 @@
     "data": {
       "id": "A8S4_147",
       "label": "A8S4_147",
-      "year": "",
-      "institute": "",
+      "year": 2017,
+      "institute": "香川県",
       "notes": "A8の4回自殖系統",
-      "sources": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25607&LANGUAGE=Japanese",
       "db_registration_date": "2025/12/28",
       "placeholder": false
     }
@@ -2655,10 +2655,10 @@
     "data": {
       "id": "miebohon1go",
       "label": "三重母本1号",
-      "year": "",
-      "institute": "",
+      "year": 2016,
+      "institute": "三重県",
       "notes": "かおり野の4回自殖系統",
-      "sources": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25518&LANGUAGE=Japanese",
       "db_registration_date": "2025/12/28",
       "placeholder": false
     }
@@ -3325,7 +3325,7 @@
   },
   {
     "data": {
-      "id": "sizuoka13go",
+      "id": "shizuoka13go",
       "label": "静岡13号",
       "year": "",
       "institute": "",
@@ -5173,7 +5173,7 @@
   },
   {
     "data": {
-      "id": "akaisizuku",
+      "id": "akaishizuku",
       "label": "紅い雫",
       "year": 2017,
       "institute": "愛媛県",
@@ -7573,6 +7573,594 @@
   },
   {
     "data": {
+      "id": "9_2_3_hanakagari",
+      "label": "9_2_3",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "af01",
+      "label": "af01",
+      "year": "",
+      "institute": "",
+      "notes": "品種登録出願中（2025年12月31日現在）",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "surugared",
+      "label": "スルガレッド",
+      "year": 1991,
+      "institute": "静岡県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2809&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "akasyanomiharu",
+      "label": "あかしゃのみはる",
+      "year": 1996,
+      "institute": "木下清和, 木下美津子(福岡県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4891&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "benihibari",
+      "label": "ベニヒバリ",
+      "year": 1995,
+      "institute": "東洋製罐株式会社 (東京都)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4474&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sainokaori",
+      "label": "彩のかおり",
+      "year": 1996,
+      "institute": "埼玉県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5194&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "zyunberry",
+      "label": "純ベリー",
+      "year": 1994,
+      "institute": "山口照男(東京都)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4056&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yamaguchi9go",
+      "label": "山口9号",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "HST_yamaguchi9go_father",
+      "label": "HST",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "beniswan",
+      "label": "紅スワン",
+      "year": 1991,
+      "institute": "田辺米一(新潟県)",
+      "notes": "固定品種とのこと",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2883&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "syakko",
+      "label": "赤光",
+      "year": 1990,
+      "institute": "高田宗男, 松井茂一(岐阜県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2161&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "reiko_shizutakara_syakko_mother",
+      "label": "麗紅×しずたから",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aroma_japan",
+      "label": "アロマ",
+      "year": 1989,
+      "institute": "タキイ種苗株式会社(京都府)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1980&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "meiho_reiko",
+      "label": "明宝×麗紅",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "oko",
+      "label": "王香",
+      "year": 1987,
+      "institute": "山口照男(東京都)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1394&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "wasekissen",
+      "label": "早生吉阡",
+      "year": 1987,
+      "institute": "ナント種苗株式会社(奈良県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1268&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "suzuhime",
+      "label": "鈴姫",
+      "year": 1988,
+      "institute": "鈴木一(愛知県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=718&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sashima1go",
+      "label": "さしま1号",
+      "year": 1983,
+      "institute": "キューピー株式会社(東京都)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=348&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "firstberry",
+      "label": "ファーストベリー",
+      "year": 1993,
+      "institute": "太田宣明, 太田充(岡山県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3698&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aiberry_misyokeito_firstberry_mother",
+      "label": "アイベリー実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "natsunokagayaki",
+      "label": "夏の輝",
+      "year": 2015,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構?",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=24328&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yumetsuzuki",
+      "label": "夢つづき",
+      "year": 2018,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構, アヲハタ株式会社(広島県)",
+      "notes": "母本は「はつくに」「てるのか」「とちおとめ」「さがほのか」から育成した多元交配系統とのこと",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=26985&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "porichigo",
+      "label": "ぽりっちご",
+      "year": 2024,
+      "institute": "国立研究開発法人農業・食品産業技術総合研究機構",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=30608&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aikei4go",
+      "label": "愛経4号",
+      "year": 2024,
+      "institute": "愛知県経済農業協同組合連合会, 愛知県",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=30500&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "keito13_18",
+      "label": "系統13_18",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "keito12_21",
+      "label": "系統12_21",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "KD-S1",
+      "label": "KD-S1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sawaberry",
+      "label": "サワベリー",
+      "year": 2002,
+      "institute": "沢田広範(三重県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10369&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hanagasaotome",
+      "label": "花笠おとめ",
+      "year": 2006,
+      "institute": "株式会社天香園 (山形県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14045&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "serenata",
+      "label": "Serenata",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "amaterasu",
+      "label": "アマテラス",
+      "year": 2002,
+      "institute": "星野光輝(福岡県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10245&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kinuama",
+      "label": "鬼怒甘",
+      "year": 1992,
+      "institute": "",
+      "notes": "女峰の突然変異株",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3223&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "zyunberry2",
+      "label": "純ベリー2",
+      "year": 2004,
+      "institute": "山口照男(東京都)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12060&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "toshihime",
+      "label": "としひめ",
+      "year": 2000,
+      "institute": "松永章三(福島県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12059&LANGUAGE=Japanese",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hokowase_senbatsukeito",
+      "label": "宝交早生選抜系統",
+      "year": "",
+      "institute": "",
+      "notes": "宝交早生の自殖の意味か？",
+      "sources": "",
+      "db_registration_date": "2025/12/31",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "rougetaime",
+      "label": "ルージューテーエム",
+      "year": 1997,
+      "institute": "鳥井満弘(愛知県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5726&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pajaro_misho_kodai",
+      "label": "Pajaro実生後代系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shizuoka4go",
+      "label": "静岡4号",
+      "year": "",
+      "institute": "",
+      "notes": "情報を募集しています。",
+      "sources": "",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "berumare",
+      "label": "ベルマーレ",
+      "year": 1996,
+      "institute": "株式会社トーホク(栃木県)",
+      "notes": "母本は輸入果実より採取した種子から育成した系統とのこと",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5197&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hikarikofugaya",
+      "label": "光小布ヶ谷",
+      "year": 1997,
+      "institute": "片井勝(静岡県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5789&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "smileruby",
+      "label": "スマイルルビー",
+      "year": "",
+      "institute": "株式会社四国総合研究所(香川県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6562&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kuwanshie",
+      "label": "クワンシエ",
+      "year": 2001,
+      "institute": "藤江充(愛知県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8840&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "miranshie",
+      "label": "ミランシエ",
+      "year": 2001,
+      "institute": "藤江充(愛知県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8841&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "mizunomaru",
+      "label": "みずのまる",
+      "year": 2002,
+      "institute": "尾方孝男, 尾方啓一, 亀井豊(徳島県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summerberry_mishokeito_hokowase",
+      "label": "サマーベリー実生系統×宝交早生",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "summerberry_mishokeito",
+      "label": "サマーベリー実生系統",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "diamondberry",
+      "label": "ダイアモンドベリー",
+      "year": 2005,
+      "institute": "庄島隆(福岡県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12577&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "esupo",
+      "label": "エスポ",
+      "year": 2006,
+      "institute": "株式会社ホーブ(北海道)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14538&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kazenoalice",
+      "label": "風のアリス",
+      "year": 2006,
+      "institute": "上野保和, 上野友崇(岡山県)",
+      "notes": "",
+      "sources": "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14539&LANGUAGE=Japanese",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -7585,8 +8173,8 @@
   },
   {
     "data": {
-      "id": "93_123_06",
-      "label": "93_123_06",
+      "id": "08a05_07",
+      "label": "08a05_07",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7597,8 +8185,20 @@
   },
   {
     "data": {
-      "id": "9_2_3_hanakagari",
-      "label": "9_2_3_hanakagari",
+      "id": "11268_01",
+      "label": "11268_01",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "93_123_06",
+      "label": "93_123_06",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -7803,6 +8403,18 @@
     "data": {
       "id": "N.J. scarlet",
       "label": "N.J. scarlet",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Se11_11",
+      "label": "Se11_11",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8065,8 +8677,8 @@
   },
   {
     "data": {
-      "id": "miyazaki_the sun",
-      "label": "miyazaki_the sun",
+      "id": "oishishikinari2go",
+      "label": "oishishikinari2go",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8139,18 +8751,6 @@
     "data": {
       "id": "sharpless",
       "label": "sharpless",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "sizutakara",
-      "label": "sizutakara",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8306,6 +8906,18 @@
   {
     "data": {
       "id": "unknown_father__98_7_3",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__9_2_3_hanakagari",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -8749,6 +9361,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__hokowase_senbatsukeito",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__ikeko",
       "label": "不明",
       "year": "",
@@ -8798,6 +9422,18 @@
   {
     "data": {
       "id": "unknown_father__kiharu",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__kinuama",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9073,6 +9709,30 @@
   },
   {
     "data": {
+      "id": "unknown_father__serenata",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__shizuoka4go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__syuko",
       "label": "不明",
       "year": "",
@@ -9277,6 +9937,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__9_2_3_hanakagari",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__A8_self",
       "label": "不明",
       "year": "",
@@ -9446,6 +10118,18 @@
   {
     "data": {
       "id": "unknown_mother__benitaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__berumare",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9637,6 +10321,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__hokowase_senbatsukeito",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__ikeko",
       "label": "不明",
       "year": "",
@@ -9662,6 +10358,18 @@
   {
     "data": {
       "id": "unknown_mother__kiharu",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__kinuama",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9733,6 +10441,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__kuwanshie",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__kyokuho",
       "label": "不明",
       "year": "",
@@ -9782,6 +10502,18 @@
   {
     "data": {
       "id": "unknown_mother__merton princess",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__miranshie",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9866,6 +10598,30 @@
   {
     "data": {
       "id": "unknown_mother__oishisikinari2go",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__serenata",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__shizuoka4go",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9974,6 +10730,18 @@
   {
     "data": {
       "id": "unknown_mother__yakumo",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__yumetsuzuki",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -13149,7 +13917,7 @@
   },
   {
     "data": {
-      "source": "sizuoka13go",
+      "source": "shizuoka13go",
       "target": "kirapika",
       "role": "father",
       "source_id": "河田ら(2016; https://agriknowledge.affrc.go.jp/RN/2010902388.pdf)"
@@ -14438,7 +15206,7 @@
   {
     "data": {
       "source": "99_5_2_02_3_4_mother",
-      "target": "sizuoka13go",
+      "target": "shizuoka13go",
       "role": "mother",
       "source_id": "河田ら(2016; https://agriknowledge.affrc.go.jp/RN/2010902388.pdf)"
     }
@@ -14446,7 +15214,7 @@
   {
     "data": {
       "source": "00_4_2_05_2_5_father",
-      "target": "sizuoka13go",
+      "target": "shizuoka13go",
       "role": "father",
       "source_id": "河田ら(2016; https://agriknowledge.affrc.go.jp/RN/2010902388.pdf)"
     }
@@ -16902,7 +17670,7 @@
   {
     "data": {
       "source": "amaotome",
-      "target": "akaisizuku",
+      "target": "akaishizuku",
       "role": "mother",
       "source_id": "松澤ら(2015; https://www.pref.ehime.jp/uploaded/attachment/26544.pdf)"
     }
@@ -16910,7 +17678,7 @@
   {
     "data": {
       "source": "benihoppe",
-      "target": "akaisizuku",
+      "target": "akaishizuku",
       "role": "father",
       "source_id": "松澤ら(2015; https://www.pref.ehime.jp/uploaded/attachment/26544.pdf)"
     }
@@ -17637,7 +18405,7 @@
   },
   {
     "data": {
-      "source": "sizutakara",
+      "source": "shizutakara",
       "target": "T16_ehimenoshiV1go_father",
       "role": "mother",
       "source_id": "清水ら(1993; https://agriknowledge.affrc.go.jp/RN/2010490511.pdf)"
@@ -17925,7 +18693,7 @@
   },
   {
     "data": {
-      "source": "miyazaki_the sun",
+      "source": "miyazaki_the sun_benizuru_mother",
       "target": "benizuru",
       "role": "mother",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, 16章)"
@@ -20081,6 +20849,790 @@
       "target": "capt. jack",
       "role": "father",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__9_2_3_hanakagari",
+      "target": "9_2_3_hanakagari",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__9_2_3_hanakagari",
+      "target": "9_2_3_hanakagari",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "Se11_11",
+      "target": "af01",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/153333.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "11268_01",
+      "target": "af01",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/153333.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "surugared",
+      "role": "mother",
+      "source_id": "中村ら(1991; https://agriknowledge.affrc.go.jp/RN/2010491107.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "surugared",
+      "role": "father",
+      "source_id": "中村ら(1991; https://agriknowledge.affrc.go.jp/RN/2010491107.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "akasyanomiharu",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4891&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "akasyanomiharu",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4891&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "america",
+      "target": "benihibari",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4474&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "benihibari",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4474&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "sainokaori",
+      "role": "mother",
+      "source_id": "小林ら・太田(https://agriknowledge.affrc.go.jp/RN/2030651613)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "sainokaori",
+      "role": "father",
+      "source_id": "小林ら・太田(https://agriknowledge.affrc.go.jp/RN/2030651613)"
+    }
+  },
+  {
+    "data": {
+      "source": "yamaguchi9go",
+      "target": "zyunberry",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4056&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "zyunberry",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4056&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "yamaguchi2go",
+      "target": "yamaguchi9go",
+      "role": "mother",
+      "source_id": "https://agresearcher.maff.go.jp/seika/show/219870"
+    }
+  },
+  {
+    "data": {
+      "source": "HST_yamaguchi9go_father",
+      "target": "yamaguchi9go",
+      "role": "father",
+      "source_id": "https://agresearcher.maff.go.jp/seika/show/219870"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry",
+      "target": "HST_yamaguchi9go_father",
+      "role": "mother",
+      "source_id": "https://agresearcher.maff.go.jp/seika/show/219870"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "HST_yamaguchi9go_father",
+      "role": "father",
+      "source_id": "https://agresearcher.maff.go.jp/seika/show/219870"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "beniswan",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2883&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "beniswan",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2883&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko_shizutakara_syakko_mother",
+      "target": "syakko",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2161&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "syakko",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2161&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "reiko_shizutakara_syakko_mother",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2161&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "shizutakara",
+      "target": "reiko_shizutakara_syakko_mother",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2161&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "meiho_reiko",
+      "target": "aroma_japan",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1980&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "terunoka",
+      "target": "aroma_japan",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1980&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "meiho",
+      "target": "meiho_reiko",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1980&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "meiho_reiko",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1980&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "oko",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1394&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "donner",
+      "target": "oko",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1394&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "wasekissen",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1268&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hatsukuni",
+      "target": "wasekissen",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1268&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "reiko",
+      "target": "suzuhime",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=718&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "suzuhime",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=718&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "america",
+      "target": "sashima1go",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=348&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "surecrop",
+      "target": "sashima1go",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=348&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry_misyokeito_firstberry_mother",
+      "target": "firstberry",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3698&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "firstberry",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3698&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "aiberry_misyokeito_firstberry_mother",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3698&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "aiberry_misyokeito_firstberry_mother",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3698&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "morioka30go",
+      "target": "natsunokagayaki",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/049079.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "sweetcharmy",
+      "target": "natsunokagayaki",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/049079.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__yumetsuzuki",
+      "target": "yumetsuzuki",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/laboratory/karc/059426.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "karenberry",
+      "target": "yumetsuzuki",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/laboratory/karc/059426.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "08a05_07",
+      "target": "porichigo",
+      "role": "mother",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/143048.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "sachinoka",
+      "target": "porichigo",
+      "role": "father",
+      "source_id": "農研機構ホームページ(https://www.naro.go.jp/collab/breed/0300/0301/143048.html)"
+    }
+  },
+  {
+    "data": {
+      "source": "keito13_18",
+      "target": "aikei4go",
+      "role": "mother",
+      "source_id": "松浦ら(2021; https://www.pref.aichi.jp/uploaded/attachment/413170.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "keito12_21",
+      "target": "aikei4go",
+      "role": "father",
+      "source_id": "松浦ら(2021; https://www.pref.aichi.jp/uploaded/attachment/413170.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "keito13_18",
+      "role": "mother",
+      "source_id": "松浦ら(2021; https://www.pref.aichi.jp/uploaded/attachment/413170.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "keito13_18",
+      "role": "father",
+      "source_id": "松浦ら(2021; https://www.pref.aichi.jp/uploaded/attachment/413170.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "amaotome",
+      "target": "keito12_21",
+      "role": "mother",
+      "source_id": "松浦ら(2021; https://www.pref.aichi.jp/uploaded/attachment/413170.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "keito12_21",
+      "role": "father",
+      "source_id": "松浦ら(2021; https://www.pref.aichi.jp/uploaded/attachment/413170.pdf)"
+    }
+  },
+  {
+    "data": {
+      "source": "amaekubo",
+      "target": "KD-S1",
+      "role": "mother",
+      "source_id": "山本ら(2014; https://kindai.repo.nii.ac.jp/records/2001017)"
+    }
+  },
+  {
+    "data": {
+      "source": "kaorino",
+      "target": "KD-S1",
+      "role": "father",
+      "source_id": "山本ら(2014; https://kindai.repo.nii.ac.jp/records/2001017)"
+    }
+  },
+  {
+    "data": {
+      "source": "himiko",
+      "target": "sawaberry",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10369&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "sawaberry",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10369&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "serenata",
+      "target": "hanagasaotome",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14045&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "hanagasaotome",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14045&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__serenata",
+      "target": "serenata",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__serenata",
+      "target": "serenata",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "kinuama",
+      "target": "amaterasu",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10245&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "amaterasu",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10245&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__kinuama",
+      "target": "kinuama",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3223&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__kinuama",
+      "target": "kinuama",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3223&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "zyunberry",
+      "target": "zyunberry2",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12060&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "zyunberry2",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12060&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase_senbatsukeito",
+      "target": "toshihime",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12059&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "akihime",
+      "target": "toshihime",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12059&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__hokowase_senbatsukeito",
+      "target": "hokowase_senbatsukeito",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12059&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__hokowase_senbatsukeito",
+      "target": "hokowase_senbatsukeito",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12059&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro_misho_kodai",
+      "target": "rougetaime",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5726&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "shizuoka4go",
+      "target": "rougetaime",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5726&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "pajaro_misho_kodai",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "pajaro_misho_kodai",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__shizuoka4go",
+      "target": "shizuoka4go",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__shizuoka4go",
+      "target": "shizuoka4go",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__berumare",
+      "target": "berumare",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5197&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "berumare",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5197&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "toyonoka",
+      "target": "hikarikofugaya",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5789&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "nyoho",
+      "target": "hikarikofugaya",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5789&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "aiberry",
+      "target": "smileruby",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6562&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "smileruby",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=6562&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__kuwanshie",
+      "target": "kuwanshie",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8840&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "akanekko",
+      "target": "kuwanshie",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8840&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__miranshie",
+      "target": "miranshie",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8841&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "akanekko",
+      "target": "miranshie",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8841&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry_mishokeito_hokowase",
+      "target": "mizunomaru",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "miyoshi",
+      "target": "mizunomaru",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry_mishokeito",
+      "target": "summerberry_mishokeito_hokowase",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "hokowase",
+      "target": "summerberry_mishokeito_hokowase",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry",
+      "target": "summerberry_mishokeito",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "summerberry",
+      "target": "summerberry_mishokeito",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12569&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "sagahonoka",
+      "target": "diamondberry",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12577&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "kurume54go",
+      "target": "diamondberry",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=12577&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "oishishikinari2go",
+      "target": "esupo",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14538&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "harunoka",
+      "target": "esupo",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14538&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "sweetcharmy",
+      "target": "kazenoalice",
+      "role": "mother",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14539&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "minequeen",
+      "target": "kazenoalice",
+      "role": "father",
+      "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14539&LANGUAGE=Japanese)"
     }
   }
 ]

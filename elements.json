@@ -1958,7 +1958,7 @@
   {
     "data": {
       "id": "fukuokaS6go",
-      "label": "福岡S6号",
+      "label": "福岡S6号(あまおう)",
       "year": 2005,
       "institute": "",
       "notes": "",
@@ -1970,7 +1970,7 @@
   {
     "data": {
       "id": "fukuokaS7go",
-      "label": "福岡S7号(あまおう)",
+      "label": "福岡S7号",
       "year": 2005,
       "institute": "",
       "notes": "商標名: あまおう",
@@ -8161,6 +8161,30 @@
   },
   {
     "data": {
+      "id": "albion",
+      "label": "Albion(UC Albion)",
+      "year": 2006,
+      "institute": "University of California, University of California San Diego UCSD",
+      "notes": "",
+      "sources": "https://patents.google.com/patent/USPP16228P3/en",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "diamante",
+      "label": "Diamante",
+      "year": 1998,
+      "institute": "University of California, University of California San Diego UCSD",
+      "notes": "",
+      "sources": "https://patents.google.com/patent/USPP10435P/en",
+      "db_registration_date": "2026/1/1",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -8259,6 +8283,42 @@
     "data": {
       "id": "Cal 72.361_105",
       "label": "Cal 72.361_105",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 87.112-6",
+      "label": "Cal 87.112-6",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 88.270-1",
+      "label": "Cal 88.270-1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 94.16_1",
+      "label": "Cal 94.16_1",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -21633,6 +21693,38 @@
       "target": "kazenoalice",
       "role": "father",
       "source_id": "登録品種データベース(https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14539&LANGUAGE=Japanese)"
+    }
+  },
+  {
+    "data": {
+      "source": "diamante",
+      "target": "albion",
+      "role": "mother",
+      "source_id": "USPP16228P3(https://patents.google.com/patent/USPP16228P3/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 94.16_1",
+      "target": "albion",
+      "role": "father",
+      "source_id": "USPP16228P3(https://patents.google.com/patent/USPP16228P3/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 87.112-6",
+      "target": "diamante",
+      "role": "mother",
+      "source_id": "USPP10435P(https://patents.google.com/patent/USPP10435P/en)"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 88.270-1",
+      "target": "diamante",
+      "role": "father",
+      "source_id": "USPP10435P(https://patents.google.com/patent/USPP10435P/en)"
     }
   }
 ]

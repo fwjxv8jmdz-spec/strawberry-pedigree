@@ -3629,7 +3629,7 @@
       "label": "General Chanzy",
       "year": "",
       "institute": "",
-      "notes": "1889年にフランスから日本に導入された4つの品種のうちの1つ。もう一つはDocteur Morereであることがわかっている。(Darrow, 1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up; 6章, 18章）",
+      "notes": "1889年にフランスから日本に導入された4つの品種のうちの1つ。もう一つはDocteur Morereであることがわかっている。(Darrow, 1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up; 6章, 18章）父本と母本を逆に記載している例もある。",
       "sources": "",
       "db_registration_date": "2025/12/28",
       "placeholder": false
@@ -8191,7 +8191,7 @@
       "institute": "",
       "notes": "1900年ごろに生じた偶発実生. 1906年に発表",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8203,7 +8203,7 @@
       "institute": "",
       "notes": "1890年に発表。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8215,7 +8215,7 @@
       "institute": "",
       "notes": "1899年に生じた偶発実生。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8227,7 +8227,7 @@
       "institute": "",
       "notes": "詳細不明",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8239,7 +8239,7 @@
       "institute": "",
       "notes": "1905年に育成, 1913年に発表。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8251,7 +8251,7 @@
       "institute": "",
       "notes": "1880年に育成。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8263,7 +8263,7 @@
       "institute": "",
       "notes": "1890年に育成, 1892年に発表。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8275,7 +8275,7 @@
       "institute": "",
       "notes": "1841年に発表。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8287,7 +8287,7 @@
       "institute": "",
       "notes": "1828年以前。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8299,7 +8299,7 @@
       "institute": "",
       "notes": "1877年育成。Neunanの実生で、父本は不明。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8311,7 +8311,7 @@
       "institute": "",
       "notes": "1905年に育成。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8323,7 +8323,7 @@
       "institute": "",
       "notes": "少なくとも1870年以前に育成。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8335,7 +8335,7 @@
       "institute": "",
       "notes": "1872年育成, 1877年発表。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
       "placeholder": false
     }
   },
@@ -8347,7 +8347,115 @@
       "institute": "",
       "notes": "1851年育成, 1854年発表。",
       "sources": "",
-      "db_registration_date": "2025/1/3",
+      "db_registration_date": "2026/1/3",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "chesapeake",
+      "label": "Chesapeake",
+      "year": "",
+      "institute": "",
+      "notes": "1904年頃に育成",
+      "sources": "",
+      "db_registration_date": "2026/1/3",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "madame lebreton",
+      "label": "Madame Lebreton(Marguerite Lebreton)",
+      "year": "",
+      "institute": "",
+      "notes": "1895年に育成。父本は品種不明とのこと。フランスの品種。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "marguerite_america",
+      "label": "Marguerite(America)",
+      "year": "",
+      "institute": "",
+      "notes": "1893年育成。偶発実生とされる。Madame Lebreton(Marguerite Lebreton)とは別物。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sir harry",
+      "label": "Sir Harry",
+      "year": "",
+      "institute": "",
+      "notes": "1853年育成。イギリスで育成。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "keen's seedling",
+      "label": "Keen's Seedling",
+      "year": "",
+      "institute": "",
+      "notes": "1821年発表。その名の通りKeenが選抜した実生であるが、そのまま\"Keen’s Seedling\"という品種名で通用したようである。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "keen’s imperial",
+      "label": "Keen’s Imperial",
+      "year": "",
+      "institute": "",
+      "notes": "1806年頃育成, 1814年に書簡として記載, 1822年発表。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "large white chili",
+      "label": "Large White Chili(White Carolina)",
+      "year": "",
+      "institute": "",
+      "notes": "おそらく雑多な集団で、今日でいう特定の品種名というよりかは、品種群としての呼称であろう。「果実は大きく奇妙な見た目（色が白い）が我々の目を惹いたが、風味はよくはない」という評価であったらしい。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "british queen",
+      "label": "British Queen",
+      "year": "",
+      "institute": "",
+      "notes": "1841年登録か。親系統に関する記述が見つからない。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "joseph riffaud",
+      "label": "Joseph Riffaud",
+      "year": "",
+      "institute": "",
+      "notes": "1862年に紹介された。来歴に関する情報は不明。",
+      "sources": "",
+      "db_registration_date": "2026/1/24",
       "placeholder": false
     }
   },
@@ -8629,32 +8737,8 @@
   },
   {
     "data": {
-      "id": "J. Riffaud",
-      "label": "J. Riffaud",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "LA 2556",
       "label": "LA 2556",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Madame Lebreton",
-      "label": "Madame Lebreton",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8703,18 +8787,6 @@
     "data": {
       "id": "banner",
       "label": "banner",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "chesapeake",
-      "label": "chesapeake",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8811,6 +8883,30 @@
     "data": {
       "id": "huxley",
       "label": "huxley",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "jessie",
+      "label": "jessie",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "jewell",
+      "label": "jewell",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -9361,6 +9457,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__chesapeake",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__clark",
       "label": "不明",
       "year": "",
@@ -9601,6 +9709,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__joseph riffaud",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__keens imperial",
       "label": "不明",
       "year": "",
@@ -9722,6 +9842,30 @@
   {
     "data": {
       "id": "unknown_father__kyokuho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__large white chili",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__madame lebreton",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10477,6 +10621,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__chesapeake",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__clark",
       "label": "不明",
       "year": "",
@@ -10669,6 +10825,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__joseph riffaud",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__kei56_tomehoppe_mother",
       "label": "不明",
       "year": "",
@@ -10778,6 +10946,18 @@
   {
     "data": {
       "id": "unknown_mother__kyokuho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__large white chili",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -15989,18 +16169,18 @@
   },
   {
     "data": {
-      "source": "J. Riffaud",
+      "source": "joseph riffaud",
       "target": "general chanzy",
       "role": "mother",
-      "source_id": ""
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV); https://archive.org/details/lemoniteurdhorti1899pari/page/178"
     }
   },
   {
     "data": {
-      "source": "Madame Lebreton",
+      "source": "madame lebreton",
       "target": "general chanzy",
       "role": "father",
-      "source_id": ""
+      "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV); https://archive.org/details/lemoniteurdhorti1899pari/page/178"
     }
   },
   {
@@ -22273,6 +22453,150 @@
       "target": "wilson",
       "role": "father",
       "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/742"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__chesapeake",
+      "target": "chesapeake",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/558"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__chesapeake",
+      "target": "chesapeake",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/558"
+    }
+  },
+  {
+    "data": {
+      "source": "sir harry",
+      "target": "madame lebreton",
+      "role": "mother",
+      "source_id": "https://www.biodiversitylibrary.org/item/107009#page/105"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__madame lebreton",
+      "target": "madame lebreton",
+      "role": "father",
+      "source_id": "https://www.biodiversitylibrary.org/item/107009#page/105"
+    }
+  },
+  {
+    "data": {
+      "source": "jewell",
+      "target": "marguerite_america",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/652"
+    }
+  },
+  {
+    "data": {
+      "source": "jessie",
+      "target": "marguerite_america",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/652"
+    }
+  },
+  {
+    "data": {
+      "source": "keen's seedling",
+      "target": "sir harry",
+      "role": "mother",
+      "source_id": "https://www.biodiversitylibrary.org/item/107009#page/114"
+    }
+  },
+  {
+    "data": {
+      "source": "british queen",
+      "target": "sir harry",
+      "role": "father",
+      "source_id": "https://www.biodiversitylibrary.org/item/107009#page/114"
+    }
+  },
+  {
+    "data": {
+      "source": "keen’s imperial",
+      "target": "keen's seedling",
+      "role": "mother",
+      "source_id": "https://www.biodiversitylibrary.org/item/152459#page/298; https://www.biodiversitylibrary.org/item/155316#page/222"
+    }
+  },
+  {
+    "data": {
+      "source": "keen’s imperial",
+      "target": "keen's seedling",
+      "role": "father",
+      "source_id": "https://www.biodiversitylibrary.org/item/152459#page/298; https://www.biodiversitylibrary.org/item/155316#page/222"
+    }
+  },
+  {
+    "data": {
+      "source": "large white chili",
+      "target": "keen’s imperial",
+      "role": "mother",
+      "source_id": "https://www.biodiversitylibrary.org/item/151597#page/141; https://www.biodiversitylibrary.org/item/155316#page/223"
+    }
+  },
+  {
+    "data": {
+      "source": "large white chili",
+      "target": "keen’s imperial",
+      "role": "father",
+      "source_id": "https://www.biodiversitylibrary.org/item/151597#page/141; https://www.biodiversitylibrary.org/item/155316#page/223"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__large white chili",
+      "target": "large white chili",
+      "role": "mother",
+      "source_id": "https://www.biodiversitylibrary.org/item/155316#page/227"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__large white chili",
+      "target": "large white chili",
+      "role": "father",
+      "source_id": "https://www.biodiversitylibrary.org/item/155316#page/227"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__british queen",
+      "target": "british queen",
+      "role": "mother",
+      "source_id": "https://archive.org/details/proceedingsofhor121roya/page/346; https://archive.org/details/proceedingsofhor121roya/page/242"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__british queen",
+      "target": "british queen",
+      "role": "father",
+      "source_id": "https://archive.org/details/proceedingsofhor121roya/page/346; https://archive.org/details/proceedingsofhor121roya/page/242"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__joseph riffaud",
+      "target": "joseph riffaud",
+      "role": "mother",
+      "source_id": "https://archive.org/details/revuehorticolejo1875unse/page/376; https://archive.org/details/lemoniteurdhorti1899pari/page/178"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__joseph riffaud",
+      "target": "joseph riffaud",
+      "role": "father",
+      "source_id": "https://archive.org/details/revuehorticolejo1875unse/page/376; https://archive.org/details/lemoniteurdhorti1899pari/page/178"
     }
   }
 ]

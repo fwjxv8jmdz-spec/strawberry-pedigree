@@ -8257,18 +8257,6 @@
   },
   {
     "data": {
-      "id": "british queen",
-      "label": "British queen",
-      "year": "",
-      "institute": "",
-      "notes": "1841年に発表。",
-      "sources": "",
-      "db_registration_date": "2026/1/3",
-      "placeholder": false
-    }
-  },
-  {
-    "data": {
       "id": "hudson bay",
       "label": "Hudson Bay",
       "year": "",
@@ -22409,22 +22397,6 @@
       "target": "excelsior",
       "role": "father",
       "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/588"
-    }
-  },
-  {
-    "data": {
-      "source": "unknown_mother__british queen",
-      "target": "british queen",
-      "role": "mother",
-      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/548"
-    }
-  },
-  {
-    "data": {
-      "source": "unknown_father__british queen",
-      "target": "british queen",
-      "role": "father",
-      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/548"
     }
   },
   {

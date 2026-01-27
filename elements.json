@@ -8965,18 +8965,6 @@
   },
   {
     "data": {
-      "id": "haffman",
-      "label": "haffman",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "huxley",
       "label": "huxley",
       "year": "",
@@ -9015,18 +9003,6 @@
     "data": {
       "id": "joe",
       "label": "joe",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "keen's seedling",
-      "label": "keen's seedling",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -22421,7 +22397,7 @@
   },
   {
     "data": {
-      "source": "haffman",
+      "source": "hoffman",
       "target": "excelsior",
       "role": "mother",
       "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/588"
@@ -22597,7 +22573,7 @@
   },
   {
     "data": {
-      "source": "keen's seedling",
+      "source": "keens seedling",
       "target": "sir harry",
       "role": "mother",
       "source_id": "https://www.biodiversitylibrary.org/item/107009#page/114"

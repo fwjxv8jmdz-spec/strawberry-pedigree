@@ -233,8 +233,30 @@
       ],
       layout: { name: 'preset' }
     });
-
-    // 祖先系図は dagre が見やすい（左→右）
+    
+     requestAnimationFrame(() => {
+        cy.resize();
+    
+        const layout = cy.layout({
+          name: 'dagre',
+          rankDir: 'LR',
+          nodeSep: 20,
+          edgeSep: 6,
+          rankSep: 90,
+          padding: 20,
+          nodeDimensionsIncludeLabels: true,
+          animate: false
+        });
+    
+        layout.run();
+    
+        layout.on('layoutstop', () => {
+          cy.fit(undefined, 30);
+        });
+      });
+  }
+ ;
+  // 祖先系図は dagre が見やすい（左→右）
     cy.layout({
       name: 'dagre',
       rankDir: 'LR',
@@ -326,4 +348,5 @@
 </script>
 
 </body>
+
 </html>

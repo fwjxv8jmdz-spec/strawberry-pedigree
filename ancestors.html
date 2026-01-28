@@ -190,72 +190,71 @@
   }
 
   function initCy(part){
-    if(cy) cy.destroy();
+  if(cy) cy.destroy();
 
-    cy = cytoscape({
-      container: document.getElementById('cy'),
-      elements: part,
-      style: [
-        {
-          selector: 'node',
-          style: {
-            'label': 'data(label)',
-            'font-size': 12,
-            'text-wrap': 'wrap',
-            'text-max-width': 160,
-            'text-valign': 'center',
-            'text-halign': 'center',
-            'background-color': '#FCE7F3',
-            'border-width': 1.8,
-            'border-color': '#FFDEEB',
-            'color': '#831843',
-            'width': 'label',
-            'padding': '12px',
-            'shape': 'round-rectangle'
-          }
-        },
-        {
-          selector: 'edge',
-          style: {
-            'target-arrow-shape': 'triangle',
-            'target-arrow-fill': 'filled',
-            'arrow-scale': 1.2,
-            'width': 2,
-            'line-color': '#D1B0C2',
-            'target-arrow-color': '#D1B0C2',
-            'curve-style': 'unbundled-bezier',
-            'edge-distances': 'node-position'
-          }
-        },
-        { selector: 'edge[role="mother"]', style: { 'line-style': 'solid',  'control-point-distance': 30, 'control-point-weight': 0.5 } },
-        { selector: 'edge[role="father"]', style: { 'line-style': 'dashed', 'control-point-distance': -30,'control-point-weight': 0.5 } },
-        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted','control-point-distance': 18,'control-point-weight': 0.5 } },
-      ],
-      layout: { name: 'preset' }
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements: part,
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'label': 'data(label)',
+          'font-size': 12,
+          'text-wrap': 'wrap',
+          'text-max-width': 160,
+          'text-valign': 'center',
+          'text-halign': 'center',
+          'background-color': '#FCE7F3',
+          'border-width': 1.8,
+          'border-color': '#FFDEEB',
+          'color': '#831843',
+          'width': 'label',
+          'padding': '12px',
+          'shape': 'round-rectangle'
+        }
+      },
+      {
+        selector: 'edge',
+        style: {
+          'target-arrow-shape': 'triangle',
+          'target-arrow-fill': 'filled',
+          'arrow-scale': 1.2,
+          'width': 2,
+          'line-color': '#D1B0C2',
+          'target-arrow-color': '#D1B0C2',
+          'curve-style': 'unbundled-bezier',
+          'edge-distances': 'node-position'
+        }
+      },
+      { selector: 'edge[role="mother"]', style: { 'line-style': 'solid',  'control-point-distance': 30, 'control-point-weight': 0.5 } },
+      { selector: 'edge[role="father"]', style: { 'line-style': 'dashed', 'control-point-distance': -30,'control-point-weight': 0.5 } },
+      { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted','control-point-distance': 18,'control-point-weight': 0.5 } },
+    ],
+    layout: { name: 'preset' }
+  });
+
+  // ★ サイズ確定 → dagre → fit（これだけでOK）
+  requestAnimationFrame(() => {
+    cy.resize();
+
+    const layout = cy.layout({
+      name: 'dagre',
+      rankDir: 'LR',
+      nodeSep: 20,
+      edgeSep: 6,
+      rankSep: 90,
+      padding: 20,
+      nodeDimensionsIncludeLabels: true,
+      animate: false
     });
-    
-     requestAnimationFrame(() => {
-        cy.resize();
-    
-        const layout = cy.layout({
-          name: 'dagre',
-          rankDir: 'LR',
-          nodeSep: 20,
-          edgeSep: 6,
-          rankSep: 90,
-          padding: 20,
-          nodeDimensionsIncludeLabels: true,
-          animate: false
-        });
-    
-        layout.run();
-    
-        layout.on('layoutstop', () => {
-          cy.fit(undefined, 30);
-        });
-      });
-  }
- ;
+
+    layout.on('layoutstop', () => cy.fit(undefined, 30));
+    layout.run();
+  });
+}
+
+ 
   // 祖先系図は dagre が見やすい（左→右）
     cy.layout({
       name: 'dagre',
@@ -350,3 +349,4 @@
 </body>
 
 </html>
+

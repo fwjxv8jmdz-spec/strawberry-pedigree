@@ -1,3 +1,10 @@
+console.log("ancestors.html loaded:", location.href);
+
+fetch("elements.json?ts=" + Date.now(), { cache: "no-store" })
+  .then(r => console.log("elements.json status:", r.status, r.url))
+  .catch(err => console.error("fetch failed:", err));
+
+
 <script>
   let all = null;
   let nodeById = new Map();
@@ -248,3 +255,4 @@
 
   load();
 </script>
+

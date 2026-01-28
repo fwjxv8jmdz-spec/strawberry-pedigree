@@ -238,15 +238,29 @@
     }
   }
 
-  document.getElementById('run').addEventListener('click', run);
-  document.getElementById('name').addEventListener('keydown', (e)=>{ if(e.key === 'Enter') run(); });
+window.addEventListener('DOMContentLoaded', () => {
+  const btnRun = document.getElementById('run');
+  const inpName = document.getElementById('name');
+  const selDepth = document.getElementById('depth');
+  const chkUnknown = document.getElementById('includeUnknown');
 
-  // ついで：プルダウン変えたら自動更新（任意）
+  if(!btnRun || !inpName || !selDepth || !chkUnknown){
+    console.error("Required DOM not found:", {btnRun, inpName, selDepth, chkUnknown});
+    setBadge("画面部品が見つかりません（HTMLのidを確認）");
+    return;
+  }
+
+  btnRun.addEventListener('click', run);
+  inpName.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') run(); });
+
   let t = null;
-  document.getElementById('depth').addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
-  document.getElementById('includeUnknown').addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
+  selDepth.addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
+  chkUnknown.addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
 
   load();
+});
+
 </script>
+
 
 

@@ -1,275 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>祖先表示 | Strawberry Pedigree</title>
-
-  <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
-  <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
-  <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
-
-  <style>
-    :root{
-      --border:#e5e7eb; --muted:#6b7280;
-      --pink-50:#fff1f7; --pink-100:#FCE7F3; --pink-300:#F9A8D4;
-      --wine:#831843;
-    }
-    body{ margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; }
-    header{
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      padding:10px; border-bottom:1px solid var(--border);
-      position: sticky; top:0; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); z-index: 10;
-    }
-    input, select{
-      padding:10px; border:1px solid #d1d5db; border-radius:10px; background:#fff;
-    }
-    button{
-      padding:10px 12px; border:1px solid #d1d5db; border-radius:10px; background:#fff; cursor:pointer;
-    }
-    button:hover{ background:#f9fafb; }
-    label{ font-size: 13px; color:#111827; }
-    .muted{ color: var(--muted); font-size:12px; }
-    #cy{ width:100%; height: calc(100vh - 64px); }
-
-    .pill{
-      font-size: 12px; padding: 2px 10px; border: 1px solid var(--border);
-      border-radius: 999px; color: var(--muted); background:#fff;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <div>
-    <div style="font-weight:800;">祖先のみ表示</div>
-    <div class="muted">品種名と世代を指定して、その品種の祖先だけ描画します。</div>
-  </div>
-
-  <div style="flex:1; min-width: 220px;"></div>
-
-  <div>
-    <input id="name" list="cultivars" placeholder="品種名（例：とちおとめ）" style="min-width: 240px;" />
-    <datalist id="cultivars"></datalist>
-  </div>
-
-  <div>
-    <select id="depth">
-      <option value="1">1（親まで）</option>
-      <option value="2" selected>2（祖父母まで）</option>
-      <option value="3">3（曾祖父母まで）</option>
-      <option value="4">4（高祖父母まで）</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-    </select>
-  </div>
-
-  <label style="display:flex; align-items:center; gap:6px;">
-    <input id="includeUnknown" type="checkbox" />
-    不明(unknown)も含める
-  </label>
-
-  <button id="run">表示</button>
-  <span id="badge" class="pill">読み込み中…</span>
-</header>
-
-<div id="cy"></div>
-
 <script>
-  let all = null;        // elements.json の生データ
+  let all = null;
   let nodeById = new Map();
-  let nodeByLabel = new Map();   // 同名は先勝ち
-  let parentsOf = new Map();     // childId -> [{parentId, role, edgeId}]
+  let nodeByLabel = new Map();
+  let parentsOf = new Map();
   let cy = null;
 
   const UNKNOWN_LABELS = new Set(['unknown','不明']);
 
-  const esc = (s) => (s ?? '').toString()
-    .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-
   function isUnknownLabel(label){
     const t = (label ?? '').toString().trim().toLowerCase();
     return UNKNOWN_LABELS.has(t);
-  }
-
-  function parseElements(elements){
-    nodeById = new Map();
-    nodeByLabel = new Map();
-    parentsOf = new Map();
-
-    const nodes = elements.filter(e => e.group === 'nodes' || e.data?.label);
-    const edges = elements.filter(e => e.group === 'edges' || (e.data?.source && e.data?.target));
-
-    for(const n of nodes){
-      const id = n.data?.id ?? n.data?.name ?? n.data?.label ?? n.id;
-      const nid = (n.data?.id ?? n.data?.id === 0) ? String(n.data.id) : (n.data?.id ?? n.data?.id);
-      // あなたの elements.json は data.id を持ってる前提が強いので、基本は data.id を使用
-      const realId = (n.data && n.data.id) ? String(n.data.id) : (n.data && n.data.label ? String(n.data.label) : String(id));
-      nodeById.set(realId, n);
-
-      const label = (n.data?.label ?? '').toString().trim();
-      if(label && !nodeByLabel.has(label)) nodeByLabel.set(label, realId);
-    }
-
-    for(const e of edges){
-      const d = e.data || {};
-      const source = String(d.source);
-      const target = String(d.target);
-      const role = d.role || '';
-      const edgeId = d.id ? String(d.id) : undefined;
-
-      // 親→子 の向きなら「子(target)の親はsource」
-      if(!parentsOf.has(target)) parentsOf.set(target, []);
-      parentsOf.get(target).push({ parentId: source, role, edgeId });
-    }
-
-    // datalist を作る
-    const dl = document.getElementById('cultivars');
-    dl.innerHTML = '';
-    for(const label of nodeByLabel.keys()){
-      const opt = document.createElement('option');
-      opt.value = label;
-      dl.appendChild(opt);
-    }
-  }
-
-  // 祖先ノード集合を BFS で集める
-  function collectAncestors(startId, depthN, includeUnknown){
-    const keepNodes = new Set();
-    const keepEdges = new Set();
-
-    keepNodes.add(startId);
-
-    let frontier = new Set([startId]);
-    for(let gen = 1; gen <= depthN; gen++){
-      const next = new Set();
-      for(const childId of frontier){
-        const ps = parentsOf.get(childId) || [];
-        for(const p of ps){
-          const parentId = p.parentId;
-          const parentNode = nodeById.get(parentId);
-          if(!parentNode) continue;
-
-          const label = (parentNode.data?.label ?? '').toString().trim();
-          if(!includeUnknown && isUnknownLabel(label)) continue;
-
-          keepNodes.add(parentId);
-          next.add(parentId);
-
-          // エッジも保持（親→子のエッジ）
-          // elements.json 側の edge.data.id が無い場合があるので、source/target/roleで合成キー
-          const k = p.edgeId ? `id:${p.edgeId}` : `st:${parentId}=>${childId}|${p.role}`;
-          keepEdges.add(k);
-        }
-      }
-      frontier = next;
-      if(frontier.size === 0) break;
-    }
-
-    // elements を切り出す
-    const out = [];
-
-    // nodes
-    for(const nid of keepNodes){
-      const n = nodeById.get(nid);
-      if(n) out.push(n);
-    }
-
-    // edges（keepNodes 同士を結ぶものだけ）
-    const edges = all.filter(e => (e.group === 'edges') || (e.data?.source && e.data?.target));
-    for(const e of edges){
-      const d = e.data || {};
-      const s = String(d.source), t = String(d.target);
-      if(!keepNodes.has(s) || !keepNodes.has(t)) continue;
-
-      const k = d.id ? `id:${String(d.id)}` : `st:${s}=>${t}|${d.role || ''}`;
-      if(keepEdges.has(k)) out.push(e);
-    }
-
-    return { elements: out, nodeCount: keepNodes.size, edgeCount: out.length - keepNodes.size };
-  }
-
-  function initCy(part){
-  if(cy) cy.destroy();
-
-  cy = cytoscape({
-    container: document.getElementById('cy'),
-    elements: part,
-    style: [
-      {
-        selector: 'node',
-        style: {
-          'label': 'data(label)',
-          'font-size': 12,
-          'text-wrap': 'wrap',
-          'text-max-width': 160,
-          'text-valign': 'center',
-          'text-halign': 'center',
-          'background-color': '#FCE7F3',
-          'border-width': 1.8,
-          'border-color': '#FFDEEB',
-          'color': '#831843',
-          'width': 'label',
-          'padding': '12px',
-          'shape': 'round-rectangle'
-        }
-      },
-      {
-        selector: 'edge',
-        style: {
-          'target-arrow-shape': 'triangle',
-          'target-arrow-fill': 'filled',
-          'arrow-scale': 1.2,
-          'width': 2,
-          'line-color': '#D1B0C2',
-          'target-arrow-color': '#D1B0C2',
-          'curve-style': 'unbundled-bezier',
-          'edge-distances': 'node-position'
-        }
-      },
-      { selector: 'edge[role="mother"]', style: { 'line-style': 'solid',  'control-point-distance': 30, 'control-point-weight': 0.5 } },
-      { selector: 'edge[role="father"]', style: { 'line-style': 'dashed', 'control-point-distance': -30,'control-point-weight': 0.5 } },
-      { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted','control-point-distance': 18,'control-point-weight': 0.5 } },
-    ],
-    layout: { name: 'preset' }
-  });
-
-  // ★ サイズ確定 → dagre → fit（これだけでOK）
-  requestAnimationFrame(() => {
-    cy.resize();
-
-    const layout = cy.layout({
-      name: 'dagre',
-      rankDir: 'LR',
-      nodeSep: 20,
-      edgeSep: 6,
-      rankSep: 90,
-      padding: 20,
-      nodeDimensionsIncludeLabels: true,
-      animate: false
-    });
-
-    layout.on('layoutstop', () => cy.fit(undefined, 30));
-    layout.run();
-  });
-}
-
- 
-  // 祖先系図は dagre が見やすい（左→右）
-    cy.layout({
-      name: 'dagre',
-      rankDir: 'LR',
-      nodeSep: 20,
-      edgeSep: 6,
-      rankSep: 90,
-      padding: 20,
-      nodeDimensionsIncludeLabels: true,
-      animate: false
-    }).run();
-
-    setTimeout(() => {
-      cy.fit(undefined, 30);
-    }, 0);
   }
 
   function setBadge(text){
@@ -286,6 +26,165 @@
     if(value === null || value === undefined || value === '') u.searchParams.delete(name);
     else u.searchParams.set(name, value);
     history.replaceState({}, '', u.toString());
+  }
+
+  function parseElements(elements){
+    nodeById = new Map();
+    nodeByLabel = new Map();
+    parentsOf = new Map();
+
+    const nodes = elements.filter(e => e.group === 'nodes' || e.data?.label);
+    const edges = elements.filter(e => e.group === 'edges' || (e.data?.source && e.data?.target));
+
+    for(const n of nodes){
+      // ★ ここは elements.json の仕様次第。
+      // 今はいったん「data.idがあればそれ、なければ Cytoscape の id」を使う
+      const realId = (n.data && n.data.id !== undefined && n.data.id !== null && String(n.data.id).trim() !== '')
+        ? String(n.data.id)
+        : String(n.data?.id ?? n.id ?? n.data?.label);
+
+      nodeById.set(realId, n);
+
+      const label = (n.data?.label ?? '').toString().trim();
+      if(label && !nodeByLabel.has(label)) nodeByLabel.set(label, realId);
+    }
+
+    for(const e of edges){
+      const d = e.data || {};
+      const source = String(d.source);
+      const target = String(d.target);
+      const role = d.role || '';
+      const edgeId = d.id ? String(d.id) : undefined;
+
+      if(!parentsOf.has(target)) parentsOf.set(target, []);
+      parentsOf.get(target).push({ parentId: source, role, edgeId });
+    }
+
+    // datalist
+    const dl = document.getElementById('cultivars');
+    dl.innerHTML = '';
+    for(const label of nodeByLabel.keys()){
+      const opt = document.createElement('option');
+      opt.value = label;
+      dl.appendChild(opt);
+    }
+  }
+
+  function collectAncestors(startId, depthN, includeUnknown){
+    const keepNodes = new Set([startId]);
+    const keepEdges = new Set();
+
+    let frontier = new Set([startId]);
+
+    for(let gen = 1; gen <= depthN; gen++){
+      const next = new Set();
+
+      for(const childId of frontier){
+        const ps = parentsOf.get(childId) || [];
+        for(const p of ps){
+          const parentId = p.parentId;
+          const parentNode = nodeById.get(parentId);
+          if(!parentNode) continue;
+
+          const label = (parentNode.data?.label ?? '').toString().trim();
+          if(!includeUnknown && isUnknownLabel(label)) continue;
+
+          keepNodes.add(parentId);
+          next.add(parentId);
+
+          const k = p.edgeId ? `id:${p.edgeId}` : `st:${parentId}=>${childId}|${p.role}`;
+          keepEdges.add(k);
+        }
+      }
+
+      frontier = next;
+      if(frontier.size === 0) break;
+    }
+
+    const out = [];
+
+    // nodes
+    for(const nid of keepNodes){
+      const n = nodeById.get(nid);
+      if(n) out.push(n);
+    }
+
+    // edges
+    const edges = all.filter(e => (e.group === 'edges') || (e.data?.source && e.data?.target));
+    for(const e of edges){
+      const d = e.data || {};
+      const s = String(d.source), t = String(d.target);
+      if(!keepNodes.has(s) || !keepNodes.has(t)) continue;
+
+      const k = d.id ? `id:${String(d.id)}` : `st:${s}=>${t}|${d.role || ''}`;
+      if(keepEdges.has(k)) out.push(e);
+    }
+
+    return { elements: out, nodeCount: keepNodes.size, edgeCount: Math.max(0, out.length - keepNodes.size) };
+  }
+
+  function initCy(part){
+    if(cy) cy.destroy();
+
+    cy = cytoscape({
+      container: document.getElementById('cy'),
+      elements: part,
+      style: [
+        {
+          selector: 'node',
+          style: {
+            'label': 'data(label)',
+            'font-size': 12,
+            'text-wrap': 'wrap',
+            'text-max-width': 160,
+            'text-valign': 'center',
+            'text-halign': 'center',
+            'background-color': '#FCE7F3',
+            'border-width': 1.8,
+            'border-color': '#FFDEEB',
+            'color': '#831843',
+            'width': 'label',
+            'padding': '12px',
+            'shape': 'round-rectangle'
+          }
+        },
+        {
+          selector: 'edge',
+          style: {
+            'target-arrow-shape': 'triangle',
+            'target-arrow-fill': 'filled',
+            'arrow-scale': 1.2,
+            'width': 2,
+            'line-color': '#D1B0C2',
+            'target-arrow-color': '#D1B0C2',
+            'curve-style': 'unbundled-bezier',
+            'edge-distances': 'node-position'
+          }
+        },
+        { selector: 'edge[role="mother"]', style: { 'line-style': 'solid',  'control-point-distance': 30, 'control-point-weight': 0.5 } },
+        { selector: 'edge[role="father"]', style: { 'line-style': 'dashed', 'control-point-distance': -30,'control-point-weight': 0.5 } },
+        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted','control-point-distance': 18,'control-point-weight': 0.5 } },
+      ],
+      layout: { name: 'preset' }
+    });
+
+    requestAnimationFrame(() => {
+      cy.resize();
+
+      const layout = cy.layout({
+        name: 'dagre',
+        rankDir: 'LR',
+        nodeSep: 20,
+        edgeSep: 6,
+        rankSep: 90,
+        padding: 20,
+        nodeDimensionsIncludeLabels: true,
+        animate: false
+      });
+
+      layout.on('layoutstop', () => cy.fit(undefined, 30));
+      layout.run();
+    });
   }
 
   function run(){
@@ -323,7 +222,6 @@
       all = await res.json();
       parseElements(all);
 
-      // URLパラメータ対応（?name=とちおとめ&n=4&u=1）
       const pName = getParam('name');
       const pN = getParam('n');
       const pU = getParam('u');
@@ -343,10 +241,10 @@
   document.getElementById('run').addEventListener('click', run);
   document.getElementById('name').addEventListener('keydown', (e)=>{ if(e.key === 'Enter') run(); });
 
+  // ついで：プルダウン変えたら自動更新（任意）
+  let t = null;
+  document.getElementById('depth').addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
+  document.getElementById('includeUnknown').addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
+
   load();
 </script>
-
-</body>
-
-</html>
-

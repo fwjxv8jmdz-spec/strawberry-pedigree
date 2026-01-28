@@ -304,52 +304,62 @@
       layout: { name: 'preset' }
     });
 
-    requestAnimationFrame(() => {
-      cy.resize();
+requestAnimationFrame(() => {
+  cy.resize();
 
-      const layout = cy.layout({
-        name: 'dagre',
-        rankDir: 'LR',
-        nodeSep: 20,
-        edgeSep: 6,
-        rankSep: 90,
-        padding: 20,
-        nodeDimensionsIncludeLabels: true,
-        animate: false
-      });
+  const opts = {
+    name: 'dagre',
+    rankDir: 'LR',
+    nodeSep: 20,
+    edgeSep: 6,
+    rankSep: 90,
+    padding: 20,
+    nodeDimensionsIncludeLabels: true,
+    animate: false
+  };
 
-      layout.on('layoutstop', () => cy.fit(undefined, 30));
-      layout.run();
-    });
+  const layout = cy.layout(opts);
+
+  layout.on('layoutstop', () => {
+    // ★1回目：軽くfit（安定用）
+    cy.fit(undefined, 30);
+    // ★2回目：次フレームでもう一度（崩れ残りを消す）
+    requestAnimationFrame(() => cy.fit(undefined, 30));
+  });
+
+  layout.run();
+});
+
   }
 
-  function run(){
-    if(!all) return;
+function run(){
+  if(!all) return;
 
-    const label = (document.getElementById('name').value ?? '').toString().trim();
-    const depth = parseInt(document.getElementById('depth').value, 10);
-    const includeUnknown = !!document.getElementById('includeUnknown').checked;
+  const myToken = ++renderToken;  // ★このrunの番号
+  setBadge('描画中…');
 
-    if(!label){
-      setBadge('品種名を入力してください');
-      return;
-    }
+  const label = (document.getElementById('name').value ?? '').toString().trim();
+  const depth = parseInt(document.getElementById('depth').value, 10);
+  const includeUnknown = !!document.getElementById('includeUnknown').checked;
 
-    const startId = nodeByLabel.get(label);
-    if(!startId){
-      setBadge('見つかりません（表記ゆれ注意）');
-      return;
-    }
+  if(!label){ setBadge('品種名を入力してください'); return; }
+  const startId = nodeByLabel.get(label);
+  if(!startId){ setBadge('見つかりません（表記ゆれ注意）'); return; }
 
-    setParam('name', label);
-    setParam('n', String(depth));
-    setParam('u', includeUnknown ? '1' : '0');
+  setParam('name', label);
+  setParam('n', String(depth));
+  setParam('u', includeUnknown ? '1' : '0');
 
-    const { elements, nodeCount, edgeCount } = collectAncestors(startId, depth, includeUnknown);
+  const { elements, nodeCount, edgeCount } = collectAncestors(startId, depth, includeUnknown);
+
+  // ★少し待って“最後のrunだけ”実行（連打に強い）
+  requestAnimationFrame(() => {
+    if(myToken !== renderToken) return; // 途中で別runが来たら捨てる
     initCy(elements);
-
     setBadge(`ノード ${nodeCount} / エッジ ${edgeCount}（${label}, N=${depth}）`);
-  }
+  });
+}
+
 
   async function load(){
     try{
@@ -402,3 +412,4 @@
 
 </body>
 </html>
+

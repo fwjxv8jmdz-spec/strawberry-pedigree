@@ -159,7 +159,7 @@
     parentsOf = new Map();
 
     // nodes / edges を「データの形で」判定（group無しでも動く）
-    const nodes = elements.filter(e => !(e.data?.source && e.data?.target) && e.data?.id);
+    const nodes = elements.filter(e => e.data?.id && e.data?.label && !(e.data?.source && e.data?.target));
     const edges = elements.filter(e => (e.data?.source && e.data?.target));
 
     // nodes: id をキーに保存（重複は先勝ち）
@@ -262,21 +262,70 @@
   }
 
 function initCy(part){
-  const myToken = renderToken; // ★runで更新された最新トークンだけ生かす
+  const myToken = renderToken; // ★この時点のトークン（古い描画を捨てる用）
 
   if(cy) cy.destroy();
 
-  cy = cytoscape({ ... });
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements: part,
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'label': 'data(label)',
+          'font-size': 12,
+          'text-wrap': 'wrap',
+          'text-max-width': 160,
+          'text-valign': 'center',
+          'text-halign': 'center',
+          'background-color': '#FCE7F3',
+          'border-width': 1.8,
+          'border-color': '#FFDEEB',
+          'color': '#831843',
+          'width': 'label',
+          'padding': '12px',
+          'shape': 'round-rectangle'
+        }
+      },
+      {
+        selector: 'edge',
+        style: {
+          'target-arrow-shape': 'triangle',
+          'target-arrow-fill': 'filled',
+          'arrow-scale': 1.2,
+          'width': 2,
+          'line-color': '#D1B0C2',
+          'target-arrow-color': '#D1B0C2',
+          'curve-style': 'unbundled-bezier',
+          'edge-distances': 'node-position'
+        }
+      },
+      { selector: 'edge[role="mother"]', style: { 'line-style': 'solid',  'control-point-distance': 30, 'control-point-weight': 0.5 } },
+      { selector: 'edge[role="father"]', style: { 'line-style': 'dashed', 'control-point-distance': -30,'control-point-weight': 0.5 } },
+      { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted','control-point-distance': 18,'control-point-weight': 0.5 } }
+    ],
+    layout: { name: 'preset' }
+  });
 
   requestAnimationFrame(() => {
-    if(myToken !== renderToken) return; // ★途中で別run来たら捨てる
+    if(myToken !== renderToken) return;
+
     cy.resize();
 
-    const opts = { ... };
-    const layout = cy.layout(opts);
+    const layout = cy.layout({
+      name: 'dagre',
+      rankDir: 'LR',
+      nodeSep: 20,
+      edgeSep: 6,
+      rankSep: 90,
+      padding: 20,
+      nodeDimensionsIncludeLabels: true,
+      animate: false
+    });
 
     layout.on('layoutstop', () => {
-      if(myToken !== renderToken) return; // ★古いなら何もしない
+      if(myToken !== renderToken) return;
       cy.fit(undefined, 30);
       requestAnimationFrame(() => {
         if(myToken !== renderToken) return;
@@ -369,6 +418,7 @@ function run(){
 
 </body>
 </html>
+
 
 
 

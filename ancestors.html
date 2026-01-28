@@ -127,6 +127,8 @@
   let parentsOf = new Map();    // childId -> [{parentId, role, edgeId}]
   let cy = null;
 
+  let renderToken = 0;   // ★ここに追加
+  
   const UNKNOWN_LABELS = new Set(['unknown','不明']);
 
   function isUnknownLabel(label){
@@ -412,4 +414,5 @@ function run(){
 
 </body>
 </html>
+
 

@@ -61,7 +61,7 @@
     label{ font-size: 13px; color:#111827; }
     .muted{ color: var(--muted); font-size:12px; line-height:1.35; }
 
-    #cy{ width:100%; height: calc(100vh - 74px); }
+    #cy{ width:100%; height: calc(100dvh - 74px); }
 
     .pill{
       font-size: 12px;
@@ -73,10 +73,9 @@
       white-space: nowrap;
     }
 
-    @media (max-width: 600px){
-      #cy{ height: calc(100vh - 120px); }
-      input{ min-width: 200px !important; }
-    }
+@media (max-width: 600px){
+  #cy{ height: calc(100dvh - 120px); }
+}
   </style>
 </head>
 

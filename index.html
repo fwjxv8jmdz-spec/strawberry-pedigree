@@ -859,8 +859,8 @@ function setDetail(n){
     const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
     const links = parts.map(p => {
       const isUrl = /^https?:\/\//i.test(p);
-      return isUrl
-        ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">${esc(p)}</a></div>`
+      return isUrl 
+        ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">${esc(p)}</a></div>`
         : `<div>${esc(p)}</div>`;
     }).join('');
     sourcesHtml = `<div style="margin-top:8px;"><b>品種登録情報</b>${links}</div>`;
@@ -1019,12 +1019,18 @@ function renderCultivarList(nodes, badgeText){
 
   wrap.querySelectorAll('tbody tr').forEach(tr => {
     tr.addEventListener('click', () => {
+      if (e.target.tagName === 'A') return;
       const nodeId = tr.getAttribute('data-node-id');
       const n = cy.getElementById(nodeId);
       if(n && n.length){
         /* ★ 修正②：検索タブでタップ→グラフ中央へ */
         focusFromList(n);
       }
+    });
+  });
+  wrap.querySelectorAll('tbody tr a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.stopPropagation();
     });
   });
 }

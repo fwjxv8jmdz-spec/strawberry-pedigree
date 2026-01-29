@@ -170,10 +170,8 @@
     dl.innerHTML = sortedLabels.map(l => `<option value="${l}">`).join('');
   }
 
-function collectAncestors(startId, depthN, includeUnknown) {
-    const keepNodes = new Map(); // SetからMapに変更して階層を保持
-    keepNodes.set(startId, 0); // 開始ノードはレベル0
-
+  function collectAncestors(startId, depthN, includeUnknown) {
+    const keepNodes = new Set([startId]);
     const resultElements = [];
     let frontier = [startId];
 
@@ -188,10 +186,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
           const label = String(parentNode.data.label).toLowerCase();
           if (!includeUnknown && UNKNOWN_LABELS.has(label)) return;
 
-          // すでに登録済みでも、より深い（遠い）世代を優先する
-          if (!keepNodes.has(p.parentId) || keepNodes.get(p.parentId) < gen) {
-            keepNodes.set(p.parentId, gen);
-          }
+          keepNodes.add(p.parentId);
           nextFrontier.push(p.parentId);
           
           resultElements.push({
@@ -203,15 +198,9 @@ function collectAncestors(startId, depthN, includeUnknown) {
       if (frontier.length === 0) break;
     }
 
-    // ノードを結果に追加する際、生成したlevelをdataに注入する
-    keepNodes.forEach((level, id) => {
+    keepNodes.forEach(id => {
       const n = nodeById.get(id);
-      if (n) {
-        // 元のデータを壊さないようコピーしてlevelを追加
-        const nodeData = JSON.parse(JSON.stringify(n));
-        nodeData.data.level = level; 
-        resultElements.push(nodeData);
-      }
+      if (n) resultElements.push(n);
     });
 
     return resultElements;
@@ -287,12 +276,12 @@ function collectAncestors(startId, depthN, includeUnknown) {
       ]
     });
   }
-function run() {
+
+  function run() {
     if (!all) return;
     const myToken = ++renderToken;
     const label = document.getElementById('name').value.trim();
-    // 1回目：ここで宣言
-    const depthVal = parseInt(document.getElementById('depth').value, 10); 
+    const depth = parseInt(document.getElementById('depth').value, 10);
     const includeUnknown = document.getElementById('includeUnknown').checked;
 
     const startId = nodeByLabel.get(label);
@@ -302,10 +291,10 @@ function run() {
     }
 
     setParam('name', label);
-    setParam('n', depthVal);
+    setParam('n', depth);
     setParam('u', includeUnknown ? '1' : '0');
 
-    const elements = collectAncestors(startId, depthVal, includeUnknown);
+    const elements = collectAncestors(startId, depth, includeUnknown);
     setBadge('描画中...');
 
     if (currentLayout) currentLayout.stop();
@@ -315,60 +304,30 @@ function run() {
       cy.add(elements);
     });
 
+    // 描画の安定化のためsetTimeoutを使用
     setTimeout(() => {
       if (myToken !== renderToken) return;
       cy.resize();
-
-      // ダミー要素を追加して世代を物理的に固定
-      cy.batch(() => {
-        for (let i = 0; i <= depthVal; i++) {
-          cy.add({
-            group: 'nodes',
-            data: { id: `_grid_${i}`, level: i },
-            style: { 'visibility': 'hidden', 'width': 1, 'height': 1 }
-          });
-          if (i > 0) {
-            cy.add({
-              group: 'edges',
-              data: { source: `_grid_${i}`, target: `_grid_${i-1}` },
-              style: { 'visibility': 'hidden', 'curve-style': 'haystack' }
-            });
-          }
-        }
-      });
-
+      
       currentLayout = cy.layout({
         name: 'dagre',
-        rankDir: 'RL',
-        nodeSep: 20,
+        rankDir: 'LR',
+        ranker: 'longest-path',
+        nodeSep: 30,
         rankSep: 100,
-        // エッジの重み付け：本物の親子関係(roleあり)を弱く、ダミー(roleなし)を強くして「背骨」を優先
-        edgeWeight: (edge) => edge.data('role') ? 1 : 100, 
-        ranker: (dagreGraph) => {
-          cy.nodes().forEach(n => {
-            dagreGraph.setNode(n.id(), { 
-              width: n.width(), 
-              height: n.height(), 
-              rank: n.data('level') 
-            });
-          });
-        },
+        padding: 50,
         animate: true,
         animationDuration: 400,
         fit: true,
         stop: () => {
-          // 計算が終わったらダミーを削除
-          cy.elements('[id ^= "_grid_"]').remove();
           if (myToken === renderToken) {
-            setBadge(`表示中: ${label}`);
-            cy.fit(undefined, 50);
+            setBadge(`表示中: ${label} (ノード:${cy.nodes().size()})`);
           }
         }
       });
       currentLayout.run();
-    }, 50);
+    }, 10);
   }
-  
 
   async function load() {
     try {
@@ -416,10 +375,6 @@ function run() {
 </script>
 </body>
 </html>
-
-
-
-
 
 
 

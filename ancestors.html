@@ -170,8 +170,10 @@
     dl.innerHTML = sortedLabels.map(l => `<option value="${l}">`).join('');
   }
 
-  function collectAncestors(startId, depthN, includeUnknown) {
-    const keepNodes = new Set([startId]);
+function collectAncestors(startId, depthN, includeUnknown) {
+    const keepNodes = new Map(); // SetからMapに変更して階層を保持
+    keepNodes.set(startId, 0); // 開始ノードはレベル0
+
     const resultElements = [];
     let frontier = [startId];
 
@@ -186,7 +188,10 @@
           const label = String(parentNode.data.label).toLowerCase();
           if (!includeUnknown && UNKNOWN_LABELS.has(label)) return;
 
-          keepNodes.add(p.parentId);
+          // すでに登録済みでも、より深い（遠い）世代を優先する
+          if (!keepNodes.has(p.parentId) || keepNodes.get(p.parentId) < gen) {
+            keepNodes.set(p.parentId, gen);
+          }
           nextFrontier.push(p.parentId);
           
           resultElements.push({
@@ -198,9 +203,15 @@
       if (frontier.length === 0) break;
     }
 
-    keepNodes.forEach(id => {
+    // ノードを結果に追加する際、生成したlevelをdataに注入する
+    keepNodes.forEach((level, id) => {
       const n = nodeById.get(id);
-      if (n) resultElements.push(n);
+      if (n) {
+        // 元のデータを壊さないようコピーしてlevelを追加
+        const nodeData = JSON.parse(JSON.stringify(n));
+        nodeData.data.level = level; 
+        resultElements.push(nodeData);
+      }
     });
 
     return resultElements;
@@ -311,8 +322,15 @@
       
       currentLayout = cy.layout({
         name: 'dagre',
-        rankDir: 'LR',
-        ranker: 'longest-path',
+        rankDir: 'RL',
+        //ranker: 'longest-path',
+        transform: (node, pos) => pos, 
+        ranker: (dagreGraph) => {
+          cy.nodes().forEach(node => {
+            const level = node.data('level');
+            dagreGraph.setNode(node.id(), { width: node.width(), height: node.height(), rank: level });
+          });
+        },
         nodeSep: 30,
         rankSep: 100,
         padding: 50,
@@ -375,6 +393,7 @@
 </script>
 </body>
 </html>
+
 
 
 

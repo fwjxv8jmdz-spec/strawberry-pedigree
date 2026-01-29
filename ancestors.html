@@ -128,6 +128,8 @@
   let cy = null;
 
   let renderToken = 0;   // ★ここに追加
+  let currentLayout = null;
+
   
   const UNKNOWN_LABELS = new Set(['unknown','不明']);
 
@@ -261,14 +263,12 @@
     };
   }
 
-function initCy(part){
-  const myToken = renderToken; // ★この時点のトークン（古い描画を捨てる用）
-
-  if(cy) cy.destroy();
+function initCyOnce(){
+  if(cy) return;
 
   cy = cytoscape({
     container: document.getElementById('cy'),
-    elements: part,
+    elements: [],
     style: [
       {
         selector: 'node',
@@ -307,33 +307,59 @@ function initCy(part){
     ],
     layout: { name: 'preset' }
   });
+}
 
+  function updateGraphAndRelayout(part, myToken){
+  if(!cy) initCyOnce();
+  if(myToken !== renderToken) return;
+
+  // 走ってるlayoutがあれば止める（これが超重要）
+  if(currentLayout){
+    try{ currentLayout.stop(); }catch(e){}
+    currentLayout = null;
+  }
+  cy.stop(); // アニメ/レイアウト停止
+
+  // 要素差し替え（destroyしない）
+  cy.batch(() => {
+    cy.elements().remove();
+    cy.add(part);
+  });
+
+  // ★ ここがコツ：DOMの再計算→resize→layout
   requestAnimationFrame(() => {
     if(myToken !== renderToken) return;
 
-    cy.resize();
-
-    const layout = cy.layout({
-      name: 'dagre',
-      rankDir: 'LR',
-      nodeSep: 20,
-      edgeSep: 6,
-      rankSep: 90,
-      padding: 20,
-      nodeDimensionsIncludeLabels: true,
-      animate: false
-    });
-
-    layout.on('layoutstop', () => {
+    requestAnimationFrame(() => {
       if(myToken !== renderToken) return;
-      cy.fit(undefined, 30);
-      requestAnimationFrame(() => {
+
+      cy.resize();
+
+      const opts = {
+        name: 'dagre',
+        rankDir: 'LR',
+        nodeSep: 20,
+        edgeSep: 6,
+        rankSep: 90,
+        padding: 20,
+        nodeDimensionsIncludeLabels: true,
+        animate: false
+      };
+
+      currentLayout = cy.layout(opts);
+
+      currentLayout.on('layoutstop', () => {
         if(myToken !== renderToken) return;
         cy.fit(undefined, 30);
+        requestAnimationFrame(() => {
+          if(myToken !== renderToken) return;
+          cy.resize();
+          cy.fit(undefined, 30);
+        });
       });
-    });
 
-    layout.run();
+      currentLayout.run();
+    });
   });
 }
 
@@ -356,14 +382,14 @@ function run(){
   setParam('n', String(depth));
   setParam('u', includeUnknown ? '1' : '0');
 
-  const { elements, nodeCount, edgeCount } = collectAncestors(startId, depth, includeUnknown);
+const { elements, nodeCount, edgeCount } = collectAncestors(startId, depth, includeUnknown);
 
-  // ★少し待って“最後のrunだけ”実行（連打に強い）
-  requestAnimationFrame(() => {
-    if(myToken !== renderToken) return; // 途中で別runが来たら捨てる
-    initCy(elements);
-    setBadge(`ノード ${nodeCount} / エッジ ${edgeCount}（${label}, N=${depth}）`);
-  });
+requestAnimationFrame(() => {
+  if(myToken !== renderToken) return;
+  updateGraphAndRelayout(elements, myToken);
+  setBadge(`ノード ${nodeCount} / エッジ ${edgeCount}（${label}, N=${depth}）`);
+});
+
 }
 
 
@@ -384,7 +410,7 @@ function run(){
       if(pName) document.getElementById('name').value = pName;
       if(pN) document.getElementById('depth').value = pN;
       if(pU) document.getElementById('includeUnknown').checked = (pU === '1');
-
+initCyOnce();
       setBadge('準備OK');
       if(pName) run();
     }catch(e){
@@ -418,6 +444,7 @@ function run(){
 
 </body>
 </html>
+
 
 
 

@@ -478,6 +478,9 @@
 
     <!-- RIGHT -->
     <div id="right">
+      <button id="btnAncestors" style="width: 100%; margin-bottom: 12px; border-color: var(--pink-300); color: var(--wine); font-weight: 800; display: none;">
+      祖先のみ表示
+      </button>
       <div class="h">詳細</div>
       <div id="detail" class="muted">品種名をクリックすると情報が表示されます。</div>
 
@@ -548,6 +551,7 @@
   </footer>
 
 <script>
+
  // ★初期フォーカス候補（品種名ラベルで指定）
     const initialFocusLabels = [
       'とちおとめ',
@@ -832,13 +836,20 @@ function initPanButtons(){
 
 /* ===== detail ===== */
 function setDetail(n){
+  const btnAnc = document.getElementById('btnAncestors');
   if(!n){
     document.getElementById('detail').innerHTML =
       '<span class="muted">品種名をクリックすると詳細が表示されます。</span>';
+    if(btnAnc) btnAnc.style.display = 'none'; // 品種未選択なら隠す
     return;
   }
 
   const d = n.data();
+  if(btnAnc) {
+    btnAnc.style.display = 'block'; // 品種選択されたら表示
+    // データ属性に品種名を保存しておく
+    btnAnc.dataset.label = d.label;
+  }
   const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
   const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';

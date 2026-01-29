@@ -307,8 +307,9 @@
       currentLayout = cy.layout({
         name: 'dagre',
         rankDir: 'LR',
+        ranker: 'longest-path',
         nodeSep: 30,
-        rankSep: 80,
+        rankSep: 100,
         padding: 50,
         animate: true,
         animationDuration: 400,
@@ -369,5 +370,6 @@
 </script>
 </body>
 </html>
+
 
 

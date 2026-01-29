@@ -287,12 +287,12 @@ function collectAncestors(startId, depthN, includeUnknown) {
       ]
     });
   }
-
-  function run() {
+function run() {
     if (!all) return;
     const myToken = ++renderToken;
     const label = document.getElementById('name').value.trim();
-    const depth = parseInt(document.getElementById('depth').value, 10);
+    // 1回目：ここで宣言
+    const depthVal = parseInt(document.getElementById('depth').value, 10); 
     const includeUnknown = document.getElementById('includeUnknown').checked;
 
     const startId = nodeByLabel.get(label);
@@ -302,10 +302,10 @@ function collectAncestors(startId, depthN, includeUnknown) {
     }
 
     setParam('name', label);
-    setParam('n', depth);
+    setParam('n', depthVal);
     setParam('u', includeUnknown ? '1' : '0');
 
-    const elements = collectAncestors(startId, depth, includeUnknown);
+    const elements = collectAncestors(startId, depthVal, includeUnknown);
     setBadge('描画中...');
 
     if (currentLayout) currentLayout.stop();
@@ -315,23 +315,18 @@ function collectAncestors(startId, depthN, includeUnknown) {
       cy.add(elements);
     });
 
-// 描画の安定化のためsetTimeoutを使用
     setTimeout(() => {
       if (myToken !== renderToken) return;
       cy.resize();
 
-      // --- 【ここから修正】 ---
-      const depth = parseInt(document.getElementById('depth').value, 10);
-      
-      // 1. 各世代の「壁」となる透明なダミー要素を追加
+      // ダミー要素を追加して世代を物理的に固定
       cy.batch(() => {
-        for (let i = 0; i <= depth; i++) {
+        for (let i = 0; i <= depthVal; i++) {
           cy.add({
             group: 'nodes',
             data: { id: `_grid_${i}`, level: i },
             style: { 'visibility': 'hidden', 'width': 1, 'height': 1 }
           });
-          // 壁同士をつなぐ透明なエッジ（これで列の順番を固定する）
           if (i > 0) {
             cy.add({
               group: 'edges',
@@ -347,10 +342,10 @@ function collectAncestors(startId, depthN, includeUnknown) {
         rankDir: 'RL',
         nodeSep: 20,
         rankSep: 100,
-        edgeWeight: (edge) => edge.data('role') ? 1 : 10, // ダミーのエッジを強く優先させる
+        // エッジの重み付け：本物の親子関係(roleあり)を弱く、ダミー(roleなし)を強くして「背骨」を優先
+        edgeWeight: (edge) => edge.data('role') ? 1 : 100, 
         ranker: (dagreGraph) => {
           cy.nodes().forEach(n => {
-            // 全てのノード（本物も透明な壁も）を、保持しているlevelの列に強制配属
             dagreGraph.setNode(n.id(), { 
               width: n.width(), 
               height: n.height(), 
@@ -362,7 +357,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
         animationDuration: 400,
         fit: true,
         stop: () => {
-          // 2. レイアウトが終わったらダミー要素を消す
+          // 計算が終わったらダミーを削除
           cy.elements('[id ^= "_grid_"]').remove();
           if (myToken === renderToken) {
             setBadge(`表示中: ${label}`);
@@ -371,9 +366,9 @@ function collectAncestors(startId, depthN, includeUnknown) {
         }
       });
       currentLayout.run();
-      // --- 【ここまで修正】 ---
     }, 50);
   }
+  
 
   async function load() {
     try {
@@ -421,6 +416,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
 </script>
 </body>
 </html>
+
 
 
 

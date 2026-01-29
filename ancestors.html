@@ -234,8 +234,7 @@
             // 'curve-style': 'taxi', を以下に変更
             'curve-style': 'unbundled-bezier',
             'target-arrow-shape': 'triangle',
-            'line-color': '#D1B0C2',
-            'target-arrow-color': '#D1B0C2',
+
             'width': 2,
             'arrow-scale': 1.2,
             'edge-distances': 'node-position' // 距離計算の基準
@@ -245,6 +244,8 @@
         { 
           selector: 'edge[role="mother"]', 
           style: { 
+            'line-color': '#D1B0C2',
+            'target-arrow-color': '#D1B0C2',
             'line-style': 'solid', 
             'control-point-distance': -30, 
             'control-point-weight': 0.5 
@@ -254,6 +255,8 @@
         { 
           selector: 'edge[role="father"]', 
           style: { 
+            'line-color': '#B0C1D1',
+            'target-arrow-color': '#B0C1D1',
             'line-style': 'dashed', 
             'control-point-distance': 30, 
             'control-point-weight': 0.5 
@@ -264,6 +267,8 @@
           selector: 'edge[role="unknown"]', 
           style: { 
             'line-style': 'dotted', 
+            'line-color': '#cccccc',
+            'target-arrow-color': '#cccccc',
             'control-point-distance': 15, 
             'control-point-weight': 0.5 
           } 
@@ -370,6 +375,7 @@
 </script>
 </body>
 </html>
+
 
 
 

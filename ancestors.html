@@ -170,7 +170,7 @@
     dl.innerHTML = sortedLabels.map(l => `<option value="${l}">`).join('');
   }
 
-  function collectAncestors(startId, depthN, includeUnknown) {
+function collectAncestors(startId, depthN, includeUnknown) {
     const keepNodes = new Set([startId]);
     const resultElements = [];
     let frontier = [startId];
@@ -184,13 +184,24 @@
           if (!parentNode) return;
 
           const label = String(parentNode.data.label).toLowerCase();
-          if (!includeUnknown && UNKNOWN_LABELS.has(label)) return;
+          const isUnknown = UNKNOWN_LABELS.has(label);
+
+          if (!includeUnknown && isUnknown) return;
 
           keepNodes.add(p.parentId);
           nextFrontier.push(p.parentId);
           
+          // ★ 修正点1: roleが空でも名前が不明なら 'unknown' 扱いにする
+          const effectiveRole = isUnknown ? 'unknown' : p.role;
+
+          // ★ 修正点2: IDにroleを含めることで、同じ親(福羽など)から複数本引けるようにする
           resultElements.push({
-            data: { id: `e-${p.parentId}-${childId}`, source: p.parentId, target: childId, role: p.role }
+            data: { 
+              id: `e-${p.parentId}-${childId}-${p.role}`, // IDをユニーク化
+              source: p.parentId, 
+              target: childId, 
+              role: effectiveRole 
+            }
           });
         });
       });
@@ -375,6 +386,7 @@
 </script>
 </body>
 </html>
+
 
 
 

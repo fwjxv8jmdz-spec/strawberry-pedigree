@@ -315,36 +315,64 @@ function collectAncestors(startId, depthN, includeUnknown) {
       cy.add(elements);
     });
 
-    // 描画の安定化のためsetTimeoutを使用
+// 描画の安定化のためsetTimeoutを使用
     setTimeout(() => {
       if (myToken !== renderToken) return;
       cy.resize();
+
+      // --- 【ここから修正】 ---
+      const depth = parseInt(document.getElementById('depth').value, 10);
       
+      // 1. 各世代の「壁」となる透明なダミー要素を追加
+      cy.batch(() => {
+        for (let i = 0; i <= depth; i++) {
+          cy.add({
+            group: 'nodes',
+            data: { id: `_grid_${i}`, level: i },
+            style: { 'visibility': 'hidden', 'width': 1, 'height': 1 }
+          });
+          // 壁同士をつなぐ透明なエッジ（これで列の順番を固定する）
+          if (i > 0) {
+            cy.add({
+              group: 'edges',
+              data: { source: `_grid_${i}`, target: `_grid_${i-1}` },
+              style: { 'visibility': 'hidden', 'curve-style': 'haystack' }
+            });
+          }
+        }
+      });
+
       currentLayout = cy.layout({
         name: 'dagre',
         rankDir: 'RL',
-        //ranker: 'longest-path',
-        transform: (node, pos) => pos, 
+        nodeSep: 20,
+        rankSep: 100,
+        edgeWeight: (edge) => edge.data('role') ? 1 : 10, // ダミーのエッジを強く優先させる
         ranker: (dagreGraph) => {
-          cy.nodes().forEach(node => {
-            const level = node.data('level');
-            dagreGraph.setNode(node.id(), { width: node.width(), height: node.height(), rank: level });
+          cy.nodes().forEach(n => {
+            // 全てのノード（本物も透明な壁も）を、保持しているlevelの列に強制配属
+            dagreGraph.setNode(n.id(), { 
+              width: n.width(), 
+              height: n.height(), 
+              rank: n.data('level') 
+            });
           });
         },
-        nodeSep: 30,
-        rankSep: 100,
-        padding: 50,
         animate: true,
         animationDuration: 400,
         fit: true,
         stop: () => {
+          // 2. レイアウトが終わったらダミー要素を消す
+          cy.elements('[id ^= "_grid_"]').remove();
           if (myToken === renderToken) {
-            setBadge(`表示中: ${label} (ノード:${cy.nodes().size()})`);
+            setBadge(`表示中: ${label}`);
+            cy.fit(undefined, 50);
           }
         }
       });
       currentLayout.run();
-    }, 10);
+      // --- 【ここまで修正】 ---
+    }, 50);
   }
 
   async function load() {
@@ -393,6 +421,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
 </script>
 </body>
 </html>
+
 
 
 

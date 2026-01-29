@@ -627,6 +627,19 @@ function hideCyLoading(){
   
 let cy = null;
 
+function openAncestorsTab(label){
+  const name = (label ?? '').toString().trim();
+  if(!name) return;
+
+  // 必要なら既定値をここで調整
+  const n = 3;   // 祖父母まで
+  const u = 1;   // unknown含めない（含めるなら 1）
+
+  const url = `ancestors.html?name=${encodeURIComponent(name)}&n=${n}&u=${u}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+
 const mqMobile = window.matchMedia('(max-width: 900px)');
 const isMobileNow = () => mqMobile.matches;
 const nodeFontSize = () => (isMobileNow() ? 18 : 12);
@@ -849,6 +862,12 @@ function setDetail(n){
     btnAnc.style.display = 'block'; // 品種選択されたら表示
     // データ属性に品種名を保存しておく
     btnAnc.dataset.label = d.label;
+    if(!btnAnc.dataset.bound){
+    btnAnc.dataset.bound = "1";
+    btnAnc.addEventListener('click', () => {
+      openAncestorsTab(btnAnc.dataset.label);
+    });
+  }
   }
   const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
   const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';

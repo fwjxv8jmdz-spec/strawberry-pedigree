@@ -228,19 +228,46 @@
             'color': '#831843'
           }
         },
-        {
+{
           selector: 'edge',
           style: {
-            'curve-style': 'taxi',
-            'taxi-direction': 'horizontal',
+            // 'curve-style': 'taxi', を以下に変更
+            'curve-style': 'unbundled-bezier',
             'target-arrow-shape': 'triangle',
             'line-color': '#D1B0C2',
             'target-arrow-color': '#D1B0C2',
-            'width': 2
+            'width': 2,
+            'arrow-scale': 1.2,
+            'edge-distances': 'node-position' // 距離計算の基準
           }
         },
-        { selector: 'edge[role="father"]', style: { 'line-style': 'dashed' } },
-        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted' } }
+        // 母方のライン：上側に膨らませる
+        { 
+          selector: 'edge[role="mother"]', 
+          style: { 
+            'line-style': 'solid', 
+            'control-point-distance': 30, 
+            'control-point-weight': 0.5 
+          } 
+        },
+        // 父方のライン：下側に膨らませる
+        { 
+          selector: 'edge[role="father"]', 
+          style: { 
+            'line-style': 'dashed', 
+            'control-point-distance': -30, 
+            'control-point-weight': 0.5 
+          } 
+        },
+        // 不明のライン：少しだけ膨らませる
+        { 
+          selector: 'edge[role="unknown"]', 
+          style: { 
+            'line-style': 'dotted', 
+            'control-point-distance': 15, 
+            'control-point-weight': 0.5 
+          } 
+        }
       ]
     });
   }
@@ -342,3 +369,4 @@
 </script>
 </body>
 </html>
+

@@ -141,6 +141,26 @@ body{
     });
   }
 
+  let pendingRun = false;
+
+function safeRun(){
+  // タブが非表示なら、表示に戻ったときに1回だけ実行
+  if (document.hidden) {
+    pendingRun = true;
+    return;
+  }
+  run(); // 既存の run() を呼ぶ
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden && pendingRun) {
+    pendingRun = false;
+    // 表示復帰直後はレイアウトが崩れやすいので少し待つ
+    setTimeout(() => run(), 50);
+  }
+});
+
+
   
   let all = null;        // elements.json 生データ
   let nodeById = new Map();
@@ -440,6 +460,14 @@ initCyOnce();
     }
   }
 
+window.addEventListener("resize", () => {
+  if(!cy) return;
+  cy.resize();
+  // 表示が崩れてたら戻す
+  requestAnimationFrame(() => cy.fit(undefined, 30));
+});
+
+  
   window.addEventListener('DOMContentLoaded', () => {
     const btnRun = document.getElementById('run');
     const inpName = document.getElementById('name');
@@ -456,8 +484,8 @@ initCyOnce();
     inpName.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') run(); });
 
     let t = null;
-    selDepth.addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
-    chkUnknown.addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(run, 120); });
+selDepth.addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(safeRun, 80); });
+chkUnknown.addEventListener('change', ()=>{ clearTimeout(t); t=setTimeout(safeRun, 80); });
 
     load();
   });
@@ -465,6 +493,7 @@ initCyOnce();
 
 </body>
 </html>
+
 
 
 

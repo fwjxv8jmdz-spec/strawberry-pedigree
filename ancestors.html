@@ -2,85 +2,89 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>祖先のみ表示 | Strawberry Pedigree</title>
   <meta name="description" content="品種名と世代を指定して、その品種の祖先だけを抽出して表示します。" />
 
-  <!-- Cytoscape -->
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
-  <!-- dagre -->
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
 
   <style>
-    :root{
-      --border:#e5e7eb;
-      --muted:#6b7280;
-      --pink-50:#fff1f7;
-      --pink-100:#FCE7F3;
-      --pink-200:#FBCFE8;
-      --pink-300:#F9A8D4;
-      --wine:#831843;
-      --bg:#ffffff;
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --pink-50: #fff1f7;
+      --pink-100: #FCE7F3;
+      --pink-300: #F9A8D4;
+      --wine: #831843;
+      --bg: #ffffff;
     }
 
-    html, body { height: 100%; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+    html, body { 
+      height: 100%; 
+      margin: 0; 
+      padding: 0;
+      overflow: hidden; 
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
       background: var(--bg);
-      color:#111827;
-      overflow: hidden;
+      color: #111827;
     }
-    a{ color:#2563eb; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+    a { color: #2563eb; text-decoration: none; }
 
-    /* ===== Layout (B風：左 / 中央グラフ / 右) ===== */
-    #app{
+    /* ===== Layout (PC: 3列 / Mobile: 1列) ===== */
+    #app {
       display: grid;
-      grid-template-columns: 340px 1fr 360px;
+      grid-template-columns: 320px 1fr 320px;
       height: 100vh;
+      width: 100vw;
     }
-    #left, #right{
-      overflow: auto;
-      padding: 12px;
-      background: #fff;
-    }
-    #left{ border-right: 1px solid var(--border); }
-    #right{ border-left: 1px solid var(--border); }
 
-    #cyWrap{
+    #left, #right {
+      overflow-y: auto;
+      padding: 16px;
+      background: #fff;
+      z-index: 10;
+    }
+    #left { border-right: 1px solid var(--border); }
+    #right { border-left: 1px solid var(--border); }
+
+    #cyWrap {
       position: relative;
-      width: 100%;
+      flex: 1;
       height: 100%;
       background: #fafafa;
+      overflow: hidden;
     }
-    #cy{
+    #cy {
       width: 100%;
       height: 100%;
+      display: block;
     }
 
-    .h{ font-weight: 800; margin: 6px 0 10px; }
-    .muted{ color: var(--muted); font-size: 12px; line-height: 1.4; }
-    .box{
+    /* UI Parts */
+    .h { font-weight: 800; margin: 0 0 10px; font-size: 15px; }
+    .muted { color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .box {
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 12px;
+      margin-bottom: 12px;
       background: #fff;
     }
-    .pill{
-      display:inline-block;
+    .pill {
+      display: inline-block;
       font-size: 11px;
       padding: 2px 8px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: #fff;
       color: var(--muted);
-      white-space: nowrap;
     }
 
-    input[type="text"], select{
+    input[type="text"], select {
       width: 100%;
       box-sizing: border-box;
       padding: 10px;
@@ -88,100 +92,72 @@
       border-radius: 10px;
       background: #fff;
       font-size: 14px;
+      margin-bottom: 8px;
     }
-    button{
+    button {
       width: 100%;
-      padding: 10px 12px;
+      padding: 12px;
       border: 1px solid #d1d5db;
       border-radius: 10px;
       background: #fff;
       cursor: pointer;
       font-weight: 900;
+      transition: background 0.2s;
     }
-    button:hover{ background:#f9fafb; }
+    button:hover { background: #f9fafb; }
 
-    label.chk{
-      display:flex;
-      align-items:center;
-      gap: 8px;
-      font-size: 13px;
-      user-select: none;
-    }
-    label.chk input{ width:auto; }
-
-    /* loading overlay */
-    #cyLoading{
+    /* Loading Overlay */
+    #cyLoading {
       position: absolute;
       inset: 0;
       display: none;
       place-items: center;
-      background: rgba(255,255,255,0.78);
-      backdrop-filter: blur(6px);
-      z-index: 20;
-      pointer-events: none;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 100;
     }
-    #cyLoading.show{ display:grid; }
-    .loaderBox{
-      width: min(360px, 86vw);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.92);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-      padding: 16px 16px 14px;
-      text-align: center;
-    }
-    .spinner{
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      border: 3px solid #e5e7eb;
-      border-top-color: var(--pink-300);
-      animation: spin 0.9s linear infinite;
-      margin: 0 auto;
-    }
-    @keyframes spin{ to { transform: rotate(360deg); } }
+    #cyLoading.show { display: grid; }
 
-    /* ===== Mobile tabs (Bの思想を残す) ===== */
-    #mobileTabs{ display:none; }
-    @media (max-width: 900px){
-      #app{
+    /* ===== Mobile Responsive ===== */
+    #mobileTabs { display: none; }
+
+    @media (max-width: 1000px) {
+      #app {
         grid-template-columns: 1fr;
-        height: 100vh;
       }
-      #left, #right, #cyWrap{ display:none; border: none; }
-      body.tab-left  #left{ display:block; }
-      body.tab-cy    #cyWrap{ display:block; }
-      body.tab-right #right{ display:block; }
+      #left, #right, #cyWrap { 
+        display: none; 
+        height: calc(100vh - 60px); 
+      }
+      
+      /* タブ切り替え制御 */
+      body.tab-left #left { display: block; }
+      body.tab-cy #cyWrap { display: block; }
+      body.tab-right #right { display: block; }
 
-      #left, #right{
-        height: calc(100vh - 64px);
-        overflow:auto;
-      }
-      #cyWrap{
-        height: calc(100vh - 64px);
-      }
-
-      #mobileTabs{
+      #mobileTabs {
         position: fixed;
-        left: 0; right: 0; bottom: 0;
+        bottom: 0; left: 0; right: 0;
+        height: 60px;
         display: flex;
-        gap: 8px;
-        padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
-        background: rgba(255,255,255,0.92);
+        background: #fff;
         border-top: 1px solid var(--border);
-        backdrop-filter: blur(8px);
+        padding: 5px;
+        box-sizing: border-box;
         z-index: 1000;
       }
-      #mobileTabs button{
+      #mobileTabs button {
         flex: 1;
-        width: auto;
-        border-radius: 999px;
-        font-size: 14px;
+        border: none;
+        background: none;
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--muted);
       }
-      #mobileTabs button.active{
-        border-color: var(--pink-300);
-        background: var(--pink-100);
+      #mobileTabs button.active {
         color: var(--wine);
+        background: var(--pink-100);
+        border-radius: 8px;
       }
     }
   </style>
@@ -189,482 +165,288 @@
 
 <body class="tab-cy">
   <div id="app">
-    <!-- LEFT: 操作系（Bのヘッダー分をここへ移動） -->
     <div id="left">
-      <div class="h" style="font-size:16px; margin-top:0;">祖先のみ表示</div>
-      <div class="muted">
-        品種名と世代を指定して、その品種の祖先だけを抽出して表示します。
-      </div>
+      <div class="h" style="font-size:18px;">祖先のみ表示</div>
+      <p class="muted">選択した品種のルーツを家系図形式で表示します。</p>
 
       <div class="box">
-        <div class="h" style="margin:0 0 8px;">品種名</div>
-        <input id="name" type="text" list="cultivars" placeholder="品種名（例：とちおとめ）" />
+        <div class="h">品種名</div>
+        <input id="name" type="text" list="cultivars" placeholder="例：とちおとめ" />
         <datalist id="cultivars"></datalist>
 
-        <div class="h" style="margin:10px 0 8px;">世代</div>
+        <div class="h" style="margin-top:10px;">遡る世代</div>
         <select id="depth">
-          <option value="1">1（親まで）</option>
-          <option value="2" selected>2（祖父母まで）</option>
-          <option value="3">3（曾祖父母まで）</option>
-          <option value="4">4（高祖父母まで）</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
+          <option value="1">1代前（親）</option>
+          <option value="2" selected>2代前（祖父母）</option>
+          <option value="3">3代前（曾祖父母）</option>
+          <option value="4">4代前（高祖父母）</option>
+          <option value="5">5代前</option>
+          <option value="6">6代前</option>
         </select>
 
-        <div style="margin:10px 0;">
-          <label class="chk">
-            <input id="includeUnknown" type="checkbox" />
-            不明(unknown)も含める
-          </label>
-        </div>
+        <label style="display:flex; align-items:center; gap:8px; font-size:13px; margin:10px 0;">
+          <input id="includeUnknown" type="checkbox" /> 不明(unknown)を含める
+        </label>
 
-        <button id="run" type="button">表示</button>
-
-        <div style="margin-top:10px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-          <span id="badge" class="pill">読み込み中…</span>
-          <a class="muted" href="./" style="margin-left:auto;">トップへ</a>
-        </div>
-
-        <div class="muted" style="margin-top:8px;" id="info-status">
-          品種を入力して「表示」を押してください。
-        </div>
+        <button id="run" type="button">系統図を表示</button>
       </div>
 
       <div class="box">
-        <div class="h" style="margin:0 0 6px;">凡例</div>
-        <div class="muted" style="line-height:1.7;">
-          <div><span class="pill" style="border-color:#D1B0C2;color:#831843;">母 → 子</span> 実線</div>
-          <div><span class="pill" style="border-color:#D1B0C2;color:#831843;">父 → 子</span> 破線</div>
-          <div><span class="pill" style="border-color:#D1B0C2;color:#831843;">不明</span> 点線</div>
+        <div class="h">ステータス</div>
+        <span id="badge" class="pill">準備中...</span>
+        <div id="info-status" class="muted" style="margin-top:8px;">品種を入力してください。</div>
+      </div>
+
+      <div class="box">
+        <div class="h">凡例</div>
+        <div class="muted">
+          母方：実線 / 父方：破線 / 不明：点線
         </div>
       </div>
-
-      <div class="muted" style="margin-top:auto; padding-top:10px;">
-        © Strawberry Pedigree
-      </div>
+      
+      <a class="muted" href="./" style="display:block; text-align:center;">← トップページに戻る</a>
     </div>
 
-    <!-- CENTER: Aの祖先系統図（Cytoscape） -->
     <div id="cyWrap">
       <div id="cy"></div>
-
-      <div id="cyLoading" aria-live="polite">
-        <div class="loaderBox">
-          <div class="spinner" aria-hidden="true"></div>
-          <div style="margin-top:8px; font-weight:900;">配置中…</div>
-          <div class="muted" style="margin-top:4px;">系統図を配置しています。</div>
+      <div id="cyLoading">
+        <div style="text-align:center; background:white; padding:20px; border-radius:12px; border:1px solid var(--border);">
+          <div style="font-weight:bold;">描画中...</div>
+          <div class="muted">家系図を計算しています</div>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT: Bの右カラムっぽい情報枠 -->
     <div id="right">
-      <div class="h" style="font-size:14px;">表示について</div>
-      <div class="box">
-        <div class="muted">
-          祖先抽出は「子(target) ← 親(source)」の向きで辿ります。<br>
-          表示が崩れる場合は、モバイルならタブを「系統図」にしてから再度「表示」を押してください。
-        </div>
+      <div class="h">解説</div>
+      <div class="box muted">
+        このツールは、膨大な交配データの中から特定の品種に繋がる祖先だけを抜き出して可視化します。
       </div>
-
-      <div class="box">
-        <div class="h" style="margin:0 0 6px;">利用条件・免責</div>
-        <div class="muted">
-          本サイトのデータの利用条件は以下をご確認ください。
-          <ul style="padding-left:16px; margin:6px 0;">
-            <li>
-              <a href="./README.html" target="_blank" rel="noopener noreferrer">利用上の注意</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="h" style="margin:0 0 6px;">問い合わせ</div>
-        <div class="muted">
-          情報提供・誤りの指摘など歓迎です。
-        </div>
-      </div>
+      <div class="h">ヒント</div>
+      <ul class="muted" style="padding-left:15px;">
+        <li>ノードをドラッグして動かせます</li>
+        <li>背景をドラッグで移動、スクロールで拡大縮小できます</li>
+        <li>表示がズレた場合は「系統図」タブで再度「表示」を押してください</li>
+      </ul>
+      <div class="muted" style="margin-top:20px; text-align:center;">© Strawberry Pedigree</div>
     </div>
   </div>
 
-  <!-- Mobile bottom tabs -->
-  <div id="mobileTabs" aria-label="mobile tabs">
-    <button type="button" data-tab="left">操作</button>
+  <div id="mobileTabs">
+    <button type="button" data-tab="left">設定</button>
     <button type="button" data-tab="cy" class="active">系統図</button>
     <button type="button" data-tab="right">情報</button>
   </div>
 
 <script>
-  // dagre を Cytoscape に登録
   if (window.cytoscape && window.cytoscapeDagre) {
     cytoscape.use(cytoscapeDagre);
   }
 
-  // ===== UI helpers =====
-  const mqMobile = window.matchMedia('(max-width: 900px)');
-  const isMobileNow = () => mqMobile.matches;
+  let allData = null;
+  let nodeById = new Map();
+  let nodeByLabel = new Map();
+  let parentsOf = new Map();
+  let cy = null;
+  let renderToken = 0;
 
-  function setTab(name){
-    document.body.classList.remove('tab-left','tab-cy','tab-right');
+  // タブ切り替え（スマホ用）
+  function setTab(name) {
+    document.body.classList.remove('tab-left', 'tab-cy', 'tab-right');
     document.body.classList.add(`tab-${name}`);
-    document.querySelectorAll('#mobileTabs button[data-tab]').forEach(b=>{
+    document.querySelectorAll('#mobileTabs button').forEach(b => {
       b.classList.toggle('active', b.dataset.tab === name);
     });
-
-    if(name === 'cy' && cy){
-      requestAnimationFrame(() => {
-        cy.resize();
-        setTimeout(() => cy.resize(), 80);
-      });
+    if (cy) {
+      setTimeout(() => { cy.resize(); cy.fit(); }, 100);
     }
   }
 
-  function initMobileTabs(){
-    const tabs = document.getElementById('mobileTabs');
-    if(!tabs) return;
+  document.querySelectorAll('#mobileTabs button').forEach(btn => {
+    btn.addEventListener('click', () => setTab(btn.dataset.tab));
+  });
 
-    function onChange(){
-      if(isMobileNow()){
-        setTab('cy');
-      }else{
-        document.body.classList.remove('tab-left','tab-cy','tab-right');
-      }
-    }
-    mqMobile.addEventListener('change', onChange);
-    onChange();
+  // データ解析
+  function parseElements(elements) {
+    nodeById.clear();
+    nodeByLabel.clear();
+    parentsOf.clear();
 
-    tabs.addEventListener('click', (e)=>{
-      const btn = e.target.closest('button[data-tab]');
-      if(!btn) return;
-      setTab(btn.dataset.tab);
+    const nodes = elements.filter(e => e.data && e.data.id && e.data.label && !e.data.source);
+    const edges = elements.filter(e => e.data && e.data.source && e.data.target);
+
+    nodes.forEach(n => {
+      const id = String(n.data.id);
+      nodeById.set(id, n);
+      const label = String(n.data.label).trim();
+      if (!nodeByLabel.has(label)) nodeByLabel.set(label, id);
+    });
+
+    edges.forEach(e => {
+      const target = String(e.data.target);
+      if (!parentsOf.has(target)) parentsOf.set(target, []);
+      parentsOf.get(target).push({
+        parentId: String(e.data.source),
+        role: e.data.role || ''
+      });
+    });
+
+    const dl = document.getElementById('cultivars');
+    Array.from(nodeByLabel.keys()).sort().forEach(l => {
+      const opt = document.createElement('option');
+      opt.value = l;
+      dl.appendChild(opt);
     });
   }
 
-  function showCyLoading(msg){
-    const el = document.getElementById('cyLoading');
-    if(!el) return;
-    if(msg){
-      const sub = el.querySelector('.muted');
-      if(sub) sub.textContent = msg;
-    }
-    el.classList.add('show');
-  }
-  function hideCyLoading(){
-    const el = document.getElementById('cyLoading');
-    if(!el) return;
-    el.classList.remove('show');
-  }
-
-  function setBadge(text){
-    const el = document.getElementById('badge');
-    if(el) el.textContent = text;
-  }
-
-  // ===== Data structures (Aのロジック) =====
-  let all = null;                // elements.json 生データ
-  let nodeById = new Map();
-  let nodeByLabel = new Map();   // label -> id（同名は先勝ち）
-  let parentsOf = new Map();     // childId -> [{parentId, role, edgeId}]
-  let cy = null;
-
-  let renderToken = 0;
-  let currentLayout = null;
-
-  const UNKNOWN_LABELS = new Set(['unknown','不明','n/a','na','nan']);
-
-  function isUnknownLabel(label){
-    const t = (label ?? '').toString().trim().toLowerCase();
-    return UNKNOWN_LABELS.has(t);
-  }
-
-  function getParam(name){
-    return new URL(location.href).searchParams.get(name);
-  }
-  function setParam(name, value){
-    const u = new URL(location.href);
-    if(value === null || value === undefined || value === '') u.searchParams.delete(name);
-    else u.searchParams.set(name, value);
-    history.replaceState({}, '', u.toString());
-  }
-
-  function parseElements(elements){
-    nodeById = new Map();
-    nodeByLabel = new Map();
-    parentsOf = new Map();
-
-    // group無しでも動く判定
-    const nodes = elements.filter(e => e.data?.id && e.data?.label && !(e.data?.source && e.data?.target));
-    const edges = elements.filter(e => (e.data?.source && e.data?.target));
-
-    for(const n of nodes){
-      const id = String(n.data.id ?? '').trim();
-      if(!id) continue;
-      if(!nodeById.has(id)) nodeById.set(id, n);
-
-      const label = (n.data.label ?? '').toString().trim();
-      if(label && !nodeByLabel.has(label)) nodeByLabel.set(label, id);
-    }
-
-    for(const e of edges){
-      const d = e.data || {};
-      const source = String(d.source ?? '').trim();
-      const target = String(d.target ?? '').trim();
-      if(!source || !target) continue;
-
-      const role = d.role || '';
-      const edgeId = d.id ? String(d.id) : undefined;
-
-      if(!parentsOf.has(target)) parentsOf.set(target, []);
-      parentsOf.get(target).push({ parentId: source, role, edgeId });
-    }
-
-    // datalist
-    const dl = document.getElementById('cultivars');
-    if(dl){
-      dl.innerHTML = '';
-      const labels = Array.from(nodeByLabel.keys())
-        .sort((a,b)=>a.localeCompare(b,'ja',{numeric:true}));
-      for(const label of labels){
-        const opt = document.createElement('option');
-        opt.value = label;
-        dl.appendChild(opt);
-      }
-    }
-  }
-
-  function collectAncestors(startId, depthN, includeUnknown){
+  // 祖先収集ロジック
+  function collectAncestors(startId, maxDepth, includeUnknown) {
     const keepNodes = new Set([startId]);
-    const keepEdges = new Set();
-    let frontier = new Set([startId]);
+    const keepEdges = [];
+    let frontier = [startId];
 
-    for(let gen=1; gen<=depthN; gen++){
-      const next = new Set();
+    for (let d = 0; d < maxDepth; d++) {
+      let nextFrontier = [];
+      frontier.forEach(childId => {
+        const parents = parentsOf.get(childId) || [];
+        parents.forEach(p => {
+          const parentNode = nodeById.get(p.parentId);
+          if (!parentNode) return;
 
-      for(const childId of frontier){
-        const ps = parentsOf.get(childId) || [];
-        for(const p of ps){
-          const parentId = p.parentId;
-          const parentNode = nodeById.get(parentId);
-          if(!parentNode) continue;
+          const label = String(parentNode.data.label).toLowerCase();
+          const isUnknown = ['不明', 'unknown', 'n/a', 'nan'].includes(label);
 
-          const label = (parentNode.data?.label ?? '').toString().trim();
-          if(!includeUnknown && isUnknownLabel(label)) continue;
+          if (!includeUnknown && isUnknown) return;
 
-          keepNodes.add(parentId);
-          next.add(parentId);
-
-          const k = p.edgeId ? `id:${p.edgeId}` : `st:${parentId}=>${childId}|${p.role}`;
-          keepEdges.add(k);
-        }
-      }
-
-      frontier = next;
-      if(frontier.size === 0) break;
+          keepNodes.add(p.parentId);
+          nextFrontier.push(p.parentId);
+          keepEdges.push({
+            data: {
+              source: p.parentId,
+              target: childId,
+              role: isUnknown ? 'unknown' : p.role
+            }
+          });
+        });
+      });
+      frontier = nextFrontier;
+      if (frontier.length === 0) break;
     }
 
-    const out = [];
-
-    for(const nid of keepNodes){
-      const n = nodeById.get(nid);
-      if(n) out.push(n);
-    }
-
-    const edges = all.filter(e => (e.data?.source && e.data?.target));
-    for(const e of edges){
-      const d = e.data || {};
-      const s = String(d.source ?? '').trim();
-      const t = String(d.target ?? '').trim();
-      if(!keepNodes.has(s) || !keepNodes.has(t)) continue;
-
-      const k = d.id ? `id:${String(d.id)}` : `st:${s}=>${t}|${d.role || ''}`;
-      if(keepEdges.has(k)) out.push(e);
-    }
-
-    return { elements: out, nodeCount: keepNodes.size, edgeCount: Math.max(0, out.length - keepNodes.size) };
+    const result = [];
+    keepNodes.forEach(id => result.push(nodeById.get(id)));
+    return result.concat(keepEdges);
   }
 
-  function initCyOnce(){
-    if(cy) return;
-
+  function initCy() {
+    if (cy) return;
     cy = cytoscape({
       container: document.getElementById('cy'),
-      elements: [],
       style: [
         {
           selector: 'node',
           style: {
             'label': 'data(label)',
-            'font-size': 12,
-            'text-wrap': 'wrap',
-            'text-max-width': 180,
+            'font-size': '12px',
             'text-valign': 'center',
             'text-halign': 'center',
             'background-color': '#FCE7F3',
-            'border-width': 1.8,
-            'border-color': '#FFDEEB',
-            'color': '#831843',
+            'border-width': 1,
+            'border-color': '#F9A8D4',
             'width': 'label',
-            'padding': '12px',
-            'shape': 'round-rectangle'
+            'padding': '10px',
+            'shape': 'round-rectangle',
+            'color': '#831843'
           }
         },
         {
           selector: 'edge',
           style: {
+            'curve-style': 'unbundled-bezier',
             'target-arrow-shape': 'triangle',
-            'target-arrow-fill': 'filled',
-            'arrow-scale': 1.2,
             'width': 2,
             'line-color': '#D1B0C2',
-            'target-arrow-color': '#D1B0C2',
-            'curve-style': 'unbundled-bezier',
-            'edge-distances': 'node-position'
+            'target-arrow-color': '#D1B0C2'
           }
         },
-        { selector: 'edge[role="mother"]',  style: { 'line-style': 'solid',  'control-point-distance': 30,  'control-point-weight': 0.5 } },
-        { selector: 'edge[role="father"]',  style: { 'line-style': 'dashed', 'control-point-distance': -30, 'control-point-weight': 0.5 } },
-        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted', 'control-point-distance': 18,  'control-point-weight': 0.5 } }
-      ],
-      layout: { name: 'preset' }
+        { selector: 'edge[role="mother"]', style: { 'line-style': 'solid' } },
+        { selector: 'edge[role="father"]', style: { 'line-style': 'dashed' } },
+        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted', 'line-color': '#ccc' } }
+      ]
     });
   }
 
-  function updateGraphAndRelayout(part, myToken){
-    initCyOnce();
-    if(myToken !== renderToken) return;
+  async function run() {
+    const label = document.getElementById('name').value.trim();
+    if (!label) return;
 
-    // 走ってるlayoutがあれば止める（重要）
-    if(currentLayout){
-      try{ currentLayout.stop(); }catch(e){}
-      currentLayout = null;
+    // モバイル時は系統図タブへ強制移動
+    if (window.innerWidth <= 1000) setTab('cy');
+
+    const startId = nodeByLabel.get(label);
+    if (!startId) {
+      document.getElementById('badge').textContent = '未発見';
+      return;
     }
-    cy.stop();
+
+    const depth = parseInt(document.getElementById('depth').value);
+    const includeUnknown = document.getElementById('includeUnknown').checked;
+    const elements = collectAncestors(startId, depth, includeUnknown);
+
+    document.getElementById('cyLoading').classList.add('show');
+    document.getElementById('badge').textContent = '描画中...';
+
+    const myToken = ++renderToken;
+    initCy();
 
     cy.batch(() => {
       cy.elements().remove();
-      cy.add(part);
+      cy.add(elements);
     });
 
-    // DOMサイズ確定 → resize → layout
-    requestAnimationFrame(() => {
-      if(myToken !== renderToken) return;
-      requestAnimationFrame(() => {
-        if(myToken !== renderToken) return;
-
-        cy.resize();
-
-        currentLayout = cy.layout({
-          name: 'dagre',
-          rankDir: 'LR',
-          nodeSep: isMobileNow() ? 36 : 20,
-          edgeSep: isMobileNow() ? 10 : 6,
-          rankSep: isMobileNow() ? 140 : 90,
-          padding: 30,
-          nodeDimensionsIncludeLabels: true,
-          animate: false
-        });
-
-        currentLayout.on('layoutstop', () => {
-          if(myToken !== renderToken) return;
-          cy.fit(undefined, isMobileNow() ? 24 : 30);
-          requestAnimationFrame(() => {
-            if(myToken !== renderToken) return;
-            cy.resize();
-            cy.fit(undefined, isMobileNow() ? 24 : 30);
-          });
-          hideCyLoading();
-        });
-
-        currentLayout.run();
-      });
-    });
+    // 描画安定化のためのディレイ
+    setTimeout(() => {
+      if (myToken !== renderToken) return;
+      cy.resize();
+      cy.layout({
+        name: 'dagre',
+        rankDir: 'LR',
+        nodeSep: 40,
+        rankSep: 80,
+        animate: true,
+        stop: () => {
+          cy.fit(undefined, 40);
+          document.getElementById('cyLoading').classList.remove('show');
+          document.getElementById('badge').textContent = `表示: ${label}`;
+          document.getElementById('info-status').textContent = `${elements.length} 個の要素を表示しました。`;
+        }
+      }).run();
+    }, 50);
   }
 
-  function run(){
-    if(!all) return;
-
-    // モバイルはまず系統図タブへ（display:none問題を避ける）
-    if(isMobileNow()) setTab('cy');
-
-    const myToken = ++renderToken;
-    const label = (document.getElementById('name').value ?? '').toString().trim();
-    const depth = parseInt(document.getElementById('depth').value, 10);
-    const includeUnknown = !!document.getElementById('includeUnknown').checked;
-
-    if(!label){ setBadge('品種名を入力してください'); return; }
-    const startId = nodeByLabel.get(label);
-    if(!startId){ setBadge('見つかりません（表記ゆれ注意）'); return; }
-
-    setParam('name', label);
-    setParam('n', String(depth));
-    setParam('u', includeUnknown ? '1' : '0');
-
-    const { elements, nodeCount, edgeCount } = collectAncestors(startId, depth, includeUnknown);
-
-    setBadge('描画中…');
-    document.getElementById('info-status').textContent = `${label} の祖先（N=${depth}）を表示中…`;
-    showCyLoading('系統図を配置しています…');
-
-    updateGraphAndRelayout(elements, myToken);
-    setBadge(`ノード ${nodeCount} / エッジ ${edgeCount}`);
-    document.getElementById('info-status').textContent = `${label} の祖先（N=${depth}）を表示しました。`;
-  }
-
-  async function load(){
-    try{
-      initMobileTabs();
-
-      // elements.json を同階層から読む（必要ならパス変更）
-      const res = await fetch("elements.json?ts=" + Date.now(), { cache: "no-store" });
-      if(!res.ok) throw new Error(`HTTP ${res.status}`);
-      all = await res.json();
-
-      parseElements(all);
-      initCyOnce();
-
-      setBadge('準備OK');
-
-      // URLパラメータで自動実行
-      const pName = getParam('name');
-      const pN = getParam('n');
-      const pU = getParam('u');
-
-      if(pName) document.getElementById('name').value = pName;
-      if(pN) document.getElementById('depth').value = pN;
-      if(pU) document.getElementById('includeUnknown').checked = (pU === '1');
-
-      if(pName) run();
-    }catch(e){
-      console.error(e);
-      setBadge('読み込み失敗');
-      document.getElementById('info-status').textContent = 'elements.json の読み込みに失敗しました。パスを確認してください。';
-      hideCyLoading();
+  async function load() {
+    try {
+      const res = await fetch("elements.json?ts=" + Date.now());
+      allData = await res.json();
+      parseElements(allData);
+      document.getElementById('badge').textContent = '準備完了';
+      
+      // URLパラメータの反映
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('name')) {
+        document.getElementById('name').value = params.get('name');
+        run();
+      }
+    } catch (e) {
+      document.getElementById('badge').textContent = '読み込み失敗';
     }
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('run').addEventListener('click', run);
-    document.getElementById('name').addEventListener('keydown', (e)=>{ if(e.key === 'Enter') run(); });
-
-    // 変更で自動再描画（軽いデバウンス）
-    let t=null;
-    const autoRun = ()=>{ clearTimeout(t); t=setTimeout(run, 160); };
-    document.getElementById('depth').addEventListener('change', autoRun);
-    document.getElementById('includeUnknown').addEventListener('change', autoRun);
-
-    load();
-  });
-
-  window.addEventListener('resize', () => {
-    if(!cy) return;
-    // 表示中タブのサイズ変化に追従
-    requestAnimationFrame(() => {
-      cy.resize();
-      // fitは好みで：頻繁に動くのが嫌なら外してOK
-      // cy.fit(undefined, isMobileNow() ? 24 : 30);
-    });
-  });
+  document.getElementById('run').addEventListener('click', run);
+  document.getElementById('name').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
+  
+  window.addEventListener('resize', () => { if (cy) cy.resize(); });
+  window.onload = load;
 </script>
 </body>
 </html>

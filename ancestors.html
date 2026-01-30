@@ -30,6 +30,8 @@
       height: 100dvh;
       overflow: hidden;
     }
+
+    /* ヘッダー */
     header {
       display: flex;
       gap: 12px;
@@ -41,6 +43,34 @@
       backdrop-filter: blur(8px);
       z-index: 10;
     }
+
+    /* メインレイアウト（横並び） */
+    #app {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* 左側サイドバー */
+    #left {
+      width: 320px;
+      min-width: 320px;
+      border-right: 1px solid var(--border);
+      padding: 20px;
+      overflow-y: auto;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* 右側グラフエリア */
+    #cy {
+      flex: 1;
+      background-color: #fafafa;
+    }
+
+    /* 共通コンポーネント */
     input, select {
       padding: 8px 12px;
       border: 1px solid #d1d5db;
@@ -58,11 +88,7 @@
       font-weight: 700;
     }
     button:hover { background: #f9fafb; }
-    #cy {
-      flex: 1;
-      width: 100%;
-      background-color: #fafafa;
-    }
+    
     .pill {
       font-size: 12px;
       padding: 2px 10px;
@@ -72,7 +98,21 @@
       background: #fff;
     }
     .muted { color: var(--muted); font-size: 12px; }
+    .h { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
     a { color: #2563eb; text-decoration: none; }
+
+    /* ボックス風デザイン */
+    .box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fdfdfd;
+    }
+
+    /* モバイル対応：画面が狭いときはサイドバーを隠すか調整 */
+    @media (max-width: 768px) {
+      #left { display: none; }
+    }
   </style>
 </head>
 
@@ -106,7 +146,35 @@
   <a href="./" class="muted">トップへ</a>
 </header>
 
-<div id="cy"></div>
+<div id="app">
+  <div id="left">
+    <h1 style="font-size:18px; margin:0;">いちご品種系統図</h1>
+    <div class="muted">
+      指定した品種から過去に遡って、そのルーツとなる親品種のみを抽出して表示するツールです。
+    </div>
+
+    <div class="box">
+      <div class="h">現在の表示設定</div>
+      <div class="muted" id="info-status">品種を選択してください。</div>
+    </div>
+
+    <div class="box">
+      <div class="h">凡例</div>
+      <ul style="padding-left:16px; margin:8px 0; font-size:12px; line-height:1.6;">
+        <li><span style="color:#D1B0C2; font-weight:bold;">ピンクの線</span>: 種子親（母）</li>
+        <li><span style="color:#B0C1D1; font-weight:bold;">青の線</span>: 花粉親（父）</li>
+        <li><span style="color:#cccccc; font-weight:bold;">点線</span>: 親不明</li>
+      </ul>
+    </div>
+
+    <div class="muted" style="margin-top:auto;">
+      データ出典: 農林水産省 品種登録データベース 他<br>
+      © Strawberry Pedigree
+    </div>
+  </div>
+
+  <div id="cy"></div>
+</div>
 
 <script>
   // Cytoscape拡張の登録
@@ -170,7 +238,7 @@
     dl.innerHTML = sortedLabels.map(l => `<option value="${l}">`).join('');
   }
 
-function collectAncestors(startId, depthN, includeUnknown) {
+  function collectAncestors(startId, depthN, includeUnknown) {
     const keepNodes = new Set([startId]);
     const resultElements = [];
     let frontier = [startId];
@@ -191,13 +259,11 @@ function collectAncestors(startId, depthN, includeUnknown) {
           keepNodes.add(p.parentId);
           nextFrontier.push(p.parentId);
           
-          // ★ 修正点1: roleが空でも名前が不明なら 'unknown' 扱いにする
           const effectiveRole = isUnknown ? 'unknown' : p.role;
 
-          // ★ 修正点2: IDにroleを含めることで、同じ親(福羽など)から複数本引けるようにする
           resultElements.push({
             data: { 
-              id: `e-${p.parentId}-${childId}-${p.role}`, // IDをユニーク化
+              id: `e-${p.parentId}-${childId}-${p.role}`,
               source: p.parentId, 
               target: childId, 
               role: effectiveRole 
@@ -239,41 +305,34 @@ function collectAncestors(startId, depthN, includeUnknown) {
             'color': '#831843'
           }
         },
-{
+        {
           selector: 'edge',
           style: {
-            // 'curve-style': 'taxi', を以下に変更
             'curve-style': 'unbundled-bezier',
             'target-arrow-shape': 'triangle',
-
             'width': 2,
             'arrow-scale': 1.2,
-            'edge-distances': 'node-position' // 距離計算の基準
+            'edge-distances': 'node-position'
           }
         },
-        // 母方のライン：上側に膨らませる
         { 
           selector: 'edge[role="mother"]', 
           style: { 
             'line-color': '#D1B0C2',
             'target-arrow-color': '#D1B0C2',
-            'line-style': 'solid', 
             'control-point-distance': -30, 
             'control-point-weight': 0.5 
           } 
         },
-        // 父方のライン：下側に膨らませる
         { 
           selector: 'edge[role="father"]', 
           style: { 
             'line-color': '#B0C1D1',
             'target-arrow-color': '#B0C1D1',
-            'line-style': 'solid', 
             'control-point-distance': 30, 
             'control-point-weight': 0.5 
           } 
         },
-        // 不明のライン：少しだけ膨らませる
         { 
           selector: 'edge[role="unknown"]', 
           style: { 
@@ -307,6 +366,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
 
     const elements = collectAncestors(startId, depth, includeUnknown);
     setBadge('描画中...');
+    document.getElementById('info-status').textContent = `${label} を起点に ${depth} 代遡っています。`;
 
     if (currentLayout) currentLayout.stop();
     
@@ -315,7 +375,6 @@ function collectAncestors(startId, depthN, includeUnknown) {
       cy.add(elements);
     });
 
-    // 描画の安定化のためsetTimeoutを使用
     setTimeout(() => {
       if (myToken !== renderToken) return;
       cy.resize();
@@ -332,7 +391,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
         fit: true,
         stop: () => {
           if (myToken === renderToken) {
-            setBadge(`表示中: ${label} (ノード:${cy.nodes().size()})`);
+            setBadge(`表示中: ${label}`);
           }
         }
       });
@@ -365,7 +424,6 @@ function collectAncestors(startId, depthN, includeUnknown) {
     document.getElementById('run').addEventListener('click', run);
     document.getElementById('name').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
     
-    // プルダウン変更時の自動更新（少し余裕を持たせる）
     let timer;
     const autoRun = () => {
       clearTimeout(timer);

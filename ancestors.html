@@ -168,6 +168,28 @@
       <div class="h" style="font-size:18px;">祖先のみ表示</div>
       <p class="muted">選択した品種のルーツを家系図形式で表示します。</p>
 
+<div class="box">
+  <div class="h" style="margin:0 0 8px;">品種リスト</div>
+  <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
+
+  <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
+    <span id="listBadge" class="pill">準備中…</span>
+  </div>
+
+  <div id="listWrap" style="
+    margin-top:8px;
+    max-height: 42vh;
+    overflow:auto;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#fff;">
+    <div class="muted" style="padding:10px;">読み込み中…</div>
+  </div>
+
+  <div class="muted" style="margin-top:8px;">行をクリックすると、その品種名が入力されます。</div>
+</div>
+
+      
       <div class="box">
         <div class="h">品種名</div>
         <input id="name" type="text" list="cultivars" placeholder="例：とちおとめ" />
@@ -353,6 +375,97 @@
     });
   }
 
+  function compareLabelJP(a, b){
+  return a.localeCompare(b, 'ja', { numeric: true, sensitivity: 'base' });
+}
+
+// 全ノード配列を作る（unknown除外は好みで）
+function getAllNodesArray(){
+  const out = [];
+  for(const [id, n] of nodeById.entries()){
+    const label = (n.data?.label ?? '').toString().trim();
+    if(!label) continue;
+    // unknown をリストから外したいなら下の行を有効化
+    // if(isUnknownLabel(label)) continue;
+    out.push({ id, data: n.data });
+  }
+  return out;
+}
+
+function renderList(rows, badgeText){
+  const wrap = document.getElementById('listWrap');
+  const badge = document.getElementById('listBadge');
+  if(badge) badge.textContent = badgeText;
+
+  if(!wrap) return;
+
+  if(!rows.length){
+    wrap.innerHTML = `<div class="muted" style="padding:10px;">該当なし</div>`;
+    return;
+  }
+
+  const htmlRows = rows.map(r => {
+    const label = esc(r.data.label ?? '');
+    const year = esc(r.data.year ?? '');
+    const inst = esc(r.data.institute ?? '');
+    return `
+      <tr data-label="${label}">
+        <td>${label}</td>
+        <td class="muted" style="white-space:nowrap;">${year || '-'}</td>
+        <td class="muted">${inst || '-'}</td>
+      </tr>
+    `;
+  }).join('');
+
+  wrap.innerHTML = `
+    <table style="border-collapse:collapse; width:100%;">
+      <thead>
+        <tr>
+          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">品種</th>
+          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border); width:18%;">登録年</th>
+          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">登録者</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${htmlRows}
+      </tbody>
+    </table>
+  `;
+
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    tr.style.cursor = 'pointer';
+    tr.addEventListener('click', () => {
+      const label = tr.getAttribute('data-label');
+      document.getElementById('name').value = label;
+
+      // すぐ描画したいなら run() を呼ぶ
+      run();
+
+      // モバイルなら系統図タブへ移動
+      if(isMobileNow()) setTab('cy');
+    });
+  });
+}
+
+function updateList(){
+  const term = (document.getElementById('q')?.value ?? '').toString().trim().toLowerCase();
+  let rows = getAllNodesArray();
+
+  if(term){
+    rows = rows.filter(r => {
+      const label = ((r.data.label ?? '') + '').toLowerCase();
+      const inst  = ((r.data.institute ?? '') + '').toLowerCase();
+      return label.includes(term) || inst.includes(term);
+    });
+  }
+
+  rows.sort((a,b) => compareLabelJP((a.data.label??''), (b.data.label??'')));
+
+  const badgeText = term ? `検索結果：${rows.length}件` : `全品種：${rows.length}件`;
+  renderList(rows, badgeText);
+}
+
+  
   function collectAncestors(startId, maxDepth, includeUnknown) {
     const keepNodes = new Set([startId]);
     const keepEdges = [];
@@ -457,6 +570,9 @@
       const res = await fetch("elements.json?ts=" + Date.now());
       allData = await res.json();
       parseElements(allData);
+      // リスト初期化
+      updateList();
+      document.getElementById('q').addEventListener('input', updateList);
       document.getElementById('badge').textContent = '準備完了';
       const params = new URLSearchParams(window.location.search);
       if (params.has('name')) {
@@ -475,3 +591,4 @@
 </script>
 </body>
 </html>
+

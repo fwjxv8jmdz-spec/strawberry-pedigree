@@ -106,44 +106,6 @@
   <a href="./" class="muted">トップへ</a>
 </header>
 
-    <div id="left">
-      <h1 style="font-size:16px; margin:0 0 8px;">いちご 品種系統図（交配図）</h1>
-
-      <div class="muted" style="margin:0 0 10px;">
-        いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
-      </div>
-
-      <div class="h">検索</div>
-      <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
-
-      <div class="box">
-        <div class="listHeader">
-          <div class="h" style="margin:0;">品種リスト</div>
-          <span id="listBadge" class="pill">準備中…</span>
-        </div>
-
-        <div class="muted" style="margin:0 0 6px;">行をクリックするとその品種へ移動します。</div>
-
-        <div class="seg" role="tablist" aria-label="品種リスト フィルタ">
-          <button id="f_all" class="active" type="button">全品種</button>
-          <button id="f_reg" type="button">登録品種</button>
-          <button id="f_orphan" type="button">親が不明</button>
-        </div>
-
-        <div id="listWrap">
-          <div class="emptyRow">elements.json 読み込み中…</div>
-        </div>
-
-        <div class="muted" style="margin-top:8px;">
-          <ul style="padding-left:16px; margin:6px 0;">
-            <li>全品種: 本系統図に含まれるすべての品種</li>
-            <li>登録品種: 農林水産省による登録を受けた品種</li>
-            <li>親が不明: 情報を募集しています。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
 <div id="cy"></div>
 
 <script>
@@ -424,10 +386,3 @@ function collectAncestors(startId, depthN, includeUnknown) {
 </script>
 </body>
 </html>
-
-
-
-
-
-
-

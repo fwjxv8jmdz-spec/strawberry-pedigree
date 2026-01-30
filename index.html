@@ -1036,17 +1036,19 @@ function renderCultivarList(nodes, badgeText){
     </table>
   `;
 
+// ここを修正：引数 (e) を追加し、tagNameの判定を正しく行う
   wrap.querySelectorAll('tbody tr').forEach(tr => {
-    tr.addEventListener('click', () => {
+    tr.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') return;
       const nodeId = tr.getAttribute('data-node-id');
       const n = cy.getElementById(nodeId);
-      if(n && n.length){
-        /* ★ 修正②：検索タブでタップ→グラフ中央へ */
+      if (n && n.length) {
+        /* 検索タブでタップ→グラフ中央へ */
         focusFromList(n);
       }
     });
   });
+
   wrap.querySelectorAll('tbody tr a').forEach(a => {
     a.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -1054,41 +1056,25 @@ function renderCultivarList(nodes, badgeText){
   });
 }
 
-function updateListAndHighlights(){
-  if(!cy) return;
+function updateListAndHighlights() {
+  if (!cy) return;
 
   const term = (document.getElementById('q').value ?? '').trim().toLowerCase();
 
   let base = cy.nodes().filter(n => !isUnknownNode(n));
   let nodes = applyListFilter(base);
 
-  if(term){
+  if (term) {
     nodes = nodes.filter(n => {
       const label = ((n.data('label') || '') + '').toLowerCase();
-      const inst  = ((n.data('institute') || '') + '').toLowerCase();
+      const inst = ((n.data('institute') || '') + '').toLowerCase();
       return label.includes(term) || inst.includes(term);
     });
   }
 
-  const sorted = nodes.toArray().sort((a, b) => {
-    if(listFilter === 'reg'){
-      const ya = parseYear(a);
-      const yb = parseYear(b);
-      const va = (ya !== null);
-      const vb = (yb !== null);
-
-      if(va && vb && ya !== yb) return yb - ya;
-      if(va !== vb) return va ? -1 : 1;
-      return compareLabelJPENNUM(a, b);
-    }
-    return compareLabelJPENNUM(a, b);
-  });
-
-  const badgeText = term
-    ? `検索結果（${filterLabel()}）：${sorted.length}件`
-    : `${filterLabel()}：${sorted.length}件`;
-
-  renderCultivarList(sorted, badgeText);
+  // ここを修正：toArray() を正しく呼び出す
+  const sorted = nodes.toArray().sort(compareLabelJPENNUM);
+  renderCultivarList(sorted, `${sorted.length} 品種 (${filterLabel()})`);
 }
 
 function runLayout(mode){

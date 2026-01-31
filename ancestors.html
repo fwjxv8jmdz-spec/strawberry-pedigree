@@ -14,15 +14,15 @@
     }
     body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: #111827; }
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
-    #left, #right { padding: 12px; overflow-auto; border-right: 1px solid var(--border); }
+    #left, #right { padding: 12px; overflow: auto; border-right: 1px solid var(--border); }
     #right { border-left: 1px solid var(--border); border-right: none; }
     #cyWrap { position: relative; width: 100%; height: 100%; background: #fafafa; }
     #cy { width: 100%; height: 100%; }
     .h { font-weight: 700; margin: 6px 0 10px; }
     .muted { color: var(--muted); font-size: 12px; line-height: 1.4; }
     .box { border: 1px solid var(--border); border-radius: 10px; padding: 10px; margin: 10px 0; background:#fff; }
-    input[type="text"], select { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #d1d5db; border-radius: 10px; margin-bottom: 8px; }
-    #listWrap { max-height: 50vh; overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+    input[type="text"], select { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #d1d5db; border-radius: 10px; margin-bottom: 8px; font-size: 14px; }
+    #listWrap { max-height: 50vh; overflow-auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
     table { border-collapse: collapse; width: 100%; table-layout: fixed; }
     thead th { position: sticky; top: 0; background: #fff; z-index: 1; font-size: 12px; text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
     tbody td { font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #f3f4f6; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -75,7 +75,6 @@ let rawNodes = [];
 let rawEdges = [];
 let currentRootId = null;
 
-// Cytoscape 初期スタイル
 const cyStyle = [
   { selector: 'node', style: {
     'label': 'data(label)', 'font-size': 12, 'text-valign': 'center', 'text-halign': 'center',
@@ -89,7 +88,6 @@ const cyStyle = [
   }}
 ];
 
-// データの読み込み
 async function loadData() {
   const tbody = document.getElementById('listBody');
   try {
@@ -97,24 +95,29 @@ async function loadData() {
     if (!response.ok) throw new Error("ファイルが見つかりません (404)");
     const json = await response.json();
 
-    // elements.json の構造を柔軟に判定
-    let elements = [];
-    if (json.elements) {
-      elements = json.elements; // { elements: [...] } の形
-    } else if (Array.isArray(json)) {
-      elements = json; // [...] 直接配列の形
-    } else if (json.nodes) {
-      // { nodes: [], edges: [] } の形
-      rawNodes = json.nodes;
-      rawEdges = json.edges;
+    // ★ 徹底的に要素を探すロジック
+    let allItems = [];
+    if (Array.isArray(json)) {
+      allItems = json;
+    } else if (json.elements && Array.isArray(json.elements)) {
+      allItems = json.elements;
+    } else if (json.nodes && json.edges) {
+      // 直列に繋ぐ
+      rawNodes = Array.isArray(json.nodes) ? json.nodes : [];
+      rawEdges = Array.isArray(json.edges) ? json.edges : [];
     }
 
-    if (elements.length > 0) {
-      rawNodes = elements.filter(el => el.group === 'nodes');
-      rawEdges = elements.filter(el => el.group === 'edges');
+    if (allItems.length > 0) {
+      // sourceがあればedge、なければnodeとみなす（groupプロパティに頼らない）
+      rawNodes = allItems.filter(el => el.data && !el.data.source && !el.data.target);
+      rawEdges = allItems.filter(el => el.data && el.data.source && el.data.target);
     }
 
-    if (rawNodes.length === 0) throw new Error("ノードデータが空です");
+    // デバッグ用: コンソールに取得結果を表示
+    console.log("Nodes found:", rawNodes.length);
+    console.log("Edges found:", rawEdges.length);
+
+    if (rawNodes.length === 0) throw new Error("ノードが見つかりません。データの形式を確認してください。");
 
     renderList();
     document.getElementById('q').addEventListener('input', renderList);
@@ -123,19 +126,19 @@ async function loadData() {
     });
 
   } catch (err) {
-    console.error(err);
-    tbody.innerHTML = `<tr><td colspan="2" style="color:red;">エラー: ${err.message}</td></tr>`;
+    console.error("Load Error:", err);
+    tbody.innerHTML = `<tr><td colspan="2" style="color:red; font-size:10px;">エラー: ${err.message}</td></tr>`;
   }
 }
 
-// リストの描画
 function renderList() {
   const q = document.getElementById('q').value.toLowerCase();
   const tbody = document.getElementById('listBody');
   
   const filtered = rawNodes.filter(n => {
-    const label = (n.data.label || "").toLowerCase();
-    const inst = (n.data.institute || "").toLowerCase();
+    const label = (n.data.label || "").toString().toLowerCase();
+    const inst = (n.data.institute || "").toString().toLowerCase();
+    // Unknownはリストに出さない
     if (label === "unknown" || label === "不明") return false;
     return label.includes(q) || inst.includes(q);
   });
@@ -145,7 +148,10 @@ function renderList() {
     return;
   }
 
-  tbody.innerHTML = filtered.map(n => `
+  // 読み込みを軽くするため、上位300件程度に制限（必要なら外してください）
+  const displayItems = filtered.slice(0, 500);
+
+  tbody.innerHTML = displayItems.map(n => `
     <tr onclick="updateGraph('${n.data.id}')">
       <td>${n.data.label || '---'}</td>
       <td>${n.data.year || '-'}</td>
@@ -153,53 +159,58 @@ function renderList() {
   `).join('');
 }
 
-// グラフの更新
 function updateGraph(rootId) {
   currentRootId = rootId;
   const limit = parseInt(document.getElementById('genLimit').value);
-  document.getElementById('loading').classList.add('show');
+  const loadingEl = document.getElementById('loading');
+  loadingEl.classList.add('show');
 
-  const subsetNodes = new Set();
-  const subsetEdges = [];
-  
-  // 祖先を再帰的に探索
-  function trace(nodeId, depth) {
-    if (depth >= limit) return;
-    const parentEdges = rawEdges.filter(e => e.data.target === nodeId);
-    parentEdges.forEach(e => {
-      subsetNodes.add(e.data.source);
-      subsetEdges.push(e);
-      trace(e.data.source, depth + 1);
+  // アニメーションのために一瞬待機
+  setTimeout(() => {
+    const subsetNodes = new Set();
+    const subsetEdges = [];
+    
+    function trace(nodeId, depth) {
+      if (depth >= limit) return;
+      const parentEdges = rawEdges.filter(e => e.data.target === nodeId);
+      parentEdges.forEach(e => {
+        subsetNodes.add(e.data.source);
+        subsetEdges.push(e);
+        trace(e.data.source, depth + 1);
+      });
+    }
+    
+    subsetNodes.add(rootId);
+    trace(rootId, 0);
+
+    const elements = [
+      ...rawNodes.filter(n => subsetNodes.has(n.data.id)),
+      ...subsetEdges
+    ];
+
+    if (cy) cy.destroy();
+    cy = cytoscape({
+      container: document.getElementById('cy'),
+      elements: elements,
+      style: cyStyle,
+      layout: { name: 'dagre', rankDir: 'BT', nodeSep: 40, rankSep: 80 },
+      userZoomingEnabled: true,
+      userPanningEnabled: true
     });
-  }
-  
-  subsetNodes.add(rootId);
-  trace(rootId, 0);
 
-  const elements = [
-    ...rawNodes.filter(n => subsetNodes.has(n.data.id)),
-    ...subsetEdges
-  ];
-
-  if (cy) cy.destroy();
-  cy = cytoscape({
-    container: document.getElementById('cy'),
-    elements: elements,
-    style: cyStyle,
-    layout: { name: 'dagre', rankDir: 'BT', nodeSep: 40, rankSep: 80 }
-  });
-
-  cy.getElementById(rootId).addClass('root');
-  cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
-  
-  const rootData = rawNodes.find(n => n.data.id === rootId);
-  if (rootData) showDetail(rootData.data);
-  document.getElementById('loading').classList.remove('show');
+    cy.getElementById(rootId).addClass('root');
+    cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
+    
+    const rootData = rawNodes.find(n => n.data.id === rootId);
+    if (rootData) showDetail(rootData.data);
+    loadingEl.classList.remove('show');
+  }, 10);
 }
 
-// 詳細パネルの表示
 function showDetail(d) {
   const panel = document.getElementById('detailPanel');
+  
+  // 父母を探す
   const findNames = (targetId, role) => rawEdges
     .filter(e => e.data.target === targetId && e.data.role === role)
     .map(e => {
@@ -207,6 +218,7 @@ function showDetail(d) {
       return p ? p.data.label : '不明';
     }).join(', ');
 
+  // 子を探す
   const children = rawEdges.filter(e => e.data.source === d.id)
     .map(e => {
       const c = rawNodes.find(n => n.data.id === e.data.target);
@@ -223,13 +235,12 @@ function showDetail(d) {
       <div class="detail-item"><span class="detail-label">子</span>${children || '-'}</div>
       <div class="detail-item"><span class="detail-label">交配出典</span>${d.source_id || '-'}</div>
       <div class="detail-item"><span class="detail-label">品種登録情報</span>
-        <div class="muted" style="word-break:break-all;">${d.sources ? d.sources.replace(/\n/g, '<br>') : '-'}</div>
+        <div class="muted" style="word-break:break-all;">${d.sources ? d.sources.toString().replace(/\n/g, '<br>') : '-'}</div>
       </div>
     </div>
   `;
 }
 
-// 初期化実行
 loadData();
 </script>
 </body>

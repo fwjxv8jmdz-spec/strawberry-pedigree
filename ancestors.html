@@ -175,11 +175,11 @@
   
   <div id="app">
     <div id="left">
-      <div class="h" style="font-size:18px;">祖先のみ表示</div>
-      <p class="muted">選択した品種のルーツを家系図形式で表示します。</p>
+      <div class="h" style="font-size:18px;">イチゴ品種系統図（祖先表示）</div>
+      <p class="muted">選択した品種の祖先を家系図形式で表示します。</p>
 
 <div class="box">
-  <div class="h" style="margin:0 0 8px;">品種リスト</div>
+  <div class="h" style="margin:0 0 8px;">検索</div>
   <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
 
   <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
@@ -200,11 +200,6 @@
 </div>
 
       
-      <div class="box">
-        <div class="h">品種名</div>
-        <input id="name" type="text" list="cultivars" placeholder="例：とちおとめ" />
-        <datalist id="cultivars"></datalist>
-
         <div class="h" style="margin-top:10px;">遡る世代</div>
         <select id="depth">
           <option value="1">1代前（親）</option>
@@ -220,7 +215,7 @@
         </label>
 
         <button id="run" type="button">系統図を表示</button>
-      </div>
+ 
       
       <div class="box">
         <div class="h">ステータス</div>
@@ -601,3 +596,4 @@ function updateList(){
 </script>
 </body>
 </html>
+

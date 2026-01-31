@@ -20,11 +20,11 @@
       --wine:#831843;
       --bg:#ffffff;
     }
-    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: #111827; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: #111827; }
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
-    #left, #right { padding: 12px; overflow: auto; border-right: 1px solid var(--border); }
+    #left, #right { padding: 12px; overflow: auto; }
     #left { border-right: 1px solid var(--border); }
-    #right { border-left: 1px solid var(--border); border-right: none; }
+    #right { border-left: 1px solid var(--border); }
     #cyWrap { position: relative; width: 100%; height: 100%; background: #fafafa; }
     #cy { width: 100%; height: 100%; }
     
@@ -37,14 +37,12 @@
       border: 1px solid #d1d5db; border-radius: 10px; background: #fff; margin-bottom: 8px;
     }
 
-    /* List table */
-    #listWrap { max-height: 40vh; overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+    #listWrap { max-height: 50vh; overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
     table { border-collapse: collapse; width: 100%; }
     thead th { position: sticky; top: 0; background: #fff; z-index: 1; font-size: 12px; text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
     tbody td { font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #f3f4f6; cursor: pointer; }
     tbody tr:hover { background: var(--pink-50); }
 
-    /* Detail styles */
     .detail-item { margin-bottom: 8px; font-size: 13px; }
     .detail-label { font-weight: bold; color: var(--wine); display: block; margin-bottom: 2px; }
 
@@ -89,7 +87,7 @@
             <tr><th>品種</th><th>登録年</th></tr>
           </thead>
           <tbody id="cultivarTableBody">
-            <tr><td colspan="2" class="muted">読み込み中...</td></tr>
+            <tr><td colspan="2" class="muted">準備中...</td></tr>
           </tbody>
         </table>
       </div>
@@ -111,7 +109,8 @@
 
 <script>
 let cy = null;
-let allElements = [];
+let rawNodes = [];
+let rawEdges = [];
 let currentRootId = null;
 
 // Cytoscape Style
@@ -123,15 +122,15 @@ const cyStyle = [
       'font-size': 12,
       'text-valign': 'center',
       'text-halign': 'center',
-      'background-color': '#FCE7F3',
+      'background-color': '#fff',
       'border-width': 1,
-      'border-color': '#FBCFE8',
-      'color': '#831843',
+      'border-color': '#d1d5db',
+      'color': '#111827',
       'width': 'label',
       'padding': '10px',
       'shape': 'round-rectangle',
       'text-wrap': 'wrap',
-      'text-max-width': 120
+      'text-max-width': 100
     }
   },
   {
@@ -146,7 +145,7 @@ const cyStyle = [
       'width': 2,
       'line-color': '#D1D5DB',
       'target-arrow-color': '#D1D5DB',
-      'line-style': (e) => e.data('role') === 'father' ? 'dashed' : 'solid'
+      'line-style': (e) => (e.data('role') === 'father') ? 'dashed' : 'solid'
     }
   }
 ];
@@ -154,7 +153,19 @@ const cyStyle = [
 async function init() {
   try {
     const res = await fetch("elements.json");
-    allElements = await res.json();
+    const data = await res.json();
+    
+    // elements.json の構造が {nodes:[], edges:[]} か、配列そのものかを確認
+    if (data.nodes && data.edges) {
+      rawNodes = data.nodes;
+      rawEdges = data.edges;
+    } else if (Array.isArray(data)) {
+      rawNodes = data.filter(el => el.group === 'nodes');
+      rawEdges = data.filter(el => el.group === 'edges');
+    } else {
+      throw new Error("JSON形式が正しくありません");
+    }
+
     renderList();
     
     document.getElementById('q').addEventListener('input', renderList);
@@ -163,6 +174,7 @@ async function init() {
     });
   } catch (e) {
     console.error("データの読み込みに失敗しました", e);
+    document.getElementById('cultivarTableBody').innerHTML = '<tr><td colspan="2" style="color:red">データの読み込みに失敗しました。</td></tr>';
   }
 }
 
@@ -170,17 +182,21 @@ function renderList() {
   const q = document.getElementById('q').value.toLowerCase();
   const tbody = document.getElementById('cultivarTableBody');
   
-  // フィルタリング（Unknownは除外）
-  const nodes = allElements.nodes.filter(n => {
+  const filtered = rawNodes.filter(n => {
     const label = (n.data.label || "").toLowerCase();
     const inst = (n.data.institute || "").toLowerCase();
     const isUnknown = label === "unknown" || label === "不明";
     return !isUnknown && (label.includes(q) || inst.includes(q));
   });
 
-  tbody.innerHTML = nodes.map(n => `
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="2" class="muted">該当なし</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(n => `
     <tr onclick="updateGraph('${n.data.id}')">
-      <td>${n.data.label}</td>
+      <td>${n.data.label || '---'}</td>
       <td class="muted">${n.data.year || '-'}</td>
     </tr>
   `).join('');
@@ -191,7 +207,6 @@ function updateGraph(rootId) {
   const limit = parseInt(document.getElementById('genLimit').value);
   document.getElementById('loading').classList.add('show');
 
-  // 祖先を辿ってサブセットを作成
   const subsetNodes = new Set();
   const subsetEdges = new Set();
   
@@ -199,19 +214,19 @@ function updateGraph(rootId) {
     if (depth > limit) return;
     subsetNodes.add(nodeId);
     
-    const parentEdges = allElements.edges.filter(e => e.data.target === nodeId);
+    const parentEdges = rawEdges.filter(e => e.data.target === nodeId);
     parentEdges.forEach(e => {
       subsetEdges.add(e);
       trace(e.data.source, depth + 1);
     });
   }
   
-  trace(rootId, 1);
+  trace(rootId, 0); // 起点を0世代として開始
 
-  const elements = {
-    nodes: allElements.nodes.filter(n => subsetNodes.has(n.data.id)),
-    edges: Array.from(subsetEdges)
-  };
+  const elements = [
+    ...rawNodes.filter(n => subsetNodes.has(n.data.id)),
+    ...Array.from(subsetEdges)
+  ];
 
   if (cy) cy.destroy();
   
@@ -219,13 +234,21 @@ function updateGraph(rootId) {
     container: document.getElementById('cy'),
     elements: elements,
     style: cyStyle,
-    layout: { name: 'dagre', rankDir: 'BT', nodeSep: 50, rankSep: 100 }
+    layout: { 
+      name: 'dagre', 
+      rankDir: 'BT', // Bottom to Top (子が下、親が上)
+      nodeSep: 40, 
+      rankSep: 80 
+    }
   });
 
-  cy.getElementById(rootId).addClass('root');
+  const rootNode = cy.getElementById(rootId);
+  if (rootNode.length) rootNode.addClass('root');
   
   cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
-  showDetail(allElements.nodes.find(n => n.data.id === rootId).data);
+  
+  const rootData = rawNodes.find(n => n.data.id === rootId);
+  if (rootData) showDetail(rootData.data);
   
   document.getElementById('loading').classList.remove('show');
 }
@@ -233,12 +256,11 @@ function updateGraph(rootId) {
 function showDetail(d) {
   const panel = document.getElementById('detailPanel');
   
-  // 父母子情報の抽出
-  const mothers = allElements.edges.filter(e => e.data.target === d.id && e.data.role === 'mother')
+  const mothers = rawEdges.filter(e => e.data.target === d.id && e.data.role === 'mother')
                   .map(e => getNameById(e.data.source)).join(', ') || '-';
-  const fathers = allElements.edges.filter(e => e.data.target === d.id && e.data.role === 'father')
+  const fathers = rawEdges.filter(e => e.data.target === d.id && e.data.role === 'father')
                   .map(e => getNameById(e.data.source)).join(', ') || '-';
-  const children = allElements.edges.filter(e => e.data.source === d.id)
+  const children = rawEdges.filter(e => e.data.source === d.id)
                   .map(e => getNameById(e.data.target)).join(', ') || '-';
 
   panel.innerHTML = `
@@ -251,14 +273,14 @@ function showDetail(d) {
       <div class="detail-item"><span class="detail-label">子</span>${children}</div>
       <div class="detail-item"><span class="detail-label">交配出典</span>${d.source_id || '-'}</div>
       <div class="detail-item"><span class="detail-label">品種登録情報</span>
-        <div class="muted">${d.sources ? d.sources.replace(/\n/g, '<br>') : '-'}</div>
+        <div class="muted" style="word-break: break-all;">${d.sources ? d.sources.replace(/\n/g, '<br>') : '-'}</div>
       </div>
     </div>
   `;
 }
 
 function getNameById(id) {
-  const n = allElements.nodes.find(n => n.data.id === id);
+  const n = rawNodes.find(n => n.data.id === id);
   return n ? n.data.label : id;
 }
 

@@ -2,603 +2,267 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  
-  <title>いちご 品種系統図（祖先表示） | Strawberry Pedigree</title>
-  <meta name="description" content="日本のいちご品種が中心の品種系統図です。品種名と世代を指定して、その品種の祖先だけを抽出して表示します。" />
-
-  <!-- favicon -->
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="icon" href="icon32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="icon16.png" sizes="16x16" type="image/png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>いちご 祖先系統図 | Strawberry Pedigree</title>
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
-
   <style>
-    :root {
-      --border: #e5e7eb;
-      --muted: #6b7280;
-      --pink-50: #fff1f7;
-      --pink-100: #FCE7F3;
-      --pink-300: #F9A8D4;
-      --wine: #831843;
-      --bg: #ffffff;
+    :root{
+      --border:#e5e7eb;
+      --muted:#6b7280;
+      --pink-50:#fff1f7;
+      --pink-100:#FCE7F3;
+      --pink-200:#FBCFE8;
+      --pink-300:#F9A8D4;
+      --pink-400:#FB7185;
+      --pink-500:#F472B6;
+      --wine:#831843;
+      --bg:#ffffff;
     }
-
-    html, body { 
-      height: 100%; 
-      margin: 0; 
-      padding: 0;
-      overflow: hidden; 
-    }
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: #111827;
-    }
-    a { color: #2563eb; text-decoration: none; }
-
-    /* ===== Layout (PC: 3列 / Mobile: 1列) ===== */
-    #app {
-      display: grid;
-      grid-template-columns: 320px 1fr 320px;
-      height: 100vh;
-      width: 100vw;
-    }
-
-    #left, #right {
-      overflow-y: auto;
-      padding: 16px;
-      background: #fff;
-      z-index: 10;
-    }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: #111827; }
+    #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
+    #left, #right { padding: 12px; overflow: auto; border-right: 1px solid var(--border); }
     #left { border-right: 1px solid var(--border); }
-    #right { border-left: 1px solid var(--border); }
-
-    #cyWrap {
-      position: relative;
-      flex: 1;
-      height: 100%;
-      background: #fafafa;
-      overflow: hidden;
-    }
-    #cy {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    /* UI Parts */
-    .h { font-weight: 800; margin: 0 0 10px; font-size: 15px; }
-    .muted { color: var(--muted); font-size: 12px; line-height: 1.5; }
-    .box {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      margin-bottom: 12px;
-      background: #fff;
-    }
-    .pill {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--muted);
-    }
-
+    #right { border-left: 1px solid var(--border); border-right: none; }
+    #cyWrap { position: relative; width: 100%; height: 100%; background: #fafafa; }
+    #cy { width: 100%; height: 100%; }
+    
+    .h { font-weight: 700; margin: 6px 0 10px; }
+    .muted { color: var(--muted); font-size: 12px; line-height: 1.4; }
+    .box { border: 1px solid var(--border); border-radius: 10px; padding: 10px; margin: 10px 0; background:#fff; }
+    
     input[type="text"], select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      background: #fff;
-      font-size: 14px;
-      margin-bottom: 8px;
+      width: 100%; box-sizing: border-box; padding: 10px;
+      border: 1px solid #d1d5db; border-radius: 10px; background: #fff; margin-bottom: 8px;
     }
-    button {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      background: #fff;
-      cursor: pointer;
-      font-weight: 900;
-      transition: background 0.2s;
+
+    /* List table */
+    #listWrap { max-height: 40vh; overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+    table { border-collapse: collapse; width: 100%; }
+    thead th { position: sticky; top: 0; background: #fff; z-index: 1; font-size: 12px; text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    tbody td { font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #f3f4f6; cursor: pointer; }
+    tbody tr:hover { background: var(--pink-50); }
+
+    /* Detail styles */
+    .detail-item { margin-bottom: 8px; font-size: 13px; }
+    .detail-label { font-weight: bold; color: var(--wine); display: block; margin-bottom: 2px; }
+
+    #loading {
+      position: absolute; inset: 0; display: none; place-items: center;
+      background: rgba(255,255,255,0.8); z-index: 100;
     }
-    button:hover { background: #f9fafb; }
+    #loading.show { display: grid; }
 
-    /* Loading Overlay */
-    #cyLoading {
-      position: absolute;
-      inset: 0;
-      display: none;
-      place-items: center;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(4px);
-      z-index: 100;
-    }
-    #cyLoading.show { display: grid; }
-
-    /* ===== Mobile Responsive ===== */
-    #mobileTabs { display: none; }
-
-    @media (max-width: 1000px) {
-      #app {
-        grid-template-columns: 1fr;
-      }
-      #left, #right, #cyWrap { 
-        display: none; 
-        height: calc(100vh - 60px); 
-      }
-      
-      body.tab-left #left { display: block; }
-      body.tab-cy #cyWrap { display: block; }
-      body.tab-right #right { display: block; }
-
-      #mobileTabs {
-        position: fixed;
-        bottom: 0; left: 0; right: 0;
-        height: 60px;
-        display: flex;
-        background: #fff;
-        border-top: 1px solid var(--border);
-        padding: 5px;
-        box-sizing: border-box;
-        z-index: 1000;
-      }
-      #mobileTabs button {
-        flex: 1;
-        border: none;
-        background: none;
-        font-size: 13px;
-        font-weight: bold;
-        color: var(--muted);
-      }
-      #mobileTabs button.active {
-        color: var(--wine);
-        background: var(--pink-100);
-        border-radius: 8px;
-      }
+    @media (max-width: 900px) {
+      #app { grid-template-columns: 1fr; height: auto; }
+      #left, #right { height: auto; border: none; }
+      #cyWrap { height: 500px; }
     }
   </style>
 </head>
+<body>
 
-<body class="tab-cy">
-  <div id="introDesktop" class="muted onlyDesktop" style="margin:8px 0 12px; padding:0 12px;">
-  いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
+<div id="app">
+  <div id="left">
+    <h1 style="font-size:16px; margin:0 0 4px;">祖先のみ表示</h1>
+    <div class="muted" style="margin-bottom:12px;">選択した品種のルーツを家系図形式で表示します。</div>
+
+    <div class="h">検索</div>
+    <input id="q" type="text" placeholder="品種名 / 登録者で検索" />
+
+    <div class="h">さかのぼる世代</div>
+    <select id="genLimit">
+      <option value="1">1世代前（父母）</option>
+      <option value="2">2世代前（祖父母）</option>
+      <option value="3" selected>3世代前（曾祖父母）</option>
+      <option value="4">4世代前</option>
+      <option value="5">5世代前</option>
+      <option value="10">可能な限りすべて</option>
+    </select>
+
+    <div class="box">
+      <div class="h" style="margin-top:0;">品種リスト</div>
+      <div id="listWrap">
+        <table>
+          <thead>
+            <tr><th>品種</th><th>登録年</th></tr>
+          </thead>
+          <tbody id="cultivarTableBody">
+            <tr><td colspan="2" class="muted">読み込み中...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-  
-  <div id="app">
-    <div id="left">
-      <div class="h" style="font-size:18px;">祖先のみ表示</div>
-      <p class="muted">選択した品種のルーツを家系図形式で表示します。</p>
 
-<div class="box">
-  <div class="h" style="margin:0 0 8px;">品種リスト</div>
-  <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
-
-  <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
-    <span id="listBadge" class="pill">準備中…</span>
+  <div id="cyWrap">
+    <div id="cy"></div>
+    <div id="loading"><div class="h">描画中...</div></div>
   </div>
 
-  <div id="listWrap" style="
-    margin-top:8px;
-    max-height: 42vh;
-    overflow:auto;
-    border:1px solid var(--border);
-    border-radius:10px;
-    background:#fff;">
-    <div class="muted" style="padding:10px;">読み込み中…</div>
+  <div id="right">
+    <div class="h">詳細情報</div>
+    <div id="detailPanel">
+      <div class="muted">リストから品種を選択してください。</div>
+    </div>
   </div>
-
-  <div class="muted" style="margin-top:8px;">行をクリックすると、その品種名が入力されます。</div>
 </div>
 
-      
-      <div class="box">
-        <div class="h">品種名</div>
-        <input id="name" type="text" list="cultivars" placeholder="例：とちおとめ" />
-        <datalist id="cultivars"></datalist>
-
-        <div class="h" style="margin-top:10px;">遡る世代</div>
-        <select id="depth">
-          <option value="1">1代前（親）</option>
-          <option value="2" selected>2代前（祖父母）</option>
-          <option value="3">3代前（曾祖父母）</option>
-          <option value="4">4代前（高祖父母）</option>
-          <option value="5">5代前</option>
-          <option value="6">6代前</option>
-        </select>
-
-        <label style="display:flex; align-items:center; gap:8px; font-size:13px; margin:10px 0;">
-          <input id="includeUnknown" type="checkbox" /> 不明(unknown)を含める
-        </label>
-
-        <button id="run" type="button">系統図を表示</button>
-      </div>
-      
-      <div class="box">
-        <div class="h">ステータス</div>
-        <span id="badge" class="pill">準備中...</span>
-        <div id="info-status" class="muted" style="margin-top:8px;">品種を入力してください。</div>
-      </div>
-
-      <div class="box">
-        <div class="h">凡例</div>
-        <div class="muted">
-          母方：実線 / 父方：破線 / 不明：点線
-        </div>
-      </div>
-      
-      <a class="muted" href="./" style="display:block; text-align:center;">← トップページに戻る</a>
-    </div>
-
-    <div id="cyWrap">
-      <div id="cy"></div>
-      <div id="cyLoading">
-        <div style="text-align:center; background:white; padding:20px; border-radius:12px; border:1px solid var(--border);">
-          <div style="font-weight:bold;">描画中...</div>
-          <div class="muted">家系図を計算しています</div>
-        </div>
-      </div>
-    </div>
-
-    <div id="right">
-      <div class="h">詳細情報</div>
-      <div id="detail">
-        <div class="box muted">ノードをクリックすると情報が表示されます。</div>
-      </div>
-
-      <div class="h">解説</div>
-      <div class="box muted">
-        このツールは、膨大な交配データの中から特定の品種に繋がる祖先だけを抜き出して可視化します。
-      </div>
-      <div class="h">ヒント</div>
-      <ul class="muted" style="padding-left:15px;">
-        <li>ノードをドラッグして動かせます</li>
-        <li>背景をドラッグで移動、スクロールで拡大縮小できます</li>
-      </ul>
-      <div class="muted" style="margin-top:20px; text-align:center;">© Strawberry Pedigree</div>
-    </div>
-  </div>
-
-  <div id="mobileTabs">
-    <button type="button" data-tab="left">設定</button>
-    <button type="button" data-tab="cy" class="active">系統図</button>
-    <button type="button" data-tab="right">情報</button>
-  </div>
-
 <script>
-  if (window.cytoscape && window.cytoscapeDagre) {
-    cytoscape.use(cytoscapeDagre);
-  }
+let cy = null;
+let allElements = [];
+let currentRootId = null;
 
-  let allData = null;
-  let nodeById = new Map();
-  let nodeByLabel = new Map();
-  let parentsOf = new Map();
-  let cy = null;
-  let renderToken = 0;
-
-  function setTab(name) {
-    document.body.classList.remove('tab-left', 'tab-cy', 'tab-right');
-    document.body.classList.add(`tab-${name}`);
-    document.querySelectorAll('#mobileTabs button').forEach(b => {
-      b.classList.toggle('active', b.dataset.tab === name);
-    });
-    if (cy) {
-      setTimeout(() => { cy.resize(); cy.fit(); }, 100);
+// Cytoscape Style
+const cyStyle = [
+  {
+    selector: 'node',
+    style: {
+      'label': 'data(label)',
+      'font-size': 12,
+      'text-valign': 'center',
+      'text-halign': 'center',
+      'background-color': '#FCE7F3',
+      'border-width': 1,
+      'border-color': '#FBCFE8',
+      'color': '#831843',
+      'width': 'label',
+      'padding': '10px',
+      'shape': 'round-rectangle',
+      'text-wrap': 'wrap',
+      'text-max-width': 120
+    }
+  },
+  {
+    selector: 'node.root',
+    style: { 'border-width': 3, 'border-color': '#FB7185', 'background-color': '#FFE4E6' }
+  },
+  {
+    selector: 'edge',
+    style: {
+      'target-arrow-shape': 'triangle',
+      'curve-style': 'dagre',
+      'width': 2,
+      'line-color': '#D1D5DB',
+      'target-arrow-color': '#D1D5DB',
+      'line-style': (e) => e.data('role') === 'father' ? 'dashed' : 'solid'
     }
   }
+];
 
-  document.querySelectorAll('#mobileTabs button').forEach(btn => {
-    btn.addEventListener('click', () => setTab(btn.dataset.tab));
-  });
-
-  function esc(s){
-    return (s ?? '').toString()
-      .replaceAll('&','&amp;')
-      .replaceAll('<','&lt;')
-      .replaceAll('>','&gt;');
-  }
-
-  function uniq(arr){
-    return Array.from(new Set(arr.map(v => (v ?? '').toString().trim()).filter(Boolean)));
-  }
-
-  function setDetail(n){
-    const box = document.getElementById('detail');
-    if(!box) return;
-
-    if(!n){
-      box.innerHTML = '<div class="box muted">ノードをクリックすると情報が表示されます。</div>';
-      return;
-    }
-
-    const d = n.data();
-    const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
-    const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
-    const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
-
-    let sourcesHtml = '';
-    if(d.sources){
-      const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
-      const links = parts.map(p => {
-        const isUrl = /^https?:\/\//i.test(p);
-        return isUrl
-          ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">外部リンク</a></div>`
-          : `<div>${esc(p)}</div>`;
-      }).join('');
-      sourcesHtml = `<div style="margin-top:8px;"><b>情報源</b>${links}</div>`;
-    }
-
-    const incomers = n.incomers('edge');
-    const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
-    const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
-    const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
-    const outgoers = n.outgoers('edge');
-    const children = outgoers.targets().map(x => x.data('label'));
-
-    const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
-    const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
-    const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
-    const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
-
-    box.innerHTML = `
-      <div class="box">
-        <div class="h" style="margin:0 0 6px; color:var(--wine);">${esc(d.label)}</div>
-        ${year} ${inst} ${motherHtml} ${fatherHtml} ${unknownHtml} ${childHtml} ${notes} ${sourcesHtml}
-      </div>
-    `;
-  }
-
-  function parseElements(elements) {
-    nodeById.clear();
-    nodeByLabel.clear();
-    parentsOf.clear();
-    const nodes = elements.filter(e => e.data && e.data.id && e.data.label && !e.data.source);
-    const edges = elements.filter(e => e.data && e.data.source && e.data.target);
-
-    nodes.forEach(n => {
-      const id = String(n.data.id);
-      nodeById.set(id, n);
-      const label = String(n.data.label).trim();
-      if (!nodeByLabel.has(label)) nodeByLabel.set(label, id);
+async function init() {
+  try {
+    const res = await fetch("elements.json");
+    allElements = await res.json();
+    renderList();
+    
+    document.getElementById('q').addEventListener('input', renderList);
+    document.getElementById('genLimit').addEventListener('change', () => {
+      if(currentRootId) updateGraph(currentRootId);
     });
-
-    edges.forEach(e => {
-      const target = String(e.data.target);
-      if (!parentsOf.has(target)) parentsOf.set(target, []);
-      parentsOf.get(target).push({ parentId: String(e.data.source), role: e.data.role || '' });
-    });
-
-    const dl = document.getElementById('cultivars');
-    Array.from(nodeByLabel.keys()).sort().forEach(l => {
-      const opt = document.createElement('option');
-      opt.value = l;
-      dl.appendChild(opt);
-    });
+  } catch (e) {
+    console.error("データの読み込みに失敗しました", e);
   }
-
-  function compareLabelJP(a, b){
-  return a.localeCompare(b, 'ja', { numeric: true, sensitivity: 'base' });
 }
 
-// 全ノード配列を作る（unknown除外は好みで）
-function getAllNodesArray(){
-  const out = [];
-  for(const [id, n] of nodeById.entries()){
-    const label = (n.data?.label ?? '').toString().trim();
-    if(!label) continue;
-    // unknown をリストから外したいなら下の行を有効化
-    // if(isUnknownLabel(label)) continue;
-    out.push({ id, data: n.data });
-  }
-  return out;
-}
-
-function renderList(rows, badgeText){
-  const wrap = document.getElementById('listWrap');
-  const badge = document.getElementById('listBadge');
-  if(badge) badge.textContent = badgeText;
-
-  if(!wrap) return;
-
-  if(!rows.length){
-    wrap.innerHTML = `<div class="muted" style="padding:10px;">該当なし</div>`;
-    return;
-  }
-
-  const htmlRows = rows.map(r => {
-    const label = esc(r.data.label ?? '');
-    const year = esc(r.data.year ?? '');
-    const inst = esc(r.data.institute ?? '');
-    return `
-      <tr data-label="${label}">
-        <td>${label}</td>
-        <td class="muted" style="white-space:nowrap;">${year || '-'}</td>
-        <td class="muted">${inst || '-'}</td>
-      </tr>
-    `;
-  }).join('');
-
-  wrap.innerHTML = `
-    <table style="border-collapse:collapse; width:100%;">
-      <thead>
-        <tr>
-          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">品種</th>
-          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border); width:18%;">登録年</th>
-          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">登録者</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${htmlRows}
-      </tbody>
-    </table>
-  `;
-
-  wrap.querySelectorAll('tbody tr').forEach(tr => {
-    tr.style.cursor = 'pointer';
-    tr.addEventListener('click', () => {
-      const label = tr.getAttribute('data-label');
-      document.getElementById('name').value = label;
-
-      // すぐ描画したいなら run() を呼ぶ
-      run();
-
-      // モバイルなら系統図タブへ移動
-      if(isMobileNow()) setTab('cy');
-    });
-  });
-}
-
-function updateList(){
-  const term = (document.getElementById('q')?.value ?? '').toString().trim().toLowerCase();
-  let rows = getAllNodesArray();
-
-  if(term){
-    rows = rows.filter(r => {
-      const label = ((r.data.label ?? '') + '').toLowerCase();
-      const inst  = ((r.data.institute ?? '') + '').toLowerCase();
-      return label.includes(term) || inst.includes(term);
-    });
-  }
-
-  rows.sort((a,b) => compareLabelJP((a.data.label??''), (b.data.label??'')));
-
-  const badgeText = term ? `検索結果：${rows.length}件` : `全品種：${rows.length}件`;
-  renderList(rows, badgeText);
-}
-
+function renderList() {
+  const q = document.getElementById('q').value.toLowerCase();
+  const tbody = document.getElementById('cultivarTableBody');
   
-  function collectAncestors(startId, maxDepth, includeUnknown) {
-    const keepNodes = new Set([startId]);
-    const keepEdges = [];
-    let frontier = [startId];
+  // フィルタリング（Unknownは除外）
+  const nodes = allElements.nodes.filter(n => {
+    const label = (n.data.label || "").toLowerCase();
+    const inst = (n.data.institute || "").toLowerCase();
+    const isUnknown = label === "unknown" || label === "不明";
+    return !isUnknown && (label.includes(q) || inst.includes(q));
+  });
 
-    for (let d = 0; d < maxDepth; d++) {
-      let nextFrontier = [];
-      frontier.forEach(childId => {
-        const parents = parentsOf.get(childId) || [];
-        parents.forEach(p => {
-          const parentNode = nodeById.get(p.parentId);
-          if (!parentNode) return;
-          const label = String(parentNode.data.label).toLowerCase();
-          const isUnknown = ['不明', 'unknown', 'n/a', 'nan'].includes(label);
-          if (!includeUnknown && isUnknown) return;
-          keepNodes.add(p.parentId);
-          nextFrontier.push(p.parentId);
-          keepEdges.push({ data: { source: p.parentId, target: childId, role: isUnknown ? 'unknown' : p.role } });
-        });
-      });
-      frontier = nextFrontier;
-      if (frontier.length === 0) break;
-    }
-    const result = [];
-    keepNodes.forEach(id => result.push(nodeById.get(id)));
-    return result.concat(keepEdges);
-  }
+  tbody.innerHTML = nodes.map(n => `
+    <tr onclick="updateGraph('${n.data.id}')">
+      <td>${n.data.label}</td>
+      <td class="muted">${n.data.year || '-'}</td>
+    </tr>
+  `).join('');
+}
 
-  function initCy() {
-    if (cy) return;
-    cy = cytoscape({
-      container: document.getElementById('cy'),
-      style: [
-        { selector: 'node', style: {
-          'label': 'data(label)', 'font-size': '12px', 'text-valign': 'center', 'text-halign': 'center',
-          'background-color': '#FCE7F3', 'border-width': 1, 'border-color': '#F9A8D4',
-          'width': 'label', 'padding': '10px', 'shape': 'round-rectangle', 'color': '#831843'
-        }},
-        { selector: 'edge', style: {
-          'curve-style': 'unbundled-bezier', 'target-arrow-shape': 'triangle', 'width': 2,
-          'line-color': '#D1B0C2', 'target-arrow-color': '#D1B0C2'
-        }},
-        { selector: 'edge[role="mother"]', style: { 'line-style': 'solid' } },
-        { selector: 'edge[role="father"]', style: { 'line-style': 'dashed' } },
-        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted', 'line-color': '#ccc' } }
-      ]
-    });
+function updateGraph(rootId) {
+  currentRootId = rootId;
+  const limit = parseInt(document.getElementById('genLimit').value);
+  document.getElementById('loading').classList.add('show');
 
-    // ここでイベントを登録
-    cy.on('tap', 'node', (evt) => {
-      if (window.innerWidth <= 1000) setTab('right');
-      setDetail(evt.target);
-    });
-    cy.on('tap', (evt) => {
-      if(evt.target === cy) setDetail(null);
+  // 祖先を辿ってサブセットを作成
+  const subsetNodes = new Set();
+  const subsetEdges = new Set();
+  
+  function trace(nodeId, depth) {
+    if (depth > limit) return;
+    subsetNodes.add(nodeId);
+    
+    const parentEdges = allElements.edges.filter(e => e.data.target === nodeId);
+    parentEdges.forEach(e => {
+      subsetEdges.add(e);
+      trace(e.data.source, depth + 1);
     });
   }
+  
+  trace(rootId, 1);
 
-  async function run() {
-    const label = document.getElementById('name').value.trim();
-    if (!label) return;
-    if (window.innerWidth <= 1000) setTab('cy');
+  const elements = {
+    nodes: allElements.nodes.filter(n => subsetNodes.has(n.data.id)),
+    edges: Array.from(subsetEdges)
+  };
 
-    const startId = nodeByLabel.get(label);
-    if (!startId) {
-      document.getElementById('badge').textContent = '未発見';
-      return;
-    }
+  if (cy) cy.destroy();
+  
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements: elements,
+    style: cyStyle,
+    layout: { name: 'dagre', rankDir: 'BT', nodeSep: 50, rankSep: 100 }
+  });
 
-    const depth = parseInt(document.getElementById('depth').value);
-    const includeUnknown = document.getElementById('includeUnknown').checked;
-    const elements = collectAncestors(startId, depth, includeUnknown);
+  cy.getElementById(rootId).addClass('root');
+  
+  cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
+  showDetail(allElements.nodes.find(n => n.data.id === rootId).data);
+  
+  document.getElementById('loading').classList.remove('show');
+}
 
-    document.getElementById('cyLoading').classList.add('show');
-    document.getElementById('badge').textContent = '描画中...';
+function showDetail(d) {
+  const panel = document.getElementById('detailPanel');
+  
+  // 父母子情報の抽出
+  const mothers = allElements.edges.filter(e => e.data.target === d.id && e.data.role === 'mother')
+                  .map(e => getNameById(e.data.source)).join(', ') || '-';
+  const fathers = allElements.edges.filter(e => e.data.target === d.id && e.data.role === 'father')
+                  .map(e => getNameById(e.data.source)).join(', ') || '-';
+  const children = allElements.edges.filter(e => e.data.source === d.id)
+                  .map(e => getNameById(e.data.target)).join(', ') || '-';
 
-    const myToken = ++renderToken;
-    initCy(); // cyを確実に作成
+  panel.innerHTML = `
+    <div class="box">
+      <div class="h" style="font-size:16px; color:var(--wine);">${d.label}</div>
+      <div class="detail-item"><span class="detail-label">品種登録年</span>${d.year || '-'}</div>
+      <div class="detail-item"><span class="detail-label">品種登録者</span>${d.institute || '-'}</div>
+      <div class="detail-item"><span class="detail-label">母</span>${mothers}</div>
+      <div class="detail-item"><span class="detail-label">父</span>${fathers}</div>
+      <div class="detail-item"><span class="detail-label">子</span>${children}</div>
+      <div class="detail-item"><span class="detail-label">交配出典</span>${d.source_id || '-'}</div>
+      <div class="detail-item"><span class="detail-label">品種登録情報</span>
+        <div class="muted">${d.sources ? d.sources.replace(/\n/g, '<br>') : '-'}</div>
+      </div>
+    </div>
+  `;
+}
 
-    cy.batch(() => {
-      cy.elements().remove();
-      cy.add(elements);
-    });
+function getNameById(id) {
+  const n = allElements.nodes.find(n => n.data.id === id);
+  return n ? n.data.label : id;
+}
 
-    setTimeout(() => {
-      if (myToken !== renderToken) return;
-      cy.resize();
-      cy.layout({
-        name: 'dagre', rankDir: 'LR', nodeSep: 40, rankSep: 80, animate: true,
-        stop: () => {
-          cy.fit(undefined, 40);
-          document.getElementById('cyLoading').classList.remove('show');
-          document.getElementById('badge').textContent = `表示: ${label}`;
-          document.getElementById('info-status').textContent = `${elements.length} 個の要素を表示しました。`;
-        }
-      }).run();
-    }, 50);
-  }
-
-  async function load() {
-    try {
-      const res = await fetch("elements.json?ts=" + Date.now());
-      allData = await res.json();
-      parseElements(allData);
-      // リスト初期化
-      updateList();
-      document.getElementById('q').addEventListener('input', updateList);
-      document.getElementById('badge').textContent = '準備完了';
-      const params = new URLSearchParams(window.location.search);
-      if (params.has('name')) {
-        document.getElementById('name').value = params.get('name');
-        run();
-      }
-    } catch (e) {
-      document.getElementById('badge').textContent = '読み込み失敗';
-    }
-  }
-
-  document.getElementById('run').addEventListener('click', run);
-  document.getElementById('name').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
-  window.addEventListener('resize', () => { if (cy) cy.resize(); });
-  window.onload = load;
+init();
 </script>
 </body>
 </html>
-

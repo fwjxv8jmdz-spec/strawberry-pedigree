@@ -9,101 +9,63 @@
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
   <style>
     :root{
-      --border:#e5e7eb;
-      --muted:#6b7280;
-      --pink-50:#fff1f7;
-      --pink-100:#FCE7F3;
-      --pink-200:#FBCFE8;
-      --pink-300:#F9A8D4;
-      --pink-400:#FB7185;
-      --pink-500:#F472B6;
-      --wine:#831843;
-      --bg:#ffffff;
+      --border:#e5e7eb; --muted:#6b7280; --pink-50:#fff1f7; --pink-100:#FCE7F3;
+      --pink-200:#FBCFE8; --pink-300:#F9A8D4; --pink-500:#F472B6; --wine:#831843; --bg:#ffffff;
     }
-    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: #111827; }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: #111827; }
     #app { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
-    #left, #right { padding: 12px; overflow: auto; }
-    #left { border-right: 1px solid var(--border); }
-    #right { border-left: 1px solid var(--border); }
+    #left, #right { padding: 12px; overflow-auto; border-right: 1px solid var(--border); }
+    #right { border-left: 1px solid var(--border); border-right: none; }
     #cyWrap { position: relative; width: 100%; height: 100%; background: #fafafa; }
     #cy { width: 100%; height: 100%; }
-    
     .h { font-weight: 700; margin: 6px 0 10px; }
     .muted { color: var(--muted); font-size: 12px; line-height: 1.4; }
     .box { border: 1px solid var(--border); border-radius: 10px; padding: 10px; margin: 10px 0; background:#fff; }
-    
-    input[type="text"], select {
-      width: 100%; box-sizing: border-box; padding: 10px;
-      border: 1px solid #d1d5db; border-radius: 10px; background: #fff; margin-bottom: 8px;
-    }
-
+    input[type="text"], select { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #d1d5db; border-radius: 10px; margin-bottom: 8px; }
     #listWrap { max-height: 50vh; overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
-    table { border-collapse: collapse; width: 100%; }
+    table { border-collapse: collapse; width: 100%; table-layout: fixed; }
     thead th { position: sticky; top: 0; background: #fff; z-index: 1; font-size: 12px; text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
-    tbody td { font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #f3f4f6; cursor: pointer; }
+    tbody td { font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #f3f4f6; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     tbody tr:hover { background: var(--pink-50); }
-
     .detail-item { margin-bottom: 8px; font-size: 13px; }
     .detail-label { font-weight: bold; color: var(--wine); display: block; margin-bottom: 2px; }
-
-    #loading {
-      position: absolute; inset: 0; display: none; place-items: center;
-      background: rgba(255,255,255,0.8); z-index: 100;
-    }
+    #loading { position: absolute; inset: 0; display: none; place-items: center; background: rgba(255,255,255,0.8); z-index: 100; }
     #loading.show { display: grid; }
-
-    @media (max-width: 900px) {
-      #app { grid-template-columns: 1fr; height: auto; }
-      #left, #right { height: auto; border: none; }
-      #cyWrap { height: 500px; }
-    }
+    @media (max-width: 900px) { #app { grid-template-columns: 1fr; height: auto; } #cyWrap { height: 400px; } }
   </style>
 </head>
 <body>
-
 <div id="app">
   <div id="left">
     <h1 style="font-size:16px; margin:0 0 4px;">祖先のみ表示</h1>
-    <div class="muted" style="margin-bottom:12px;">選択した品種のルーツを家系図形式で表示します。</div>
-
+    <p class="muted">選択した品種のルーツを家系図形式で表示します。</p>
     <div class="h">検索</div>
     <input id="q" type="text" placeholder="品種名 / 登録者で検索" />
-
     <div class="h">さかのぼる世代</div>
     <select id="genLimit">
       <option value="1">1世代前（父母）</option>
       <option value="2">2世代前（祖父母）</option>
       <option value="3" selected>3世代前（曾祖父母）</option>
-      <option value="4">4世代前</option>
       <option value="5">5世代前</option>
       <option value="10">可能な限りすべて</option>
     </select>
-
     <div class="box">
       <div class="h" style="margin-top:0;">品種リスト</div>
       <div id="listWrap">
         <table>
-          <thead>
-            <tr><th>品種</th><th>登録年</th></tr>
-          </thead>
-          <tbody id="cultivarTableBody">
-            <tr><td colspan="2" class="muted">準備中...</td></tr>
-          </tbody>
+          <thead><tr><th style="width:60%">品種</th><th style="width:40%">登録年</th></tr></thead>
+          <tbody id="listBody"><tr><td colspan="2" class="muted">データ読込中...</td></tr></tbody>
         </table>
       </div>
     </div>
   </div>
-
   <div id="cyWrap">
     <div id="cy"></div>
     <div id="loading"><div class="h">描画中...</div></div>
   </div>
-
   <div id="right">
     <div class="h">詳細情報</div>
-    <div id="detailPanel">
-      <div class="muted">リストから品種を選択してください。</div>
-    </div>
+    <div id="detailPanel"><p class="muted">リストから品種を選択してください。</p></div>
   </div>
 </div>
 
@@ -113,80 +75,69 @@ let rawNodes = [];
 let rawEdges = [];
 let currentRootId = null;
 
-// Cytoscape Style
+// Cytoscape 初期スタイル
 const cyStyle = [
-  {
-    selector: 'node',
-    style: {
-      'label': 'data(label)',
-      'font-size': 12,
-      'text-valign': 'center',
-      'text-halign': 'center',
-      'background-color': '#fff',
-      'border-width': 1,
-      'border-color': '#d1d5db',
-      'color': '#111827',
-      'width': 'label',
-      'padding': '10px',
-      'shape': 'round-rectangle',
-      'text-wrap': 'wrap',
-      'text-max-width': 100
-    }
-  },
-  {
-    selector: 'node.root',
-    style: { 'border-width': 3, 'border-color': '#FB7185', 'background-color': '#FFE4E6' }
-  },
-  {
-    selector: 'edge',
-    style: {
-      'target-arrow-shape': 'triangle',
-      'curve-style': 'dagre',
-      'width': 2,
-      'line-color': '#D1D5DB',
-      'target-arrow-color': '#D1D5DB',
-      'line-style': (e) => (e.data('role') === 'father') ? 'dashed' : 'solid'
-    }
-  }
+  { selector: 'node', style: {
+    'label': 'data(label)', 'font-size': 12, 'text-valign': 'center', 'text-halign': 'center',
+    'background-color': '#fff', 'border-width': 1, 'border-color': '#d1d5db', 'width': 'label', 'padding': '8px',
+    'shape': 'round-rectangle', 'text-wrap': 'wrap', 'text-max-width': 80
+  }},
+  { selector: 'node.root', style: { 'border-width': 3, 'border-color': '#FB7185', 'background-color': '#FFE4E6' }},
+  { selector: 'edge', style: {
+    'target-arrow-shape': 'triangle', 'curve-style': 'dagre', 'width': 2, 'line-color': '#D1D5DB', 'target-arrow-color': '#D1D5DB',
+    'line-style': (e) => (e.data('role') === 'father' ? 'dashed' : 'solid')
+  }}
 ];
 
-async function init() {
+// データの読み込み
+async function loadData() {
+  const tbody = document.getElementById('listBody');
   try {
-    const res = await fetch("elements.json");
-    const data = await res.json();
-    
-    // elements.json の構造が {nodes:[], edges:[]} か、配列そのものかを確認
-    if (data.nodes && data.edges) {
-      rawNodes = data.nodes;
-      rawEdges = data.edges;
-    } else if (Array.isArray(data)) {
-      rawNodes = data.filter(el => el.group === 'nodes');
-      rawEdges = data.filter(el => el.group === 'edges');
-    } else {
-      throw new Error("JSON形式が正しくありません");
+    const response = await fetch("elements.json");
+    if (!response.ok) throw new Error("ファイルが見つかりません (404)");
+    const json = await response.json();
+
+    // elements.json の構造を柔軟に判定
+    let elements = [];
+    if (json.elements) {
+      elements = json.elements; // { elements: [...] } の形
+    } else if (Array.isArray(json)) {
+      elements = json; // [...] 直接配列の形
+    } else if (json.nodes) {
+      // { nodes: [], edges: [] } の形
+      rawNodes = json.nodes;
+      rawEdges = json.edges;
     }
 
+    if (elements.length > 0) {
+      rawNodes = elements.filter(el => el.group === 'nodes');
+      rawEdges = elements.filter(el => el.group === 'edges');
+    }
+
+    if (rawNodes.length === 0) throw new Error("ノードデータが空です");
+
     renderList();
-    
     document.getElementById('q').addEventListener('input', renderList);
     document.getElementById('genLimit').addEventListener('change', () => {
       if(currentRootId) updateGraph(currentRootId);
     });
-  } catch (e) {
-    console.error("データの読み込みに失敗しました", e);
-    document.getElementById('cultivarTableBody').innerHTML = '<tr><td colspan="2" style="color:red">データの読み込みに失敗しました。</td></tr>';
+
+  } catch (err) {
+    console.error(err);
+    tbody.innerHTML = `<tr><td colspan="2" style="color:red;">エラー: ${err.message}</td></tr>`;
   }
 }
 
+// リストの描画
 function renderList() {
   const q = document.getElementById('q').value.toLowerCase();
-  const tbody = document.getElementById('cultivarTableBody');
+  const tbody = document.getElementById('listBody');
   
   const filtered = rawNodes.filter(n => {
     const label = (n.data.label || "").toLowerCase();
     const inst = (n.data.institute || "").toLowerCase();
-    const isUnknown = label === "unknown" || label === "不明";
-    return !isUnknown && (label.includes(q) || inst.includes(q));
+    if (label === "unknown" || label === "不明") return false;
+    return label.includes(q) || inst.includes(q);
   });
 
   if (filtered.length === 0) {
@@ -197,94 +148,89 @@ function renderList() {
   tbody.innerHTML = filtered.map(n => `
     <tr onclick="updateGraph('${n.data.id}')">
       <td>${n.data.label || '---'}</td>
-      <td class="muted">${n.data.year || '-'}</td>
+      <td>${n.data.year || '-'}</td>
     </tr>
   `).join('');
 }
 
+// グラフの更新
 function updateGraph(rootId) {
   currentRootId = rootId;
   const limit = parseInt(document.getElementById('genLimit').value);
   document.getElementById('loading').classList.add('show');
 
   const subsetNodes = new Set();
-  const subsetEdges = new Set();
+  const subsetEdges = [];
   
+  // 祖先を再帰的に探索
   function trace(nodeId, depth) {
-    if (depth > limit) return;
-    subsetNodes.add(nodeId);
-    
+    if (depth >= limit) return;
     const parentEdges = rawEdges.filter(e => e.data.target === nodeId);
     parentEdges.forEach(e => {
-      subsetEdges.add(e);
+      subsetNodes.add(e.data.source);
+      subsetEdges.push(e);
       trace(e.data.source, depth + 1);
     });
   }
   
-  trace(rootId, 0); // 起点を0世代として開始
+  subsetNodes.add(rootId);
+  trace(rootId, 0);
 
   const elements = [
     ...rawNodes.filter(n => subsetNodes.has(n.data.id)),
-    ...Array.from(subsetEdges)
+    ...subsetEdges
   ];
 
   if (cy) cy.destroy();
-  
   cy = cytoscape({
     container: document.getElementById('cy'),
     elements: elements,
     style: cyStyle,
-    layout: { 
-      name: 'dagre', 
-      rankDir: 'BT', // Bottom to Top (子が下、親が上)
-      nodeSep: 40, 
-      rankSep: 80 
-    }
+    layout: { name: 'dagre', rankDir: 'BT', nodeSep: 40, rankSep: 80 }
   });
 
-  const rootNode = cy.getElementById(rootId);
-  if (rootNode.length) rootNode.addClass('root');
-  
+  cy.getElementById(rootId).addClass('root');
   cy.on('tap', 'node', (evt) => showDetail(evt.target.data()));
   
   const rootData = rawNodes.find(n => n.data.id === rootId);
   if (rootData) showDetail(rootData.data);
-  
   document.getElementById('loading').classList.remove('show');
 }
 
+// 詳細パネルの表示
 function showDetail(d) {
   const panel = document.getElementById('detailPanel');
-  
-  const mothers = rawEdges.filter(e => e.data.target === d.id && e.data.role === 'mother')
-                  .map(e => getNameById(e.data.source)).join(', ') || '-';
-  const fathers = rawEdges.filter(e => e.data.target === d.id && e.data.role === 'father')
-                  .map(e => getNameById(e.data.source)).join(', ') || '-';
+  const findNames = (targetId, role) => rawEdges
+    .filter(e => e.data.target === targetId && e.data.role === role)
+    .map(e => {
+      const p = rawNodes.find(n => n.data.id === e.data.source);
+      return p ? p.data.label : '不明';
+    }).join(', ');
+
   const children = rawEdges.filter(e => e.data.source === d.id)
-                  .map(e => getNameById(e.data.target)).join(', ') || '-';
+    .map(e => {
+      const c = rawNodes.find(n => n.data.id === e.data.target);
+      return c ? c.data.label : '';
+    }).filter(Boolean).join(', ');
 
   panel.innerHTML = `
     <div class="box">
       <div class="h" style="font-size:16px; color:var(--wine);">${d.label}</div>
       <div class="detail-item"><span class="detail-label">品種登録年</span>${d.year || '-'}</div>
       <div class="detail-item"><span class="detail-label">品種登録者</span>${d.institute || '-'}</div>
-      <div class="detail-item"><span class="detail-label">母</span>${mothers}</div>
-      <div class="detail-item"><span class="detail-label">父</span>${fathers}</div>
-      <div class="detail-item"><span class="detail-label">子</span>${children}</div>
+      <div class="detail-item"><span class="detail-label">母</span>${findNames(d.id, 'mother') || '-'}</div>
+      <div class="detail-item"><span class="detail-label">父</span>${findNames(d.id, 'father') || '-'}</div>
+      <div class="detail-item"><span class="detail-label">子</span>${children || '-'}</div>
       <div class="detail-item"><span class="detail-label">交配出典</span>${d.source_id || '-'}</div>
       <div class="detail-item"><span class="detail-label">品種登録情報</span>
-        <div class="muted" style="word-break: break-all;">${d.sources ? d.sources.replace(/\n/g, '<br>') : '-'}</div>
+        <div class="muted" style="word-break:break-all;">${d.sources ? d.sources.replace(/\n/g, '<br>') : '-'}</div>
       </div>
     </div>
   `;
 }
 
-function getNameById(id) {
-  const n = rawNodes.find(n => n.data.id === id);
-  return n ? n.data.label : id;
-}
-
-init();
+// 初期化実行
+loadData();
 </script>
 </body>
 </html>

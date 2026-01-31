@@ -7,6 +7,7 @@
   <title>いちご 品種系統図（祖先表示） | Strawberry Pedigree</title>
   <meta name="description" content="日本のいちご品種が中心の品種系統図です。品種名と世代を指定して、その品種の祖先だけを抽出して表示します。" />
 
+  <!-- favicon -->
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="icon" href="icon32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="icon16.png" sizes="16x16" type="image/png">
@@ -39,7 +40,7 @@
     }
     a { color: #2563eb; text-decoration: none; }
 
-    /* ===== Layout ===== */
+    /* ===== Layout (PC: 3列 / Mobile: 1列) ===== */
     #app {
       display: grid;
       grid-template-columns: 320px 1fr 320px;
@@ -63,7 +64,11 @@
       background: #fafafa;
       overflow: hidden;
     }
-    #cy { width: 100%; height: 100%; display: block; }
+    #cy {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
 
     /* UI Parts */
     .h { font-weight: 800; margin: 0 0 10px; font-size: 15px; }
@@ -85,92 +90,116 @@
       color: var(--muted);
     }
 
-    /* Filter Tabs (index.html style) */
-    .filter-tabs {
-      display: flex;
-      background: #f3f4f6;
-      border-radius: 8px;
-      padding: 2px;
+    input[type="text"], select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 14px;
       margin-bottom: 8px;
     }
-    .filter-tabs button {
-      flex: 1;
-      border: none;
-      padding: 6px 4px;
-      font-size: 11px;
-      font-weight: bold;
-      background: none;
-      color: var(--muted);
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    .filter-tabs button.active {
+    button {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
       background: #fff;
-      color: #111827;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      cursor: pointer;
+      font-weight: 900;
+      transition: background 0.2s;
     }
+    button:hover { background: #f9fafb; }
 
-    input[type="text"], select {
-      width: 100%; box-sizing: border-box; padding: 10px;
-      border: 1px solid #d1d5db; border-radius: 10px;
-      background: #fff; font-size: 14px; margin-bottom: 8px;
-    }
-    button.primary-btn {
-      width: 100%; padding: 12px; border: 1px solid #d1d5db;
-      border-radius: 10px; background: #fff; cursor: pointer;
-      font-weight: 900; transition: background 0.2s;
-    }
-    button.primary-btn:hover { background: #f9fafb; }
-
+    /* Loading Overlay */
     #cyLoading {
-      position: absolute; inset: 0; display: none; place-items: center;
-      background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(4px); z-index: 100;
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 100;
     }
     #cyLoading.show { display: grid; }
 
+    /* ===== Mobile Responsive ===== */
+    #mobileTabs { display: none; }
+
     @media (max-width: 1000px) {
-      #app { grid-template-columns: 1fr; }
-      #left, #right, #cyWrap { display: none; height: calc(100vh - 60px); }
+      #app {
+        grid-template-columns: 1fr;
+      }
+      #left, #right, #cyWrap { 
+        display: none; 
+        height: calc(100vh - 60px); 
+      }
+      
       body.tab-left #left { display: block; }
       body.tab-cy #cyWrap { display: block; }
       body.tab-right #right { display: block; }
+
       #mobileTabs {
-        position: fixed; bottom: 0; left: 0; right: 0; height: 60px;
-        display: flex; background: #fff; border-top: 1px solid var(--border);
-        padding: 5px; box-sizing: border-box; z-index: 1000;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        height: 60px;
+        display: flex;
+        background: #fff;
+        border-top: 1px solid var(--border);
+        padding: 5px;
+        box-sizing: border-box;
+        z-index: 1000;
       }
-      #mobileTabs button { flex: 1; border: none; background: none; font-size: 13px; font-weight: bold; color: var(--muted); }
-      #mobileTabs button.active { color: var(--wine); background: var(--pink-100); border-radius: 8px; }
+      #mobileTabs button {
+        flex: 1;
+        border: none;
+        background: none;
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--muted);
+      }
+      #mobileTabs button.active {
+        color: var(--wine);
+        background: var(--pink-100);
+        border-radius: 8px;
+      }
     }
   </style>
 </head>
 
 <body class="tab-cy">
+  <div id="introDesktop" class="muted onlyDesktop" style="margin:8px 0 12px; padding:0 12px;">
+  いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
+  </div>
+  
   <div id="app">
     <div id="left">
       <div class="h" style="font-size:18px;">祖先のみ表示</div>
       <p class="muted">選択した品種のルーツを家系図形式で表示します。</p>
 
-      <div class="box">
-        <div class="h" style="margin:0 0 8px;">品種リスト</div>
-        
-        <div class="filter-tabs">
-          <button type="button" data-filter="all" class="active">全品種</button>
-          <button type="button" data-filter="registered">登録品種</button>
-          <button type="button" data-filter="no-parents">親が不明</button>
-        </div>
+<div class="box">
+  <div class="h" style="margin:0 0 8px;">品種リスト</div>
+  <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
 
-        <input id="q" type="text" placeholder="品種名 / 登録者で検索" />
+  <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
+    <span id="listBadge" class="pill">準備中…</span>
+  </div>
 
-        <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
-          <span id="listBadge" class="pill">準備中…</span>
-        </div>
+  <div id="listWrap" style="
+    margin-top:8px;
+    max-height: 42vh;
+    overflow:auto;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#fff;">
+    <div class="muted" style="padding:10px;">読み込み中…</div>
+  </div>
 
-        <div id="listWrap" style="margin-top:8px; max-height: 40vh; overflow:auto; border:1px solid var(--border); border-radius:10px; background:#fff;">
-          <div class="muted" style="padding:10px;">読み込み中…</div>
-        </div>
-      </div>
+  <div class="muted" style="margin-top:8px;">行をクリックすると、その品種名が入力されます。</div>
+</div>
 
+      
       <div class="box">
         <div class="h">品種名</div>
         <input id="name" type="text" list="cultivars" placeholder="例：とちおとめ" />
@@ -190,7 +219,7 @@
           <input id="includeUnknown" type="checkbox" /> 不明(unknown)を含める
         </label>
 
-        <button id="run" class="primary-btn" type="button">系統図を表示</button>
+        <button id="run" type="button">系統図を表示</button>
       </div>
       
       <div class="box">
@@ -199,6 +228,13 @@
         <div id="info-status" class="muted" style="margin-top:8px;">品種を入力してください。</div>
       </div>
 
+      <div class="box">
+        <div class="h">凡例</div>
+        <div class="muted">
+          母方：実線 / 父方：破線 / 不明：点線
+        </div>
+      </div>
+      
       <a class="muted" href="./" style="display:block; text-align:center;">← トップページに戻る</a>
     </div>
 
@@ -217,10 +253,16 @@
       <div id="detail">
         <div class="box muted">ノードをクリックすると情報が表示されます。</div>
       </div>
-      <div class="h">凡例</div>
+
+      <div class="h">解説</div>
       <div class="box muted">
-        母方：実線 / 父方：破線 / 不明：点線
+        このツールは、膨大な交配データの中から特定の品種に繋がる祖先だけを抜き出して可視化します。
       </div>
+      <div class="h">ヒント</div>
+      <ul class="muted" style="padding-left:15px;">
+        <li>ノードをドラッグして動かせます</li>
+        <li>背景をドラッグで移動、スクロールで拡大縮小できます</li>
+      </ul>
       <div class="muted" style="margin-top:20px; text-align:center;">© Strawberry Pedigree</div>
     </div>
   </div>
@@ -242,7 +284,6 @@
   let parentsOf = new Map();
   let cy = null;
   let renderToken = 0;
-  let currentFilter = 'all'; // 現在のフィルタ状態
 
   function setTab(name) {
     document.body.classList.remove('tab-left', 'tab-cy', 'tab-right');
@@ -250,50 +291,68 @@
     document.querySelectorAll('#mobileTabs button').forEach(b => {
       b.classList.toggle('active', b.dataset.tab === name);
     });
-    if (cy) { setTimeout(() => { cy.resize(); cy.fit(); }, 100); }
+    if (cy) {
+      setTimeout(() => { cy.resize(); cy.fit(); }, 100);
+    }
   }
 
   document.querySelectorAll('#mobileTabs button').forEach(btn => {
     btn.addEventListener('click', () => setTab(btn.dataset.tab));
   });
 
-  // フィルタタブのクリックイベント
-  document.querySelectorAll('.filter-tabs button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-tabs button').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.dataset.filter;
-      updateList();
-    });
-  });
-
   function esc(s){
-    return (s ?? '').toString().replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+    return (s ?? '').toString()
+      .replaceAll('&','&amp;')
+      .replaceAll('<','&lt;')
+      .replaceAll('>','&gt;');
+  }
+
+  function uniq(arr){
+    return Array.from(new Set(arr.map(v => (v ?? '').toString().trim()).filter(Boolean)));
   }
 
   function setDetail(n){
     const box = document.getElementById('detail');
-    if(!box || !n) {
+    if(!box) return;
+
+    if(!n){
       box.innerHTML = '<div class="box muted">ノードをクリックすると情報が表示されます。</div>';
       return;
     }
+
     const d = n.data();
     const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
     const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
+    const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
+
+    let sourcesHtml = '';
+    if(d.sources){
+      const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
+      const links = parts.map(p => {
+        const isUrl = /^https?:\/\//i.test(p);
+        return isUrl
+          ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">外部リンク</a></div>`
+          : `<div>${esc(p)}</div>`;
+      }).join('');
+      sourcesHtml = `<div style="margin-top:8px;"><b>情報源</b>${links}</div>`;
+    }
+
     const incomers = n.incomers('edge');
     const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
     const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
+    const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
     const outgoers = n.outgoers('edge');
     const children = outgoers.targets().map(x => x.data('label'));
+
+    const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
+    const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
+    const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
+    const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
 
     box.innerHTML = `
       <div class="box">
         <div class="h" style="margin:0 0 6px; color:var(--wine);">${esc(d.label)}</div>
-        ${year} ${inst}
-        <div><b>母</b>：${Array.from(new Set(mothers)).join(', ') || '-'}</div>
-        <div><b>父</b>：${Array.from(new Set(fathers)).join(', ') || '-'}</div>
-        <div style="margin-top:8px;"><b>子</b><div>${Array.from(new Set(children)).join(', ') || '-'}</div></div>
-        ${d.sources ? `<div style="margin-top:8px;"><b>情報源</b><div class="muted">${esc(d.sources)}</div></div>` : ''}
+        ${year} ${inst} ${motherHtml} ${fatherHtml} ${unknownHtml} ${childHtml} ${notes} ${sourcesHtml}
       </div>
     `;
   }
@@ -326,64 +385,97 @@
     });
   }
 
-  function updateList(){
-    const term = (document.getElementById('q')?.value ?? '').trim().toLowerCase();
-    let rows = [];
-    
-    for(const [id, n] of nodeById.entries()){
-      const label = (n.data?.label ?? '').toString();
-      const inst = (n.data?.institute ?? '').toString();
-      const isUnknown = ['不明','unknown'].includes(label.toLowerCase());
-      
-      if(isUnknown) continue;
+  function compareLabelJP(a, b){
+  return a.localeCompare(b, 'ja', { numeric: true, sensitivity: 'base' });
+}
 
-      // フィルタリング
-      if (currentFilter === 'registered' && !n.data.year) continue;
-      if (currentFilter === 'no-parents' && parentsOf.has(id)) continue;
+// 全ノード配列を作る（unknown除外は好みで）
+function getAllNodesArray(){
+  const out = [];
+  for(const [id, n] of nodeById.entries()){
+    const label = (n.data?.label ?? '').toString().trim();
+    if(!label) continue;
+    // unknown をリストから外したいなら下の行を有効化
+    // if(isUnknownLabel(label)) continue;
+    out.push({ id, data: n.data });
+  }
+  return out;
+}
 
-      // 検索ワード
-      if (term && !label.toLowerCase().includes(term) && !inst.toLowerCase().includes(term)) continue;
+function renderList(rows, badgeText){
+  const wrap = document.getElementById('listWrap');
+  const badge = document.getElementById('listBadge');
+  if(badge) badge.textContent = badgeText;
 
-      rows.push({ id, data: n.data });
-    }
+  if(!wrap) return;
 
-    rows.sort((a,b) => (a.data.label).localeCompare(b.data.label, 'ja'));
-    renderList(rows, term ? `検索結果：${rows.length}件` : `件数：${rows.length}件`);
+  if(!rows.length){
+    wrap.innerHTML = `<div class="muted" style="padding:10px;">該当なし</div>`;
+    return;
   }
 
-  function renderList(rows, badgeText){
-    const wrap = document.getElementById('listWrap');
-    document.getElementById('listBadge').textContent = badgeText;
-    if(!rows.length){
-      wrap.innerHTML = `<div class="muted" style="padding:10px;">該当なし</div>`;
-      return;
-    }
+  const htmlRows = rows.map(r => {
+    const label = esc(r.data.label ?? '');
+    const year = esc(r.data.year ?? '');
+    const inst = esc(r.data.institute ?? '');
+    return `
+      <tr data-label="${label}">
+        <td>${label}</td>
+        <td class="muted" style="white-space:nowrap;">${year || '-'}</td>
+        <td class="muted">${inst || '-'}</td>
+      </tr>
+    `;
+  }).join('');
 
-    wrap.innerHTML = `
-      <table style="border-collapse:collapse; width:100%; font-size:12px;">
-        <thead>
-          <tr style="position:sticky; top:0; background:#fff; box-shadow:0 1px var(--border);">
-            <th style="text-align:left; padding:8px 10px;">品種</th>
-            <th style="text-align:left; padding:8px 10px; width:20%;">登録年</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${rows.map(r => `<tr data-label="${esc(r.data.label)}" style="cursor:pointer; border-bottom:1px solid #f9fafb;">
-            <td style="padding:8px 10px;">${esc(r.data.label)}<br><small class="muted">${esc(r.data.institute || '')}</small></td>
-            <td style="padding:8px 10px;" class="muted">${esc(r.data.year || '-')}</td>
-          </tr>`).join('')}
-        </tbody>
-      </table>`;
+  wrap.innerHTML = `
+    <table style="border-collapse:collapse; width:100%;">
+      <thead>
+        <tr>
+          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">品種</th>
+          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border); width:18%;">登録年</th>
+          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">登録者</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${htmlRows}
+      </tbody>
+    </table>
+  `;
 
-    wrap.querySelectorAll('tbody tr').forEach(tr => {
-      tr.addEventListener('click', () => {
-        document.getElementById('name').value = tr.dataset.label;
-        run();
-        if(window.innerWidth <= 1000) setTab('cy');
-      });
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    tr.style.cursor = 'pointer';
+    tr.addEventListener('click', () => {
+      const label = tr.getAttribute('data-label');
+      document.getElementById('name').value = label;
+
+      // すぐ描画したいなら run() を呼ぶ
+      run();
+
+      // モバイルなら系統図タブへ移動
+      if(isMobileNow()) setTab('cy');
+    });
+  });
+}
+
+function updateList(){
+  const term = (document.getElementById('q')?.value ?? '').toString().trim().toLowerCase();
+  let rows = getAllNodesArray();
+
+  if(term){
+    rows = rows.filter(r => {
+      const label = ((r.data.label ?? '') + '').toLowerCase();
+      const inst  = ((r.data.institute ?? '') + '').toLowerCase();
+      return label.includes(term) || inst.includes(term);
     });
   }
 
+  rows.sort((a,b) => compareLabelJP((a.data.label??''), (b.data.label??'')));
+
+  const badgeText = term ? `検索結果：${rows.length}件` : `全品種：${rows.length}件`;
+  renderList(rows, badgeText);
+}
+
+  
   function collectAncestors(startId, maxDepth, includeUnknown) {
     const keepNodes = new Set([startId]);
     const keepEdges = [];
@@ -397,7 +489,7 @@
           const parentNode = nodeById.get(p.parentId);
           if (!parentNode) return;
           const label = String(parentNode.data.label).toLowerCase();
-          const isUnknown = ['不明', 'unknown'].includes(label);
+          const isUnknown = ['不明', 'unknown', 'n/a', 'nan'].includes(label);
           if (!includeUnknown && isUnknown) return;
           keepNodes.add(p.parentId);
           nextFrontier.push(p.parentId);
@@ -407,7 +499,9 @@
       frontier = nextFrontier;
       if (frontier.length === 0) break;
     }
-    return Array.from(keepNodes).map(id => nodeById.get(id)).concat(keepEdges);
+    const result = [];
+    keepNodes.forEach(id => result.push(nodeById.get(id)));
+    return result.concat(keepEdges);
   }
 
   function initCy() {
@@ -429,37 +523,53 @@
         { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted', 'line-color': '#ccc' } }
       ]
     });
+
+    // ここでイベントを登録
     cy.on('tap', 'node', (evt) => {
       if (window.innerWidth <= 1000) setTab('right');
       setDetail(evt.target);
     });
-    cy.on('tap', (evt) => { if(evt.target === cy) setDetail(null); });
+    cy.on('tap', (evt) => {
+      if(evt.target === cy) setDetail(null);
+    });
   }
 
   async function run() {
     const label = document.getElementById('name').value.trim();
+    if (!label) return;
+    if (window.innerWidth <= 1000) setTab('cy');
+
     const startId = nodeByLabel.get(label);
-    if (!startId) { document.getElementById('badge').textContent = '未発見'; return; }
+    if (!startId) {
+      document.getElementById('badge').textContent = '未発見';
+      return;
+    }
 
     const depth = parseInt(document.getElementById('depth').value);
     const includeUnknown = document.getElementById('includeUnknown').checked;
     const elements = collectAncestors(startId, depth, includeUnknown);
 
     document.getElementById('cyLoading').classList.add('show');
-    const myToken = ++renderToken;
-    initCy();
+    document.getElementById('badge').textContent = '描画中...';
 
-    cy.batch(() => { cy.elements().remove(); cy.add(elements); });
+    const myToken = ++renderToken;
+    initCy(); // cyを確実に作成
+
+    cy.batch(() => {
+      cy.elements().remove();
+      cy.add(elements);
+    });
 
     setTimeout(() => {
       if (myToken !== renderToken) return;
+      cy.resize();
       cy.layout({
-        name: 'dagre', rankDir: 'LR', animate: true,
+        name: 'dagre', rankDir: 'LR', nodeSep: 40, rankSep: 80, animate: true,
         stop: () => {
           cy.fit(undefined, 40);
           document.getElementById('cyLoading').classList.remove('show');
           document.getElementById('badge').textContent = `表示: ${label}`;
-          document.getElementById('info-status').textContent = `${elements.length} 個の要素を表示。`;
+          document.getElementById('info-status').textContent = `${elements.length} 個の要素を表示しました。`;
         }
       }).run();
     }, 50);
@@ -469,14 +579,24 @@
     try {
       const res = await fetch("elements.json?ts=" + Date.now());
       allData = await res.json();
-      parseElements(allData.elements || allData);
+      parseElements(allData);
+      // リスト初期化
       updateList();
       document.getElementById('q').addEventListener('input', updateList);
       document.getElementById('badge').textContent = '準備完了';
-    } catch (e) { document.getElementById('badge').textContent = '失敗'; }
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('name')) {
+        document.getElementById('name').value = params.get('name');
+        run();
+      }
+    } catch (e) {
+      document.getElementById('badge').textContent = '読み込み失敗';
+    }
   }
 
   document.getElementById('run').addEventListener('click', run);
+  document.getElementById('name').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
+  window.addEventListener('resize', () => { if (cy) cy.resize(); });
   window.onload = load;
 </script>
 </body>

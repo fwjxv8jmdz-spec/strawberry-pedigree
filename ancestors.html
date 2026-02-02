@@ -3,9 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>祖先表示 | Strawberry Pedigree</title>
-  <meta name="description" content="品種名と世代を指定して、その品種の祖先だけを表示します。" />
+  <title>いちご 品種系統図（祖先のみ表示） | Strawberry Pedigree</title>
+  <meta name="description" content="品種名と世代数を指定して、その品種の祖先だけを表示します。" />
 
+  <!-- favicon -->
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="icon16.png" sizes="16x16" type="image/png">
+  
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
@@ -79,8 +84,8 @@
 <body>
 <header>
   <div>
-    <div style="font-weight:900;">祖先のみ表示</div>
-    <div class="muted">品種名と世代を指定</div>
+    <div style="font-weight:900;">いちご 品種系統図（祖先のみ表示）</div>
+    <div class="muted">品種名と世代を指定すると先祖が表示されます。</div>
   </div>
 
   <div style="flex:1;"></div>
@@ -95,6 +100,7 @@
     <option value="4">4（高祖父母）</option>
     <option value="5">5代前</option>
     <option value="6">6代前</option>
+    <option value="6">7代前</option>
   </select>
 
   <label style="display:flex; align-items:center; gap:5px; font-size:13px;">
@@ -103,7 +109,7 @@
 
   <button id="run">表示</button>
   <span id="badge" class="pill">読込中...</span>
-  <a href="./" class="muted">トップへ</a>
+  <a href="./" class="muted">系統図（ネットワーク図）に戻る</a>
 </header>
 
 <div id="cy"></div>
@@ -386,3 +392,4 @@ function collectAncestors(startId, depthN, includeUnknown) {
 </script>
 </body>
 </html>
+

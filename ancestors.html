@@ -2,16 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  
-  <title>いちご 品種系統図（祖先表示） | Strawberry Pedigree</title>
-  <meta name="description" content="日本のいちご品種が中心の品種系統図です。品種名と世代を指定して、その品種の祖先だけを抽出して表示します。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>祖先表示 | Strawberry Pedigree</title>
+  <meta name="description" content="品種名と世代を指定して、その品種の祖先だけを表示します。" />
 
-  <!-- favicon -->
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="icon" href="icon32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="icon16.png" sizes="16x16" type="image/png">
-  
   <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
   <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
   <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
@@ -26,482 +20,201 @@
       --wine: #831843;
       --bg: #ffffff;
     }
-
-    html, body { 
-      height: 100%; 
-      margin: 0; 
-      padding: 0;
-      overflow: hidden; 
-    }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
       background: var(--bg);
       color: #111827;
-    }
-    a { color: #2563eb; text-decoration: none; }
-
-    /* ===== Layout (PC: 3列 / Mobile: 1列) ===== */
-    #app {
-      display: grid;
-      grid-template-columns: 320px 1fr 320px;
-      height: 100vh;
-      width: 100vw;
-    }
-
-    #left, #right {
-      overflow-y: auto;
-      padding: 16px;
-      background: #fff;
-      z-index: 10;
-    }
-    #left { border-right: 1px solid var(--border); }
-    #right { border-left: 1px solid var(--border); }
-
-    #cyWrap {
-      position: relative;
-      flex: 1;
-      height: 100%;
-      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
       overflow: hidden;
     }
-    #cy {
-      width: 100%;
-      height: 100%;
-      display: block;
+    header {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 10;
     }
-
-    /* UI Parts */
-    .h { font-weight: 800; margin: 0 0 10px; font-size: 15px; }
-    .muted { color: var(--muted); font-size: 12px; line-height: 1.5; }
-    .box {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      margin-bottom: 12px;
-      background: #fff;
-    }
-    .pill {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--muted);
-    }
-
-    input[type="text"], select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
+    input, select {
+      padding: 8px 12px;
       border: 1px solid #d1d5db;
-      border-radius: 10px;
+      border-radius: 8px;
       background: #fff;
       font-size: 14px;
-      margin-bottom: 8px;
     }
     button {
-      width: 100%;
-      padding: 12px;
+      padding: 8px 16px;
       border: 1px solid #d1d5db;
-      border-radius: 10px;
+      border-radius: 8px;
       background: #fff;
       cursor: pointer;
-      font-weight: 900;
-      transition: background 0.2s;
+      font-size: 14px;
+      font-weight: 700;
     }
     button:hover { background: #f9fafb; }
-
-    /* Loading Overlay */
-    #cyLoading {
-      position: absolute;
-      inset: 0;
-      display: none;
-      place-items: center;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(4px);
-      z-index: 100;
+    #cy {
+      flex: 1;
+      width: 100%;
+      background-color: #fafafa;
     }
-    #cyLoading.show { display: grid; }
-
-    /* ===== Mobile Responsive ===== */
-    #mobileTabs { display: none; }
-
-    @media (max-width: 1000px) {
-      #app {
-        grid-template-columns: 1fr;
-      }
-      #left, #right, #cyWrap { 
-        display: none; 
-        height: calc(100vh - 60px); 
-      }
-      
-      body.tab-left #left { display: block; }
-      body.tab-cy #cyWrap { display: block; }
-      body.tab-right #right { display: block; }
-
-      #mobileTabs {
-        position: fixed;
-        bottom: 0; left: 0; right: 0;
-        height: 60px;
-        display: flex;
-        background: #fff;
-        border-top: 1px solid var(--border);
-        padding: 5px;
-        box-sizing: border-box;
-        z-index: 1000;
-      }
-      #mobileTabs button {
-        flex: 1;
-        border: none;
-        background: none;
-        font-size: 13px;
-        font-weight: bold;
-        color: var(--muted);
-      }
-      #mobileTabs button.active {
-        color: var(--wine);
-        background: var(--pink-100);
-        border-radius: 8px;
-      }
+    .pill {
+      font-size: 12px;
+      padding: 2px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: #fff;
     }
+    .muted { color: var(--muted); font-size: 12px; }
+    a { color: #2563eb; text-decoration: none; }
   </style>
 </head>
 
-<body class="tab-cy">
-  <div id="introDesktop" class="muted onlyDesktop" style="margin:8px 0 12px; padding:0 12px;">
-  いちごの品種系統図（交配図）を可視化したサイトです。品種名や登録者で検索し、母・父・子の関係や品種登録情報を確認できます。
-  </div>
-  
-  <div id="app">
-    <div id="left">
-      <div class="h" style="font-size:18px;">いちご 品種系統図（祖先表示）</div>
-      <p class="muted">選択した品種の祖先を家系図形式で表示します。</p>
-
-<div class="box">
-  <div class="h" style="margin:0 0 8px;">品種リスト</div>
-  <input id="q" type="text" placeholder="品種名 / 登録者で検索（例：とちおとめ、栃木県）" />
-
-  <div style="display:flex; gap:8px; align-items:center; margin-top:8px;">
-    <span id="listBadge" class="pill">準備中…</span>
+<body>
+<header>
+  <div>
+    <div style="font-weight:900;">祖先のみ表示</div>
+    <div class="muted">品種名と世代を指定</div>
   </div>
 
-  <div id="listWrap" style="
-    margin-top:8px;
-    max-height: 42vh;
-    overflow:auto;
-    border:1px solid var(--border);
-    border-radius:10px;
-    background:#fff;">
-    <div class="muted" style="padding:10px;">読み込み中…</div>
-  </div>
+  <div style="flex:1;"></div>
 
-  <div class="muted" style="margin-top:8px;">行をクリックすると、その品種名が入力されます。</div>
-</div>
+  <input id="name" list="cultivars" placeholder="品種名（例：とちおとめ）" style="min-width: 200px;" />
+  <datalist id="cultivars"></datalist>
 
-      
-      <div class="box">
-        <div class="h">品種名</div>
-        <input id="name" type="text" list="cultivars" placeholder="例：とちおとめ" />
-        <datalist id="cultivars"></datalist>
+  <select id="depth">
+    <option value="1">1（親）</option>
+    <option value="2" selected>2（祖父母）</option>
+    <option value="3">3（曾祖父母）</option>
+    <option value="4">4（高祖父母）</option>
+    <option value="5">5代前</option>
+    <option value="6">6代前</option>
+  </select>
 
-        <div class="h" style="margin-top:10px;">遡る世代</div>
-        <select id="depth">
-          <option value="1">1代前（親）</option>
-          <option value="2" selected>2代前（祖父母）</option>
-          <option value="3">3代前（曾祖父母）</option>
-          <option value="4">4代前（高祖父母）</option>
-          <option value="5">5代前</option>
-          <option value="6">6代前</option>
-        </select>
+  <label style="display:flex; align-items:center; gap:5px; font-size:13px;">
+    <input id="includeUnknown" type="checkbox" /> 不明含む
+  </label>
 
-        <label style="display:flex; align-items:center; gap:8px; font-size:13px; margin:10px 0;">
-          <input id="includeUnknown" type="checkbox" /> 不明(unknown)を含める
-        </label>
+  <button id="run">表示</button>
+  <span id="badge" class="pill">読込中...</span>
+  <a href="./" class="muted">トップへ</a>
+</header>
 
-        <button id="run" type="button">系統図を表示</button>
-      </div>
-      
-      <div class="box">
-        <div class="h">ステータス</div>
-        <span id="badge" class="pill">準備中...</span>
-        <div id="info-status" class="muted" style="margin-top:8px;">品種を入力してください。</div>
-      </div>
-
-      <div class="box">
-        <div class="h">凡例</div>
-        <div class="muted">
-          母方：実線 / 父方：破線 / 不明：点線
-        </div>
-      </div>
-      
-      <a class="muted" href="./" style="display:block; text-align:center;">← トップページに戻る</a>
-    </div>
-
-    <div id="cyWrap">
-      <div id="cy"></div>
-      <div id="cyLoading">
-        <div style="text-align:center; background:white; padding:20px; border-radius:12px; border:1px solid var(--border);">
-          <div style="font-weight:bold;">描画中...</div>
-          <div class="muted">家系図を計算しています</div>
-        </div>
-      </div>
-    </div>
-
-    <div id="right">
-      <div class="h">詳細情報</div>
-      <div id="detail">
-        <div class="box muted">ノードをクリックすると情報が表示されます。</div>
-      </div>
-
-      <div class="h">解説</div>
-      <div class="box muted">
-        このツールは、膨大な交配データの中から特定の品種に繋がる祖先だけを抜き出して可視化します。
-      </div>
-      <div class="h">ヒント</div>
-      <ul class="muted" style="padding-left:15px;">
-        <li>ノードをドラッグして動かせます</li>
-        <li>背景をドラッグで移動、スクロールで拡大縮小できます</li>
-      </ul>
-      <div class="muted" style="margin-top:20px; text-align:center;">© Strawberry Pedigree</div>
-    </div>
-  </div>
-
-  <div id="mobileTabs">
-    <button type="button" data-tab="left">設定</button>
-    <button type="button" data-tab="cy" class="active">系統図</button>
-    <button type="button" data-tab="right">情報</button>
-  </div>
+<div id="cy"></div>
 
 <script>
+  // Cytoscape拡張の登録
   if (window.cytoscape && window.cytoscapeDagre) {
     cytoscape.use(cytoscapeDagre);
   }
 
-  let allData = null;
+  let all = null;
   let nodeById = new Map();
   let nodeByLabel = new Map();
   let parentsOf = new Map();
   let cy = null;
   let renderToken = 0;
+  let currentLayout = null;
 
-  function setTab(name) {
-    document.body.classList.remove('tab-left', 'tab-cy', 'tab-right');
-    document.body.classList.add(`tab-${name}`);
-    document.querySelectorAll('#mobileTabs button').forEach(b => {
-      b.classList.toggle('active', b.dataset.tab === name);
-    });
-    if (cy) {
-      setTimeout(() => { cy.resize(); cy.fit(); }, 100);
-    }
+  const UNKNOWN_LABELS = new Set(['unknown', '不明', 'n/a', 'nan']);
+
+  function setBadge(text) {
+    const el = document.getElementById('badge');
+    if (el) el.textContent = text;
   }
 
-  document.querySelectorAll('#mobileTabs button').forEach(btn => {
-    btn.addEventListener('click', () => setTab(btn.dataset.tab));
-  });
-
-  function esc(s){
-    return (s ?? '').toString()
-      .replaceAll('&','&amp;')
-      .replaceAll('<','&lt;')
-      .replaceAll('>','&gt;');
+  function getParam(name) {
+    return new URL(location.href).searchParams.get(name);
   }
 
-  function uniq(arr){
-    return Array.from(new Set(arr.map(v => (v ?? '').toString().trim()).filter(Boolean)));
-  }
-
-  function setDetail(n){
-    const box = document.getElementById('detail');
-    if(!box) return;
-
-    if(!n){
-      box.innerHTML = '<div class="box muted">ノードをクリックすると情報が表示されます。</div>';
-      return;
-    }
-
-    const d = n.data();
-    const year = d.year ? `<div><b>品種登録年</b>：${esc(d.year)}</div>` : '';
-    const inst = d.institute ? `<div><b>品種登録者</b>：${esc(d.institute)}</div>` : '';
-    const notes = d.notes ? `<div style="margin-top:8px;"><b>メモ</b><div>${esc(d.notes)}</div></div>` : '';
-
-    let sourcesHtml = '';
-    if(d.sources){
-      const parts = d.sources.toString().split(/[\n;]+/).map(x => x.trim()).filter(Boolean);
-      const links = parts.map(p => {
-        const isUrl = /^https?:\/\//i.test(p);
-        return isUrl
-          ? `<div><a href="${esc(p)}" target="_blank" rel="noopener noreferrer">外部リンク</a></div>`
-          : `<div>${esc(p)}</div>`;
-      }).join('');
-      sourcesHtml = `<div style="margin-top:8px;"><b>情報源</b>${links}</div>`;
-    }
-
-    const incomers = n.incomers('edge');
-    const mothers = incomers.filter(e => e.data('role') === 'mother').sources().map(x => x.data('label'));
-    const fathers = incomers.filter(e => e.data('role') === 'father').sources().map(x => x.data('label'));
-    const unknowns = incomers.filter(e => e.data('role') === 'unknown').sources().map(x => x.data('label'));
-    const outgoers = n.outgoers('edge');
-    const children = outgoers.targets().map(x => x.data('label'));
-
-    const motherHtml = mothers.length ? `<div><b>母</b>：${uniq(mothers).map(esc).join(', ')}</div>` : '';
-    const fatherHtml = fathers.length ? `<div><b>父</b>：${uniq(fathers).map(esc).join(', ')}</div>` : '';
-    const unknownHtml = unknowns.length ? `<div><b>不明親</b>：${uniq(unknowns).map(esc).join(', ')}</div>` : '';
-    const childHtml = children.length ? `<div style="margin-top:8px;"><b>子</b><div>${uniq(children).map(esc).join(', ')}</div></div>` : '';
-
-    box.innerHTML = `
-      <div class="box">
-        <div class="h" style="margin:0 0 6px; color:var(--wine);">${esc(d.label)}</div>
-        ${year} ${inst} ${motherHtml} ${fatherHtml} ${unknownHtml} ${childHtml} ${notes} ${sourcesHtml}
-      </div>
-    `;
+  function setParam(name, value) {
+    const u = new URL(location.href);
+    if (!value) u.searchParams.delete(name);
+    else u.searchParams.set(name, value);
+    history.replaceState({}, '', u.toString());
   }
 
   function parseElements(elements) {
     nodeById.clear();
     nodeByLabel.clear();
     parentsOf.clear();
-    const nodes = elements.filter(e => e.data && e.data.id && e.data.label && !e.data.source);
-    const edges = elements.filter(e => e.data && e.data.source && e.data.target);
+
+    const nodes = elements.filter(e => e.data?.id && e.data?.label && !e.data?.source);
+    const edges = elements.filter(e => e.data?.source && e.data?.target);
 
     nodes.forEach(n => {
-      const id = String(n.data.id);
+      const id = String(n.data.id).trim();
       nodeById.set(id, n);
       const label = String(n.data.label).trim();
       if (!nodeByLabel.has(label)) nodeByLabel.set(label, id);
     });
 
     edges.forEach(e => {
-      const target = String(e.data.target);
+      const target = String(e.data.target).trim();
       if (!parentsOf.has(target)) parentsOf.set(target, []);
-      parentsOf.get(target).push({ parentId: String(e.data.source), role: e.data.role || '' });
+      parentsOf.get(target).push({
+        parentId: String(e.data.source).trim(),
+        role: e.data.role || '',
+        edgeId: e.data.id
+      });
     });
 
     const dl = document.getElementById('cultivars');
-    Array.from(nodeByLabel.keys()).sort().forEach(l => {
-      const opt = document.createElement('option');
-      opt.value = l;
-      dl.appendChild(opt);
-    });
+    const sortedLabels = Array.from(nodeByLabel.keys()).sort((a, b) => a.localeCompare(b, 'ja'));
+    dl.innerHTML = sortedLabels.map(l => `<option value="${l}">`).join('');
   }
 
-  function compareLabelJP(a, b){
-  return a.localeCompare(b, 'ja', { numeric: true, sensitivity: 'base' });
-}
-
-// 全ノード配列を作る（unknown除外は好みで）
-function getAllNodesArray(){
-  const out = [];
-  for(const [id, n] of nodeById.entries()){
-    const label = (n.data?.label ?? '').toString().trim();
-    if(!label) continue;
-    // unknown をリストから外したいなら下の行を有効化
-    // if(isUnknownLabel(label)) continue;
-    out.push({ id, data: n.data });
-  }
-  return out;
-}
-
-function renderList(rows, badgeText){
-  const wrap = document.getElementById('listWrap');
-  const badge = document.getElementById('listBadge');
-  if(badge) badge.textContent = badgeText;
-
-  if(!wrap) return;
-
-  if(!rows.length){
-    wrap.innerHTML = `<div class="muted" style="padding:10px;">該当なし</div>`;
-    return;
-  }
-
-  const htmlRows = rows.map(r => {
-    const label = esc(r.data.label ?? '');
-    const year = esc(r.data.year ?? '');
-    const inst = esc(r.data.institute ?? '');
-    return `
-      <tr data-label="${label}">
-        <td>${label}</td>
-        <td class="muted" style="white-space:nowrap;">${year || '-'}</td>
-        <td class="muted">${inst || '-'}</td>
-      </tr>
-    `;
-  }).join('');
-
-  wrap.innerHTML = `
-    <table style="border-collapse:collapse; width:100%;">
-      <thead>
-        <tr>
-          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">品種</th>
-          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border); width:18%;">登録年</th>
-          <th style="position:sticky; top:0; background:#fff; text-align:left; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--border);">登録者</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${htmlRows}
-      </tbody>
-    </table>
-  `;
-
-  wrap.querySelectorAll('tbody tr').forEach(tr => {
-    tr.style.cursor = 'pointer';
-    tr.addEventListener('click', () => {
-      const label = tr.getAttribute('data-label');
-      document.getElementById('name').value = label;
-
-      // すぐ描画したいなら run() を呼ぶ
-      run();
-
-      // モバイルなら系統図タブへ移動
-      if(isMobileNow()) setTab('cy');
-    });
-  });
-}
-
-function updateList(){
-  const term = (document.getElementById('q')?.value ?? '').toString().trim().toLowerCase();
-  let rows = getAllNodesArray();
-
-  if(term){
-    rows = rows.filter(r => {
-      const label = ((r.data.label ?? '') + '').toLowerCase();
-      const inst  = ((r.data.institute ?? '') + '').toLowerCase();
-      return label.includes(term) || inst.includes(term);
-    });
-  }
-
-  rows.sort((a,b) => compareLabelJP((a.data.label??''), (b.data.label??'')));
-
-  const badgeText = term ? `検索結果：${rows.length}件` : `全品種：${rows.length}件`;
-  renderList(rows, badgeText);
-}
-
-  
-  function collectAncestors(startId, maxDepth, includeUnknown) {
+function collectAncestors(startId, depthN, includeUnknown) {
     const keepNodes = new Set([startId]);
-    const keepEdges = [];
+    const resultElements = [];
     let frontier = [startId];
 
-    for (let d = 0; d < maxDepth; d++) {
+    for (let gen = 1; gen <= depthN; gen++) {
       let nextFrontier = [];
       frontier.forEach(childId => {
         const parents = parentsOf.get(childId) || [];
         parents.forEach(p => {
           const parentNode = nodeById.get(p.parentId);
           if (!parentNode) return;
+
           const label = String(parentNode.data.label).toLowerCase();
-          const isUnknown = ['不明', 'unknown', 'n/a', 'nan'].includes(label);
+          const isUnknown = UNKNOWN_LABELS.has(label);
+
           if (!includeUnknown && isUnknown) return;
+
           keepNodes.add(p.parentId);
           nextFrontier.push(p.parentId);
-          keepEdges.push({ data: { source: p.parentId, target: childId, role: isUnknown ? 'unknown' : p.role } });
+          
+          // ★ 修正点1: roleが空でも名前が不明なら 'unknown' 扱いにする
+          const effectiveRole = isUnknown ? 'unknown' : p.role;
+
+          // ★ 修正点2: IDにroleを含めることで、同じ親(福羽など)から複数本引けるようにする
+          resultElements.push({
+            data: { 
+              id: `e-${p.parentId}-${childId}-${p.role}`, // IDをユニーク化
+              source: p.parentId, 
+              target: childId, 
+              role: effectiveRole 
+            }
+          });
         });
       });
       frontier = nextFrontier;
       if (frontier.length === 0) break;
     }
-    const result = [];
-    keepNodes.forEach(id => result.push(nodeById.get(id)));
-    return result.concat(keepEdges);
+
+    keepNodes.forEach(id => {
+      const n = nodeById.get(id);
+      if (n) resultElements.push(n);
+    });
+
+    return resultElements;
   }
 
   function initCy() {
@@ -509,95 +222,167 @@ function updateList(){
     cy = cytoscape({
       container: document.getElementById('cy'),
       style: [
-        { selector: 'node', style: {
-          'label': 'data(label)', 'font-size': '12px', 'text-valign': 'center', 'text-halign': 'center',
-          'background-color': '#FCE7F3', 'border-width': 1, 'border-color': '#F9A8D4',
-          'width': 'label', 'padding': '10px', 'shape': 'round-rectangle', 'color': '#831843'
-        }},
-        { selector: 'edge', style: {
-          'curve-style': 'unbundled-bezier', 'target-arrow-shape': 'triangle', 'width': 2,
-          'line-color': '#D1B0C2', 'target-arrow-color': '#D1B0C2'
-        }},
-        { selector: 'edge[role="mother"]', style: { 'line-style': 'solid' } },
-        { selector: 'edge[role="father"]', style: { 'line-style': 'dashed' } },
-        { selector: 'edge[role="unknown"]', style: { 'line-style': 'dotted', 'line-color': '#ccc' } }
-      ]
-    });
+        {
+          selector: 'node',
+          style: {
+            'label': 'data(label)',
+            'font-size': 12,
+            'text-valign': 'center',
+            'text-halign': 'center',
+            'background-color': '#FCE7F3',
+            'border-width': 1,
+            'border-color': '#F9A8D4',
+            'width': 'label',
+            'height': 'label',
+            'padding': '10px',
+            'shape': 'round-rectangle',
+            'color': '#831843'
+          }
+        },
+{
+          selector: 'edge',
+          style: {
+            // 'curve-style': 'taxi', を以下に変更
+            'curve-style': 'unbundled-bezier',
+            'target-arrow-shape': 'triangle',
 
-    // ここでイベントを登録
-    cy.on('tap', 'node', (evt) => {
-      if (window.innerWidth <= 1000) setTab('right');
-      setDetail(evt.target);
-    });
-    cy.on('tap', (evt) => {
-      if(evt.target === cy) setDetail(null);
+            'width': 2,
+            'arrow-scale': 1.2,
+            'edge-distances': 'node-position' // 距離計算の基準
+          }
+        },
+        // 母方のライン：上側に膨らませる
+        { 
+          selector: 'edge[role="mother"]', 
+          style: { 
+            'line-color': '#D1B0C2',
+            'target-arrow-color': '#D1B0C2',
+            'line-style': 'solid', 
+            'control-point-distance': -30, 
+            'control-point-weight': 0.5 
+          } 
+        },
+        // 父方のライン：下側に膨らませる
+        { 
+          selector: 'edge[role="father"]', 
+          style: { 
+            'line-color': '#B0C1D1',
+            'target-arrow-color': '#B0C1D1',
+            'line-style': 'solid', 
+            'control-point-distance': 30, 
+            'control-point-weight': 0.5 
+          } 
+        },
+        // 不明のライン：少しだけ膨らませる
+        { 
+          selector: 'edge[role="unknown"]', 
+          style: { 
+            'line-style': 'dotted', 
+            'line-color': '#cccccc',
+            'target-arrow-color': '#cccccc',
+            'control-point-distance': 15, 
+            'control-point-weight': 0.5 
+          } 
+        }
+      ]
     });
   }
 
-  async function run() {
+  function run() {
+    if (!all) return;
+    const myToken = ++renderToken;
     const label = document.getElementById('name').value.trim();
-    if (!label) return;
-    if (window.innerWidth <= 1000) setTab('cy');
+    const depth = parseInt(document.getElementById('depth').value, 10);
+    const includeUnknown = document.getElementById('includeUnknown').checked;
 
     const startId = nodeByLabel.get(label);
     if (!startId) {
-      document.getElementById('badge').textContent = '未発見';
+      setBadge('未発見');
       return;
     }
 
-    const depth = parseInt(document.getElementById('depth').value);
-    const includeUnknown = document.getElementById('includeUnknown').checked;
+    setParam('name', label);
+    setParam('n', depth);
+    setParam('u', includeUnknown ? '1' : '0');
+
     const elements = collectAncestors(startId, depth, includeUnknown);
+    setBadge('描画中...');
 
-    document.getElementById('cyLoading').classList.add('show');
-    document.getElementById('badge').textContent = '描画中...';
-
-    const myToken = ++renderToken;
-    initCy(); // cyを確実に作成
-
+    if (currentLayout) currentLayout.stop();
+    
     cy.batch(() => {
       cy.elements().remove();
       cy.add(elements);
     });
 
+    // 描画の安定化のためsetTimeoutを使用
     setTimeout(() => {
       if (myToken !== renderToken) return;
       cy.resize();
-      cy.layout({
-        name: 'dagre', rankDir: 'LR', nodeSep: 40, rankSep: 80, animate: true,
+      
+      currentLayout = cy.layout({
+        name: 'dagre',
+        rankDir: 'LR',
+        ranker: 'longest-path',
+        nodeSep: 30,
+        rankSep: 100,
+        padding: 50,
+        animate: true,
+        animationDuration: 400,
+        fit: true,
         stop: () => {
-          cy.fit(undefined, 40);
-          document.getElementById('cyLoading').classList.remove('show');
-          document.getElementById('badge').textContent = `表示: ${label}`;
-          document.getElementById('info-status').textContent = `${elements.length} 個の要素を表示しました。`;
+          if (myToken === renderToken) {
+            setBadge(`表示中: ${label} (ノード:${cy.nodes().size()})`);
+          }
         }
-      }).run();
-    }, 50);
+      });
+      currentLayout.run();
+    }, 10);
   }
 
   async function load() {
     try {
-      const res = await fetch("elements.json?ts=" + Date.now());
-      allData = await res.json();
-      parseElements(allData);
-      // リスト初期化
-      updateList();
-      document.getElementById('q').addEventListener('input', updateList);
-      document.getElementById('badge').textContent = '準備完了';
-      const params = new URLSearchParams(window.location.search);
-      if (params.has('name')) {
-        document.getElementById('name').value = params.get('name');
+      const res = await fetch("/strawberry-pedigree/elements.json?ts=" + Date.now());
+      all = await res.json();
+      parseElements(all);
+      initCy();
+
+      const pName = getParam('name');
+      if (pName) {
+        document.getElementById('name').value = pName;
+        document.getElementById('depth').value = getParam('n') || '2';
+        document.getElementById('includeUnknown').checked = getParam('u') === '1';
         run();
+      } else {
+        setBadge('準備完了');
       }
     } catch (e) {
-      document.getElementById('badge').textContent = '読み込み失敗';
+      setBadge('読込失敗');
     }
   }
 
-  document.getElementById('run').addEventListener('click', run);
-  document.getElementById('name').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
-  window.addEventListener('resize', () => { if (cy) cy.resize(); });
-  window.onload = load;
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('run').addEventListener('click', run);
+    document.getElementById('name').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
+    
+    // プルダウン変更時の自動更新（少し余裕を持たせる）
+    let timer;
+    const autoRun = () => {
+      clearTimeout(timer);
+      timer = setTimeout(run, 150);
+    };
+    document.getElementById('depth').addEventListener('change', autoRun);
+    document.getElementById('includeUnknown').addEventListener('change', autoRun);
+
+    load();
+  });
+
+  window.addEventListener('resize', () => {
+    if (cy) {
+      cy.resize();
+      cy.fit(undefined, 50);
+    }
+  });
 </script>
 </body>
 </html>

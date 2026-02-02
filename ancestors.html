@@ -95,9 +95,9 @@
 
   <select id="depth">
     <option value="1">1（親）</option>
-    <option value="2" selected>2（祖父母）</option>
+    <option value="2">2（祖父母）</option>
     <option value="3">3（曾祖父母）</option>
-    <option value="4">4（高祖父母）</option>
+    <option value="4" selected>4（高祖父母）</option>
     <option value="5">5代前</option>
     <option value="6">6代前</option>
     <option value="6">7代前</option>
@@ -356,7 +356,7 @@ function collectAncestors(startId, depthN, includeUnknown) {
       const pName = getParam('name');
       if (pName) {
         document.getElementById('name').value = pName;
-        document.getElementById('depth').value = getParam('n') || '2';
+        document.getElementById('depth').value = getParam('n') || '4';
         document.getElementById('includeUnknown').checked = getParam('u') === '1';
         run();
       } else {
@@ -392,4 +392,5 @@ function collectAncestors(startId, depthN, includeUnknown) {
 </script>
 </body>
 </html>
+
 

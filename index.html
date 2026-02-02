@@ -632,7 +632,7 @@ function openAncestorsTab(label){
   if(!name) return;
 
   // 必要なら既定値をここで調整
-  const n = 3;   // 祖父母まで
+  const n = 4;   // 曽祖父母まで
   const u = 1;   // unknown含めない（含めるなら 1）
 
   const url = `ancestors.html?name=${encodeURIComponent(name)}&n=${n}&u=${u}`;

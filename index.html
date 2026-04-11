@@ -975,6 +975,18 @@ function centerOnNode(n, duration=360){
   );
 }
 
+function trackCultivarSelection(n, source = 'unknown'){
+  if(!n || typeof gtag !== 'function') return;
+
+  const label = (n.data('label') ?? '').toString().trim();
+  if(!label) return;
+
+  gtag('event', 'select_cultivar', {
+    cultivar_name: label,
+    select_source: source
+  });
+}
+  
 function selectNode(n, doFit=true, source='unknown'){
   if(!n || !cy) return;
 

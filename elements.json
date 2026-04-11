@@ -8860,7 +8860,7 @@
       "id": "vechnaya vesna",
       "label": "Vechnaya Vesna",
       "year": "",
-      "institute": "grenader_V2",
+      "institute": "",
       "notes": "ロシアの品種。",
       "sources": "",
       "db_registration_date": "2026/4/11",
@@ -9565,32 +9565,8 @@
   },
   {
     "data": {
-      "id": "Cal 87.112-6",
-      "label": "Cal 87.112-6",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "Cal 87.112_6",
       "label": "Cal 87.112_6",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "Cal 88.270-1",
-      "label": "Cal 88.270-1",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -9975,6 +9951,18 @@
     "data": {
       "id": "geneva",
       "label": "geneva",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "grenader_V2",
+      "label": "grenader_V2",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -16973,7 +16961,7 @@
   },
   {
     "data": {
-      "source": "Cal 87.112-6",
+      "source": "Cal 87.112_6",
       "target": "diamante",
       "role": "mother",
       "source_id": "USPP10435P(https://patents.google.com/patent/USPP10435P/en)"
@@ -16981,7 +16969,7 @@
   },
   {
     "data": {
-      "source": "Cal 88.270-1",
+      "source": "Cal 88.270_1",
       "target": "diamante",
       "role": "father",
       "source_id": "USPP10435P(https://patents.google.com/patent/USPP10435P/en)"
@@ -24893,9 +24881,17 @@
   },
   {
     "data": {
-      "source": "rannyaya plotnaya",
+      "source": "grenader_V2",
       "target": "vechnaya vesna",
       "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "rannyaya plotnaya",
+      "target": "vechnaya vesna",
+      "role": "father",
       "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
     }
   },

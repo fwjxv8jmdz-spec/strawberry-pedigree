@@ -8533,6 +8533,942 @@
   },
   {
     "data": {
+      "id": "Cal 72.361_105",
+      "label": "C55 (Cal 72.361_105)",
+      "year": 1979,
+      "institute": "University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP4481P(https://patents.google.com/patent/USPP4481P/en?oq=USPP4481)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "adina",
+      "label": "Adina",
+      "year": "",
+      "institute": "",
+      "notes": "オーストラリアの品種",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aires",
+      "label": "Aires",
+      "year": 1996,
+      "institute": "Plantas de Navarra SA",
+      "notes": "",
+      "sources": "USPP9757P(https://patents.google.com/patent/USPP9757P/en?oq=USPP9757)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "88_042_35_adina_mother",
+      "label": "88_042_35",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "86_037_aires_mother",
+      "label": "86_037",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "86_096_aires_father",
+      "label": "86_096",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "alinta",
+      "label": "Alinta",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "88_011_30_alinta_mother",
+      "label": "88_011_30",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "arena",
+      "label": "Arena",
+      "year": 1996,
+      "institute": "Plantas de Navarra SA",
+      "notes": "",
+      "sources": "USPP9770P(https://patents.google.com/patent/USPP9770P/en?oq=USPP9770)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "85_20_arena_mother",
+      "label": "85_20",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "86_175_arena_father",
+      "label": "86_175",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "aromas",
+      "label": "Aromas",
+      "year": 1998,
+      "institute": "University of California",
+      "notes": "",
+      "sources": "USPP10451P(https://patents.google.com/patent/USPP10451P/en?oq=USPP10451)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "burlington",
+      "label": "Burlington",
+      "year": 1986,
+      "institute": "Sakuma Bros Farms Inc",
+      "notes": "",
+      "sources": "USPP5674P(https://patents.google.com/patent/USPP5674P/en?oq=USPP5674)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cabot",
+      "label": "Cabot",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "elsanta_K79_5",
+      "label": "Elsanta×K79_5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "arking_K79_4",
+      "label": "ArKing×K79_4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K79_5_elsanta_K79_5_father",
+      "label": "K79_5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K79_4_arking_K79_4_father",
+      "label": "K79_4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cacanska krupna",
+      "label": "Cacanska Krupna",
+      "year": "",
+      "institute": "",
+      "notes": "セルビアの品種",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "surprise des halles",
+      "label": "Surprise des Halles",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cacak 45/7",
+      "label": "Cacak 45/7 (?a?anska 45/7)",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cacanska rana",
+      "label": "Cacanska Rana",
+      "year": "",
+      "institute": "",
+      "notes": "セルビアの品種",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "talisman",
+      "label": "Talisman",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "catalina",
+      "label": "Catalina",
+      "year": 1995,
+      "institute": "NEW WEST FRUIT CORP",
+      "notes": "",
+      "sources": "USPP9320P(https://patents.google.com/patent/USPP9320P/en?oq=USPP9320)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "A41_catalina_mother",
+      "label": "A41",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "seascape",
+      "label": "Seascape",
+      "year": 1991,
+      "institute": "University of California",
+      "notes": "",
+      "sources": "USPP7614P(https://patents.google.com/patent/USPP7614P/en?oq=USPP7614)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "darsanga",
+      "label": "Darsanga",
+      "year": 1998,
+      "institute": "Societe Civile Darbonne",
+      "notes": "",
+      "sources": "USPP10634P(https://patents.google.com/patent/USPP10634P/en?oq=USPP10634)",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "vechnaya vesna",
+      "label": "Vechnaya Vesna",
+      "year": "",
+      "institute": "grenader_V2",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "girlyanda",
+      "label": "Girlyanda",
+      "year": "",
+      "institute": "",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "zolushka",
+      "label": "Zolushka",
+      "year": "",
+      "institute": "",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lakomka",
+      "label": "Lakomka",
+      "year": "",
+      "institute": "",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lyubava",
+      "label": "Lyubava",
+      "year": "",
+      "institute": "",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "solovushka",
+      "label": "Solovushka",
+      "year": "",
+      "institute": "",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tsaritsa",
+      "label": "Tsaritsa",
+      "year": "",
+      "institute": "",
+      "notes": "ロシアの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "honeoye",
+      "label": "Honeoye",
+      "year": "",
+      "institute": "",
+      "notes": "アメリカの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "korona",
+      "label": "Korona",
+      "year": "",
+      "institute": "",
+      "notes": "オランダの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "red gauntlet",
+      "label": "Red Gauntlet",
+      "year": "",
+      "institute": "",
+      "notes": "イギリスの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "senga sengana",
+      "label": "Senga Sengana",
+      "year": "",
+      "institute": "",
+      "notes": "ドイツの品種。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "markee",
+      "label": "Markee",
+      "year": "",
+      "institute": "",
+      "notes": "両親は不明。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "senga precosa",
+      "label": "Senga Precosa",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "S.1260_senga precosa_father",
+      "label": "S.1260",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "regina",
+      "label": "Regina",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "macherauchs fruhernte",
+      "label": "Macherauchs Fr?hernte",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "georg soltwedel",
+      "label": "Georg Soltwedel",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "rotkappchen",
+      "label": "Rotk?ppchen",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "direktor paul wallbaum",
+      "label": "Direktor Paul Wallbaum",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "oberschlesien",
+      "label": "Oberschlesien",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "jucunda",
+      "label": "Jucunda",
+      "year": "",
+      "institute": "",
+      "notes": "親が不明。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "frau mieze schindler",
+      "label": "Frau mieze schindler",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "johannes muller",
+      "label": "Johannes M?ller",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "wunder von kothen",
+      "label": "Wunder von K?then",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lucida perfekta",
+      "label": "Lucida Perfekta",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sieger",
+      "label": "Sieger",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kaiser samling",
+      "label": "Kaiser Samling",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "konig von sachsen",
+      "label": "K?nig von Sachsen",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "laxtons noble",
+      "label": "Laxton's Noble",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "deutsch evern",
+      "label": "Deutsch Evern",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "helgoland_king of the earlies",
+      "label": "Helgoland×King of the Earlies",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "garteninspektor koch_king of the earlies",
+      "label": "Garteninspektor Koch×King of the Earlies",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hansa",
+      "label": "Hansa",
+      "year": "",
+      "institute": "",
+      "notes": "偶発実生",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "asieta",
+      "label": "Asieta",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "macherauchs marieva",
+      "label": "Macherauch's Marieva",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hybrids 32/74",
+      "label": "Hybrids 32/74",
+      "year": "",
+      "institute": "",
+      "notes": "親が不明。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "macherauchs dauerernte",
+      "label": "Macherauch's Dauerernte",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ada herzberg",
+      "label": "Ada Herzberg",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "uberreich",
+      "label": "?berreich",
+      "year": "",
+      "institute": "",
+      "notes": "親が不明。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "herzbergs triumph",
+      "label": "Herzberg's Triumph",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "gartenbaudirektor langer",
+      "label": "Gartenbaudirektor Langer",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "roter elefant",
+      "label": "Roter Elefant",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "macherauchs spaternte",
+      "label": "Macherauch's Sp?ternte",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "senga gigana",
+      "label": "Senga Gigana",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "so 341_senga gigana_mother",
+      "label": "So. 341",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "finn",
+      "label": "Finn",
+      "year": "",
+      "institute": "",
+      "notes": "偶発実生",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "vigerla",
+      "label": "Vigerla",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "seedling of deutsch evern",
+      "label": "Seedling of Deutsch Evern",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "eva macherauch",
+      "label": "Eva Macherauch",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "konigin luise",
+      "label": "K?nigin Luise",
+      "year": "",
+      "institute": "",
+      "notes": "親が不明。",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "prinz julius ernst",
+      "label": "Prinz Julius Ernst",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -8629,18 +9565,6 @@
   },
   {
     "data": {
-      "id": "Cal 72.361_105",
-      "label": "Cal 72.361_105",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "Cal 87.112-6",
       "label": "Cal 87.112-6",
       "year": "",
@@ -8653,8 +9577,32 @@
   },
   {
     "data": {
+      "id": "Cal 87.112_6",
+      "label": "Cal 87.112_6",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "Cal 88.270-1",
       "label": "Cal 88.270-1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal 88.270_1",
+      "label": "Cal 88.270_1",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8845,6 +9793,18 @@
   },
   {
     "data": {
+      "id": "arking",
+      "label": "arking",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "banner",
       "label": "banner",
       "year": "",
@@ -8881,6 +9841,18 @@
   },
   {
     "data": {
+      "id": "climax",
+      "label": "climax",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "elan",
       "label": "elan",
       "year": "",
@@ -8893,8 +9865,44 @@
   },
   {
     "data": {
+      "id": "elsanta",
+      "label": "elsanta",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "ettersburg",
       "label": "ettersburg",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "festivalnaya",
+      "label": "festivalnaya",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "festivalnaya romashka",
+      "label": "festivalnaya romashka",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -8953,8 +9961,68 @@
   },
   {
     "data": {
+      "id": "garteninspektor koch",
+      "label": "garteninspektor koch",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "geneva",
+      "label": "geneva",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "helgoland",
+      "label": "helgoland",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "holiday",
+      "label": "holiday",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "huxley",
       "label": "huxley",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "induka",
+      "label": "induka",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -9001,8 +10069,44 @@
   },
   {
     "data": {
+      "id": "krasavitsa",
+      "label": "krasavitsa",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "kurume48go",
       "label": "kurume48go",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "lucida",
+      "label": "lucida",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "new jersey 105",
+      "label": "new jersey 105",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -9061,6 +10165,18 @@
   },
   {
     "data": {
+      "id": "rannyaya plotnaya",
+      "label": "rannyaya plotnaya",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "redglow",
       "label": "redglow",
       "year": "",
@@ -9097,6 +10213,18 @@
   },
   {
     "data": {
+      "id": "rotkappchen",
+      "label": "rotkappchen",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "scotland BK_46",
       "label": "scotland BK_46",
       "year": "",
@@ -9123,6 +10251,30 @@
     "data": {
       "id": "sunrise",
       "label": "sunrise",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "syurpriz olimpiade",
+      "label": "syurpriz olimpiade",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "tamella",
+      "label": "tamella",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -9193,7 +10345,79 @@
   },
   {
     "data": {
+      "id": "unknown_father__85_20_arena_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__86_037_aires_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__86_096_aires_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__86_175_arena_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__8821_11",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__88_011_30_alinta_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__88_042_35_adina_mother",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9266,6 +10490,18 @@
   {
     "data": {
       "id": "unknown_father__9_2_3_hanakagari",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__A41_catalina_mother",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9398,6 +10634,30 @@
   {
     "data": {
       "id": "unknown_father__HKW_02",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__K79_4_arking_K79_4_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__K79_5_elsanta_K79_5_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9697,6 +10957,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__finn",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__florida ninety",
       "label": "不明",
       "year": "",
@@ -9710,6 +10982,18 @@
   {
     "data": {
       "id": "unknown_father__goliath",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__hansa",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9793,6 +11077,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__hybrids 32/74",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__ikeko",
       "label": "不明",
       "year": "",
@@ -9805,7 +11101,43 @@
   },
   {
     "data": {
+      "id": "unknown_father__johannes muller",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__joseph riffaud",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__jucunda",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__kaiser samling",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9866,6 +11198,30 @@
   {
     "data": {
       "id": "unknown_father__kinuama",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__konig von sachsen",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__konigin luise",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -9950,6 +11306,18 @@
   {
     "data": {
       "id": "unknown_father__madame lebreton",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__markee",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10189,6 +11557,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__prinz julius ernst",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__rose etterburg",
       "label": "不明",
       "year": "",
@@ -10202,6 +11582,18 @@
   {
     "data": {
       "id": "unknown_father__rose etterburg_unknown_seedling",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__roter elefant",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10249,7 +11641,31 @@
   },
   {
     "data": {
+      "id": "unknown_father__surprise des halles",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__syuko",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__talisman",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10321,6 +11737,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__uberreich",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__uzushio",
       "label": "不明",
       "year": "",
@@ -10369,6 +11797,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__wunder von kothen",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__yakumo",
       "label": "不明",
       "year": "",
@@ -10393,7 +11833,79 @@
   },
   {
     "data": {
+      "id": "unknown_mother__85_20_arena_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__86_037_aires_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__86_096_aires_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__86_175_arena_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__8821_11",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__88_011_30_alinta_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__88_042_35_adina_mother",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10466,6 +11978,18 @@
   {
     "data": {
       "id": "unknown_mother__9_2_3_hanakagari",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__A41_catalina_mother",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10586,6 +12110,30 @@
   {
     "data": {
       "id": "unknown_mother__HKW_02",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__K79_4_arking_K79_4_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__K79_5_elsanta_K79_5_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10909,6 +12457,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__hybrids 32/74",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__ikeko",
       "label": "不明",
       "year": "",
@@ -10922,6 +12482,18 @@
   {
     "data": {
       "id": "unknown_mother__joseph riffaud",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__jucunda",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -10958,6 +12530,30 @@
   {
     "data": {
       "id": "unknown_mother__kinuama",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__konig von sachsen",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__konigin luise",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -11042,6 +12638,18 @@
   {
     "data": {
       "id": "unknown_mother__kyokuho",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__markee",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -11221,6 +12829,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__roter elefant",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__serenata",
       "label": "不明",
       "year": "",
@@ -11257,7 +12877,31 @@
   },
   {
     "data": {
+      "id": "unknown_mother__surprise des halles",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__syuko",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__talisman",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -11329,6 +12973,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__uberreich",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__uzushio",
       "label": "不明",
       "year": "",
@@ -11365,6 +13021,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__wunder von kothen",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__yakumo",
       "label": "不明",
       "year": "",
@@ -11382,6 +13050,30 @@
       "year": "",
       "institute": "",
       "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "venta",
+      "label": "venta",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "vibrant",
+      "label": "vibrant",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
       "sources": "",
       "db_registration_date": "",
       "placeholder": true
@@ -22765,6 +24457,1246 @@
       "target": "new jersey scarlet",
       "role": "father",
       "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_%281966%29.pdf?utm_source=chatgpt.com"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 63.7_101",
+      "target": "Cal 72.361_105",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP4481P/en?oq=USPP4481"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 64.57_108",
+      "target": "Cal 72.361_105",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP4481P/en?oq=USPP4481"
+    }
+  },
+  {
+    "data": {
+      "source": "88_042_35_adina_mother",
+      "target": "adina",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "adina",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "86_037_aires_mother",
+      "target": "aires",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP9757P/en?oq=USPP9757"
+    }
+  },
+  {
+    "data": {
+      "source": "86_096_aires_father",
+      "target": "aires",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP9757P/en?oq=USPP9757"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__88_042_35_adina_mother",
+      "target": "88_042_35_adina_mother",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__88_042_35_adina_mother",
+      "target": "88_042_35_adina_mother",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__86_037_aires_mother",
+      "target": "86_037_aires_mother",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__86_037_aires_mother",
+      "target": "86_037_aires_mother",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__86_096_aires_father",
+      "target": "86_096_aires_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__86_096_aires_father",
+      "target": "86_096_aires_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "88_011_30_alinta_mother",
+      "target": "alinta",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "alinta",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__88_011_30_alinta_mother",
+      "target": "88_011_30_alinta_mother",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__88_011_30_alinta_mother",
+      "target": "88_011_30_alinta_mother",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "85_20_arena_mother",
+      "target": "arena",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP9770P/en?oq=USPP9770"
+    }
+  },
+  {
+    "data": {
+      "source": "86_175_arena_father",
+      "target": "arena",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP9770P/en?oq=USPP9770"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__85_20_arena_mother",
+      "target": "85_20_arena_mother",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__85_20_arena_mother",
+      "target": "85_20_arena_mother",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__86_175_arena_father",
+      "target": "86_175_arena_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__86_175_arena_father",
+      "target": "86_175_arena_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 87.112_6",
+      "target": "aromas",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP10451P/en?oq=USPP10451"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal 88.270_1",
+      "target": "aromas",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP10451P/en?oq=USPP10451"
+    }
+  },
+  {
+    "data": {
+      "source": "tufts",
+      "target": "burlington",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5674P/en?oq=USPP5674"
+    }
+  },
+  {
+    "data": {
+      "source": "EB 18_tribute_mother",
+      "target": "burlington",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5674P/en?oq=USPP5674"
+    }
+  },
+  {
+    "data": {
+      "source": "elsanta_K79_5",
+      "target": "cabot",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "arking_K79_4",
+      "target": "cabot",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "elsanta",
+      "target": "elsanta_K79_5",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "K79_5_elsanta_K79_5_father",
+      "target": "elsanta_K79_5",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "arking",
+      "target": "arking_K79_4",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "K79_4_arking_K79_4_father",
+      "target": "arking_K79_4",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__K79_5_elsanta_K79_5_father",
+      "target": "K79_5_elsanta_K79_5_father",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__K79_5_elsanta_K79_5_father",
+      "target": "K79_5_elsanta_K79_5_father",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__K79_4_arking_K79_4_father",
+      "target": "K79_4_arking_K79_4_father",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__K79_4_arking_K79_4_father",
+      "target": "K79_4_arking_K79_4_father",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "surprise des halles",
+      "target": "cacanska krupna",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "cacak 45/7",
+      "target": "cacanska krupna",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__surprise des halles",
+      "target": "surprise des halles",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__surprise des halles",
+      "target": "surprise des halles",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "talisman",
+      "target": "cacak 45/7",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "macherauchs fruhernte",
+      "target": "cacak 45/7",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "surprise des halles",
+      "target": "cacanska rana",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "cacak 45/7",
+      "target": "cacanska rana",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/hortsci/34/2/article-p181.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__talisman",
+      "target": "talisman",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__talisman",
+      "target": "talisman",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "A41_catalina_mother",
+      "target": "catalina",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP9320P/en?oq=USPP9320"
+    }
+  },
+  {
+    "data": {
+      "source": "seascape",
+      "target": "catalina",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP9320P/en?oq=USPP9320"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__A41_catalina_mother",
+      "target": "A41_catalina_mother",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__A41_catalina_mother",
+      "target": "A41_catalina_mother",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "seascape",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP7614P/en?oq=USPP7614"
+    }
+  },
+  {
+    "data": {
+      "source": "douglas",
+      "target": "seascape",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP7614P/en?oq=USPP7614"
+    }
+  },
+  {
+    "data": {
+      "source": "tufts",
+      "target": "darsanga",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP10634P/en?oq=USPP10634"
+    }
+  },
+  {
+    "data": {
+      "source": "korona",
+      "target": "darsanga",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP10634P/en?oq=USPP10634"
+    }
+  },
+  {
+    "data": {
+      "source": "rannyaya plotnaya",
+      "target": "vechnaya vesna",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "elsanta",
+      "target": "girlyanda",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "korona",
+      "target": "girlyanda",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "festivalnaya",
+      "target": "zolushka",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "senga sengana",
+      "target": "zolushka",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "krasavitsa",
+      "target": "lakomka",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "korona",
+      "target": "lakomka",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "solovushka",
+      "target": "lyubava",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "geneva",
+      "target": "lyubava",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "syurpriz olimpiade",
+      "target": "solovushka",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "festivalnaya romashka",
+      "target": "solovushka",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "venta",
+      "target": "tsaritsa",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "red gauntlet",
+      "target": "tsaritsa",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "vibrant",
+      "target": "honeoye",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "honeoye",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "tamella",
+      "target": "korona",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "induka",
+      "target": "korona",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "new jersey 105",
+      "target": "red gauntlet",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "climax",
+      "target": "red gauntlet",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "sieger",
+      "target": "senga sengana",
+      "role": "mother",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "markee",
+      "target": "senga sengana",
+      "role": "father",
+      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__markee",
+      "target": "markee",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__markee",
+      "target": "markee",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "regina",
+      "target": "senga precosa",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "S.1260_senga precosa_father",
+      "target": "senga precosa",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "sparkle",
+      "target": "S.1260_senga precosa_father",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "eva macherauch",
+      "target": "S.1260_senga precosa_father",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "geneva",
+      "target": "regina",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "deutsch evern",
+      "target": "regina",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "geneva",
+      "target": "macherauchs fruhernte",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "deutsch evern",
+      "target": "macherauchs fruhernte",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "rotkappchen",
+      "target": "georg soltwedel",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "hansa",
+      "target": "georg soltwedel",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "deutsch evern",
+      "target": "rotkappchen",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "sieger",
+      "target": "rotkappchen",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "georg soltwedel",
+      "target": "direktor paul wallbaum",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "frau mieze schindler",
+      "target": "direktor paul wallbaum",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless",
+      "target": "oberschlesien",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "jucunda",
+      "target": "oberschlesien",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__jucunda",
+      "target": "jucunda",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__jucunda",
+      "target": "jucunda",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "lucida perfekta",
+      "target": "frau mieze schindler",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "johannes muller",
+      "target": "frau mieze schindler",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "wunder von kothen",
+      "target": "johannes muller",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__johannes muller",
+      "target": "johannes muller",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__wunder von kothen",
+      "target": "wunder von kothen",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__wunder von kothen",
+      "target": "wunder von kothen",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "lucida",
+      "target": "lucida perfekta",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "british queen",
+      "target": "lucida perfekta",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "kaiser samling",
+      "target": "sieger",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "laxtons noble",
+      "target": "sieger",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "konig von sachsen",
+      "target": "kaiser samling",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__kaiser samling",
+      "target": "kaiser samling",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__konig von sachsen",
+      "target": "konig von sachsen",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__konig von sachsen",
+      "target": "konig von sachsen",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "excelsior",
+      "target": "laxtons noble",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless",
+      "target": "laxtons noble",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "helgoland_king of the earlies",
+      "target": "deutsch evern",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "garteninspektor koch_king of the earlies",
+      "target": "deutsch evern",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "helgoland",
+      "target": "helgoland_king of the earlies",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "king of the earlies",
+      "target": "helgoland_king of the earlies",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "garteninspektor koch",
+      "target": "garteninspektor koch_king of the earlies",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "king of the earlies",
+      "target": "garteninspektor koch_king of the earlies",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "laxtons noble",
+      "target": "hansa",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__hansa",
+      "target": "hansa",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "madame moutot",
+      "target": "asieta",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "hansa",
+      "target": "asieta",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "hybrids 32/74",
+      "target": "macherauchs marieva",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "georg soltwedel",
+      "target": "macherauchs marieva",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__hybrids 32/74",
+      "target": "hybrids 32/74",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__hybrids 32/74",
+      "target": "hybrids 32/74",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "ada herzberg",
+      "target": "macherauchs dauerernte",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "prinz julius ernst",
+      "target": "macherauchs dauerernte",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "deutsch evern",
+      "target": "ada herzberg",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "uberreich",
+      "target": "ada herzberg",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__uberreich",
+      "target": "uberreich",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__uberreich",
+      "target": "uberreich",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "gartenbaudirektor langer",
+      "target": "herzbergs triumph",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "frau mieze schindler",
+      "target": "herzbergs triumph",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "roter elefant",
+      "target": "gartenbaudirektor langer",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "uberreich",
+      "target": "gartenbaudirektor langer",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__roter elefant",
+      "target": "roter elefant",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__roter elefant",
+      "target": "roter elefant",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "frau mieze schindler",
+      "target": "macherauchs spaternte",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "georg soltwedel",
+      "target": "macherauchs spaternte",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "so 341_senga gigana_mother",
+      "target": "senga gigana",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "finn",
+      "target": "senga gigana",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "rotkappchen",
+      "target": "so 341_senga gigana_mother",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "hansa",
+      "target": "so 341_senga gigana_mother",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "finn",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__finn",
+      "target": "finn",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "seedling of deutsch evern",
+      "target": "vigerla",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "frau mieze schindler",
+      "target": "vigerla",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "deutsch evern",
+      "target": "seedling of deutsch evern",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "deutsch evern",
+      "target": "seedling of deutsch evern",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "konigin luise",
+      "target": "eva macherauch",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "laxtons noble",
+      "target": "eva macherauch",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__konigin luise",
+      "target": "konigin luise",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__konigin luise",
+      "target": "konigin luise",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "oberschlesien",
+      "target": "prinz julius ernst",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__prinz julius ernst",
+      "target": "prinz julius ernst",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
     }
   }
 ]

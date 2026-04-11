@@ -980,6 +980,9 @@ function selectNode(n, doFit=true){
 
   setDetail(n);
 
+    // ★ 追加：GA4へ送信
+  trackCultivarSelection(n, source);
+
   // いったん全解除
   cy.elements().removeClass('faded');
   cy.elements().removeClass('highlight');
@@ -1018,7 +1021,7 @@ function focusFromList(n){
       setTimeout(() => {
         cy.resize();         // 念のため2回目
         centerOnNode(n, 420);
-        setTimeout(() => selectNode(n, false), 220);
+        setTimeout(() => selectNode(n, false, 'list'), 220);
       }, 120);
     });
     return;
@@ -1317,7 +1320,7 @@ layout: { name: 'preset' }
 
 
   /* グラフ内タップ：ハイライト（fitはしない） */
-  cy.on('tap', 'node', (evt) => selectNode(evt.target, false));
+  cy.on('tap', 'node', (evt) => selectNode(evt.target, false, 'graph'));
 
   /* 背景タップ：解除 */
   cy.on('tap', (evt) => {

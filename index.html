@@ -387,6 +387,40 @@
       to { transform: rotate(360deg); }
     }
 
+/* 追加：ローディング中の使い方説明文のスタイル */
+    .usage-guide {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px dashed var(--border);
+      text-align: left;
+    }
+    .usage-title {
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--wine);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .usage-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 12px;
+      color: #374151;
+      line-height: 1.6;
+    }
+    .usage-list li {
+      margin-bottom: 6px;
+    }
+    .usage-list strong {
+      color: #111827;
+    }
+
+    /* ローディングボックスの幅を説明文に合わせて少し広げる（PCのみ） */
+    @media (min-width: 901px) {
+      .loaderBox {
+        width: 450px; /* 360pxから拡張 */
+      }
+    }
     
   </style>
 </head>
@@ -440,12 +474,24 @@
     <div id="cyWrap">
       <div id="cy"></div>
 
+<div id="cyWrap">
+      <div id="cy"></div>
+
       <div id="cyLoading" aria-live="polite">
-      <div class="loaderBox">
-        <div class="spinner" aria-hidden="true"></div>
-        <div class="loaderTitle">読み込み中…</div>
-        <div class="loaderSub">系統図を配置しています。しばらくお待ちください。</div>
-      </div>
+        <div class="loaderBox">
+          <div class="spinner" aria-hidden="true"></div>
+          <div class="loaderTitle">読み込み中…</div>
+          <div class="loaderSub">系統図を配置しています。しばらくお待ちください。</div>
+          
+          <div class="usage-guide onlyDesktop">
+            <div class="usage-title">簡単 系統図の使い方</div>
+            <ul class="usage-list">
+              <li><strong>左パネル：</strong>品種名を検索またはリストから選択すると中央パネルおよび右パネルに表示されます。</li>
+              <li><strong>中央パネル：</strong>系統図の中から、選択した品種の親子関係がハイライトされます。「CLR」ボタンでハイライト解除後、系統図中の品種をクリックできます。</li>
+              <li><strong>右パネル：</strong>選択した品種の詳細が表示されます。「祖先のみ表示」ボタンで、家系図が表示されます。</li>
+            </ul>
+          </div>
+          </div>
       </div>
 
       

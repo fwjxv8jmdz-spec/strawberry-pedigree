@@ -8797,18 +8797,6 @@
   },
   {
     "data": {
-      "id": "talisman",
-      "label": "Talisman",
-      "year": "",
-      "institute": "",
-      "notes": "",
-      "sources": "",
-      "db_registration_date": "2026/4/11",
-      "placeholder": false
-    }
-  },
-  {
-    "data": {
       "id": "catalina",
       "label": "Catalina",
       "year": 1995,
@@ -8965,13 +8953,25 @@
   },
   {
     "data": {
-      "id": "red gauntlet",
-      "label": "Red Gauntlet",
+      "id": "redgauntlet",
+      "label": "Redgauntlet",
       "year": "",
       "institute": "",
       "notes": "イギリスの品種。",
       "sources": "",
       "db_registration_date": "2026/4/11",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "talisman",
+      "label": "Talisman",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
       "placeholder": false
     }
   },
@@ -9685,6 +9685,78 @@
   },
   {
     "data": {
+      "id": "auchincruive climax",
+      "label": "Auchincruive Climax",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "new jersey 1051",
+      "label": "New Jersey 1051",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "NJ_674",
+      "label": "NJ_674",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "NJ_370",
+      "label": "NJ_370",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "NJ_147",
+      "label": "NJ_147",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "NJ_314",
+      "label": "NJ_314",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/12",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -9973,6 +10045,18 @@
   },
   {
     "data": {
+      "id": "TD-8(CC-6 O.P.) frith O.P.)",
+      "label": "TD-8(CC-6 O.P.) frith O.P.)",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "arking",
       "label": "arking",
       "year": "",
@@ -10189,18 +10273,6 @@
   },
   {
     "data": {
-      "id": "jerseybelly",
-      "label": "jerseybelly",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "jessie",
       "label": "jessie",
       "year": "",
@@ -10273,18 +10345,6 @@
   },
   {
     "data": {
-      "id": "new jersey 105",
-      "label": "new jersey 105",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "oishishikinari2go",
       "label": "oishishikinari2go",
       "year": "",
@@ -10333,8 +10393,32 @@
   },
   {
     "data": {
+      "id": "pearl",
+      "label": "pearl",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "rannyaya plotnaya",
       "label": "rannyaya plotnaya",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "red gauntlet",
+      "label": "red gauntlet",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11905,18 +11989,6 @@
   },
   {
     "data": {
-      "id": "unknown_father__talisman",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "unknown_father__tankyo20",
       "label": "不明",
       "year": "",
@@ -13226,18 +13298,6 @@
   {
     "data": {
       "id": "unknown_mother__syuko",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_mother__talisman",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -25137,22 +25197,6 @@
   },
   {
     "data": {
-      "source": "unknown_mother__talisman",
-      "target": "talisman",
-      "role": "mother",
-      "source_id": ""
-    }
-  },
-  {
-    "data": {
-      "source": "unknown_father__talisman",
-      "target": "talisman",
-      "role": "father",
-      "source_id": ""
-    }
-  },
-  {
-    "data": {
       "source": "A41_catalina_mother",
       "target": "catalina",
       "role": "mother",
@@ -25361,18 +25405,34 @@
   },
   {
     "data": {
-      "source": "new jersey 105",
-      "target": "red gauntlet",
+      "source": "auchincruive climax",
+      "target": "redgauntlet",
       "role": "mother",
-      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
     }
   },
   {
     "data": {
-      "source": "climax",
-      "target": "red gauntlet",
+      "source": "new jersey 1051",
+      "target": "redgauntlet",
       "role": "father",
-      "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "auchincruive climax",
+      "target": "talisman",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "new jersey 1051",
+      "target": "talisman",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
     }
   },
   {
@@ -26209,7 +26269,7 @@
   },
   {
     "data": {
-      "source": "jerseybelly",
+      "source": "jerseybelle",
       "target": "raritan",
       "role": "mother",
       "source_id": "https://ecommons.cornell.edu/server/api/core/bitstreams/44f507f3-667f-4406-bc34-b4f7e1414b81/content"
@@ -26315,6 +26375,102 @@
     "data": {
       "source": "unknown_father__aberdeen",
       "target": "aberdeen",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "TD-8(CC-6 O.P.) frith O.P.)",
+      "target": "auchincruive climax",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "aberdeen",
+      "target": "auchincruive climax",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "NJ_674",
+      "target": "new jersey 1051",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "NJ_314",
+      "target": "new jersey 1051",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "NJ_370",
+      "target": "NJ_674",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "NJ_147",
+      "target": "NJ_674",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "aberdeen",
+      "target": "NJ_370",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "NJ_370",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "pearl",
+      "target": "NJ_147",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "NJ_147",
+      "role": "father",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "pearl",
+      "target": "NJ_314",
+      "role": "mother",
+      "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "NJ_314",
       "role": "father",
       "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
     }

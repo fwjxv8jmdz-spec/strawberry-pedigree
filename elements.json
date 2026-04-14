@@ -9062,7 +9062,7 @@
   {
     "data": {
       "id": "rotkappchen",
-      "label": "Rotk?ppchen",
+      "label": "Rotkappchen",
       "year": "",
       "institute": "",
       "notes": "",
@@ -9122,7 +9122,7 @@
   {
     "data": {
       "id": "johannes muller",
-      "label": "Johannes M?ller",
+      "label": "Johannes Muller",
       "year": "",
       "institute": "",
       "notes": "",
@@ -9134,7 +9134,7 @@
   {
     "data": {
       "id": "wunder von kothen",
-      "label": "Wunder von K?then",
+      "label": "Wunder von Kothen",
       "year": "",
       "institute": "",
       "notes": "",
@@ -9182,7 +9182,7 @@
   {
     "data": {
       "id": "konig von sachsen",
-      "label": "K?nig von Sachsen",
+      "label": "Konig von Sachsen",
       "year": "",
       "institute": "",
       "notes": "",
@@ -9362,7 +9362,7 @@
   {
     "data": {
       "id": "macherauchs spaternte",
-      "label": "Macherauch's Sp?ternte",
+      "label": "Macherauch's Spaternte",
       "year": "",
       "institute": "",
       "notes": "",
@@ -9446,7 +9446,7 @@
   {
     "data": {
       "id": "konigin luise",
-      "label": "K?nigin Luise",
+      "label": "Konigin Luise",
       "year": "",
       "institute": "",
       "notes": "親が不明。",
@@ -9613,18 +9613,6 @@
   },
   {
     "data": {
-      "id": "climax",
-      "label": "Climax",
-      "year": "",
-      "institute": "",
-      "notes": "",
-      "sources": "",
-      "db_registration_date": "2026/4/11",
-      "placeholder": false
-    }
-  },
-  {
-    "data": {
       "id": "venta",
       "label": "Venta",
       "year": "",
@@ -9757,6 +9745,210 @@
   },
   {
     "data": {
+      "id": "darselect",
+      "label": "Darselect",
+      "year": 1998,
+      "institute": "NATIONAL LICENSING ASSOCIATION-US LLC",
+      "notes": "",
+      "sources": "USPP10402P(https://patents.google.com/patent/USPP10402P/en)",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "euroka",
+      "label": "Euroka",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "firecracker",
+      "label": "Firecracker",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "88_015_euroka_father",
+      "label": "88_015",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 850_48",
+      "label": "ORUS 850_48",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "G19",
+      "label": "G19",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "independence",
+      "label": "Independence",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 750_1",
+      "label": "ORUS 750_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kalang",
+      "label": "Kalang",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lacadie",
+      "label": "Lacadie",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "totem",
+      "label": "Totem",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/13",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "lowanna",
+      "label": "Lowanna",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "milsei",
+      "label": "Milsei",
+      "year": 1992,
+      "institute": "Plantas de Navarra SA",
+      "notes": "",
+      "sources": "USPP7864P(https://patents.google.com/patent/USPP7864P/en?oq=USPP7864P)",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "buddy",
+      "label": "Buddy",
+      "year": 2014,
+      "institute": "Hargreaves Plants Ltd",
+      "notes": "",
+      "sources": "USPP24512P3(https://patents.google.com/patent/USPP24512P3/en)",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "san andreas",
+      "label": "San Andreas",
+      "year": 2009,
+      "institute": "University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP19975P2(https://patents.google.com/patent/USPP19975P2/en)",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "monterey",
+      "label": "Monterey",
+      "year": 2009,
+      "institute": "Samsung Display Co Ltd University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP19767P2(https://patents.google.com/patent/USPP19767P2/en)",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "jewel",
+      "label": "Jewel",
+      "year": 1987,
+      "institute": "Cornell Research Foundation Inc",
+      "notes": "",
+      "sources": "USPP5897P(https://patents.google.com/patent/USPP5897P/en)",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -9783,6 +9975,18 @@
     "data": {
       "id": "11268_01",
       "label": "11268_01",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "89_064_1_lowanna_father",
+      "label": "89_064_1_lowanna_father",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -9901,8 +10105,44 @@
   },
   {
     "data": {
+      "id": "Cal. 97.85_6",
+      "label": "Cal. 97.85_6",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. 97.86_1",
+      "label": "Cal. 97.86_1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "Cape Mendocino beach strawberry",
       "label": "Cape Mendocino beach strawberry",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "DNBL205",
+      "label": "DNBL205",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10023,6 +10263,42 @@
     "data": {
       "id": "LA 2556",
       "label": "LA 2556",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "N.Y. 1221",
+      "label": "N.Y. 1221",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 1077_47",
+      "label": "ORUS 1077_47",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 3746",
+      "label": "ORUS 3746",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10225,8 +10501,32 @@
   },
   {
     "data": {
+      "id": "glooscap",
+      "label": "glooscap",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "grenader_V2",
       "label": "grenader_V2",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "guardian",
+      "label": "guardian",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10333,6 +10633,18 @@
   },
   {
     "data": {
+      "id": "linn",
+      "label": "linn",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "lucida",
       "label": "lucida",
       "year": "",
@@ -10405,8 +10717,8 @@
   },
   {
     "data": {
-      "id": "rannyaya plotnaya",
-      "label": "rannyaya plotnaya",
+      "id": "puget beauty",
+      "label": "puget beauty",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10417,8 +10729,8 @@
   },
   {
     "data": {
-      "id": "red gauntlet",
-      "label": "red gauntlet",
+      "id": "rannyaya plotnaya",
+      "label": "rannyaya plotnaya",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10646,6 +10958,18 @@
   {
     "data": {
       "id": "unknown_father__88_011_30_alinta_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__88_015_euroka_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -11102,18 +11426,6 @@
   {
     "data": {
       "id": "unknown_father__clark",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_father__climax",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12229,6 +12541,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__88_015_euroka_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__88_042_35_adina_mother",
       "label": "不明",
       "year": "",
@@ -12662,18 +12986,6 @@
   {
     "data": {
       "id": "unknown_mother__clark",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "unknown_mother__climax",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -25365,7 +25677,7 @@
   },
   {
     "data": {
-      "source": "red gauntlet",
+      "source": "redgauntlet",
       "target": "tsaritsa",
       "role": "father",
       "source_id": "https://mdpi-res.com/bookfiles/book/3775/Genetic_Diversity_Assessment_and_MarkerAssisted_Selection_in_Crops.pdf?v=1736388181"
@@ -26285,22 +26597,6 @@
   },
   {
     "data": {
-      "source": "unknown_mother__climax",
-      "target": "climax",
-      "role": "mother",
-      "source_id": ""
-    }
-  },
-  {
-    "data": {
-      "source": "unknown_father__climax",
-      "target": "climax",
-      "role": "father",
-      "source_id": ""
-    }
-  },
-  {
-    "data": {
       "source": "unknown_mother__venta",
       "target": "venta",
       "role": "mother",
@@ -26473,6 +26769,278 @@
       "target": "NJ_314",
       "role": "father",
       "source_id": "https://csclub.uwaterloo.ca/~pbarfuss/Darrow_-_The_Strawberry_(1966).pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "elsanta",
+      "target": "darselect",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP10402P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "darselect",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP10402P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "euroka",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "88_015_euroka_father",
+      "target": "euroka",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 850_48",
+      "target": "firecracker",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "totem",
+      "target": "firecracker",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__88_015_euroka_father",
+      "target": "88_015_euroka_father",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__88_015_euroka_father",
+      "target": "88_015_euroka_father",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "linn",
+      "target": "ORUS 850_48",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 1077_47",
+      "target": "ORUS 850_48",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "G19",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "G19",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 850_48",
+      "target": "independence",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 750_1",
+      "target": "independence",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "totem",
+      "target": "ORUS 750_1",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 3746",
+      "target": "ORUS 750_1",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "kalang",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "kalang",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "guardian",
+      "target": "lacadie",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "glooscap",
+      "target": "lacadie",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "puget beauty",
+      "target": "totem",
+      "role": "mother",
+      "source_id": "Fruit Varieties Journal 47(4):182-184 1993"
+    }
+  },
+  {
+    "data": {
+      "source": "northwest",
+      "target": "totem",
+      "role": "father",
+      "source_id": "Fruit Varieties Journal 47(4):182-184 1993"
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "lowanna",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "89_064_1_lowanna_father",
+      "target": "lowanna",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "milsei",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP7864P/en?oq=USPP7864P"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "milsei",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP7864P/en?oq=USPP7864P"
+    }
+  },
+  {
+    "data": {
+      "source": "diamante",
+      "target": "buddy",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP24512P3/en"
+    }
+  },
+  {
+    "data": {
+      "source": "DNBL205",
+      "target": "buddy",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP24512P3/en"
+    }
+  },
+  {
+    "data": {
+      "source": "albion",
+      "target": "san andreas",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP19975P2/en"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 97.86_1",
+      "target": "san andreas",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP19975P2/en"
+    }
+  },
+  {
+    "data": {
+      "source": "albion",
+      "target": "monterey",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP19767P2/en"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 97.85_6",
+      "target": "monterey",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP19767P2/en"
+    }
+  },
+  {
+    "data": {
+      "source": "N.Y. 1221",
+      "target": "jewel",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5897P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "jewel",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5897P/en"
     }
   }
 ]

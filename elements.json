@@ -8774,7 +8774,7 @@
   {
     "data": {
       "id": "cacak 45/7",
-      "label": "Cacak 45/7 (?a?anska 45/7)",
+      "label": "Cacak 45/7 (Cacanska 45/7)",
       "year": "",
       "institute": "",
       "notes": "",
@@ -9941,8 +9941,80 @@
       "label": "Jewel",
       "year": 1987,
       "institute": "Cornell Research Foundation Inc",
-      "notes": "",
+      "notes": "Jewellとは別の品種。",
       "sources": "USPP5897P(https://patents.google.com/patent/USPP5897P/en)",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "jewel_1919",
+      "label": "Jewel",
+      "year": "",
+      "institute": "",
+      "notes": "同名のJewel（USPP5897P）が存在する。Superbの偶発実生",
+      "sources": "",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "jewell_marguerite_america_mother",
+      "label": "Jewell",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "superb",
+      "label": "Superb",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cooper",
+      "label": "Cooper",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "autumn",
+      "label": "Autumn",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pan american",
+      "label": "Pan American",
+      "year": "",
+      "institute": "",
+      "notes": "Bismarckの枝変わりである",
+      "sources": "",
       "db_registration_date": "2026/4/14",
       "placeholder": false
     }
@@ -10575,18 +10647,6 @@
     "data": {
       "id": "jessie",
       "label": "jessie",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "jewell",
-      "label": "jewell",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11713,6 +11773,30 @@
   },
   {
     "data": {
+      "id": "unknown_father__jewel_1919",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__jewell_marguerite_america_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__johannes muller",
       "label": "不明",
       "year": "",
@@ -12146,6 +12230,18 @@
   {
     "data": {
       "id": "unknown_father__onebor",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__pan american",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -13177,6 +13273,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__jewell_marguerite_america_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__joseph riffaud",
       "label": "不明",
       "year": "",
@@ -13526,6 +13634,18 @@
   {
     "data": {
       "id": "unknown_mother__onebor",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__pan american",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -24917,7 +25037,7 @@
   },
   {
     "data": {
-      "source": "jewell",
+      "source": "jewell_marguerite_america_mother",
       "target": "marguerite_america",
       "role": "mother",
       "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/652"
@@ -27041,6 +27161,102 @@
       "target": "jewel",
       "role": "father",
       "source_id": "https://patents.google.com/patent/USPP5897P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "superb",
+      "target": "jewel_1919",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/626/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__jewel_1919",
+      "target": "jewel_1919",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/626/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__jewell_marguerite_america_mother",
+      "target": "jewell_marguerite_america_mother",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/626/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__jewell_marguerite_america_mother",
+      "target": "jewell_marguerite_america_mother",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/626/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "autumn",
+      "target": "superb",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/726/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "cooper",
+      "target": "superb",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/726/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "pan american",
+      "target": "cooper",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/566/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "pan american",
+      "target": "cooper",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/566/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "pan american",
+      "target": "autumn",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/522/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "pan american",
+      "target": "autumn",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/522/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__pan american",
+      "target": "pan american",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/682/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__pan american",
+      "target": "pan american",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/682/mode/2up"
     }
   }
 ]

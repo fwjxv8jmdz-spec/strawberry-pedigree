@@ -6017,7 +6017,7 @@
       "label": "Pan American",
       "year": "",
       "institute": "",
-      "notes": "Bismarck の変異とのこと",
+      "notes": "Bismarck の枝変わり。Bismarckと同じ親であるとして記載。",
       "sources": "",
       "db_registration_date": "2025/12/30",
       "placeholder": false
@@ -10009,13 +10009,409 @@
   },
   {
     "data": {
-      "id": "pan american",
-      "label": "Pan American",
+      "id": "bismarck",
+      "label": "Bismarck",
       "year": "",
       "institute": "",
-      "notes": "Bismarckの枝変わりである",
+      "notes": "",
       "sources": "",
       "db_registration_date": "2026/4/14",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nama",
+      "label": "Nama",
+      "year": 1994,
+      "institute": "Israel Ministry of Agriculture and Rural Development Agricultural Research Organization of Israel Ministry of Agriculture",
+      "notes": "",
+      "sources": "USPP8747P(https://patents.google.com/patent/USPP8747P/en?oq=USPP8747P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "nonda",
+      "label": "Nonda",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "onebor",
+      "label": "Onebor",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "USPP8535(https://patents.google.com/patent/USPP8535P/en?oq=USPP8535P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "232_nama_father",
+      "label": "232",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "selezione No. 15_onebor_father",
+      "label": "Selezione No. 15",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "gorella",
+      "label": "Gorella",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "MDUS 3763",
+      "label": "MDUS 3763",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pacific",
+      "label": "Pacific",
+      "year": 1998,
+      "institute": "University of California University of California San Diego UCSD",
+      "notes": "別名: CN211",
+      "sources": "USPP10436P(https://patents.google.com/patent/USPP10436P/en?oq=USPP10436P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ruby red",
+      "label": "Ruby Red",
+      "year": 1984,
+      "institute": "",
+      "notes": "",
+      "sources": "USPP5232P(https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "canall_twentieth century_twentieth century_ogallala_oberschlesien",
+      "label": "[([(Canall×Twentieth Century)×Twentieth Century]×Ogallala)×Oberschlesien]",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "canall_twentieth century_twentieth century_ogallala",
+      "label": "[(Canall×Twentieth Century)×Twentieth Century]×Ogallala",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "canall_twentieth century_twentieth century",
+      "label": "(Canall×Twentieth Century)×Twentieth Century",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "canall_twentieth century",
+      "label": "Canall×Twentieth Century",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "sable",
+      "label": "Sable",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "san miguel",
+      "label": "San Miguel",
+      "year": 1998,
+      "institute": "Driscolls Inc",
+      "notes": "",
+      "sources": "USPP10642P(https://patents.google.com/patent/USPP10642P/en?oq=USPP10642P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K6_san miguel_father",
+      "label": "K6",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "shalom",
+      "label": "Shalom",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "USPP7876P(https://patents.google.com/patent/USPP7876P/en?oq=USPP7876P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "talee",
+      "label": "Talee",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tallara",
+      "label": "Tallara",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "virginia",
+      "label": "Virginia",
+      "year": 1994,
+      "institute": "Israel Ministry of Agriculture and Rural Development Agricultural Research Organization of Israel Ministry of Agriculture",
+      "notes": "",
+      "sources": "USPP8748P(https://patents.google.com/patent/USPP8748P/en?oq=USPP8748P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "230_virginia_father",
+      "label": "230",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "yamaska",
+      "label": "Yamaska",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "tillamook",
+      "label": "Tillamook",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cuesta",
+      "label": "Cuesta",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fern_parker_cuesta_father",
+      "label": "Fern×Parker",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "puget reliance",
+      "label": "Puget Reliance",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "USPP9310P(https://patents.google.com/patent/USPP9310P/en?oq=USPP9310P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "camarosa",
+      "label": "Camarosa",
+      "year": 1994,
+      "institute": "University of California University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP8708P(https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P)",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pinnacle",
+      "label": "Pinnacle",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 1267_250",
+      "label": "ORUS 1267_250",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 869_13",
+      "label": "ORUS 869_13",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "WSU 1623",
+      "label": "WSU 1623",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "WSU 1574",
+      "label": "WSU 1574",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "WSU 1532",
+      "label": "WSU 1532",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/15",
       "placeholder": false
     }
   },
@@ -10057,6 +10453,18 @@
   },
   {
     "data": {
+      "id": "88_011_30_nonda_mother",
+      "label": "88_011_30_nonda_mother",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "89_064_1_lowanna_father",
       "label": "89_064_1_lowanna_father",
       "year": "",
@@ -10083,6 +10491,18 @@
     "data": {
       "id": "B0205_1",
       "label": "B0205_1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "BC77_2_72",
+      "label": "BC77_2_72",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10167,6 +10587,30 @@
     "data": {
       "id": "Cal BH 14(mixed crosses)",
       "label": "Cal BH 14(mixed crosses)",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. 85.218_605",
+      "label": "Cal. 85.218_605",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. 88.118_603",
+      "label": "Cal. 88.118_603",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10405,6 +10849,18 @@
   },
   {
     "data": {
+      "id": "WSU 1945",
+      "label": "WSU 1945",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "arking",
       "label": "arking",
       "year": "",
@@ -10429,8 +10885,56 @@
   },
   {
     "data": {
+      "id": "bogota",
+      "label": "bogota",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "canall",
+      "label": "canall",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "cavendish",
+      "label": "cavendish",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "chilean",
       "label": "chilean",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "columbia",
+      "label": "columbia",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10467,6 +10971,18 @@
     "data": {
       "id": "ettersburg",
       "label": "ettersburg",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "fern",
+      "label": "fern",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10669,6 +11185,18 @@
   },
   {
     "data": {
+      "id": "juspa",
+      "label": "juspa",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "krasavitsa",
       "label": "krasavitsa",
       "year": "",
@@ -10683,6 +11211,18 @@
     "data": {
       "id": "kurume48go",
       "label": "kurume48go",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "laguna",
+      "label": "laguna",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10717,6 +11257,18 @@
   },
   {
     "data": {
+      "id": "ogallala",
+      "label": "ogallala",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "oishishikinari2go",
       "label": "oishishikinari2go",
       "year": "",
@@ -10729,8 +11281,32 @@
   },
   {
     "data": {
+      "id": "olympus",
+      "label": "olympus",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "palmyre",
       "label": "palmyre",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "pandora",
+      "label": "pandora",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10789,8 +11365,44 @@
   },
   {
     "data": {
+      "id": "rachel",
+      "label": "rachel",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "rannyaya plotnaya",
       "label": "rannyaya plotnaya",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "redcrest",
+      "label": "redcrest",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "redgem",
+      "label": "redgem",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10921,7 +11533,43 @@
   },
   {
     "data": {
+      "id": "twentieth century",
+      "label": "twentieth century",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__03042_08",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__230_virginia_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__232_nama_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -11282,6 +11930,18 @@
   {
     "data": {
       "id": "unknown_father__HKW_02",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__K6_san miguel_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12241,18 +12901,6 @@
   },
   {
     "data": {
-      "id": "unknown_father__pan american",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "unknown_father__portia",
       "label": "不明",
       "year": "",
@@ -12326,6 +12974,18 @@
   {
     "data": {
       "id": "unknown_father__roter elefant",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__selezione No. 15_onebor_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12554,6 +13214,30 @@
   {
     "data": {
       "id": "unknown_mother__03042_08",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__230_virginia_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__232_nama_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12878,6 +13562,18 @@
   {
     "data": {
       "id": "unknown_mother__HKW_02",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__K6_san miguel_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -13645,18 +14341,6 @@
   },
   {
     "data": {
-      "id": "unknown_mother__pan american",
-      "label": "不明",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (unknown parent)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "unknown_mother__rosie",
       "label": "不明",
       "year": "",
@@ -13670,6 +14354,18 @@
   {
     "data": {
       "id": "unknown_mother__roter elefant",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__selezione No. 15_onebor_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -13890,6 +14586,18 @@
       "year": "",
       "institute": "",
       "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "veestar",
+      "label": "veestar",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
       "sources": "",
       "db_registration_date": "",
       "placeholder": true
@@ -27245,18 +27953,546 @@
   },
   {
     "data": {
-      "source": "unknown_mother__pan american",
-      "target": "pan american",
+      "source": "bubach",
+      "target": "bismarck",
       "role": "mother",
-      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/682/mode/2up"
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/538/mode/2up"
     }
   },
   {
     "data": {
-      "source": "unknown_father__pan american",
-      "target": "pan american",
+      "source": "van deman",
+      "target": "bismarck",
       "role": "father",
-      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/682/mode/2up"
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/538/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "nama",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8747P/en?oq=USPP8747P"
+    }
+  },
+  {
+    "data": {
+      "source": "232_nama_father",
+      "target": "nama",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8747P/en?oq=USPP8747P"
+    }
+  },
+  {
+    "data": {
+      "source": "88_011_30_nonda_mother",
+      "target": "nonda",
+      "role": "mother",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "nonda",
+      "role": "father",
+      "source_id": "HortScience.?1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "gorella",
+      "target": "onebor",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8535P/en?oq=USPP8535P"
+    }
+  },
+  {
+    "data": {
+      "source": "selezione No. 15_onebor_father",
+      "target": "onebor",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8535P/en?oq=USPP8535P"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__232_nama_father",
+      "target": "232_nama_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__232_nama_father",
+      "target": "232_nama_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__selezione No. 15_onebor_father",
+      "target": "selezione No. 15_onebor_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__selezione No. 15_onebor_father",
+      "target": "selezione No. 15_onebor_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "juspa",
+      "target": "gorella",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/jashs/125/3/article-p330.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 3763",
+      "target": "gorella",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/jashs/125/3/article-p330.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "suwannee",
+      "target": "MDUS 3763",
+      "role": "mother",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/jashs/125/3/article-p330.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "midland",
+      "target": "MDUS 3763",
+      "role": "father",
+      "source_id": "https://journals.ashs.org/hort/hort/published/rest/pdf-watermark/v1/journals/jashs/125/3/article-p330.pdf/watermark-pdf/"
+    }
+  },
+  {
+    "data": {
+      "source": "seascape",
+      "target": "pacific",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP10436P/en?oq=USPP10436P"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 88.118_603",
+      "target": "pacific",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP10436P/en?oq=USPP10436P"
+    }
+  },
+  {
+    "data": {
+      "source": "canall_twentieth century_twentieth century_ogallala_oberschlesien",
+      "target": "ruby red",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "surecrop",
+      "target": "ruby red",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "canall_twentieth century_twentieth century_ogallala",
+      "target": "canall_twentieth century_twentieth century_ogallala_oberschlesien",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "oberschlesien",
+      "target": "canall_twentieth century_twentieth century_ogallala_oberschlesien",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "canall_twentieth century_twentieth century",
+      "target": "canall_twentieth century_twentieth century_ogallala",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "ogallala",
+      "target": "canall_twentieth century_twentieth century_ogallala",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "canall_twentieth century",
+      "target": "canall_twentieth century_twentieth century",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "twentieth century",
+      "target": "canall_twentieth century_twentieth century",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "canall",
+      "target": "canall_twentieth century",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "twentieth century",
+      "target": "canall_twentieth century",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5232P/en?oq=USPP5232P"
+    }
+  },
+  {
+    "data": {
+      "source": "veestar",
+      "target": "sable",
+      "role": "mother",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "cavendish",
+      "target": "sable",
+      "role": "father",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "seascape",
+      "target": "san miguel",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP10642P/en?oq=USPP10642P"
+    }
+  },
+  {
+    "data": {
+      "source": "K6_san miguel_father",
+      "target": "san miguel",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP10642P/en?oq=USPP10642P"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__K6_san miguel_father",
+      "target": "K6_san miguel_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__K6_san miguel_father",
+      "target": "K6_san miguel_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "rachel",
+      "target": "shalom",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP7876P/en?oq=USPP7876P"
+    }
+  },
+  {
+    "data": {
+      "source": "douglas",
+      "target": "shalom",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP7876P/en?oq=USPP7876P"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "talee",
+      "role": "mother",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "talee",
+      "role": "father",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "tallara",
+      "role": "mother",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "pajaro",
+      "target": "tallara",
+      "role": "father",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "virginia",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8748P/en?oq=USPP8748P"
+    }
+  },
+  {
+    "data": {
+      "source": "230_virginia_father",
+      "target": "virginia",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8748P/en?oq=USPP8748P"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__230_virginia_father",
+      "target": "230_virginia_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__230_virginia_father",
+      "target": "230_virginia_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "pandora",
+      "target": "yamaska",
+      "role": "mother",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "bogota",
+      "target": "yamaska",
+      "role": "father",
+      "source_id": "HortScience. 1999, Vol 34, Num 2, pp 181-205"
+    }
+  },
+  {
+    "data": {
+      "source": "cuesta",
+      "target": "tillamook",
+      "role": "mother",
+      "source_id": "HortScience. 2004, Vol 39, Num 6, pp 1497-1489"
+    }
+  },
+  {
+    "data": {
+      "source": "puget reliance",
+      "target": "tillamook",
+      "role": "father",
+      "source_id": "HortScience. 2004, Vol 39, Num 6, pp 1497-1489"
+    }
+  },
+  {
+    "data": {
+      "source": "seascape",
+      "target": "cuesta",
+      "role": "mother",
+      "source_id": "HortScience. 2004, Vol 39, Num 6, pp 1497-1489"
+    }
+  },
+  {
+    "data": {
+      "source": "fern_parker_cuesta_father",
+      "target": "cuesta",
+      "role": "father",
+      "source_id": "HortScience. 2004, Vol 39, Num 6, pp 1497-1489"
+    }
+  },
+  {
+    "data": {
+      "source": "fern",
+      "target": "fern_parker_cuesta_father",
+      "role": "mother",
+      "source_id": "HortScience. 2004, Vol 39, Num 6, pp 1497-1489"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "fern_parker_cuesta_father",
+      "role": "father",
+      "source_id": "HortScience. 2004, Vol 39, Num 6, pp 1497-1489"
+    }
+  },
+  {
+    "data": {
+      "source": "BC77_2_72",
+      "target": "puget reliance",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP9310P/en?oq=USPP9310P"
+    }
+  },
+  {
+    "data": {
+      "source": "WSU 1945",
+      "target": "puget reliance",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP9310P/en?oq=USPP9310P"
+    }
+  },
+  {
+    "data": {
+      "source": "douglas",
+      "target": "camarosa",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 85.218_605",
+      "target": "camarosa",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "laguna",
+      "target": "pinnacle",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 1267_250",
+      "target": "pinnacle",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "redcrest",
+      "target": "ORUS 1267_250",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 869_13",
+      "target": "ORUS 1267_250",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "WSU 1623",
+      "target": "ORUS 869_13",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "redgem",
+      "target": "ORUS 869_13",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "WSU 1574",
+      "target": "WSU 1623",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "WSU 1532",
+      "target": "WSU 1623",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "totem",
+      "target": "WSU 1574",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "olympus",
+      "target": "WSU 1574",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "N.Y. 844",
+      "target": "WSU 1532",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "columbia",
+      "target": "WSU 1532",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
     }
   }
 ]

@@ -10417,6 +10417,270 @@
   },
   {
     "data": {
+      "id": "glooscap",
+      "label": "Glooscap",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "blomidon",
+      "label": "Blomidon",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K72_4_blomidon_mother",
+      "label": "K72_4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "guardsman_tioga",
+      "label": "Guardsman×Tioga",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "pandora",
+      "label": "Pandora",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "valley sunset",
+      "label": "Valley Sunset",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K94_15_valley sunset_mother",
+      "label": "K94_15",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K90_22_K94_15_mother",
+      "label": "K90_22",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K73_18_K94_15_father",
+      "label": "K73_18",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K67_210_K73_18_father",
+      "label": "K67_210",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K95_24_valley sunset_father",
+      "label": "K95_24",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K90_24_K95_24_mother",
+      "label": "K90_24",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K91_15_K95_24_father",
+      "label": "K91_15",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K86_19_K91_15_father",
+      "label": "K86_19",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K79_4_K86_19_father",
+      "label": "K79_4",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K72_9_K79_4_father",
+      "label": "K72_9",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "bogota",
+      "label": "Bogota",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "micmac",
+      "label": "Micmac",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K61_87_micmac_father",
+      "label": "K61_87",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cavendish",
+      "label": "Cavendish",
+      "year": 1999,
+      "institute": "Agriculture and Agri-Food Canada",
+      "notes": "",
+      "sources": "USPP11110P(https://patents.google.com/patent/USPP11110P/en)",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "annapolis",
+      "label": "Annapolis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K74_5_annapolis_mother",
+      "label": "K74_5",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/16",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -10861,6 +11125,30 @@
   },
   {
     "data": {
+      "id": "acadia",
+      "label": "acadia",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "allstar",
+      "label": "allstar",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "arking",
       "label": "arking",
       "year": "",
@@ -10885,8 +11173,20 @@
   },
   {
     "data": {
-      "id": "bogota",
-      "label": "bogota",
+      "id": "bountry",
+      "label": "bountry",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "bounty",
+      "label": "bounty",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10899,18 +11199,6 @@
     "data": {
       "id": "canall",
       "label": "canall",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "cavendish",
-      "label": "cavendish",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -10935,6 +11223,18 @@
     "data": {
       "id": "columbia",
       "label": "columbia",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "earlinglow",
+      "label": "earlinglow",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11089,18 +11389,6 @@
   },
   {
     "data": {
-      "id": "glooscap",
-      "label": "glooscap",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "grenader_V2",
       "label": "grenader_V2",
       "year": "",
@@ -11115,6 +11403,18 @@
     "data": {
       "id": "guardian",
       "label": "guardian",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "guardsman",
+      "label": "guardsman",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11305,18 +11605,6 @@
   },
   {
     "data": {
-      "id": "pandora",
-      "label": "pandora",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "parker",
       "label": "parker",
       "year": "",
@@ -11439,6 +11727,18 @@
     "data": {
       "id": "rotkappchen",
       "label": "rotkappchen",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "scotland",
+      "label": "scotland",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12086,6 +12386,18 @@
   {
     "data": {
       "id": "unknown_father__benitaki",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__bogota",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12890,6 +13202,18 @@
   {
     "data": {
       "id": "unknown_father__onebor",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__pandora",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -13729,6 +14053,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__bogota",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__british queen",
       "label": "不明",
       "year": "",
@@ -14341,6 +14677,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__pandora",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__rosie",
       "label": "不明",
       "year": "",
@@ -14595,6 +14943,18 @@
     "data": {
       "id": "veestar",
       "label": "veestar",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "vesper",
+      "label": "vesper",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -28493,6 +28853,358 @@
       "target": "WSU 1532",
       "role": "father",
       "source_id": "https://patents.google.com/patent/USPP8708P/en?oq=USPP8708P"
+    }
+  },
+  {
+    "data": {
+      "source": "micmac",
+      "target": "glooscap",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "bountry",
+      "target": "glooscap",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "K72_4_blomidon_mother",
+      "target": "blomidon",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "blomidon",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "micmac",
+      "target": "K72_4_blomidon_mother",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "guardsman_tioga",
+      "target": "K72_4_blomidon_mother",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "guardsman",
+      "target": "guardsman_tioga",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "tioga",
+      "target": "guardsman_tioga",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__pandora",
+      "target": "pandora",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__pandora",
+      "target": "pandora",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "K94_15_valley sunset_mother",
+      "target": "valley sunset",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K95_24_valley sunset_father",
+      "target": "valley sunset",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K90_22_K94_15_mother",
+      "target": "K94_15_valley sunset_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K73_18_K94_15_father",
+      "target": "K94_15_valley sunset_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "pandora",
+      "target": "K90_22_K94_15_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "scotland",
+      "target": "K90_22_K94_15_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "micmac",
+      "target": "K73_18_K94_15_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K67_210_K73_18_father",
+      "target": "K73_18_K94_15_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "vesper",
+      "target": "K67_210_K73_18_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "acadia",
+      "target": "K67_210_K73_18_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K90_24_K95_24_mother",
+      "target": "K95_24_valley sunset_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K91_15_K95_24_father",
+      "target": "K95_24_valley sunset_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "cavendish",
+      "target": "K90_24_K95_24_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "allstar",
+      "target": "K90_24_K95_24_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "bogota",
+      "target": "K91_15_K95_24_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K86_19_K91_15_father",
+      "target": "K91_15_K95_24_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "arking",
+      "target": "K86_19_K91_15_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K79_4_K86_19_father",
+      "target": "K86_19_K91_15_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "K79_4_K86_19_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "K72_9_K79_4_father",
+      "target": "K79_4_K86_19_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "bounty",
+      "target": "K72_9_K79_4_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "micmac",
+      "target": "K72_9_K79_4_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 45(4):663?665. 2010."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__bogota",
+      "target": "bogota",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__bogota",
+      "target": "bogota",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "tioga",
+      "target": "micmac",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 58: 903-904 (1978)"
+    }
+  },
+  {
+    "data": {
+      "source": "K61_87_micmac_father",
+      "target": "micmac",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 58: 903-904 (1978)"
+    }
+  },
+  {
+    "data": {
+      "source": "guardsman",
+      "target": "K61_87_micmac_father",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 58: 903-904 (1978)"
+    }
+  },
+  {
+    "data": {
+      "source": "guardsman",
+      "target": "K61_87_micmac_father",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 58: 903-904 (1978)"
+    }
+  },
+  {
+    "data": {
+      "source": "glooscap",
+      "target": "cavendish",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP11110P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "annapolis",
+      "target": "cavendish",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP11110P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "K74_5_annapolis_mother",
+      "target": "annapolis",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP11110P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "earlinglow",
+      "target": "annapolis",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP11110P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "micmac",
+      "target": "K74_5_annapolis_mother",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP11110P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "raritan",
+      "target": "K74_5_annapolis_mother",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP11110P/en"
     }
   }
 ]

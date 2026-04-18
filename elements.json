@@ -9038,7 +9038,7 @@
   {
     "data": {
       "id": "macherauchs fruhernte",
-      "label": "Macherauchs Fr?hernte",
+      "label": "Macherauchs Fruhernte",
       "year": "",
       "institute": "",
       "notes": "",
@@ -10789,6 +10789,546 @@
   },
   {
     "data": {
+      "id": "88_011_30_nonda_mother",
+      "label": "88_011_30",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "redgem",
+      "label": "Redgem",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "benton",
+      "label": "Benton",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 3596",
+      "label": "ORUS 3596",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "bountiful",
+      "label": "Bountiful",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "linn",
+      "label": "Linn",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "olympus",
+      "label": "Olympus",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "molalla",
+      "label": "Molalla",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 2136",
+      "label": "US_OR 2136",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US 3374",
+      "label": "US 3374",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "dorsett",
+      "label": "Dorsett",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "temple",
+      "label": "Temple",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 2242",
+      "label": "US_OR 2242",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 2012",
+      "label": "US_OR 2012",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 1491",
+      "label": "US_OR 1491",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "corvallis_progressive_f. chiloensis_US_OR 1491_mother",
+      "label": "Corvallis×(Progressive×Fragaria chiloensis)",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "label": "Progressive×Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "label": "Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 1509",
+      "label": "US_OR 1509",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "clark_narcissa_US_OR 1509_mother",
+      "label": "Clark×Narcissa",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis_marshall_fairfax_US_OR_father",
+      "label": "Fragaria chiloensis×(Marshall×Fairfax)",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "label": "Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "marshall_fairfax_f. chiloensis_marshall_fairfax_US_OR_father_father",
+      "label": "Marshall×Fairfax",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 1816",
+      "label": "US_OR 1816",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 1579",
+      "label": "US_OR 1579",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "clark_f. ovalis_US_OR 1579_mother",
+      "label": "Clark×Fragaria ovalis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
+      "label": "Fragaria ovalis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "blakemore_marshall_US_OR 1579_father",
+      "label": "Blakemore×Marshall",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 319",
+      "label": "US_OR 319",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "ettersburg 121_marshall_US_OR 319_father",
+      "label": "Ettersburg 121_marshall_US_OR 319_father",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "columbia",
+      "label": "Columbia",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "WSU 157",
+      "label": "WSU 157",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 828",
+      "label": "US_OR 828",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "f. chiloensis_US_OR 828_mother",
+      "label": "Fragaria chiloensis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 1149",
+      "label": "US_OR 1149",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "WSU 175",
+      "label": "WSU 175",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 450",
+      "label": "US_OR 450",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 438",
+      "label": "US_OR 438",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "US_OR 1491",
+      "label": "US_OR 1491",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "comanche",
+      "label": "Comanche",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cherokee",
+      "label": "Cherokee",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "vesper",
+      "label": "Vesper",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "bounty",
+      "label": "Bounty",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "acadia",
+      "label": "Acadia",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "earlibelle",
+      "label": "Earlibelle",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -10815,18 +11355,6 @@
     "data": {
       "id": "11268_01",
       "label": "11268_01",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "88_011_30_nonda_mother",
-      "label": "88_011_30_nonda_mother",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11077,18 +11605,6 @@
   },
   {
     "data": {
-      "id": "E_121",
-      "label": "E_121",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "F. virginiana glauca (wild, Utah)",
       "label": "F. virginiana glauca (wild, Utah)",
       "year": "",
@@ -11197,6 +11713,30 @@
   },
   {
     "data": {
+      "id": "MDUS 2101",
+      "label": "MDUS 2101",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "MDUS 3184",
+      "label": "MDUS 3184",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "N.Y. 1221",
       "label": "N.Y. 1221",
       "year": "",
@@ -11211,6 +11751,30 @@
     "data": {
       "id": "ORUS 1077_47",
       "label": "ORUS 1077_47",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 2414",
+      "label": "ORUS 2414",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 2853",
+      "label": "ORUS 2853",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11257,6 +11821,18 @@
   },
   {
     "data": {
+      "id": "US_OR 18",
+      "label": "US_OR 18",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "WSU 1945",
       "label": "WSU 1945",
       "year": "",
@@ -11269,8 +11845,8 @@
   },
   {
     "data": {
-      "id": "acadia",
-      "label": "acadia",
+      "id": "albritton",
+      "label": "albritton",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11329,6 +11905,18 @@
   },
   {
     "data": {
+      "id": "brazos",
+      "label": "brazos",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "canall",
       "label": "canall",
       "year": "",
@@ -11353,20 +11941,8 @@
   },
   {
     "data": {
-      "id": "columbia",
-      "label": "columbia",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "earlibelle",
-      "label": "earlibelle",
+      "id": "darrow",
+      "label": "darrow",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11653,18 +12229,6 @@
   },
   {
     "data": {
-      "id": "linn",
-      "label": "linn",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "lucida",
       "label": "lucida",
       "year": "",
@@ -11703,18 +12267,6 @@
     "data": {
       "id": "oishishikinari2go",
       "label": "oishishikinari2go",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "olympus",
-      "label": "olympus",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11809,8 +12361,8 @@
   },
   {
     "data": {
-      "id": "redgem",
-      "label": "redgem",
+      "id": "redcrop",
+      "label": "redcrop",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12074,6 +12626,18 @@
   {
     "data": {
       "id": "unknown_father__88_011_30_alinta_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__88_011_30_nonda_mother",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12637,6 +13201,18 @@
   },
   {
     "data": {
+      "id": "unknown_father__f. chiloensis_US_OR 828_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__f. chiloensis_ettersburg 20_father",
       "label": "不明",
       "year": "",
@@ -12649,7 +13225,31 @@
   },
   {
     "data": {
+      "id": "unknown_father__f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_father__f. chiloensis_father_U.S.D.A.836",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -12674,6 +13274,18 @@
   {
     "data": {
       "id": "unknown_father__f. ovalis_US_Oreg. 834_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -13753,6 +14365,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__88_011_30_nonda_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__88_015_euroka_father",
       "label": "不明",
       "year": "",
@@ -14269,6 +14893,18 @@
   },
   {
     "data": {
+      "id": "unknown_mother__f. chiloensis_US_OR 828_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__f. chiloensis_ettersburg 20_father",
       "label": "不明",
       "year": "",
@@ -14281,7 +14917,31 @@
   },
   {
     "data": {
+      "id": "unknown_mother__f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "unknown_mother__f. chiloensis_father_U.S.D.A.836",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -14306,6 +14966,18 @@
   {
     "data": {
       "id": "unknown_mother__f. ovalis_US_Oreg. 834_father",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -15049,8 +15721,8 @@
   },
   {
     "data": {
-      "id": "veestar",
-      "label": "veestar",
+      "id": "utah shipper",
+      "label": "utah shipper",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -15061,8 +15733,20 @@
   },
   {
     "data": {
-      "id": "vesper",
-      "label": "vesper",
+      "id": "vale",
+      "label": "vale",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "veestar",
+      "label": "veestar",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -18789,7 +19473,7 @@
   },
   {
     "data": {
-      "source": "E_121",
+      "source": "ettersburg 121",
       "target": "corvallis",
       "role": "mother",
       "source_id": "Darrow(1966; https://archive.org/details/strawberryhistor00darr/page/n525/mode/1up, IV)"
@@ -29457,6 +30141,726 @@
       "target": "redcrest",
       "role": "father",
       "source_id": "HORTSCIENCE 30(3):635?636. 1995"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__88_011_30_nonda_mother",
+      "target": "88_011_30_nonda_mother",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__88_011_30_nonda_mother",
+      "target": "88_011_30_nonda_mother",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "benton",
+      "target": "redgem",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 3596",
+      "target": "redgem",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 2414",
+      "target": "benton",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "vale",
+      "target": "benton",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "earlibelle",
+      "target": "ORUS 3596",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 2853",
+      "target": "ORUS 3596",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "linn",
+      "target": "bountiful",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "totem",
+      "target": "bountiful",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 3184",
+      "target": "linn",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 2414",
+      "target": "linn",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(10):1203?1205. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "molalla",
+      "target": "olympus",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "columbia",
+      "target": "olympus",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 2136",
+      "target": "molalla",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 2242",
+      "target": "molalla",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US 3374",
+      "target": "US_OR 2136",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "temple",
+      "target": "US_OR 2136",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "dorsett",
+      "target": "US 3374",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 18",
+      "target": "US 3374",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "royal sovereign",
+      "target": "dorsett",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "howard 17",
+      "target": "dorsett",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "aberdeen",
+      "target": "temple",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "temple",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 2012",
+      "target": "US_OR 2242",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1816",
+      "target": "US_OR 2242",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1491",
+      "target": "US_OR 2012",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1509",
+      "target": "US_OR 2012",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "corvallis_progressive_f. chiloensis_US_OR 1491_mother",
+      "target": "US_OR 1491",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "US_OR 1491",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "corvallis",
+      "target": "corvallis_progressive_f. chiloensis_US_OR 1491_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "target": "corvallis_progressive_f. chiloensis_US_OR 1491_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "progressive",
+      "target": "progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "target": "progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "target": "f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "target": "f. chiloensis_father_progressive_f. chiloensis_corvallis_progressive_f. chiloensis_US_OR 1491_mother_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "clark_narcissa_US_OR 1509_mother",
+      "target": "US_OR 1509",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis_marshall_fairfax_US_OR_father",
+      "target": "US_OR 1509",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "clark",
+      "target": "clark_narcissa_US_OR 1509_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "clark_narcissa_US_OR 1509_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "target": "f. chiloensis_marshall_fairfax_US_OR_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "marshall_fairfax_f. chiloensis_marshall_fairfax_US_OR_father_father",
+      "target": "f. chiloensis_marshall_fairfax_US_OR_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "target": "f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "target": "f. chiloensis_f. chiloensis_marshall_fairfax_US_OR_father_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "marshall_fairfax_f. chiloensis_marshall_fairfax_US_OR_father_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "marshall_fairfax_f. chiloensis_marshall_fairfax_US_OR_father_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1579",
+      "target": "US_OR 1816",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 319",
+      "target": "US_OR 1816",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "clark_f. ovalis_US_OR 1579_mother",
+      "target": "US_OR 1579",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore_marshall_US_OR 1579_father",
+      "target": "US_OR 1579",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "clark",
+      "target": "clark_f. ovalis_US_OR 1579_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
+      "target": "clark_f. ovalis_US_OR 1579_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
+      "target": "f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
+      "target": "f. ovalis_clark_f. ovalis_US_OR 1579_mother_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "blakemore",
+      "target": "blakemore_marshall_US_OR 1579_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "blakemore_marshall_US_OR 1579_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "redheart",
+      "target": "US_OR 319",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121_marshall_US_OR 319_father",
+      "target": "US_OR 319",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121",
+      "target": "ettersburg 121_marshall_US_OR 319_father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "ettersburg 121_marshall_US_OR 319_father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "WSU 157",
+      "target": "columbia",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "WSU 175",
+      "target": "columbia",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 828",
+      "target": "WSU 157",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1149",
+      "target": "WSU 157",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "f. chiloensis_US_OR 828_mother",
+      "target": "US_OR 828",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "US_OR 828",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__f. chiloensis_US_OR 828_mother",
+      "target": "f. chiloensis_US_OR 828_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__f. chiloensis_US_OR 828_mother",
+      "target": "f. chiloensis_US_OR 828_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "corvallis",
+      "target": "US_OR 1149",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "fairfax",
+      "target": "US_OR 1149",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 450",
+      "target": "WSU 175",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 438",
+      "target": "WSU 175",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1491",
+      "target": "US_OR 450",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "US_OR 450",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "US_OR 1491",
+      "target": "US_OR 438",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "narcissa",
+      "target": "US_OR 438",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "ettersburg 121",
+      "target": "US_OR 1491",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "marshall",
+      "target": "US_OR 1491",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):244?245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "darrow",
+      "target": "comanche",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "brazos",
+      "target": "comanche",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "darrow",
+      "target": "cherokee",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 9(3):245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "brazos",
+      "target": "cherokee",
+      "role": "father",
+      "source_id": "HORTSCIENCE 9(3):245. 1974."
+    }
+  },
+  {
+    "data": {
+      "source": "utah shipper",
+      "target": "vesper",
+      "role": "mother",
+      "source_id": "https://doi.org/10.71318/apom.1963.17.4.64"
+    }
+  },
+  {
+    "data": {
+      "source": "jerseybelle",
+      "target": "vesper",
+      "role": "father",
+      "source_id": "https://doi.org/10.71318/apom.1963.17.4.64"
+    }
+  },
+  {
+    "data": {
+      "source": "jerseybelle",
+      "target": "bounty",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 52: 849-850 (Sept 1972)"
+    }
+  },
+  {
+    "data": {
+      "source": "senga sengana",
+      "target": "bounty",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 52: 849-850 (Sept 1972)"
+    }
+  },
+  {
+    "data": {
+      "source": "redcrop",
+      "target": "acadia",
+      "role": "mother",
+      "source_id": "Can. J. Plant Sci. 45: 298 (1965)"
+    }
+  },
+  {
+    "data": {
+      "source": "sparkle",
+      "target": "acadia",
+      "role": "father",
+      "source_id": "Can. J. Plant Sci. 45: 298 (1965)"
+    }
+  },
+  {
+    "data": {
+      "source": "albritton",
+      "target": "earlibelle",
+      "role": "mother",
+      "source_id": "https://www.pubhort.org/aps/19/v19_n4_a4.htm?utm_source=chatgpt.com"
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 2101",
+      "target": "earlibelle",
+      "role": "father",
+      "source_id": "https://www.pubhort.org/aps/19/v19_n4_a4.htm?utm_source=chatgpt.com"
     }
   }
 ]

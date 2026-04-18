@@ -9314,7 +9314,7 @@
   {
     "data": {
       "id": "uberreich",
-      "label": "?berreich",
+      "label": "Uberreich",
       "year": "",
       "institute": "",
       "notes": "親が不明。",
@@ -10681,6 +10681,114 @@
   },
   {
     "data": {
+      "id": "jessie",
+      "label": "Jessie",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "st williams",
+      "label": "St. Williams",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "V6747R_6",
+      "label": "V6747R_6",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "scotland",
+      "label": "Scotland",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "selkirk",
+      "label": "Selkirk",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "laguna",
+      "label": "Laguna",
+      "year": 1994,
+      "institute": "University of California University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP8663P(https://patents.google.com/patent/USPP8663P/en)",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "irvine",
+      "label": "Irvine",
+      "year": 1990,
+      "institute": "CALIFORNIA UNIVERSITY HALL (2199 ADDISON STREET) UNIVERSITY OF CALIFORNIA BERKELEY CALIFORNIA 94720 A CORP OF, University of, Regents of University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP7172P(https://patents.google.com/patent/USPP7172P/en?oq=USPP7172)",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "muir",
+      "label": "Muir",
+      "year": 1989,
+      "institute": "University of California University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP6558P(https://patents.google.com/patent/USPP6558P/en?oq=USPP6558)",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "redcrest",
+      "label": "Redcrest",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/17",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -10861,8 +10969,44 @@
   },
   {
     "data": {
+      "id": "Cal. 70.3_117",
+      "label": "Cal. 70.3_117",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. 71.98_605",
+      "label": "Cal. 71.98_605",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "Cal. 85.218_605",
       "label": "Cal. 85.218_605",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. 85.92_602",
+      "label": "Cal. 85.92_602",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11185,18 +11329,6 @@
   },
   {
     "data": {
-      "id": "bounty",
-      "label": "bounty",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "canall",
       "label": "canall",
       "year": "",
@@ -11223,6 +11355,18 @@
     "data": {
       "id": "columbia",
       "label": "columbia",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "earlibelle",
+      "label": "earlibelle",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11461,18 +11605,6 @@
   },
   {
     "data": {
-      "id": "jessie",
-      "label": "jessie",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "joe",
       "label": "joe",
       "year": "",
@@ -11521,18 +11653,6 @@
   },
   {
     "data": {
-      "id": "laguna",
-      "label": "laguna",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "linn",
       "label": "linn",
       "year": "",
@@ -11547,6 +11667,18 @@
     "data": {
       "id": "lucida",
       "label": "lucida",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "miner",
+      "label": "miner",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11677,18 +11809,6 @@
   },
   {
     "data": {
-      "id": "redcrest",
-      "label": "redcrest",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "redgem",
       "label": "redgem",
       "year": "",
@@ -11727,18 +11847,6 @@
     "data": {
       "id": "rotkappchen",
       "label": "rotkappchen",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "scotland",
-      "label": "scotland",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -23737,7 +23845,7 @@
   },
   {
     "data": {
-      "source": "Cal 70.3_117",
+      "source": "Cal. 70.3_117",
       "target": "selva",
       "role": "mother",
       "source_id": "Brooks and Olmo(1984; https://journals.ashs.org/view/journals/hortsci/19/3/article-p359.xml)"
@@ -23745,7 +23853,7 @@
   },
   {
     "data": {
-      "source": "Cal 71.98_605",
+      "source": "Cal. 71.98_605",
       "target": "selva",
       "role": "father",
       "source_id": "Brooks and Olmo(1984; https://journals.ashs.org/view/journals/hortsci/19/3/article-p359.xml)"
@@ -29097,7 +29205,7 @@
   },
   {
     "data": {
-      "source": "bounty",
+      "source": "bountry",
       "target": "K72_9_K79_4_father",
       "role": "mother",
       "source_id": "HORTSCIENCE 45(4):663?665. 2010."
@@ -29205,6 +29313,150 @@
       "target": "K74_5_annapolis_mother",
       "role": "father",
       "source_id": "https://patents.google.com/patent/USPP11110P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "sharpless",
+      "target": "jessie",
+      "role": "mother",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/626/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "miner",
+      "target": "jessie",
+      "role": "father",
+      "source_id": "https://archive.org/details/smallfruitsofnew00hedr/page/626/mode/2up"
+    }
+  },
+  {
+    "data": {
+      "source": "guardsman",
+      "target": "st williams",
+      "role": "mother",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "V6747R_6",
+      "target": "st williams",
+      "role": "father",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "veestar",
+      "target": "V6747R_6",
+      "role": "mother",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "N.Y. 844",
+      "target": "V6747R_6",
+      "role": "father",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "guardsman",
+      "target": "scotland",
+      "role": "mother",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "V6747R_6",
+      "target": "scotland",
+      "role": "father",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "earlibelle",
+      "target": "selkirk",
+      "role": "mother",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "selkirk",
+      "role": "father",
+      "source_id": "Can. J. plant Sci. 73: 297-300 (1993)"
+    }
+  },
+  {
+    "data": {
+      "source": "irvine",
+      "target": "laguna",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP8663P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 85.92_602",
+      "target": "laguna",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP8663P/en"
+    }
+  },
+  {
+    "data": {
+      "source": "douglas",
+      "target": "irvine",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP7172P/en?oq=USPP7172"
+    }
+  },
+  {
+    "data": {
+      "source": "muir",
+      "target": "irvine",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP7172P/en?oq=USPP7172"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 70.3_117",
+      "target": "muir",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP6558P/en?oq=USPP6558"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 71.98_605",
+      "target": "muir",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP6558P/en?oq=USPP6558"
+    }
+  },
+  {
+    "data": {
+      "source": "linn",
+      "target": "redcrest",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 30(3):635?636. 1995"
+    }
+  },
+  {
+    "data": {
+      "source": "totem",
+      "target": "redcrest",
+      "role": "father",
+      "source_id": "HORTSCIENCE 30(3):635?636. 1995"
     }
   }
 ]

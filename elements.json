@@ -11329,6 +11329,198 @@
   },
   {
     "data": {
+      "id": "89_064_1_lowanna_father",
+      "label": "89_064_1",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/18",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "anaheim",
+      "label": "Anaheim",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "calypso",
+      "label": "Calypso",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "capitola",
+      "label": "Capitola",
+      "year": 1991,
+      "institute": "University of California University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP7615P(https://patents.google.com/patent/USPP7615P/en?oq=USPP7615)",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "carlsbad",
+      "label": "Carlsbad",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "chambly",
+      "label": "Chambly",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "glare",
+      "label": "Glare",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Iowa 3_7165",
+      "label": "Iowa 3_7165",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "Iowa 3145",
+      "label": "Iowa 3145",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "cornwallis",
+      "label": "Cornwallis",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "donna",
+      "label": "Donna",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fern seedling_donna_mother",
+      "label": "Fern seedling",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "evita",
+      "label": "Evita",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "gorella_brighton_evita father",
+      "label": "Gorella×Brighton",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "gerida",
+      "label": "Gerida",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "governor simcoe",
+      "label": "Governor Simcoe",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/23",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -11355,18 +11547,6 @@
     "data": {
       "id": "11268_01",
       "label": "11268_01",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "89_064_1_lowanna_father",
-      "label": "89_064_1_lowanna_father",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11521,6 +11701,18 @@
   },
   {
     "data": {
+      "id": "Cal. 75.121_101",
+      "label": "Cal. 75.121_101",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "Cal. 85.218_605",
       "label": "Cal. 85.218_605",
       "year": "",
@@ -11571,6 +11763,18 @@
     "data": {
       "id": "Cal. 97.86_1",
       "label": "Cal. 97.86_1",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. X5.218_605",
+      "label": "Cal. X5.218_605",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -11893,18 +12097,6 @@
   },
   {
     "data": {
-      "id": "bountry",
-      "label": "bountry",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "brazos",
       "label": "brazos",
       "year": "",
@@ -11953,6 +12145,18 @@
   },
   {
     "data": {
+      "id": "earliglow",
+      "label": "earliglow",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "earlinglow",
       "label": "earlinglow",
       "year": "",
@@ -11979,6 +12183,18 @@
     "data": {
       "id": "elsanta",
       "label": "elsanta",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "elvira",
+      "label": "elvira",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12205,6 +12421,18 @@
   },
   {
     "data": {
+      "id": "kent",
+      "label": "kent",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "krasavitsa",
       "label": "krasavitsa",
       "year": "",
@@ -12361,6 +12589,18 @@
   },
   {
     "data": {
+      "id": "rapella",
+      "label": "rapella",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "redcrop",
       "label": "redcrop",
       "year": "",
@@ -12411,6 +12651,18 @@
     "data": {
       "id": "scotland BK_46",
       "label": "scotland BK_46",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "spotlight",
+      "label": "spotlight",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12662,6 +12914,18 @@
   {
     "data": {
       "id": "unknown_father__88_042_35_adina_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_father__89_064_1_lowanna_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -14390,6 +14654,18 @@
   {
     "data": {
       "id": "unknown_mother__88_042_35_adina_mother",
+      "label": "不明",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (unknown parent)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "unknown_mother__89_064_1_lowanna_father",
       "label": "不明",
       "year": "",
       "institute": "",
@@ -29657,7 +29933,7 @@
   },
   {
     "data": {
-      "source": "bountry",
+      "source": "bounty",
       "target": "glooscap",
       "role": "father",
       "source_id": "Can. J. Plant Sci. 71: 937-941 (July 1991)"
@@ -29889,7 +30165,7 @@
   },
   {
     "data": {
-      "source": "bountry",
+      "source": "bounty",
       "target": "K72_9_K79_4_father",
       "role": "mother",
       "source_id": "HORTSCIENCE 45(4):663?665. 2010."
@@ -30861,6 +31137,262 @@
       "target": "earlibelle",
       "role": "father",
       "source_id": "https://www.pubhort.org/aps/19/v19_n4_a4.htm?utm_source=chatgpt.com"
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_mother__89_064_1_lowanna_father",
+      "target": "89_064_1_lowanna_father",
+      "role": "mother",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "unknown_father__89_064_1_lowanna_father",
+      "target": "89_064_1_lowanna_father",
+      "role": "father",
+      "source_id": ""
+    }
+  },
+  {
+    "data": {
+      "source": "irvine",
+      "target": "anaheim",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 85.92_602",
+      "target": "anaheim",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "rapella",
+      "target": "calypso",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "selva",
+      "target": "calypso",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 75.121_101",
+      "target": "capitola",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP7615P/en?oq=USPP7615"
+    }
+  },
+  {
+    "data": {
+      "source": "parker",
+      "target": "capitola",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP7615P/en?oq=USPP7615"
+    }
+  },
+  {
+    "data": {
+      "source": "irvine",
+      "target": "carlsbad",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. X5.218_605",
+      "target": "carlsbad",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "sparkle",
+      "target": "chambly",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "honeoye",
+      "target": "chambly",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "Iowa 3_7165",
+      "target": "glare",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "Iowa 3145",
+      "target": "glare",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "spotlight",
+      "target": "Iowa 3_7165",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "sunrise",
+      "target": "Iowa 3_7165",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "surecrop",
+      "target": "Iowa 3145",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "sunrise",
+      "target": "Iowa 3145",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "earliglow",
+      "target": "cornwallis",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "kent",
+      "target": "cornwallis",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "fern seedling_donna_mother",
+      "target": "donna",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "douglas",
+      "target": "donna",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "fern",
+      "target": "fern seedling_donna_mother",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "fern",
+      "target": "fern seedling_donna_mother",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "chandler",
+      "target": "evita",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "gorella_brighton_evita father",
+      "target": "evita",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "gorella",
+      "target": "gorella_brighton_evita father",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "brighton",
+      "target": "gorella_brighton_evita father",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "elsanta",
+      "target": "gerida",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "elvira",
+      "target": "gerida",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "holiday",
+      "target": "governor simcoe",
+      "role": "mother",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "guardian",
+      "target": "governor simcoe",
+      "role": "father",
+      "source_id": "HORTSCIENCE 29(9):960. 1994."
     }
   }
 ]

@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "generate:top3": "node scripts/generate-top3.mjs"
+  },
+  "dependencies": {
+    "@google-analytics/data": "^5.2.0"
+  }
+}

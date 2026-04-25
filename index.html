@@ -1461,6 +1461,35 @@ async function loadElements(){
     hideCyLoading();
   }
 }
+
+// ランキングを表示するため
+  async function loadTop3(){
+  const el = document.getElementById('top3');
+  if(!el) return;
+
+  try{
+    const res = await fetch('top3.json?ts=' + Date.now(), { cache: 'no-store' });
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const data = await res.json();
+
+    if(!Array.isArray(data) || !data.length){
+      el.textContent = 'まだデータがありません。';
+      return;
+    }
+
+    el.innerHTML = data.map((row, i) => {
+      const name = esc(row.name ?? '');
+      const count = esc(row.count ?? '');
+      return `<div style="margin:4px 0;">${i + 1}. <b>${name}</b> (${count})</div>`;
+    }).join('');
+  }catch(err){
+    el.textContent = 'ランキングを読み込めませんでした。';
+    console.error(err);
+  }
+}
+
+loadTop3();
 loadElements();
 </script>
 </body>

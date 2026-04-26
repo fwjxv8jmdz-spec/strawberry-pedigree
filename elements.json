@@ -11869,6 +11869,102 @@
   },
   {
     "data": {
+      "id": "earliglow",
+      "label": "Earliglow",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "MDUS 2359",
+      "label": "MDUS 2359",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "kent",
+      "label": "Kent",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "K68_58_kent_mother",
+      "label": "K68_58",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "redcoat",
+      "label": "Redcoat",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "fern",
+      "label": "Fern",
+      "year": 1984,
+      "institute": "University of California University of California San Diego UCSD",
+      "notes": "",
+      "sources": "USPP5267P(https://patents.google.com/patent/USPP5267P)",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "darrow",
+      "label": "Darrow",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
+      "id": "hood",
+      "label": "Hood",
+      "year": "",
+      "institute": "",
+      "notes": "",
+      "sources": "",
+      "db_registration_date": "2026/4/26",
+      "placeholder": false
+    }
+  },
+  {
+    "data": {
       "id": "00_25_1",
       "label": "00_25_1",
       "year": "",
@@ -11991,6 +12087,18 @@
     "data": {
       "id": "Cal. 69.141_101",
       "label": "Cal. 69.141_101",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "Cal. 69.63_103",
+      "label": "Cal. 69.63_103",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12289,6 +12397,30 @@
   },
   {
     "data": {
+      "id": "MDUS 2712",
+      "label": "MDUS 2712",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "MDUS 2787",
+      "label": "MDUS 2787",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
       "id": "MDUS 3184",
       "label": "MDUS 3184",
       "year": "",
@@ -12315,6 +12447,18 @@
     "data": {
       "id": "ORUS 1077_47",
       "label": "ORUS 1077_47",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "ORUS 2315",
+      "label": "ORUS 2315",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12505,30 +12649,6 @@
   },
   {
     "data": {
-      "id": "darrow",
-      "label": "darrow",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "earliglow",
-      "label": "earliglow",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "earlinglow",
       "label": "earlinglow",
       "year": "",
@@ -12579,18 +12699,6 @@
     "data": {
       "id": "ettersburg",
       "label": "ettersburg",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "fern",
-      "label": "fern",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12745,18 +12853,6 @@
   },
   {
     "data": {
-      "id": "hood",
-      "label": "hood",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
       "id": "huxley",
       "label": "huxley",
       "year": "",
@@ -12795,18 +12891,6 @@
     "data": {
       "id": "juspa",
       "label": "juspa",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "kent",
-      "label": "kent",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -12999,18 +13083,6 @@
     "data": {
       "id": "rapella",
       "label": "rapella",
-      "year": "",
-      "institute": "",
-      "notes": "placeholder (parent not yet registered in master)",
-      "sources": "",
-      "db_registration_date": "",
-      "placeholder": true
-    }
-  },
-  {
-    "data": {
-      "id": "redcoat",
-      "label": "redcoat",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -16479,6 +16551,18 @@
     "data": {
       "id": "vale",
       "label": "vale",
+      "year": "",
+      "institute": "",
+      "notes": "placeholder (parent not yet registered in master)",
+      "sources": "",
+      "db_registration_date": "",
+      "placeholder": true
+    }
+  },
+  {
+    "data": {
+      "id": "valentine",
+      "label": "valentine",
       "year": "",
       "institute": "",
       "notes": "placeholder (parent not yet registered in master)",
@@ -32337,6 +32421,134 @@
       "target": "yolo",
       "role": "father",
       "source_id": "HORTSCIENCE 29(9):960. 1994."
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 2359",
+      "target": "earliglow",
+      "role": "mother",
+      "source_id": "https://journal.americanpomological.org/index.php/jofaps/article/view/1222"
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 2712",
+      "target": "earliglow",
+      "role": "father",
+      "source_id": "https://journal.americanpomological.org/index.php/jofaps/article/view/1222"
+    }
+  },
+  {
+    "data": {
+      "source": "fairland",
+      "target": "MDUS 2359",
+      "role": "mother",
+      "source_id": "https://journal.americanpomological.org/index.php/jofaps/article/view/1222"
+    }
+  },
+  {
+    "data": {
+      "source": "midland",
+      "target": "MDUS 2359",
+      "role": "father",
+      "source_id": "https://journal.americanpomological.org/index.php/jofaps/article/view/1222"
+    }
+  },
+  {
+    "data": {
+      "source": "K68_58_kent_mother",
+      "target": "kent",
+      "role": "mother",
+      "source_id": "https://cdnsciencepub.com/doi/pdf/10.4141/cjps82-122"
+    }
+  },
+  {
+    "data": {
+      "source": "raritan",
+      "target": "kent",
+      "role": "father",
+      "source_id": "https://cdnsciencepub.com/doi/pdf/10.4141/cjps82-122"
+    }
+  },
+  {
+    "data": {
+      "source": "redgauntlet",
+      "target": "K68_58_kent_mother",
+      "role": "mother",
+      "source_id": "https://cdnsciencepub.com/doi/pdf/10.4141/cjps82-122"
+    }
+  },
+  {
+    "data": {
+      "source": "tioga",
+      "target": "K68_58_kent_mother",
+      "role": "father",
+      "source_id": "https://cdnsciencepub.com/doi/pdf/10.4141/cjps82-122"
+    }
+  },
+  {
+    "data": {
+      "source": "sparkle",
+      "target": "redcoat",
+      "role": "mother",
+      "source_id": "https://link.springer.com/article/10.1007/BF02551459"
+    }
+  },
+  {
+    "data": {
+      "source": "valentine",
+      "target": "redcoat",
+      "role": "father",
+      "source_id": "https://link.springer.com/article/10.1007/BF02551459"
+    }
+  },
+  {
+    "data": {
+      "source": "tufts",
+      "target": "fern",
+      "role": "mother",
+      "source_id": "https://patents.google.com/patent/USPP5267P"
+    }
+  },
+  {
+    "data": {
+      "source": "Cal. 69.63_103",
+      "target": "fern",
+      "role": "father",
+      "source_id": "https://patents.google.com/patent/USPP5267P"
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 2713",
+      "target": "darrow",
+      "role": "mother",
+      "source_id": "https://doi.org/10.71318/apom.1975.29.1.11"
+    }
+  },
+  {
+    "data": {
+      "source": "MDUS 2787",
+      "target": "darrow",
+      "role": "father",
+      "source_id": "https://doi.org/10.71318/apom.1975.29.1.11"
+    }
+  },
+  {
+    "data": {
+      "source": "ORUS 2315",
+      "target": "hood",
+      "role": "mother",
+      "source_id": "https://oregon-strawberries.org/wp-content/uploads/2018/04/hood-variety-release.pdf"
+    }
+  },
+  {
+    "data": {
+      "source": "puget beauty",
+      "target": "hood",
+      "role": "father",
+      "source_id": "https://oregon-strawberries.org/wp-content/uploads/2018/04/hood-variety-release.pdf"
     }
   }
 ]

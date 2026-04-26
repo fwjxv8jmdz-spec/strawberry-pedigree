@@ -5,7 +5,6 @@
     "get:refresh-token": "node scripts/get-refresh-token.mjs"
   },
   "dependencies": {
-    "@google-analytics/data": "^5.2.0",
     "googleapis": "^144.0.0"
   }
 }

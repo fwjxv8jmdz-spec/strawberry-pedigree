@@ -1,9 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "generate:top3": "node scripts/generate-top3.mjs"
+    "generate:top3": "node scripts/generate-top3.mjs",
+    "get:refresh-token": "node scripts/get-refresh-token.mjs"
   },
   "dependencies": {
-    "@google-analytics/data": "^5.2.0"
+    "@google-analytics/data": "^5.2.0",
+    "googleapis": "^144.0.0"
   }
 }

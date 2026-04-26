@@ -1,5 +1,4 @@
 import fs from "fs";
-import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { google } from "googleapis";
 
 const propertyId = process.env.GA4_PROPERTY_ID;
@@ -13,17 +12,14 @@ if (!clientSecret) throw new Error("GOOGLE_CLIENT_SECRET is missing");
 if (!refreshToken) throw new Error("GOOGLE_REFRESH_TOKEN is missing");
 
 const oauth2Client = new google.auth.OAuth2(clientId, clientSecret);
+oauth2Client.setCredentials({ refresh_token: refreshToken });
 
-oauth2Client.setCredentials({
-  refresh_token: refreshToken,
-});
+const { token } = await oauth2Client.getAccessToken();
+if (!token) throw new Error("Failed to get access token");
 
-const client = new BetaAnalyticsDataClient({
-  authClient: oauth2Client,
-});
+const url = `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`;
 
-const [response] = await client.runReport({
-  property: `properties/${propertyId}`,
+const body = {
   dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
   dimensions: [{ name: "customEvent:cultivar_name" }],
   metrics: [{ name: "eventCount" }],
@@ -35,26 +31,42 @@ const [response] = await client.runReport({
             fieldName: "eventName",
             stringFilter: {
               matchType: "EXACT",
-              value: "select_cultivar",
-            },
-          },
-        },
-      ],
-    },
+              value: "select_cultivar"
+            }
+          }
+        }
+      ]
+    }
   },
   orderBys: [
     {
       metric: { metricName: "eventCount" },
-      desc: true,
-    },
+      desc: true
+    }
   ],
-  limit: 20,
+  limit: 20
+};
+
+const res = await fetch(url, {
+  method: "POST",
+  headers: {
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(body)
 });
+
+if (!res.ok) {
+  const text = await res.text();
+  throw new Error(`GA4 Data API error ${res.status}: ${text}`);
+}
+
+const response = await res.json();
 
 const top3 = (response.rows ?? [])
   .map((row) => ({
     name: row.dimensionValues?.[0]?.value ?? "",
-    count: Number(row.metricValues?.[0]?.value ?? 0),
+    count: Number(row.metricValues?.[0]?.value ?? 0)
   }))
   .filter((row) => {
     const name = row.name.trim();

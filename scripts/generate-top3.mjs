@@ -1,32 +1,32 @@
 import fs from "fs";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
+import { google } from "googleapis";
 
 const propertyId = process.env.GA4_PROPERTY_ID;
-const credentialsJson = process.env.GA4_SERVICE_ACCOUNT_JSON;
+const clientId = process.env.GOOGLE_CLIENT_ID;
+const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
 
 if (!propertyId) throw new Error("GA4_PROPERTY_ID is missing");
-if (!credentialsJson) throw new Error("GA4_SERVICE_ACCOUNT_JSON is missing");
+if (!clientId) throw new Error("GOOGLE_CLIENT_ID is missing");
+if (!clientSecret) throw new Error("GOOGLE_CLIENT_SECRET is missing");
+if (!refreshToken) throw new Error("GOOGLE_REFRESH_TOKEN is missing");
 
-const credentials = JSON.parse(credentialsJson);
+const oauth2Client = new google.auth.OAuth2(clientId, clientSecret);
+
+oauth2Client.setCredentials({
+  refresh_token: refreshToken,
+});
 
 const client = new BetaAnalyticsDataClient({
-  credentials,
+  authClient: oauth2Client,
 });
 
 const [response] = await client.runReport({
   property: `properties/${propertyId}`,
-  dateRanges: [
-    {
-      startDate: "30daysAgo",
-      endDate: "today",
-    },
-  ],
-  dimensions: [
-    { name: "customEvent:cultivar_name" },
-  ],
-  metrics: [
-    { name: "eventCount" },
-  ],
+  dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+  dimensions: [{ name: "customEvent:cultivar_name" }],
+  metrics: [{ name: "eventCount" }],
   dimensionFilter: {
     andGroup: {
       expressions: [
@@ -44,9 +44,7 @@ const [response] = await client.runReport({
   },
   orderBys: [
     {
-      metric: {
-        metricName: "eventCount",
-      },
+      metric: { metricName: "eventCount" },
       desc: true,
     },
   ],

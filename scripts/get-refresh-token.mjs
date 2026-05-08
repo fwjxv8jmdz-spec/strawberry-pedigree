@@ -10,7 +10,7 @@ if (!CLIENT_SECRET) throw new Error("GOOGLE_CLIENT_SECRET is missing");
 const oauth2Client = new google.auth.OAuth2(
   CLIENT_ID,
   CLIENT_SECRET,
-  "urn:ietf:wg:oauth:2.0:oob"
+  "http://localhost"
 );
 
 const scopes = [
@@ -35,10 +35,13 @@ const rl = readline.createInterface({
 rl.question("Code: ", async (code) => {
   try {
     const { tokens } = await oauth2Client.getToken(code.trim());
+
     console.log("\nRefresh token:\n");
     console.log(tokens.refresh_token);
+
     console.log("\nAccess token:\n");
     console.log(tokens.access_token);
+
   } catch (err) {
     console.error(err);
   } finally {

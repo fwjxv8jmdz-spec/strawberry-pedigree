@@ -20,7 +20,7 @@ if (!token) throw new Error("Failed to get access token");
 const url = `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`;
 
 const body = {
-  dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+  dateRanges: [{ startDate: "2026-04-06", endDate: "today" }],
   dimensions: [{ name: "customEvent:cultivar_name" }],
   metrics: [{ name: "eventCount" }],
   dimensionFilter: {

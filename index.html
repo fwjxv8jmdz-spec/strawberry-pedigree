@@ -1140,98 +1140,79 @@ function updateListAndHighlights() {
   renderCultivarList(sorted, `${sorted.length} 品種 (${filterLabel()})`);
 }
 
-/* 配置キャッシュ: データが変われば自動的に別キーになる */
-let graphSignature = '';
-const LAYOUT_VERSION = 'fast-v2';
-function computeGraphSignature(elements){
-  // ノード・エッジの構造とラベルを含む軽量ハッシュ
-  let h = 2166136261;
-  const feed = (v) => {
-    const str = String(v ?? '');
-    for(let i=0;i<str.length;i++){
-      h ^= str.charCodeAt(i);
-      h = Math.imul(h, 16777619);
-    }
-  };
-  for(const e of elements){
-    const d = e.data || {};
-    feed(d.id); feed(d.source); feed(d.target); feed(d.label);
-    feed(d.year); feed(d.placeholder); feed(d.role);
-  }
-  return (h >>> 0).toString(36) + '-' + elements.length;
-}
-function layoutCacheKey(mode){
-  return `strawberry-layout-${LAYOUT_VERSION}-${graphSignature}-${isMobileNow()?'mobile':'desktop'}-${mode}`;
-}
-function restoreLayout(mode){
-  try{
-    const raw = localStorage.getItem(layoutCacheKey(mode));
-    if(!raw) return false;
-    const positions = JSON.parse(raw);
-    if(!positions || Object.keys(positions).length !== cy.nodes().length) return false;
-    let valid = true;
-    cy.nodes().forEach(n => {
-      const p = positions[n.id()];
-      if(!p || !Number.isFinite(p.x) || !Number.isFinite(p.y)) valid = false;
-    });
-    if(!valid) return false;
-    cy.batch(() => cy.nodes().positions(n => positions[n.id()]));
-    return true;
-  }catch(err){ console.warn('配置キャッシュ読込失敗', err); return false; }
-}
-function saveLayout(mode){
-  try{
-    const positions = Object.create(null);
-    cy.nodes().forEach(n => { const p=n.position(); positions[n.id()]={x:p.x,y:p.y}; });
-    localStorage.setItem(layoutCacheKey(mode), JSON.stringify(positions));
-  }catch(err){ console.warn('配置キャッシュ保存不可（容量制限など）', err); }
-}
-function finishLayoutView(initial){
-  cy.fit(undefined, isMobileNow() ? 20 : 6);
-  if(initial){
-    const ok = focusInitialNode();
-    if(!ok) cy.fit(undefined, isMobileNow() ? 30 : 10);
-  }
-}
-function runLayout(mode, { initial = false, force = false } = {}){
+function runLayout(mode){
   if(!cy) return;
   cy.stop();
-  // 同じ配置を何度も計算しない。レイアウト切替でもキャッシュを利用。
-  if(!force && restoreLayout(mode)){
-    finishLayoutView(initial);
-    hideCyLoading();
-    return;
-  }
+
   const isM = isMobileNow();
-  showCyLoading('系統図を配置しています。しばらくお待ちください。');
-  const opts = mode === 'dagre' ? {
-    name: 'dagre', rankDir: 'LR',
-    nodeSep: isM ? 40 : 20, edgeSep: isM ? 10 : 5,
-    rankSep: isM ? 140 : 90, padding: 30,
-    nodeDimensionsIncludeLabels: true, animate: false
-  } : {
-    name: 'cose', padding: 30, animate: false,
-    randomize: false, avoidOverlap: true,
-    avoidOverlapPadding: isM ? 35 : 20,
-    nodeOverlap: 40,
-    nodeRepulsion: isM ? 18000 : 12000,
-    idealEdgeLength: isM ? 280 : 200,
-    componentSpacing: isM ? 160 : 130,
-    numIter: 220
-  };
-  requestAnimationFrame(() => setTimeout(() => {
-    const started = performance.now();
-    const layout = cy.layout(opts);
-    layout.one('layoutstop', () => {
-      saveLayout(mode);
-      finishLayoutView(initial);
-      hideCyLoading();
-      console.info(`${mode} 配置完了: ${Math.round(performance.now()-started)}ms`);
-    });
-    try { layout.run(); }
-    catch(err){ hideCyLoading(); console.error('配置エラー',err); }
-  }, 0));
+
+  showCyLoading(mode === 'dagre'
+    ? '数十秒かかることがあります'
+    : '数十秒かかることがあります'
+  );
+
+  // フェイルセーフ：layoutstopが来ない場合に解除
+  const failSafeTimer = setTimeout(() => {
+    hideCyLoading();
+    console.warn('layoutstopが来ないためフェイルセーフで解除');
+  }, 30000);
+
+  let opts;
+  if(mode === 'dagre'){
+    opts = {
+      name: 'dagre',
+      rankDir: 'LR',
+      nodeSep: isM ? 40 : 20,
+      edgeSep: isM ? 10 : 5,
+      rankSep: isM ? 140 : 90,
+      padding: 30,
+      nodeDimensionsIncludeLabels: true,
+      animate: false
+    };
+  }else{
+    opts = {
+      name: 'cose',
+      padding: 30,
+      animate: false,
+      randomize: false,
+      avoidOverlap: true,
+      avoidOverlapPadding: isM ? 60 : 30,
+      nodeOverlap: 40,
+      nodeRepulsion: isM ? 40000 : 24000,
+      idealEdgeLength: isM ? 420 : 280,
+      componentSpacing: isM ? 220 : 180,
+      numIter: 1200
+    };
+  }
+
+  // ★ここがポイント：まず描画を通してからlayout.run()
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      const layout = cy.layout(opts);
+
+layout.on('layoutstop', () => {
+  clearTimeout(failSafeTimer);
+  hideCyLoading();
+
+  // ★まず軽く fit（最低限の安定）
+  cy.fit(undefined, isM ? 20 : 6);
+
+  // ★候補ノードへフォーカス（見つからなければそのまま）
+  const ok = focusInitialNode();
+  if(!ok){
+    // フォールバック：候補が見つからない場合は普通のfit
+    cy.fit(undefined, isM ? 30 : 10);
+  }
+});
+
+
+
+      layout.run();
+    }, 0);
+  });
 }
+
+
 
 function setActiveLayout(btnId){
   document.getElementById('btnCose').classList.toggle('active', btnId === 'btnCose');
@@ -1325,6 +1306,15 @@ layout: { name: 'preset' }
     });
   });
 
+  // classes from data
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const d = n.data();
+      if (d.year !== undefined && d.year !== null && d.year !== '') n.addClass('registered');
+      if (d.placeholder === true) n.addClass('isPlaceholder');
+    });
+  });
+
   // ★追加：子の数(childCount)を計算して data に入れる
   let maxChildCount = 0;
 
@@ -1379,7 +1369,7 @@ layout: { name: 'preset' }
   updateListAndHighlights();
 
 setActiveLayout('btnCose');
-requestAnimationFrame(() => runLayout('cose', { initial: true }));
+requestAnimationFrame(() => runLayout('cose'));
 
 
 
@@ -1459,11 +1449,11 @@ async function loadElements(){
     initZoomButtons();
     initPanButtons();
 
-    const url = "elements.json";
-    const res = await fetch(url, { cache: "default" });
+    const url = "elements.json?ts=" + Date.now();
+    const res = await fetch(url, { cache: "no-store" });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const elements = await res.json();
-    graphSignature = computeGraphSignature(elements);
+
     initCy(elements);
   }catch(err){
     badge.textContent = '読み込み失敗';
@@ -1478,7 +1468,7 @@ async function loadElements(){
   if(!el) return;
 
   try{
-    const res = await fetch('top3.json', { cache: 'default' });
+    const res = await fetch('top3.json?ts=' + Date.now(), { cache: 'no-store' });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const data = await res.json();
